@@ -13,11 +13,11 @@
 @mixin button-container($container-color, $container-overlay, $elevation: 0, $elevation-scale: 2)
   @include ripple(rgba($container-overlay, $container-overlay--pressed))
   background-color: $container-color
+  &:disabled
+    @include elevation(0)
+    background-color: rgba(color.grayscale($container-color), $disabled-filled-container)
   &.mtrl-button--choice
     background-color: color.mix($container-color, $container-overlay, 100% - $container-overlay--pressed)
-
-    &.mtrl-button--contained
-      background-color: color.mix($container-color, $container-overlay, (100% - $container-overlay--pressed) / 2)
   &:hover
     background-color: color.mix($container-color, $container-overlay, 100% - $container-overlay--hovered)
   &:focus
@@ -32,10 +32,6 @@
       @include elevation($elevation + $elevation-scale * 2)
     &:active
       @include elevation($elevation + $elevation-scale * 3)
-  &:disabled
-    @include elevation(0)
-    background-color: rgba(color.grayscale($container-color), $disabled-filled-container)
-
 
 .mtrl-button
   @include typography(button)
@@ -89,6 +85,24 @@
     @include color($on-primary, $text--high-emphasis)
     @include padding(0, 4)
 
+  &--vertical
+    @include density(flat-button)
+    @include padding(8, 4)
+    flex-direction: column
+
+    .mtrl-button__icon
+      @include margin(0, 0, 2)
+
+    .mtrl-button__label
+      @include typography(button, 0.5)
+
+    .mtrl-button__label + .mtrl-button__icon
+      @include margin(2, 0, 0)
+
+    &.mtrl-button--rounded
+      @include shape(flat-button, $variant: rounded)
+      @include padding(8, 6)
+
   &--choice
     @include shape(choice-button)
     @include button-container($surface, $on-surface)
@@ -100,13 +114,18 @@
       @include button-container($surface, $primary)
       @include color($primary, $text--high-emphasis)
       border-color: $primary
-      border-bottom: 2px solid
 
   &--rounded
-    border-radius: map.get($component-height, button) / 2
+    @include shape(button, $variant: rounded)
 
   &--block
     width: 100%
+
+  &--transparent
+    @include button-container(transparent, $primary)
+
+  &--no-touch-target
+    overflow: hidden
 
 
   &__label

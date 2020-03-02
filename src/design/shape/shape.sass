@@ -1,9 +1,12 @@
 @use "sass:map"
+@use "../layout/density" as *
 
 // https://material.io/design/shape/applying-shape-to-ui.html
 
-$component-corners:(button: 4px, choice-button: 8px 8px 0 0,)
+$component-corners: (button: 4px, choice-button: 8px 8px 0 0,)
 
-@mixin shape($component, $style: rounded)
+@mixin shape($component, $style: rounded, $variant: normal)
   @if $style == rounded
     border-radius: map.get($component-corners, $component)
+  @if $variant == rounded
+    border-radius: map.get($component-height, flat-button) / 2
