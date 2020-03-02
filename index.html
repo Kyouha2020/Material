@@ -6,42 +6,8 @@
   <title>Button</title>
   <link href="index.css" rel="stylesheet">
   <link href="src/components/button/button.css" rel="stylesheet">
-  <link href="src/components/list/list.css" rel="stylesheet">
 </head>
 <body>
-
-<h2>CSS Houdini</h2>
-<section style="display: none">
-  <h3>Corner Shape</h3>
-  <div class="corner-shape-target-1">corner-shape-target-1</div>
-  <div class="corner-shape-target-2">corner-shape-target-2</div>
-  <div class="corner-shape-target-3">corner-shape-target-3</div>
-  <div class="corner-shape-target-4">corner-shape-target-4</div>
-  <div class="corner-shape-target-5">corner-shape-target-5</div>
-
-  <h3>Smooth Corners</h3>
-  <div class="smooth-corners-target-1">smooth-corners-target-1</div>
-  <div class="smooth-corners-target-2">smooth-corners-target-2</div>
-
-  <h3>Background Properties</h3>
-  <div class="background-target-1">background-target-1</div>
-  <div class="background-target-2">background-target-2</div>
-  <div class="A">
-    <div class="B">
-      <div class="D"></div>
-      We do things.
-    </div>
-    <div class="C">Very wow.</div>
-  </div>
-
-  <h3>Ripple</h3>
-  <button class="mtrl-button" style="width: 100%">
-    <span class="mtrl-button__label">Text Button</span>
-  </button>
-  <button class="mtrl-button mtrl-button--contained">
-    <span class="mtrl-button__label">Contained Button</span>
-  </button>
-</section>
 
 <h2>Button</h2>
 <section id="button">
@@ -63,8 +29,8 @@
 
   <h3>Text Button</h3>
   <div>
-    <button class="mtrl-button mtrl-button--two-tone">
-      <span class="mtrl-button__label">Two-Tone</span>
+    <button class="mtrl-button mtrl-button--rounded">
+      <span class="mtrl-button__label">Rounded</span>
     </button>
 
     <button class="mtrl-button">
@@ -157,10 +123,6 @@
       <span class="mtrl-button__label">Rounded</span>
     </button>
 
-    <button class="mtrl-button mtrl-button--outlined mtrl-button--two-tone">
-      <span class="mtrl-button__label">Two-Tone</span>
-    </button>
-
     <button class="mtrl-button mtrl-button--outlined">
       <span class="mtrl-button__label mtrl-button__label--sentence-case">Sentence case</span>
     </button>
@@ -247,6 +209,10 @@
 
   <h3>Contained Button</h3>
   <div>
+    <button class="mtrl-button mtrl-button--contained mtrl-button--rounded">
+      <span class="mtrl-button__label">Rounded</span>
+    </button>
+
     <button class="mtrl-button mtrl-button--contained mtrl-button--two-tone">
       <span class="mtrl-button__label">Two-Tone</span>
     </button>
@@ -335,267 +301,44 @@
     </button>
   </div>
 
-  <h3>Toggle Button</h3>
-  <div class="mtrl-toggle-button__container">
-    <button class="mtrl-toggle-button material-icons">favorite</button>
-    <button class="mtrl-toggle-button material-icons" disabled>favorite</button>
-    <button class="mtrl-toggle-button material-icons">favorite</button>
-  </div>
 </section>
 
-<h2>Chip</h2>
-<section id="chip">
+<h2>CSS Houdini</h2>
+<div style="color: #b00020;">It is an experimental web feature. Only the Chromium, since 78, has the best compatibility.
+  <a
+      href="https://ishoudinireadyyet.com" target="_blank">Compatibility Table</a></div>
+<section>
+  <h3>Corner Shape</h3>
+  <div class="corner-shape-target-1">corner-shape-target-1</div>
+  <div class="corner-shape-target-2">corner-shape-target-2</div>
+  <div class="corner-shape-target-3">corner-shape-target-3</div>
+  <div class="corner-shape-target-4">corner-shape-target-4</div>
+  <div class="corner-shape-target-5">corner-shape-target-5</div>
 
-  <button class="mtrl-chip">
-    <span class="mtrl-chip__label">Action chip</span>
-  </button>
+  <h3>Smooth Corners</h3>
+  <div class="smooth-corners-target-1">smooth-corners-target-1</div>
+  <div class="smooth-corners-target-2">smooth-corners-target-2</div>
 
-  <button class="mtrl-chip" disabled>
-    <span class="mtrl-chip__label">Action chip</span>
-  </button>
-
-  <button class="mtrl-chip mtrl-chip--outlined">
-    <span class="mtrl-chip__label">Outlined action chip</span>
-  </button>
-
-  <button class="mtrl-chip mtrl-chip--outlined" disabled>
-    <span class="mtrl-chip__label">Outlined action chip</span>
-  </button>
-
-  <button class="mtrl-chip mtrl-chip--input">
-    <i class="mtrl-chip__icon" style="background: #00000050"></i>
-    <span class="mtrl-chip__label">Input chip</span>
-    <i class="mtrl-chip__action-icon" style="background: #00000050"></i>
-  </button>
-</section>
-
-<h2>FAB</h2>
-<section id="fab">
-
-  <button class="mtrl-fab">
-    <i class="mtrl-fab__icon material-icons">favorite</i>
-  </button>
-
-  <button class="mtrl-fab mtrl-fab--mini">
-    <i class="mtrl-fab__icon material-icons">favorite</i>
-  </button>
-
-  <button class="mtrl-fab mtrl-fab--extended">
-    <i class="mtrl-fab__icon material-icons">favorite</i>
-    <span class="mtrl-fab__label">Favorite</span>
-  </button>
-
-  <button class="mtrl-fab mtrl-fab--extended">
-    <span class="mtrl-fab__label">Favorite</span>
-    <i class="mtrl-fab__icon material-icons">favorite</i>
-  </button>
-
-  <button class="mtrl-fab mtrl-fab--extended">
-    <span class="mtrl-fab__label">Favorite</span>
-  </button>
-</section>
-
-<h2>List</h2>
-<section id="list">
-
-  <h3>Single-line</h3>
-  <ul class="mtrl-list">
-    <li class="mtrl-list-item">
-      <span class="mtrl-list-item__text">Item 1</span>
-    </li>
-
-    <li class="mtrl-list-item">
-      <i class="mtrl-list-item__supporting-visuals--icon material-icons"
-         aria-hidden="true">favorite</i>
-      <div class="mtrl-list-item__primary-text">
-        <span class="mtrl-list-item__text">Single-line item</span>
-      </div>
-      <i class="mtrl-list-item__meta-data material-icons" aria-hidden="true">favorite</i>
-    </li>
-
-    <li class="mtrl-list-item">
-      <i style="background: #00b0ff"
-         class="mtrl-list-item__supporting-visuals--avatar"></i>
-      <div class="mtrl-list-item__primary-text">
-        <span class="mtrl-list-item__text">Single-line item</span>
-      </div>
-    </li>
-
-    <li class="mtrl-list-item">
-      <i style="background: #00b0ff"
-         class="mtrl-list-item__supporting-visuals--square"></i>
-      <div class="mtrl-list-item__primary-text">
-        <span class="mtrl-list-item__text">Single-line item</span>
-      </div>
-      <i style="background: #00b0ff" class="mtrl-list-item__meta-data"></i>
-    </li>
-
-    <li class="mtrl-list-item">
-      <i style="background: #00b0ff"
-         class="mtrl-list-item__supporting-visuals--media"></i>
-      <div class="mtrl-list-item__primary-text">
-        <span class="mtrl-list-item__text">Single-line item</span>
-      </div>
-      <i style="background: #00b0ff" class="mtrl-list-item__meta-data"></i>
-    </li>
-
-    <li class="mtrl-list-item">
-      <span class="mtrl-list-item__text">Item 3</span>
-      <i style="background: #00b0ff" class="mtrl-list-item__list-control"></i>
-    </li>
-  </ul>
-
-  <h3>Two-line</h3>
-  <ul class="mtrl-list mtrl-list--two-line">
-    <li class="mtrl-list-item">
-      <i class="mtrl-list-item__supporting-visuals--icon material-icons"
-         aria-hidden="true">favorite</i>
-      <div class="mtrl-list-item__primary-text">
-        <span class="mtrl-list-item__text--primary">Two-line item</span>
-        <span class="mtrl-list-item__text--secondary">Secondary text</span>
-      </div>
-    </li>
-
-    <li class="mtrl-list-item">
-      <i class="mtrl-list-item__supporting-visuals--icon material-icons"
-         aria-hidden="true">favorite</i>
-      <div class="mtrl-list-item__primary-text">
-        <span class="mtrl-list-item__text--overline">Overline</span>
-        <span class="mtrl-list-item__text--primary">Two-line item</span>
-      </div>
-    </li>
-
-    <li class="mtrl-list-item">
-      <i style="background: #00b0ff"
-         class="mtrl-list-item__supporting-visuals--avatar"></i>
-      <div class="mtrl-list-item__primary-text">
-        <span class="mtrl-list-item__text--primary">Two-line item</span>
-        <span class="mtrl-list-item__text--secondary">Secondary text</span>
-      </div>
-    </li>
-
-    <li class="mtrl-list-item">
-      <i style="background: #00b0ff"
-         class="mtrl-list-item__supporting-visuals--square"></i>
-      <div class="mtrl-list-item__primary-text">
-        <span class="mtrl-list-item__text--primary">Two-line item</span>
-        <span class="mtrl-list-item__text--secondary">Secondary text</span>
-      </div>
-      <i style="background: #00b0ff" class="mtrl-list-item__meta-data"></i>
-    </li>
-
-    <li class="mtrl-list-item">
-      <i style="background: #00b0ff"
-         class="mtrl-list-item__supporting-visuals--media"></i>
-      <div class="mtrl-list-item__primary-text">
-        <span class="mtrl-list-item__text--primary">Two-line item</span>
-        <span class="mtrl-list-item__text--secondary">Secondary text</span>
-      </div>
-      <i style="background: #00b0ff" class="mtrl-list-item__meta-data"></i>
-    </li>
-  </ul>
-
-  <h3>Three-line</h3>
-  <ul class="mtrl-list mtrl-list--three-line">
-    <li class="mtrl-list-item">
-      <i class="mtrl-list-item__supporting-visuals--icon material-icons"
-         aria-hidden="true">favorite</i>
-      <div class="mtrl-list-item__primary-text">
-        <span class="mtrl-list-item__text--primary">Three-line item Secondary text Secondary text Secondary text Secondary text Secondary text Secondary text</span>
-        <span class="mtrl-list-item__text--secondary">Secondary text Secondary text Secondary text Secondary text  Secondary text Secondary text Secondary text</span>
-      </div>
-    </li>
-
-    <li class="mtrl-list-item">
-      <i class="mtrl-list-item__supporting-visuals--icon material-icons"
-         aria-hidden="true">favorite</i>
-      <div class="mtrl-list-item__primary-text">
-        <span class="mtrl-list-item__text--overline">Overline</span>
-        <span class="mtrl-list-item__text--primary">Three-line item</span>
-        <span class="mtrl-list-item__text--secondary">Secondary text Secondary text Secondary text Secondary text</span>
-      </div>
-    </li>
-
-    <li class="mtrl-list-item">
-      <i style="background: #00b0ff"
-         class="mtrl-list-item__supporting-visuals--avatar"></i>
-      <div class="mtrl-list-item__primary-text">
-        <span class="mtrl-list-item__text--primary">Three-line item</span>
-        <span class="mtrl-list-item__text--secondary">Secondary text</span>
-      </div>
-    </li>
-
-    <li class="mtrl-list-item">
-      <i style="background: #00b0ff" class="mtrl-list-item__list-control mtrl-list-item__list-control--left"></i>
-      <div class="mtrl-list-item__primary-text">
-        <span class="mtrl-list-item__text--primary">Three-line item</span>
-        <span class="mtrl-list-item__text--secondary">Secondary text</span>
-      </div>
-    </li>
-
-    <li class="mtrl-list-item">
-      <i style="background: #00b0ff"
-         class="mtrl-list-item__supporting-visuals--media"></i>
-      <div class="mtrl-list-item__primary-text">
-        <span class="mtrl-list-item__text--primary">Three-line item</span>
-        <span class="mtrl-list-item__text--secondary">Secondary text</span>
-      </div>
-      <i style="background: #00b0ff" class="mtrl-list-item__meta-data"></i>
-    </li>
-  </ul>
-
-  <div class="mtrl-menu mtrl-menu-surface">
-    <ul class="mtrl-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
-      <li class="mtrl-list-item" role="menuitem">
-        <span class="mtrl-list-item__text">Item 1</span>
-      </li>
-      <li class="mtrl-list-item" role="menuitem">
-        <span class="mtrl-list-item__text">Item 2</span>
-      </li>
-      <li class="mtrl-list-item" role="menuitem">
-        <span class="mtrl-list-item__text">Item 3</span>
-      </li>
-    </ul>
+  <h3>Background Properties</h3>
+  <div class="background-target-1">background-target-1</div>
+  <div class="background-target-2">background-target-2</div>
+  <div class="A">
+    <div class="B">
+      <div class="D"></div>
+      We do things.
+    </div>
+    <div class="C">Very wow.</div>
   </div>
 
-  <div class="mtrl-menu mtrl-menu-surface">
-    <ul class="mtrl-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
-      <li class="mtrl-list-item" role="menuitem">
-        <span class="mtrl-list-item__text">A Menu Item</span>
-      </li>
-      <li class="mtrl-list-item mtrl-list-item--disabled" role="menuitem">
-        <span class="mtrl-list-item__text">Another Menu Item</span>
-      </li>
-      <li class="mtrl-list-item" role="menuitem">
-        <span class="mtrl-list-item__text">The Third Menu Item, The Third Menu Item</span>
-      </li>
-    </ul>
-  </div>
-
-  <div class="mtrl-menu mtrl-menu-surface">
-    <ul class="mtrl-list mtrl-list--with-divider" role="menu" aria-hidden="true" aria-orientation="vertical"
-        tabindex="-1">
-      <li class="mtrl-list-item" role="menuitem">
-        <span class="mtrl-list-item__text">A Menu Item</span>
-      </li>
-      <li class="mtrl-list-item" role="menuitem">
-        <span class="mtrl-list-item__text">Another Menu Item</span>
-      </li>
-      <li class="mtrl-list-item" role="menuitem">
-        <span class="mtrl-list-item__text">The Third Menu Item, The Third Menu Item</span>
-      </li>
-    </ul>
-  </div>
-
+  <h3>Ripple</h3>
+  <button class="mtrl-button" style="width: 100%">
+    <span class="mtrl-button__label">Text Button</span>
+  </button>
+  <button class="mtrl-button mtrl-button--contained">
+    <span class="mtrl-button__label">Contained Button</span>
+  </button>
 </section>
 
-<h2>Slider</h2>
-<section id="silder">
-
-  <label>
-    <input type="range" class="mtrl-slider" min="1" max="100" value="0">
-  </label>
-</section>
 <script type="module" src="index.js"></script>
 </body>
 </html>

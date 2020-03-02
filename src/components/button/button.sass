@@ -15,8 +15,6 @@
   background-color: $container-color
   &.mtrl-button--choice
     background-color: color.mix($container-color, $container-overlay, 100% - $container-overlay--pressed)
-  &.mtrl-button--two-tone
-    background-color: color.mix($container-color, $container-overlay, 100% - $container-overlay--pressed)
 
     &.mtrl-button--contained
       background-color: color.mix($container-color, $container-overlay, (100% - $container-overlay--pressed) / 2)
@@ -90,9 +88,6 @@
     @include button-container($primary, white, 2)
     @include color($on-primary, $text--high-emphasis)
     @include padding(0, 4)
-
-    &.mtrl-button--two-tone
-      @include color($primary, $text--high-emphasis)
 
   &--choice
     @include shape(choice-button)
