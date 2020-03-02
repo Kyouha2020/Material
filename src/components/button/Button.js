@@ -1,18 +1,20 @@
-const initChoiceButton = (button) => {
-    button.addEventListener('click', () => {
-        if (!button.classList.contains('mtrl-button--choice--active'))
-            activateChoiceButton(button)
-        else
-            inactivateChoiceButton(button)
-    })
+const choiceButton = {
+    init(button) {
+        button.addEventListener('click', () => {
+            if (!button.classList.contains('mtrl-button--choice--active'))
+                this.activate(button)
+            else
+                this.inactivate(button)
+        })
+    },
+
+    activate(button) {
+        button.classList.add('mtrl-button--choice--active')
+    },
+
+    inactivate(button) {
+        button.classList.remove('mtrl-button--choice--active')
+    },
 }
 
-const activateChoiceButton = (button) => {
-    button.classList.add('mtrl-button--choice--active')
-}
-
-const inactivateChoiceButton = (button) => {
-    button.classList.remove('mtrl-button--choice--active')
-}
-
-export {initChoiceButton, activateChoiceButton, inactivateChoiceButton}
+export {choiceButton}
