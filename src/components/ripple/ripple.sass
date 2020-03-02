@@ -1,0 +1,7 @@
+@mixin ripple($color, $speed: 2)
+  --color: #{$color}
+  --speed: #{$speed}
+
+  background-image: paint(ripple)
+  --ripple-color: var(--color)
+  --ripple-speed: var(--speed)

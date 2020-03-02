@@ -1,0 +1,69 @@
+.mtrl-aspect-ratio--16-9 {
+  position: relative;
+  overflow: hidden;
+}
+.mtrl-aspect-ratio--16-9::before {
+  display: block;
+  content: "";
+  margin-top: 56.25%;
+}
+
+.mtrl-aspect-ratio--3-2 {
+  position: relative;
+  overflow: hidden;
+}
+.mtrl-aspect-ratio--3-2::before {
+  display: block;
+  content: "";
+  margin-top: 66.6666666667%;
+}
+
+.mtrl-aspect-ratio--4-3 {
+  position: relative;
+  overflow: hidden;
+}
+.mtrl-aspect-ratio--4-3::before {
+  display: block;
+  content: "";
+  margin-top: 75%;
+}
+
+.mtrl-aspect-ratio--square {
+  position: relative;
+  overflow: hidden;
+}
+.mtrl-aspect-ratio--square::before {
+  display: block;
+  content: "";
+  margin-top: 100%;
+}
+
+.mtrl-aspect-ratio--3-4 {
+  position: relative;
+  overflow: hidden;
+}
+.mtrl-aspect-ratio--3-4::before {
+  display: block;
+  content: "";
+  margin-top: 133.3333333333%;
+}
+
+.mtrl-aspect-ratio--2-3 {
+  position: relative;
+  overflow: hidden;
+}
+.mtrl-aspect-ratio--2-3::before {
+  display: block;
+  content: "";
+  margin-top: 150%;
+}
+
+.mtrl-aspect-ratio__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/*# sourceMappingURL=aspect-ratio.css.map */

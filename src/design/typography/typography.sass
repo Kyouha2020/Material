@@ -1,0 +1,25 @@
+@use "sass:map"
+@use "type-scale" as *
+
+// https://material.io/design/typography/the-type-system.html
+
+@function font-size($size)
+  @return $size / 16 * 1rem
+
+@function letter-spacing($letter-spacing, $size)
+  @return $letter-spacing / $size * 1rem
+
+@mixin typography($scale-category)
+  $font-size: map.get($size, $scale-category)
+  font-family: Roboto, sans-serif
+  font-size: font-size($font-size)
+  font-weight: map.get($weight, map.get($font, $scale-category))
+  letter-spacing: letter-spacing(map.get($letter-spacing, $scale-category), $font-size)
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  @if map.get($case, $scale-category) == sentence
+    text-decoration: inherit
+    text-transform: inherit
+  @else if map.get($case, $scale-category) == all_caps
+    text-decoration: none
+    text-transform: uppercase

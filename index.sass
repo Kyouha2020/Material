@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto")
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp")
+
+.test-target
+  position: relative
+  display: inline-flex
+  padding: 24px
+  margin: 8px
+  font-size: 1.25rem
+  background-color: #03dac6
+
+
+.corner-shape-target-1
+  @extend .test-target
+  -webkit-mask-image: paint(corner-shape)
+  --corner-radius: 16px
+  --corner-shape: round
+
+.corner-shape-target-2
+  @extend .corner-shape-target-1
+  --corner-shape: scoop
+
+.corner-shape-target-3
+  @extend .corner-shape-target-1
+  --corner-shape: bevel
+
+.corner-shape-target-4
+  @extend .corner-shape-target-1
+  --corner-shape: notch
+
+.corner-shape-target-5
+  @extend .corner-shape-target-1
+  --corner-shape: iPhoneX
+
+
+.smooth-corners-target-1
+  @extend .test-target
+  width: 128px
+  height: 128px
+  -webkit-mask-image: paint(smooth-corners)
+  --smooth-corners: 4
+
+.smooth-corners-target-2
+  @extend .smooth-corners-target-1
+  --smooth-corners: 5
+
+
+.background-target-1
+  @extend .test-target
+  color: #fff
+  background: url(https://css-houdini.rocks/posts/background-properties/lowpoly.jpg)
+  list-style-image: url(https://css-houdini.rocks/posts/background-properties/lowpoly.jpg)
+  --background-opacity: 1
+  --background-rotate: 10deg
+  --background-filter: hue-rotate(var(--hue-rotate)) grayscale(var(--grayscale)) blur(var(--blur))
+  --blur: 0px
+  --grayscale: 0%
+  --hue-rotate: -50deg
+  background-image: paint(background)
+
+.background-target-2
+  @extend .background-target-1
+  -webkit-mask-image: paint(avatar-polygon)
+  --avatar-sides: 8
+  --avatar-angle: 0deg
+
+.A
+  width: 250px
+  height: 350px
+  margin: 50px auto
+  background: linear-gradient(#fff 50%, #eee)
+  border-radius: 3px
+  overflow: hidden
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .5), 0 5px 15px rgba(0, 0, 0, .4)
+  resize: both
+
+.B, .C
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: center
+  text-align: center
+  font-size: 2em
+
+.B
+  height: 200px
+  padding-bottom: 30px
+  background-color: hsl(0, 100%, 62%)
+  background-image: linear-gradient(hsl(296, 61%, 26%), hsl(0, 100%, 62%))
+  background-repeat: no-repeat
+  border-bottom: 1px solid transparent
+  border-image-source: radial-gradient(closest-corner at 50% -400px, hsl(0, 100%, 62%) 100%, transparent)
+  border-image-slice: 0 0 100% 0
+  border-image-width: var(--separator-size)
+  border-image-outset: var(--separator-size)
+  --separator-shape: curve-left
+  --separator-size: 75px
+  --separator-shadow: .35
+  --separator-shadow-color: rgba(0, 0, 0, .35)
+  border-image-source: paint(separator)
+
+.C
+  height: 150px
+  color: #222
+  padding-bottom: 50px
+  font-size: 1.2em
+
+.D
+  width: 80px
+  height: 80px
+  background: rgba(0, 0, 0, .35)
+  border-radius: 50%
+  margin-bottom: 20px

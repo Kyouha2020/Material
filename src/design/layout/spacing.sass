@@ -1,0 +1,102 @@
+@use "sass:math"
+
+// https://material.io/design/layout/spacing-methods.html
+
+// baseline grid
+@function get($value, $baseline: 4px)
+  @return $value * $baseline
+
+
+// spacing
+@mixin margin-start($start, $baseline: 4px)
+  $start: $start * $baseline
+
+  margin-left: $start
+  [dir=rtl] &
+    margin-right: $start
+
+@mixin margin-end($end, $baseline: 4px)
+  $end: $end * $baseline
+
+  margin-right: $end
+  [dir=rtl] &
+    margin-left: $end
+
+@mixin margin-horizontal($start, $end: $start, $baseline: 4px)
+  $start: $start * $baseline
+  $end: $end * $baseline
+
+  margin-left: $start
+  margin-right: $end
+  [dir=rtl] &
+    margin-left: $end
+    margin-right: $start
+
+@mixin margin($top, $start: $top, $bottom: $top, $end: $start, $baseline: 4px)
+  $top: $top * $baseline
+  $start: $start * $baseline
+  $bottom: $bottom * $baseline
+  $end: $end * $baseline
+
+  @if $top == $bottom and $start == $end and $top == $start
+    margin: $top
+  @else if $top == $bottom and $start == $end
+    margin: $top $start
+  @else if $start == $end
+    margin: $top $start $bottom
+  @else
+    margin: $top $end $bottom $start
+    [dir=rtl] &
+      margin: $top $start $bottom $end
+
+
+@mixin padding-start($start, $baseline: 4px)
+  $start: $start * $baseline
+
+  padding-left: $start
+  [dir=rtl] &
+    padding-right: $start
+
+@mixin padding-end($end, $baseline: 4px)
+  $end: $end * $baseline
+
+  padding-right: $end
+  [dir=rtl] &
+    padding-left: $end
+
+@mixin padding-horizontal($start, $end: $start, $baseline: 4px)
+  $start: $start * $baseline
+  $end: $end * $baseline
+
+  padding-left: $start
+  padding-right: $end
+  [dir=rtl] &
+    padding-left: $end
+    padding-right: $start
+
+@mixin padding($top, $start: $top, $bottom: $top, $end: $start, $baseline: 4px)
+  $top: $top * $baseline
+  $start: $start * $baseline
+  $bottom: $bottom * $baseline
+  $end: $end * $baseline
+
+  @if $top == $bottom and $start == $end and $top == $start
+    padding: $top
+  @else if $top == $bottom and $start == $end
+    padding: $top $start
+  @else if $start == $end
+    padding: $top $start $bottom
+  @else
+    padding: $top $end $bottom $start
+    [dir=rtl] &
+      padding: $top $start $bottom $end
+
+
+// aspect ratios
+@mixin aspect-ratio($x, $y)
+  position: relative
+  overflow: hidden
+  &::before
+    display: block
+    content: ""
+    margin-top: math.percentage($y / $x)

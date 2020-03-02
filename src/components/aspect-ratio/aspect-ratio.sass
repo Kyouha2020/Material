@@ -1,0 +1,26 @@
+@use "../../design/layout/spacing" as *
+
+.mtrl-aspect-ratio--16-9
+  @include aspect-ratio(16, 9)
+
+.mtrl-aspect-ratio--3-2
+  @include aspect-ratio(3, 2)
+
+.mtrl-aspect-ratio--4-3
+  @include aspect-ratio(4, 3)
+
+.mtrl-aspect-ratio--square
+  @include aspect-ratio(1, 1)
+
+.mtrl-aspect-ratio--3-4
+  @include aspect-ratio(3, 4)
+
+.mtrl-aspect-ratio--2-3
+  @include aspect-ratio(2, 3)
+
+.mtrl-aspect-ratio__content
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0

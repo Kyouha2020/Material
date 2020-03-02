@@ -1,0 +1,14 @@
+@use "sass:map"
+
+// https://material.io/design/layout/applying-density.html
+
+$component-height: (button: 36px,)
+
+@mixin density($component, $value: 0, $scale: 4px)
+  $height: map.get($component-height, $component)
+  $density: $value * $scale
+
+  @if $value == 0 or $value == -1 or $value == -2 or $value == -3
+    height: $height + $density
+  @else
+    height: $height

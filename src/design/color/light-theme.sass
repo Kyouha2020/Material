@@ -1,0 +1,18 @@
+@use "../usability/accessibility" as *
+@use "palette" as *
+
+// https://material.io/design/color/the-color-system.html
+
+$primary: $primary-500 !default
+$primary-variant: $primary-700 !default
+$secondary: $secondary-200 !default
+$secondary-variant: $secondary-700 !default
+$background: #ffffff !default
+$surface: #ffffff !default
+$error: #b00020 !default
+
+$on-primary: if(contrast-tone($primary) == "dark", #000, #fff)
+$on-secondary: if(contrast-tone($secondary) == "dark", #000, #fff)
+$on-background: if(contrast-tone($background) == "dark", #000, #fff)
+$on-surface: if(contrast-tone($surface) == "dark", #000, #fff)
+$on-error: if(contrast-tone($error) == "dark", #000, #fff)

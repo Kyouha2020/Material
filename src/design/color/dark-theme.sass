@@ -1,0 +1,20 @@
+@use "../usability/accessibility" as *
+@use "palette" as *
+
+// https://material.io/design/color/dark-theme.html
+
+$primary: $primary-200 !default
+$primary-variant: $primary-700 !default
+$dark-primary: #1f1b24 !default
+$secondary: $secondary-200 !default
+$background: #121212 !default
+$surface: #121212 !default
+$error: #cf6679 !default
+
+$on-primary: if(contrast-tone($primary) == "dark", #000, #fff)
+$on-secondary: if(contrast-tone($secondary) == "dark", #000, #fff)
+$on-background: if(contrast-tone($background) == "dark", #000, #fff)
+$on-surface: if(contrast-tone($surface) == "dark", #000, #fff)
+$on-error: if(contrast-tone($error) == "dark", #000, #fff)
+
+$elevation-overlay: (00: 0%, 01: 5%, 02: 7%, 03: 8%, 04: 9%, 06: 11%, 08: 12%, 12: 14%, 16: 15%, 24: 16%,)
