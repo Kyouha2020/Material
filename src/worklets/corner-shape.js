@@ -6,11 +6,19 @@ registerPaint('corner-shape', class {
     static get inputProperties() {
         return [
             '--corner-radius',
-            '--corner-shape'
+            '--corner-shape',
+            '--stroke-weight',
+            '--stroke-color'
         ]
     }
 
-    paint(ctx, geom, properties) {
+    static get inputArguments() {
+        return [
+            '<custom-ident>'
+        ]
+    }
+
+    paint(ctx, geom, properties, args) {
         const color = 'black'
         let radius = Number(properties.get('--corner-radius').toString().replace('px', ''))
         if (properties.get('--corner-radius').unit === 'percent') {
@@ -42,7 +50,7 @@ registerPaint('corner-shape', class {
             ctx.bezierCurveTo(points[0].x + r, bzr, points[0].x + r * 2 - bzr, r, points[0].x + r * 2, r)
             ctx.lineTo(points[1].x - r * 2, r)
             ctx.bezierCurveTo(points[1].x - r * 2 + bzr, r, points[1].x - r, bzr, points[1].x - r, points[1].y)
-            this.shape = 'round'
+            this.shape = 'rounded'
         }
 
         ctx.lineTo(points[1].x, points[1].y)
@@ -74,18 +82,24 @@ registerPaint('corner-shape', class {
             [points[0].x, points[7].y]
         )
         ctx.closePath()
-        ctx.fill()
+        if (args == 'filled') {
+            ctx.fill()
+        } else if (args == 'outlined') {
+            ctx.strokeStyle = properties.get('--stroke-color')
+            ctx.lineWidth = properties.get('--stroke-weight')
+            ctx.stroke()
+        }
     }
 
     goTo(ctx, point, scoop, round, notch) {
         switch (this.shape) {
-            case 'bevel':
+            case 'cut':
                 ctx.lineTo(point[0], point[1])
                 return
             case 'scoop':
                 ctx.bezierCurveTo(scoop[0], scoop[1], scoop[2], scoop[3], point[0], point[1])
                 return
-            case 'round':
+            case 'rounded':
                 ctx.bezierCurveTo(round[0], round[1], round[2], round[3], point[0], point[1])
                 return
             case 'notch':

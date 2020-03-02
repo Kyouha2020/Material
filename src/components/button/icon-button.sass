@@ -1,0 +1,82 @@
+@use "sass:color"
+@use "sass:map"
+@use "../../design/color/light-theme" as *
+@use "../../design/usability/accessibility" as *
+@use "../../design/interaction/states" as *
+@use "../../design/layout/spacing" as *
+@use "../../design/typography/typography" as *
+@use "../ripple/ripple" as *
+
+@mixin icon-button-container($container-color, $container-overlay)
+  @include ripple(rgba($container-overlay, $container-overlay--pressed))
+  background-color: $container-color
+  &:disabled
+    background-color: rgba(color.grayscale($container-color), $disabled-filled-container)
+  &:hover
+    background-color: color.mix($container-color, $container-overlay, 100% - $container-overlay--hovered)
+  &:focus
+    background-color: color.mix($container-color, $container-overlay, 100% - $container-overlay--focused)
+  &:active
+    background-color: color.mix($container-color, $container-overlay, 100% - $container-overlay--pressed)
+
+.mtrl-icon-button
+  @include typography(button)
+  @include touch-target(icon-button)
+  @include icon-button-container($surface, $primary)
+  @include color($primary, $text--high-emphasis)
+  @include margin(1)
+  width: 40px
+  height: 40px
+  border-radius: 50%
+  position: relative
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  vertical-align: middle
+  user-select: none
+  white-space: nowrap
+  border: none
+  -webkit-tap-highlight-color: transparent
+
+  &:not(:focus-visible)
+    outline: none
+
+  &:focus-visible
+    overflow: hidden
+
+  &:hover
+    cursor: pointer
+
+  &:disabled
+    @include color($on-surface, $text--disabled)
+    cursor: default
+    pointer-events: none
+    border-color: rgba($on-surface, $stroke)
+
+  & > *
+    position: relative
+
+
+  &--outlined
+    @include padding(0, 4)
+    border: 1px solid rgba($on-surface, $stroke)
+    @if tone($surface) == dark
+      &:focus
+        border-color: $primary
+
+  &--contained
+    @include icon-button-container($primary, white)
+    @include color($on-primary, $text--high-emphasis)
+
+  &--transparent
+    @include icon-button-container(transparent, $primary)
+
+  &--no-touch-target
+    overflow: hidden
+
+
+  &__icon
+    width: 18px
+    height: 18px
+    font-size: 18px
+    fill: currentColor

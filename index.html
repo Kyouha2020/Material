@@ -6,29 +6,133 @@
   <title>Button</title>
   <link href="index.css" rel="stylesheet">
   <link href="src/components/button/button.css" rel="stylesheet">
+  <link href="src/components/button/icon-button.css" rel="stylesheet">
 </head>
 <body>
 
 <h2>Button</h2>
 <section id="button">
 
-  <h3>Choice Button</h3>
+  <h3>Shape (CSS Houdini Add-ons)</h3>
+  <div style="color: #b00020;">CSS Houdini is an experimental web feature. Only the Chromium, since 78, has the best
+    compatibility.
+    <a
+        href="https://ishoudinireadyyet.com" target="_blank">Compatibility Table</a></div>
   <div>
-    <button class="mtrl-button mtrl-button--choice">
-      <span class="mtrl-button__label">Choice</span>
-    </button>
+    <div class="shadow-container">
+      <button class="mtrl-button mtrl-button--vertical mtrl-button--rounded-corners">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">Rounded</span>
+      </button>
+    </div>
+    <div class="shadow-container">
+      <button
+          class="mtrl-button mtrl-button--vertical mtrl-button--rounded-corners mtrl-button--rounded-corners--outlined">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">Rounded</span>
+      </button>
+    </div>
 
-    <button class="mtrl-button mtrl-button--choice" disabled>
-      <span class="mtrl-button__label">Choice</span>
-    </button>
+    <div class="shadow-container">
+      <button class="mtrl-button mtrl-button--vertical mtrl-button--cut-corners">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">Cut</span>
+      </button>
+    </div>
+    <div class="shadow-container">
+      <button
+          class="mtrl-button mtrl-button--vertical mtrl-button--cut-corners mtrl-button--cut-corners--outlined">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">Cut</span>
+      </button>
+    </div>
+
+    <div class="shadow-container">
+      <button class="mtrl-button mtrl-button--vertical mtrl-button--scoop-corners">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">Scoop</span>
+      </button>
+    </div>
+    <div class="shadow-container">
+      <button
+          class="mtrl-button mtrl-button--vertical mtrl-button--scoop-corners mtrl-button--scoop-corners--outlined">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">Scoop</span>
+      </button>
+    </div>
+
+    <div class="shadow-container">
+      <button class="mtrl-button mtrl-button--vertical mtrl-button--notch-corners">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">Notch</span>
+      </button>
+    </div>
+    <div class="shadow-container">
+      <button
+          class="mtrl-button mtrl-button--vertical mtrl-button--notch-corners mtrl-button--notch-corners--outlined">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">Notch</span>
+      </button>
+    </div>
+
+    <div class="shadow-container">
+      <button class="mtrl-button mtrl-button--vertical mtrl-button--iphonex-corners">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">iPhoneX</span>
+      </button>
+    </div>
+    <div class="shadow-container">
+      <button
+          class="mtrl-button mtrl-button--vertical mtrl-button--iphonex-corners mtrl-button--iphonex-corners--outlined">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">iPhoneX</span>
+      </button>
+    </div>
+
+    <div class="shadow-container">
+      <button class="mtrl-button mtrl-button--vertical mtrl-button--cut-corners-2">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">Cut 2</span>
+      </button>
+    </div>
+    <div class="shadow-container">
+      <button class="mtrl-button mtrl-button--vertical mtrl-button--cut-corners-2 mtrl-button--cut-corners-2--outlined">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">Cut 2</span>
+      </button>
+    </div>
+
+    <div class="shadow-container">
+      <button class="mtrl-button mtrl-button--vertical mtrl-button--smooth-corners">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">Smooth Corners</span>
+      </button>
+    </div>
+    <div class="shadow-container">
+      <button class="mtrl-button mtrl-button--vertical mtrl-button--smooth-corners--1">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">Smooth Corners - 1</span>
+      </button>
+    </div>
+
+    <div class="shadow-container">
+      <button class="mtrl-button mtrl-button--vertical mtrl-button--polygon">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">Polygon</span>
+      </button>
+    </div>
+
+    <div class="shadow-container">
+      <button class="mtrl-button mtrl-button--vertical mtrl-button--background">
+        <i class="mtrl-button__icon material-icons">favorite</i>
+        <span class="mtrl-button__label">Background</span>
+      </button>
+    </div>
+
   </div>
 
   <h3>Text Button</h3>
   <div>
-    <button class="mtrl-button mtrl-button--vertical">
-      <i class="mtrl-button__icon material-icons">favorite</i>
-      <span class="mtrl-button__label">Vertical</span>
-    </button>
     <button class="mtrl-button mtrl-button--vertical mtrl-button--rounded">
       <i class="mtrl-button__icon material-icons">favorite</i>
       <span class="mtrl-button__label">Rounded</span>
@@ -324,42 +428,32 @@
     </button>
   </div>
 
-</section>
+  <h3>Choice Button</h3>
+  <div>
+    <button class="mtrl-button mtrl-button--choice">
+      <span class="mtrl-button__label">Choice</span>
+    </button>
 
-<h2>CSS Houdini</h2>
-<div style="color: #b00020;">It is an experimental web feature. Only the Chromium, since 78, has the best compatibility.
-  <a
-      href="https://ishoudinireadyyet.com" target="_blank">Compatibility Table</a></div>
-<section>
-  <h3>Corner Shape</h3>
-  <div class="corner-shape-target-1">corner-shape-target-1</div>
-  <div class="corner-shape-target-2">corner-shape-target-2</div>
-  <div class="corner-shape-target-3">corner-shape-target-3</div>
-  <div class="corner-shape-target-4">corner-shape-target-4</div>
-  <div class="corner-shape-target-5">corner-shape-target-5</div>
-
-  <h3>Smooth Corners</h3>
-  <div class="smooth-corners-target-1">smooth-corners-target-1</div>
-  <div class="smooth-corners-target-2">smooth-corners-target-2</div>
-
-  <h3>Background Properties</h3>
-  <div class="background-target-1">background-target-1</div>
-  <div class="background-target-2">background-target-2</div>
-  <div class="A">
-    <div class="B">
-      <div class="D"></div>
-      We do things.
-    </div>
-    <div class="C">Very wow.</div>
+    <button class="mtrl-button mtrl-button--choice" disabled>
+      <span class="mtrl-button__label">Choice</span>
+    </button>
   </div>
 
-  <h3>Ripple</h3>
-  <button class="mtrl-button" style="width: 100%">
-    <span class="mtrl-button__label">Text Button</span>
-  </button>
-  <button class="mtrl-button mtrl-button--contained">
-    <span class="mtrl-button__label">Contained Button</span>
-  </button>
+  <h3>Icon button</h3>
+  <div>
+    <button class="mtrl-icon-button">
+      <i class="mtrl-icon-button__icon material-icons">favorite</i>
+    </button>
+
+    <button class="mtrl-icon-button mtrl-icon-button--outlined">
+      <i class="mtrl-icon-button__icon material-icons">favorite</i>
+    </button>
+
+    <button class="mtrl-icon-button mtrl-icon-button--contained">
+      <i class="mtrl-icon-button__icon material-icons">favorite</i>
+    </button>
+  </div>
+
 </section>
 
 <script type="module" src="index.js"></script>

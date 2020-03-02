@@ -33,6 +33,12 @@
     &:active
       @include elevation($elevation + $elevation-scale * 3)
 
+.shadow-container
+  position: relative
+  display: inline-flex
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.2))
+  transition-property: filter
+
 .mtrl-button
   @include typography(button)
   @include density(button)
@@ -73,17 +79,75 @@
     position: relative
 
 
+  @each $shape in (rounded, cut, scoop, notch, iphonex)
+    &--#{$shape}-corners
+      --border-shape: #{$shape}
+
+      -webkit-mask-image: paint(corner-shape, filled)
+      --corner-radius: 8px
+      border-radius: 8px
+      --corner-shape: var(--border-shape)
+
+      &--outlined
+        --border-color: #{$primary}
+
+        --stroke-color: var(--border-color)
+        --stroke-weight: 1px
+        border-image: paint(corner-shape, outlined) 0 fill !important
+
+  &--cut-corners-2
+    -webkit-mask-image: paint(cut-corners, filled)
+    --corner-radius: 0px 8px 8px 8px
+
+    &--outlined
+      --border-color: #{$primary}
+      --border-width: 1px
+
+      --stroke-color: var(--border-color)
+      --stroke-weight: var(--border-width)
+      border-image: paint(cut-corners, outlined) 0 fill
+
+  &--smooth-corners
+    width: 128px !important
+    height: 128px !important
+    -webkit-mask-image: paint(smooth-corners)
+    --smooth-corners: 4
+
+    &--1
+      width: 128px !important
+      height: 128px !important
+      -webkit-mask-image: paint(smooth-corners)
+      --smooth-corners: 1
+
+  &--polygon
+    -webkit-mask-image: paint(avatar-polygon)
+    --avatar-sides: 8
+    --avatar-angle: 0deg
+
+  &--background
+    background-image: url(https://css-houdini.rocks/posts/background-properties/lowpoly.jpg)
+    list-style-image: url(https://css-houdini.rocks/posts/background-properties/lowpoly.jpg)
+    --background-opacity: 0.5
+    --background-rotate: 10deg
+    --background-filter: hue-rotate(var(--hue-rotate)) grayscale(var(--grayscale)) blur(var(--blur))
+    --blur: 0px
+    --grayscale: 0%
+    --hue-rotate: -50deg
+    background-image: paint(background)
+
+
   &--outlined
-    @include padding(0, 4)
     border: 1px solid rgba($on-surface, $stroke)
     @if tone($surface) == dark
       &:focus
         border-color: $primary
 
+  &:is(.mtrl-button--outlined, .mtrl-button--contained)
+    @include padding(0, 4)
+
   &--contained
     @include button-container($primary, white, 2)
     @include color($on-primary, $text--high-emphasis)
-    @include padding(0, 4)
 
   &--vertical
     @include density(flat-button)
@@ -94,7 +158,7 @@
       @include margin(0, 0, 2)
 
     .mtrl-button__label
-      @include typography(button, 0.5)
+      @include typography(button, 0.875)
 
     .mtrl-button__label + .mtrl-button__icon
       @include margin(2, 0, 0)
