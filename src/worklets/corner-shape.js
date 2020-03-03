@@ -27,8 +27,8 @@ registerPaint('corner-shape', class {
         let radii = properties.get('--corner-radius').toString().replace(/px/g, '').split(' ').slice(1)
         const radius1 = radii[0]
         const radius2 = radii[1] || radii[0]
-        const radius3 = radii[2] || radii[1] || radii[0]
-        const radius4 = radii[3] || radii[2] || radii[1] || radii[0]
+        const radius3 = radii[2] || radii[0]
+        const radius4 = radii[3] || radii[1] || radii[0]
 
         const points = [
             {x: radius1, y: 0},
@@ -47,17 +47,6 @@ registerPaint('corner-shape', class {
 
         ctx.beginPath()
         ctx.moveTo(points[0].x, points[0].y)
-
-        if (this.shape === 'iphonex') {
-            const r = radius1 * .6
-            const bzr = r * this.k
-            ctx.lineTo(points[0].x + r, points[0].y)
-            ctx.bezierCurveTo(points[0].x + r, bzr, points[0].x + r * 2 - bzr, r, points[0].x + r * 2, r)
-            ctx.lineTo(points[1].x - r * 2, r)
-            ctx.bezierCurveTo(points[1].x - r * 2 + bzr, r, points[1].x - r, bzr, points[1].x - r, points[1].y)
-            this.shape = 'rounded'
-        }
-
         ctx.lineTo(points[1].x, points[1].y)
         this.goTo(ctx,
             [points[2].x, points[2].y],
@@ -110,8 +99,6 @@ registerPaint('corner-shape', class {
             case 'notch':
                 ctx.lineTo(notch[0], notch[1])
                 ctx.lineTo(point[0], point[1])
-                return
-            case 'iphonex':
                 return
         }
     }

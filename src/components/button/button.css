@@ -1,8 +1,17 @@
 .shadow-container {
   position: relative;
   display: inline-flex;
-  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2));
-  transition-property: filter;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
+  transition: filter 150ms;
+}
+.shadow-container:hover {
+  filter: drop-shadow(0px 3px 2.5px rgba(0, 0, 0, 0.325));
+}
+.shadow-container:focus {
+  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.35));
+}
+.shadow-container:active {
+  filter: drop-shadow(0px 5px 3.5px rgba(0, 0, 0, 0.4));
 }
 
 .mtrl-button {
@@ -34,7 +43,6 @@
   white-space: nowrap;
   border: none;
   -webkit-tap-highlight-color: transparent;
-  transition: box-shadow 150ms;
 }
 .mtrl-button::after {
   content: "";
@@ -81,15 +89,15 @@
 .mtrl-button > * {
   position: relative;
 }
+.mtrl-button--outlined, .mtrl-button--contained, .mtrl-button--choice {
+  padding: 0px 16px;
+}
 .mtrl-button--outlined {
   --border-color: rgba(0, 0, 0, 0.12);
   --border-width: 1px;
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
   border-image: paint(corner-shape, outlined) 0 fill;
-}
-.mtrl-button.mtrl-button--outlined, .mtrl-button.mtrl-button--contained {
-  padding: 0px 16px;
 }
 .mtrl-button--contained {
   background-color: #6200ee;
@@ -157,7 +165,6 @@
 .mtrl-button--choice {
   background-color: #ffffff;
   color: rgba(0, 0, 0, 0.87);
-  padding: 0px 16px;
   border-bottom: 2px solid #000;
 }
 .mtrl-button--choice:disabled {

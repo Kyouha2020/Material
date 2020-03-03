@@ -26,11 +26,4 @@
   --corner-radius: var(--border-radius);
 }
 
-.mtrl-shape--iphonex-corners {
-  --border-shape: iphonex;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-}
-
 /*# sourceMappingURL=shape.css.map */

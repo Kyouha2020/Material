@@ -36,8 +36,17 @@
 .shadow-container
   position: relative
   display: inline-flex
-  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))
-  transition-property: filter
+  filter: drop-shadow(0px 2px 2px rgba(black, 0.3))
+  transition: filter 150ms
+
+  &:hover
+    filter: drop-shadow(0px 3px 2.5px rgba(black, 0.325))
+
+  &:focus
+    filter: drop-shadow(0px 4px 3px rgba(black, 0.35))
+
+  &:active
+    filter: drop-shadow(0px 5px 3.5px rgba(black, 0.4))
 
 .mtrl-button
   @include typography(button)
@@ -58,7 +67,6 @@
   white-space: nowrap
   border: none
   -webkit-tap-highlight-color: transparent
-  transition: box-shadow 150ms
 
   &:not(:focus-visible)
     outline: none
@@ -78,14 +86,14 @@
   & > *
     position: relative
 
+  &--outlined, &--contained, &--choice
+    @include padding(0, 4)
+
   &--outlined
     @include stroke(rgba($on-surface, $stroke), 1px)
     @if tone($surface) == dark
       &:focus
         border-color: $primary
-
-  &.mtrl-button--outlined, &.mtrl-button--contained
-    @include padding(0, 4)
 
   &--contained
     @include button-container($primary, white, 2)
@@ -112,7 +120,6 @@
   &--choice
     @include button-container($surface, $on-surface)
     @include color($on-surface, $text--high-emphasis)
-    @include padding(0, 4)
     border-bottom: 2px solid $on-surface
 
     &--active
