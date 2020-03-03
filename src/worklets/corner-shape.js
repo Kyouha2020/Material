@@ -7,7 +7,7 @@ registerPaint('corner-shape', class {
         return [
             '--corner-radius',
             '--corner-shape',
-            '--stroke-weight',
+            '--stroke-width',
             '--stroke-color'
         ]
     }
@@ -86,7 +86,7 @@ registerPaint('corner-shape', class {
             ctx.fill()
         } else if (args == 'outlined') {
             ctx.strokeStyle = properties.get('--stroke-color')
-            ctx.lineWidth = properties.get('--stroke-weight')
+            ctx.lineWidth = properties.get('--stroke-width').toString().replace('px', '') * 2
             ctx.stroke()
         }
     }

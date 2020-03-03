@@ -43,7 +43,7 @@
   @include typography(button)
   @include density(button)
   @include touch-target(button)
-  @include shape(button)
+  @include shape(rounded, 8px)
   @include button-container($surface, $primary)
   @include color($primary, $text--high-emphasis)
   @include margin(1)
@@ -78,71 +78,13 @@
   & > *
     position: relative
 
-
-  @each $shape in (rounded, cut, scoop, notch, iphonex)
-    &--#{$shape}-corners
-      --border-shape: #{$shape}
-
-      -webkit-mask-image: paint(corner-shape, filled)
-      --corner-radius: 8px
-      border-radius: 8px
-      --corner-shape: var(--border-shape)
-
-      &--outlined
-        --border-color: #{$primary}
-
-        --stroke-color: var(--border-color)
-        --stroke-weight: 1px
-        border-image: paint(corner-shape, outlined) 0 fill !important
-
-  &--cut-corners-2
-    -webkit-mask-image: paint(cut-corners, filled)
-    --corner-radius: 0px 8px 8px 8px
-
-    &--outlined
-      --border-color: #{$primary}
-      --border-width: 1px
-
-      --stroke-color: var(--border-color)
-      --stroke-weight: var(--border-width)
-      border-image: paint(cut-corners, outlined) 0 fill
-
-  &--smooth-corners
-    width: 128px !important
-    height: 128px !important
-    -webkit-mask-image: paint(smooth-corners)
-    --smooth-corners: 4
-
-    &--1
-      width: 128px !important
-      height: 128px !important
-      -webkit-mask-image: paint(smooth-corners)
-      --smooth-corners: 1
-
-  &--polygon
-    -webkit-mask-image: paint(avatar-polygon)
-    --avatar-sides: 8
-    --avatar-angle: 0deg
-
-  &--background
-    background-image: url(https://css-houdini.rocks/posts/background-properties/lowpoly.jpg)
-    list-style-image: url(https://css-houdini.rocks/posts/background-properties/lowpoly.jpg)
-    --background-opacity: 0.5
-    --background-rotate: 10deg
-    --background-filter: hue-rotate(var(--hue-rotate)) grayscale(var(--grayscale)) blur(var(--blur))
-    --blur: 0px
-    --grayscale: 0%
-    --hue-rotate: -50deg
-    background-image: paint(background)
-
-
   &--outlined
-    border: 1px solid rgba($on-surface, $stroke)
+    @include stroke(rgba($on-surface, $stroke), 1px)
     @if tone($surface) == dark
       &:focus
         border-color: $primary
 
-  &:is(.mtrl-button--outlined, .mtrl-button--contained)
+  &.mtrl-button--outlined, &.mtrl-button--contained
     @include padding(0, 4)
 
   &--contained
@@ -150,7 +92,7 @@
     @include color($on-primary, $text--high-emphasis)
 
   &--vertical
-    @include density(flat-button)
+    @include density(vertical-button)
     @include padding(8, 4)
     flex-direction: column
 
@@ -164,11 +106,10 @@
       @include margin(2, 0, 0)
 
     &.mtrl-button--rounded
-      @include shape(flat-button, $variant: rounded)
+      @include shape($border-radius: height(vertical-button) / 2)
       @include padding(8, 6)
 
   &--choice
-    @include shape(choice-button)
     @include button-container($surface, $on-surface)
     @include color($on-surface, $text--high-emphasis)
     @include padding(0, 4)
@@ -180,7 +121,7 @@
       border-color: $primary
 
   &--rounded
-    @include shape(button, $variant: rounded)
+    @include shape($border-radius: height(button) / 2)
 
   &--block
     width: 100%

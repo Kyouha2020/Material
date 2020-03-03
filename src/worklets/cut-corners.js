@@ -2,7 +2,7 @@ registerPaint('cut-corners', class {
     static get inputProperties() {
         return [
             '--corner-radius',
-            '--stroke-weight',
+            '--stroke-width',
             '--stroke-color'
         ]
     }
@@ -15,7 +15,7 @@ registerPaint('cut-corners', class {
 
     paint(ctx, geom, properties, args) {
         let radii = properties.get('--corner-radius').toString().replace(/px/g, '').split(' ').slice(1)
-        const inset = parseInt(properties.get('--stroke-weight')[0]) / 2 || 0
+        const inset = parseInt(properties.get('--stroke-width')[0]) / 2 || 0
         const radius1 = radii[0]
         const radius2 = radii[1]
         const radius3 = radii[2]
@@ -47,7 +47,7 @@ registerPaint('cut-corners', class {
             ctx.fill()
         } else if (args == 'outlined') {
             ctx.strokeStyle = properties.get('--stroke-color')
-            ctx.lineWidth = properties.get('--stroke-weight')
+            ctx.lineWidth = properties.get('--stroke-width')
             ctx.stroke()
         }
     }

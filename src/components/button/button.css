@@ -15,7 +15,11 @@
   text-decoration: none;
   text-transform: uppercase;
   height: 36px;
-  border-radius: 4px;
+  --border-shape: rounded;
+  --border-radius: 8px;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: var(--border-shape);
+  --corner-radius: var(--border-radius);
   --color: rgba(98, 0, 238, 0.1);
   --speed: 2;
   background-image: paint(ripple);
@@ -82,114 +86,14 @@
 .mtrl-button > * {
   position: relative;
 }
-.mtrl-button--rounded-corners {
-  --border-shape: rounded;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-radius: 8px;
-  border-radius: 8px;
-  --corner-shape: var(--border-shape);
-}
-.mtrl-button--rounded-corners--outlined {
-  --border-color: #6200ee;
-  --stroke-color: var(--border-color);
-  --stroke-weight: 1px;
-  border-image: paint(corner-shape, outlined) 0 fill !important;
-}
-.mtrl-button--cut-corners {
-  --border-shape: cut;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-radius: 8px;
-  border-radius: 8px;
-  --corner-shape: var(--border-shape);
-}
-.mtrl-button--cut-corners--outlined {
-  --border-color: #6200ee;
-  --stroke-color: var(--border-color);
-  --stroke-weight: 1px;
-  border-image: paint(corner-shape, outlined) 0 fill !important;
-}
-.mtrl-button--scoop-corners {
-  --border-shape: scoop;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-radius: 8px;
-  border-radius: 8px;
-  --corner-shape: var(--border-shape);
-}
-.mtrl-button--scoop-corners--outlined {
-  --border-color: #6200ee;
-  --stroke-color: var(--border-color);
-  --stroke-weight: 1px;
-  border-image: paint(corner-shape, outlined) 0 fill !important;
-}
-.mtrl-button--notch-corners {
-  --border-shape: notch;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-radius: 8px;
-  border-radius: 8px;
-  --corner-shape: var(--border-shape);
-}
-.mtrl-button--notch-corners--outlined {
-  --border-color: #6200ee;
-  --stroke-color: var(--border-color);
-  --stroke-weight: 1px;
-  border-image: paint(corner-shape, outlined) 0 fill !important;
-}
-.mtrl-button--iphonex-corners {
-  --border-shape: iphonex;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-radius: 8px;
-  border-radius: 8px;
-  --corner-shape: var(--border-shape);
-}
-.mtrl-button--iphonex-corners--outlined {
-  --border-color: #6200ee;
-  --stroke-color: var(--border-color);
-  --stroke-weight: 1px;
-  border-image: paint(corner-shape, outlined) 0 fill !important;
-}
-.mtrl-button--cut-corners-2 {
-  -webkit-mask-image: paint(cut-corners, filled);
-  --corner-radius: 0px 8px 8px 8px;
-}
-.mtrl-button--cut-corners-2--outlined {
-  --border-color: #6200ee;
+.mtrl-button--outlined {
+  --border-color: rgba(0, 0, 0, 0.12);
   --border-width: 1px;
   --stroke-color: var(--border-color);
-  --stroke-weight: var(--border-width);
-  border-image: paint(cut-corners, outlined) 0 fill;
+  --stroke-width: var(--border-width);
+  border-image: paint(corner-shape, outlined) 0 fill;
 }
-.mtrl-button--smooth-corners {
-  width: 128px !important;
-  height: 128px !important;
-  -webkit-mask-image: paint(smooth-corners);
-  --smooth-corners: 4;
-}
-.mtrl-button--smooth-corners--1 {
-  width: 128px !important;
-  height: 128px !important;
-  -webkit-mask-image: paint(smooth-corners);
-  --smooth-corners: 1;
-}
-.mtrl-button--polygon {
-  -webkit-mask-image: paint(avatar-polygon);
-  --avatar-sides: 8;
-  --avatar-angle: 0deg;
-}
-.mtrl-button--background {
-  background-image: url(https://css-houdini.rocks/posts/background-properties/lowpoly.jpg);
-  list-style-image: url(https://css-houdini.rocks/posts/background-properties/lowpoly.jpg);
-  --background-opacity: 0.5;
-  --background-rotate: 10deg;
-  --background-filter: hue-rotate(var(--hue-rotate)) grayscale(var(--grayscale)) blur(var(--blur));
-  --blur: 0px;
-  --grayscale: 0%;
-  --hue-rotate: -50deg;
-  background-image: paint(background);
-}
-.mtrl-button--outlined {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-}
-.mtrl-button:is(.mtrl-button--outlined, .mtrl-button--contained) {
+.mtrl-button.mtrl-button--outlined, .mtrl-button.mtrl-button--contained {
   padding: 0px 16px;
 }
 .mtrl-button--contained {
@@ -254,11 +158,13 @@
   margin: 8px 0px 0px;
 }
 .mtrl-button--vertical.mtrl-button--rounded {
-  border-radius: 32px;
+  --border-radius: 32px;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: var(--border-shape);
+  --corner-radius: var(--border-radius);
   padding: 32px 24px;
 }
 .mtrl-button--choice {
-  border-radius: 8px 8px 0 0;
   --color: rgba(0, 0, 0, 0.1);
   --speed: 2;
   background-image: paint(ripple);
@@ -314,8 +220,10 @@
   background-color: #efe6fd;
 }
 .mtrl-button--rounded {
-  border-radius: 4px;
-  border-radius: 32px;
+  --border-radius: 18px;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: var(--border-shape);
+  --corner-radius: var(--border-radius);
 }
 .mtrl-button--block {
   width: 100%;

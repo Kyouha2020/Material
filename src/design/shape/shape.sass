@@ -3,10 +3,38 @@
 
 // https://material.io/design/shape/applying-shape-to-ui.html
 
-$component-corners: (button: 4px, choice-button: 8px 8px 0 0)
+@mixin shape($shape: null, $border-radius: null)
+  @if $shape != null
+    --border-shape: #{$shape}
+  @if $border-radius != null
+    --border-radius: #{$border-radius}
 
-@mixin shape($component, $style: rounded, $variant: normal)
-  @if $style == rounded
-    border-radius: map.get($component-corners, $component)
-  @if $variant == rounded
-    border-radius: map.get($component-height, flat-button) / 2
+  @if $shape == rounded or cut or scoop or notch or iphonex
+    -webkit-mask-image: paint(corner-shape, filled)
+    --corner-shape: var(--border-shape)
+    --corner-radius: var(--border-radius)
+
+  @if $shape == smooth-corners
+    -webkit-mask-image: paint(smooth-corners)
+    --smooth-corners: var(--border-radius)
+
+  @if $shape == polygon
+    -webkit-mask-image: paint(avatar-polygon)
+    --avatar-sides: var(--border-radius)
+    --avatar-angle: 0deg
+
+@mixin stroke($stroke-color, $stroke-width)
+  --border-color: #{$stroke-color}
+  --border-width: #{$stroke-width}
+
+  --stroke-color: var(--border-color)
+  --stroke-width: var(--border-width)
+  border-image: paint(corner-shape, outlined) 0 fill
+
+//@if $shape == cut-corners
+  -webkit-mask-image: paint(cut-corners, filled)
+
+//@if $shape == cut-corners--outlined
+  --stroke-color: var(--border-color)
+  --stroke-width: var(--border-width)
+  border-image: paint(cut-corners, outlined) 0 fill
