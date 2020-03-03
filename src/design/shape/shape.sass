@@ -5,7 +5,8 @@
 
 @mixin shape($shape: null, $border-radius: null)
   @if $shape != null
-    --border-shape: #{$shape}
+    @if $shape != cut2
+      --border-shape: #{$shape}
   @if $border-radius != null
     --border-radius: #{$border-radius}
 
@@ -30,11 +31,3 @@
   --stroke-color: var(--border-color)
   --stroke-width: var(--border-width)
   border-image: paint(corner-shape, outlined) 0 fill
-
-//@if $shape == cut-corners
-  -webkit-mask-image: paint(cut-corners, filled)
-
-//@if $shape == cut-corners--outlined
-  --stroke-color: var(--border-color)
-  --stroke-width: var(--border-width)
-  border-image: paint(cut-corners, outlined) 0 fill

@@ -8,10 +8,10 @@
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
 @use "../../design/typography/typography" as *
-@use "../ripple/ripple" as *
+//@use "../ripple/ripple" as *
 
 @mixin button-container($container-color, $container-overlay, $elevation: 0, $elevation-scale: 2)
-  @include ripple(rgba($container-overlay, $container-overlay--pressed))
+  //@include ripple(rgba($container-overlay, $container-overlay--pressed))
   background-color: $container-color
   &:disabled
     @include elevation(0)
@@ -36,7 +36,7 @@
 .shadow-container
   position: relative
   display: inline-flex
-  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.2))
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))
   transition-property: filter
 
 .mtrl-button

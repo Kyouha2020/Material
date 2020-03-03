@@ -7,11 +7,6 @@
   -webkit-font-smoothing: antialiased;
   text-decoration: none;
   text-transform: uppercase;
-  --color: rgba(98, 0, 238, 0.1);
-  --speed: 2;
-  background-image: paint(ripple);
-  --ripple-color: var(--color);
-  --ripple-speed: var(--speed);
   background-color: #ffffff;
   color: rgba(98, 0, 238, 0.87);
   margin: 4px;
@@ -73,11 +68,6 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 .mtrl-icon-button--contained {
-  --color: rgba(255, 255, 255, 0.1);
-  --speed: 2;
-  background-image: paint(ripple);
-  --ripple-color: var(--color);
-  --ripple-speed: var(--speed);
   background-color: #6200ee;
   color: rgba(255, 255, 255, 0.87);
 }
@@ -94,11 +84,6 @@
   background-color: #721af0;
 }
 .mtrl-icon-button--transparent {
-  --color: rgba(98, 0, 238, 0.1);
-  --speed: 2;
-  background-image: paint(ripple);
-  --ripple-color: var(--color);
-  --ripple-speed: var(--speed);
   background-color: transparent;
 }
 .mtrl-icon-button--transparent:disabled {

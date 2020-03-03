@@ -5,10 +5,10 @@
 @use "../../design/interaction/states" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/typography/typography" as *
-@use "../ripple/ripple" as *
+//@use "../ripple/ripple" as *
 
 @mixin icon-button-container($container-color, $container-overlay)
-  @include ripple(rgba($container-overlay, $container-overlay--pressed))
+  //@include ripple(rgba($container-overlay, $container-overlay--pressed))
   background-color: $container-color
   &:disabled
     background-color: rgba(color.grayscale($container-color), $disabled-filled-container)
