@@ -6,32 +6,21 @@
 @mixin shape($shape: null, $radius: null, $safe: true)
   @if $shape != null
     --border-shape: #{$shape}
-
   @if $radius != null
     --border-radius: #{$radius}
-
-    @if $safe == true
-      border-radius: $radius
-
-  @if $safe == false
+  @if $safe == true
+    border-radius: $radius
+  @else
     border-radius: 0
-    @if $shape == rounded or cut or scoop or notch or iphonex or smooth-rounded
-      -webkit-mask-image: paint(corner-shape, filled)
-      --corner-shape: var(--border-shape)
-      --corner-radius: var(--border-radius)
-
-    @if $shape == polygon
-      -webkit-mask-image: paint(avatar-polygon)
-      --avatar-sides: var(--border-radius)
-      --avatar-angle: 0deg
+    -webkit-mask-image: paint(corner-shape, filled)
+    --corner-shape: var(--border-shape)
+    --corner-radius: var(--border-radius)
 
 @mixin stroke($color: null, $width: null, $safe: true)
   @if $color != null
     --border-color: #{$color}
-
   @if $width != null
     --border-width: #{$width}
-
   @if $safe == true
     border: $width solid $color
   @else
@@ -39,3 +28,15 @@
     border-image: paint(corner-shape, outlined) 0 fill
     --stroke-color: var(--border-color)
     --stroke-width: var(--border-width)
+
+@mixin polygon($sides: null, $angle: 0deg, $safe: true)
+  @if $sides != null
+    --size: #{$sides}
+  @if $angle != 0deg
+    --angle: #{$angle}
+  @if $safe == true
+  @else
+    -webkit-mask-image: paint(corner-shape, filled)
+    --corner-shape: polygon
+    --polygon-sides: var(--size)
+    --polygon-angle: var(--angle)

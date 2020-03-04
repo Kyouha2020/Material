@@ -74,6 +74,13 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-icon-button[unsafe].mtrl-icon-button--polygon {
+  --size: 4;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: polygon;
+  --polygon-sides: var(--size);
+  --polygon-angle: var(--angle);
+}
 .mtrl-icon-button:not(:focus-visible) {
   outline: none;
 }

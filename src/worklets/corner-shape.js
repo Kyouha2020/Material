@@ -8,7 +8,9 @@ registerPaint('corner-shape', class {
             '--corner-radius',
             '--corner-shape',
             '--stroke-width',
-            '--stroke-color'
+            '--stroke-color',
+            '--polygon-sides',
+            '--polygon-angle'
         ]
     }
 
@@ -47,6 +49,29 @@ registerPaint('corner-shape', class {
                 const x = (3 * r - i) + w
                 const y = (-Math.pow(Math.abs(Math.pow(r, m) - Math.pow(Math.abs(3 * r - i), m)), 1 / m)) + h
                 ctx.lineTo(x, y)
+            }
+
+            ctx.closePath()
+        } else if (this.shape === 'polygon') {
+            const numSides = properties.get('--polygon-sides').toString()
+            const rotate = properties.get('--polygon-angle').toString().replace(/ |deg/g, '')
+
+            const center = {x: geom.width / 2, y: geom.height / 2}
+            const radius = Math.min(geom.width, geom.height) / 2
+
+            ctx.translate(geom.width / 2, geom.height / 2)
+            ctx.rotate(rotate * Math.PI / 180)
+            ctx.translate(-geom.width / 2, -geom.height / 2)
+
+            ctx.beginPath()
+
+            for (let i = 1; i <= numSides; i++) {
+                const xPos = center.x + radius * Math.cos(2 * Math.PI * i / numSides)
+                const yPos = center.y + radius * Math.sin(2 * Math.PI * i / numSides)
+                if (i === 0)
+                    ctx.moveTo(xPos, yPos)
+                else
+                    ctx.lineTo(xPos, yPos)
             }
 
             ctx.closePath()
