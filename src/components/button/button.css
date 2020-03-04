@@ -57,15 +57,15 @@
 .mtrl-button[unsafe] {
   --border-radius: 8px;
   border-radius: 0;
+  -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);
   --corner-radius: var(--border-radius);
-  -webkit-mask-image: paint(corner-shape, filled);
 }
 .mtrl-button[unsafe].mtrl-button--outlined {
-  border: 0;
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
-  border-image: paint(corner-shape, outlined) 0 fill;
 }
 .mtrl-button:not(:focus-visible) {
   outline: none;
@@ -81,9 +81,6 @@
   cursor: default;
   pointer-events: none;
   border-color: rgba(0, 0, 0, 0.12);
-}
-.mtrl-button > * {
-  position: relative;
 }
 .mtrl-button--outlined, .mtrl-button--contained, .mtrl-button--choice {
   padding: 0px 16px;
@@ -132,6 +129,16 @@
   height: 64px;
   padding: 32px 16px;
   flex-direction: column;
+}
+.mtrl-button--vertical::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
 }
 .mtrl-button--vertical .mtrl-button__icon {
   margin: 0px 0px 8px;

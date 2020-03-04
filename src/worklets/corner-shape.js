@@ -20,59 +20,91 @@ registerPaint('corner-shape', class {
 
     paint(ctx, geom, properties, args) {
         this.shape = properties.get('--corner-shape').toString().toLowerCase().trim()
+        let radii = properties.get('--corner-radius').toString().replace(/px|%/g, '').split(' ').slice(1)
 
-        let radii = properties.get('--corner-radius').toString().replace(/px/g, '').split(' ').slice(1)
-        const radius1 = radii[0]
-        const radius2 = radii[1] || radii[0]
-        const radius3 = radii[2] || radii[0]
-        const radius4 = radii[3] || radii[1] || radii[0]
+        if (this.shape === 'smooth-rounded') {
+            const n = properties.get('--corner-radius').toString()
+            let m = n
+            if (n > 100) m = 100
+            if (n < 0.00000000001) m = 0.00000000001
+            const r = geom.width / 2
+            const w = geom.width / 2
+            const h = geom.height / 2
 
-        const points = [
-            {x: radius1, y: 0},
-            {x: geom.width - radius2, y: 0},
-            {x: geom.width, y: radius2},
-            {x: geom.width, y: geom.height - radius3},
-            {x: geom.width - radius3, y: geom.height},
-            {x: radius4, y: geom.height},
-            {x: 0, y: geom.height - radius4},
-            {x: 0, y: radius1},
-        ]
-        const bezierRadius1 = radius1 * this.k
-        const bezierRadius2 = radius2 * this.k
-        const bezierRadius3 = radius3 * this.k
-        const bezierRadius4 = radius4 * this.k
+            ctx.beginPath();
 
-        ctx.beginPath()
-        ctx.moveTo(points[0].x, points[0].y)
-        ctx.lineTo(points[1].x, points[1].y)
-        this.goTo(ctx,
-            [points[2].x, points[2].y],
-            [geom.width - radius2, bezierRadius2, geom.width - bezierRadius2, radius2],
-            [geom.width - radius2 + bezierRadius2, 0, geom.width, radius2 - bezierRadius2],
-            [points[1].x, points[2].y]
-        )
-        ctx.lineTo(points[3].x, points[3].y)
-        this.goTo(ctx,
-            [points[4].x, points[4].y],
-            [geom.width - bezierRadius3, geom.height - radius3, geom.width - radius3, geom.height - bezierRadius3],
-            [geom.width, geom.height - radius3 + bezierRadius3, geom.width - radius3 + bezierRadius3, geom.height],
-            [points[4].x, points[3].y]
-        )
-        ctx.lineTo(points[5].x, points[5].y)
-        this.goTo(ctx,
-            [points[6].x, points[6].y],
-            [radius4, geom.height - bezierRadius4, bezierRadius4, geom.height - radius4],
-            [radius4 - bezierRadius4, geom.height, 0, geom.height - radius4 + bezierRadius4],
-            [points[5].x, points[6].y]
-        )
-        ctx.lineTo(points[7].x, points[7].y)
-        this.goTo(ctx,
-            [points[0].x, points[0].y],
-            [bezierRadius1, radius1, radius1, bezierRadius1],
-            [0, radius1 - bezierRadius1, radius1 - bezierRadius1, 0],
-            [points[0].x, points[7].y]
-        )
-        ctx.closePath()
+            for (let i = 0; i < (2 * r + 1); i++) {
+                const x = (i - r) + w
+                const y = (Math.pow(Math.abs(Math.pow(r, m) - Math.pow(Math.abs(i - r), m)), 1 / m)) + h
+
+                if (i === 0)
+                    ctx.moveTo(x, y)
+                else
+                    ctx.lineTo(x, y)
+            }
+
+            for (let i = (2 * r); i < (4 * r + 1); i++) {
+                const x = (3 * r - i) + w
+                const y = (-Math.pow(Math.abs(Math.pow(r, m) - Math.pow(Math.abs(3 * r - i), m)), 1 / m)) + h
+                ctx.lineTo(x, y)
+            }
+
+            ctx.closePath()
+        } else {
+            const radius1 = radii[0]
+            const radius2 = radii[1] || radii[0]
+            const radius3 = radii[2] || radii[0]
+            const radius4 = radii[3] || radii[1] || radii[0]
+
+            const bezierRadius1 = radius1 * this.k
+            const bezierRadius2 = radius2 * this.k
+            const bezierRadius3 = radius3 * this.k
+            const bezierRadius4 = radius4 * this.k
+
+            const points = [
+                {x: radius1, y: 0},
+                {x: geom.width - radius2, y: 0},
+                {x: geom.width, y: radius2},
+                {x: geom.width, y: geom.height - radius3},
+                {x: geom.width - radius3, y: geom.height},
+                {x: radius4, y: geom.height},
+                {x: 0, y: geom.height - radius4},
+                {x: 0, y: radius1},
+            ]
+
+            ctx.beginPath()
+            ctx.moveTo(points[0].x, points[0].y)
+            ctx.lineTo(points[1].x, points[1].y)
+            this.goTo(ctx,
+                [points[2].x, points[2].y],
+                [geom.width - radius2, bezierRadius2, geom.width - bezierRadius2, radius2],
+                [geom.width - radius2 + bezierRadius2, 0, geom.width, radius2 - bezierRadius2],
+                [points[1].x, points[2].y]
+            )
+            ctx.lineTo(points[3].x, points[3].y)
+            this.goTo(ctx,
+                [points[4].x, points[4].y],
+                [geom.width - bezierRadius3, geom.height - radius3, geom.width - radius3, geom.height - bezierRadius3],
+                [geom.width, geom.height - radius3 + bezierRadius3, geom.width - radius3 + bezierRadius3, geom.height],
+                [points[4].x, points[3].y]
+            )
+            ctx.lineTo(points[5].x, points[5].y)
+            this.goTo(ctx,
+                [points[6].x, points[6].y],
+                [radius4, geom.height - bezierRadius4, bezierRadius4, geom.height - radius4],
+                [radius4 - bezierRadius4, geom.height, 0, geom.height - radius4 + bezierRadius4],
+                [points[5].x, points[6].y]
+            )
+            ctx.lineTo(points[7].x, points[7].y)
+            this.goTo(ctx,
+                [points[0].x, points[0].y],
+                [bezierRadius1, radius1, radius1, bezierRadius1],
+                [0, radius1 - bezierRadius1, radius1 - bezierRadius1, 0],
+                [points[0].x, points[7].y]
+            )
+            ctx.closePath()
+        }
+
         if (args == 'filled') {
             ctx.fill()
         } else if (args == 'outlined') {

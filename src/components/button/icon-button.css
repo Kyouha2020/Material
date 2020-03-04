@@ -13,8 +13,9 @@
   background-color: #ffffff;
   color: rgba(98, 0, 238, 0.87);
   margin: 4px;
-  width: 40px;
-  height: 40px;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -28,7 +29,7 @@
 .mtrl-icon-button::after {
   content: "";
   position: absolute;
-  top: -4px;
+  top: 0px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -54,26 +55,24 @@
   --corner-radius: var(--border-radius);
 }
 .mtrl-icon-button[unsafe].mtrl-icon-button--outlined {
-  border: 0;
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
-  border-image: paint(corner-shape, outlined) 0 fill;
 }
 .mtrl-icon-button[unsafe].mtrl-icon-button--smooth-corners {
-  --border-shape: smooth-corners;
+  --border-shape: smooth-rounded;
   --border-radius: 2;
   border-radius: 0;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);
   --corner-radius: var(--border-radius);
-  -webkit-mask-image: paint(smooth-corners, filled);
-  --smooth-corners: var(--border-radius);
 }
 .mtrl-icon-button[unsafe].mtrl-icon-button--smooth-corners.mtrl-icon-button--outlined {
-  border: 0;
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
-  border-image: paint(smooth-corners, outlined) 0 fill;
 }
 .mtrl-icon-button:not(:focus-visible) {
   outline: none;
@@ -90,14 +89,10 @@
   pointer-events: none;
   border-color: rgba(0, 0, 0, 0.12);
 }
-.mtrl-icon-button > * {
-  position: relative;
-}
 .mtrl-icon-button--outlined {
   --border-color: rgba(0, 0, 0, 0.12);
   --border-width: 1px;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 0px 16px;
 }
 .mtrl-icon-button--contained {
   background-color: #6200ee;
@@ -134,9 +129,9 @@
   overflow: hidden;
 }
 .mtrl-icon-button__icon {
-  width: 18px;
-  height: 18px;
-  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
   fill: currentColor;
 }
 
