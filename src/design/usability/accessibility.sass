@@ -64,12 +64,13 @@ $stroke: 12%
   $height: map.get($component-height, $component)
   $touch-target: $touch-target
 
-  &::after
-    content: ''
-    position: absolute
-    top: ($height - $touch-target) / 2
-    right: 0
-    bottom: 0
-    left: 0
-    width: 100%
-    height: $touch-target
+  @if $height <= $touch-target
+    &::after
+      content: ''
+      position: absolute
+      top: ($height - $touch-target) / 2
+      right: 0
+      bottom: 0
+      left: 0
+      width: 100%
+      height: $touch-target

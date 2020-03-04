@@ -1,19 +1,3 @@
-.shadow-container {
-  position: relative;
-  display: inline-flex;
-  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
-  transition: filter 150ms;
-}
-.shadow-container:hover {
-  filter: drop-shadow(0px 3px 2.5px rgba(0, 0, 0, 0.325));
-}
-.shadow-container:focus {
-  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.35));
-}
-.shadow-container:active {
-  filter: drop-shadow(0px 5px 3.5px rgba(0, 0, 0, 0.4));
-}
-
 .mtrl-button {
   font-family: Roboto, sans-serif;
   font-size: 0.875rem;
@@ -25,10 +9,8 @@
   text-transform: uppercase;
   height: 36px;
   --border-shape: rounded;
-  --border-radius: 8px;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
+  --border-radius: 4px;
+  border-radius: 4px;
   background-color: #ffffff;
   color: rgba(98, 0, 238, 0.87);
   margin: 4px;
@@ -43,6 +25,7 @@
   white-space: nowrap;
   border: none;
   -webkit-tap-highlight-color: transparent;
+  transition: box-shadow 150ms;
 }
 .mtrl-button::after {
   content: "";
@@ -71,6 +54,19 @@
 .mtrl-button:active {
   background-color: #efe6fd;
 }
+.mtrl-button[unsafe] {
+  --border-radius: 8px;
+  border-radius: 0;
+  --corner-shape: var(--border-shape);
+  --corner-radius: var(--border-radius);
+  -webkit-mask-image: paint(corner-shape, filled);
+}
+.mtrl-button[unsafe]:not(.mtrl-button--choice) {
+  border: 0;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+  border-image: paint(corner-shape, outlined) 0 fill;
+}
 .mtrl-button:not(:focus-visible) {
   outline: none;
 }
@@ -95,9 +91,7 @@
 .mtrl-button--outlined {
   --border-color: rgba(0, 0, 0, 0.12);
   --border-width: 1px;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-  border-image: paint(corner-shape, outlined) 0 fill;
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--contained {
   background-color: #6200ee;
@@ -157,9 +151,7 @@
 }
 .mtrl-button--vertical.mtrl-button--rounded {
   --border-radius: 32px;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
+  border-radius: 32px;
   padding: 32px 24px;
 }
 .mtrl-button--choice {
@@ -208,9 +200,7 @@
 }
 .mtrl-button--rounded {
   --border-radius: 18px;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
+  border-radius: 18px;
 }
 .mtrl-button--block {
   width: 100%;

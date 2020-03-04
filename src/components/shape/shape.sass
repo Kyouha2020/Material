@@ -2,4 +2,4 @@
 
 @each $shape in (rounded, cut, scoop, notch)
   .mtrl-shape--#{$shape}-corners
-    @include shape($shape)
+    @include shape($shape, $safe: false)

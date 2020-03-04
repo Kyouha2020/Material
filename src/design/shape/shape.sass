@@ -3,31 +3,43 @@
 
 // https://material.io/design/shape/applying-shape-to-ui.html
 
-@mixin shape($shape: null, $border-radius: null)
+@mixin shape($shape: null, $radius: null, $safe: true)
   @if $shape != null
-    @if $shape != cut2
-      --border-shape: #{$shape}
-  @if $border-radius != null
-    --border-radius: #{$border-radius}
+    --border-shape: #{$shape}
 
-  @if $shape == rounded or cut or scoop or notch or iphonex
-    -webkit-mask-image: paint(corner-shape, filled)
-    --corner-shape: var(--border-shape)
-    --corner-radius: var(--border-radius)
+  @if $radius != null
+    --border-radius: #{$radius}
 
-  @if $shape == smooth-corners
-    -webkit-mask-image: paint(smooth-corners)
-    --smooth-corners: var(--border-radius)
+    @if $safe == true
+      border-radius: $radius
 
-  @if $shape == polygon
-    -webkit-mask-image: paint(avatar-polygon)
-    --avatar-sides: var(--border-radius)
-    --avatar-angle: 0deg
+  @if $safe == false
+    border-radius: 0
+    @if $shape == rounded or cut or scoop or notch or iphonex
+      --corner-shape: var(--border-shape)
+      --corner-radius: var(--border-radius)
+      -webkit-mask-image: paint(corner-shape, filled)
 
-@mixin stroke($stroke-color, $stroke-width)
-  --border-color: #{$stroke-color}
-  --border-width: #{$stroke-width}
+    @if $shape == smooth-corners
+      -webkit-mask-image: paint(smooth-corners)
+      --smooth-corners: var(--border-radius)
 
-  --stroke-color: var(--border-color)
-  --stroke-width: var(--border-width)
-  border-image: paint(corner-shape, outlined) 0 fill
+    @if $shape == polygon
+      -webkit-mask-image: paint(avatar-polygon)
+      --avatar-sides: var(--border-radius)
+      --avatar-angle: 0deg
+
+@mixin stroke($color: null, $width: null, $safe: true)
+  @if $color != null
+    --border-color: #{$color}
+
+  @if $width != null
+    --border-width: #{$width}
+
+  @if $safe == true
+    border: $width solid $color
+  @else
+    border: 0
+    --stroke-color: var(--border-color)
+    --stroke-width: var(--border-width)
+    border-image: paint(corner-shape, outlined) 0 fill

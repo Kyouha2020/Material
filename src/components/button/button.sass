@@ -33,26 +33,11 @@
     &:active
       @include elevation($elevation + $elevation-scale * 3)
 
-.shadow-container
-  position: relative
-  display: inline-flex
-  filter: drop-shadow(0px 2px 2px rgba(black, 0.3))
-  transition: filter 150ms
-
-  &:hover
-    filter: drop-shadow(0px 3px 2.5px rgba(black, 0.325))
-
-  &:focus
-    filter: drop-shadow(0px 4px 3px rgba(black, 0.35))
-
-  &:active
-    filter: drop-shadow(0px 5px 3.5px rgba(black, 0.4))
-
 .mtrl-button
   @include typography(button)
   @include density(button)
   @include touch-target(button)
-  @include shape(rounded, 8px)
+  @include shape(rounded, 4px)
   @include button-container($surface, $primary)
   @include color($primary, $text--high-emphasis)
   @include margin(1)
@@ -67,6 +52,13 @@
   white-space: nowrap
   border: none
   -webkit-tap-highlight-color: transparent
+  transition: box-shadow 150ms
+
+  &[unsafe]
+    @include shape($radius: 8px, $safe: false)
+
+    &:not(.mtrl-button--choice)
+      @include stroke($safe: false)
 
   &:not(:focus-visible)
     outline: none
@@ -101,6 +93,7 @@
 
   &--vertical
     @include density(vertical-button)
+    @include touch-target(vertical-button)
     @include padding(8, 4)
     flex-direction: column
 
@@ -114,7 +107,7 @@
       @include margin(2, 0, 0)
 
     &.mtrl-button--rounded
-      @include shape($border-radius: height(vertical-button) / 2)
+      @include shape($radius: height(vertical-button) / 2)
       @include padding(8, 6)
 
   &--choice
@@ -128,7 +121,7 @@
       border-color: $primary
 
   &--rounded
-    @include shape($border-radius: height(button) / 2)
+    @include shape($radius: height(button) / 2)
 
   &--block
     width: 100%
