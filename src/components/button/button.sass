@@ -57,7 +57,7 @@
   &[unsafe]
     @include shape($radius: 8px, $safe: false)
 
-    &:not(.mtrl-button--choice)
+    &.mtrl-button--outlined
       @include stroke($safe: false)
 
   &:not(:focus-visible)
@@ -131,7 +131,6 @@
 
   &--no-touch-target
     overflow: hidden
-
 
   &__label
     display: inline-flex

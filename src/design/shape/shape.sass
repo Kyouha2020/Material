@@ -16,12 +16,12 @@
   @if $safe == false
     border-radius: 0
     @if $shape == rounded or cut or scoop or notch or iphonex
+      -webkit-mask-image: paint(corner-shape, filled)
       --corner-shape: var(--border-shape)
       --corner-radius: var(--border-radius)
-      -webkit-mask-image: paint(corner-shape, filled)
 
     @if $shape == smooth-corners
-      -webkit-mask-image: paint(smooth-corners)
+      -webkit-mask-image: paint(smooth-corners, filled)
       --smooth-corners: var(--border-radius)
 
     @if $shape == polygon
@@ -29,7 +29,7 @@
       --avatar-sides: var(--border-radius)
       --avatar-angle: 0deg
 
-@mixin stroke($color: null, $width: null, $safe: true)
+@mixin stroke($color: null, $width: null, $safe: true, $smooth: false)
   @if $color != null
     --border-color: #{$color}
 
@@ -42,4 +42,7 @@
     border: 0
     --stroke-color: var(--border-color)
     --stroke-width: var(--border-width)
-    border-image: paint(corner-shape, outlined) 0 fill
+    @if $smooth == false
+      border-image: paint(corner-shape, outlined) 0 fill
+    @else
+      border-image: paint(smooth-corners, outlined) 0 fill

@@ -61,7 +61,7 @@
   --corner-radius: var(--border-radius);
   -webkit-mask-image: paint(corner-shape, filled);
 }
-.mtrl-button[unsafe]:not(.mtrl-button--choice) {
+.mtrl-button[unsafe].mtrl-button--outlined {
   border: 0;
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);

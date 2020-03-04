@@ -19,9 +19,6 @@ registerPaint('corner-shape', class {
     }
 
     paint(ctx, geom, properties, args) {
-        //if (properties.get('--corner-radius').unit === 'percent') {
-        //    radius = Math.min(radius * geom.width / 100, geom.width / 2)
-        //}
         this.shape = properties.get('--corner-shape').toString().toLowerCase().trim()
 
         let radii = properties.get('--corner-radius').toString().replace(/px/g, '').split(' ').slice(1)

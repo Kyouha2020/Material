@@ -4,6 +4,7 @@
 @use "../../design/usability/accessibility" as *
 @use "../../design/interaction/states" as *
 @use "../../design/layout/spacing" as *
+@use "../../design/shape/shape" as *
 @use "../../design/typography/typography" as *
 //@use "../ripple/ripple" as *
 
@@ -22,12 +23,12 @@
 .mtrl-icon-button
   @include typography(button)
   @include touch-target(icon-button)
+  @include shape(rounded, 50%)
   @include icon-button-container($surface, $primary)
   @include color($primary, $text--high-emphasis)
   @include margin(1)
   width: 40px
   height: 40px
-  border-radius: 50%
   position: relative
   display: inline-flex
   align-items: center
@@ -37,6 +38,18 @@
   white-space: nowrap
   border: none
   -webkit-tap-highlight-color: transparent
+
+  &[unsafe]
+    @include shape($safe: false)
+
+    &.mtrl-icon-button--outlined
+      @include stroke($safe: false)
+
+    &.mtrl-icon-button--smooth-corners
+      @include shape(smooth-corners, 2, false)
+
+      &.mtrl-icon-button--outlined
+        @include stroke($safe: false, $smooth: true)
 
   &:not(:focus-visible)
     outline: none
@@ -56,10 +69,9 @@
   & > *
     position: relative
 
-
   &--outlined
+    @include stroke(rgba($on-surface, $stroke), 1px)
     @include padding(0, 4)
-    border: 1px solid rgba($on-surface, $stroke)
     @if tone($surface) == dark
       &:focus
         border-color: $primary
@@ -73,7 +85,6 @@
 
   &--no-touch-target
     overflow: hidden
-
 
   &__icon
     width: 18px

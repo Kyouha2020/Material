@@ -1,11 +1,19 @@
 registerPaint('smooth-corners', class {
     static get inputProperties() {
         return [
-            '--smooth-corners'
+            '--smooth-corners',
+            '--stroke-width',
+            '--stroke-color'
         ]
     }
 
-    paint(ctx, geom, properties) {
+    static get inputArguments() {
+        return [
+            '<custom-ident>'
+        ]
+    }
+
+    paint(ctx, geom, properties, args) {
         const c = properties.get('--smooth-corners').toString()
 
         ctx.fillStyle = 'black'
@@ -37,6 +45,12 @@ registerPaint('smooth-corners', class {
         }
 
         ctx.closePath()
-        ctx.fill()
+        if (args == 'filled') {
+            ctx.fill()
+        } else if (args == 'outlined') {
+            ctx.strokeStyle = properties.get('--stroke-color')
+            ctx.lineWidth = properties.get('--stroke-width').toString().replace('px', '') * 2
+            ctx.stroke()
+        }
     }
 })
