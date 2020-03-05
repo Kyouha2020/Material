@@ -8,41 +8,18 @@
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
 @use "../../design/typography/typography" as *
-//@use "../ripple/ripple" as *
-
-@mixin button-container($container-color, $container-overlay, $elevation: 0, $elevation-scale: 2)
-  //@include ripple(rgba($container-overlay, $container-overlay--pressed))
-  background-color: $container-color
-  &:disabled
-    @include elevation(0)
-    background-color: rgba(color.grayscale($container-color), $disabled-filled-container)
-  &.mtrl-button--choice
-    background-color: color.mix($container-color, $container-overlay, 100% - $container-overlay--pressed)
-  &:hover
-    background-color: color.mix($container-color, $container-overlay, 100% - $container-overlay--hovered)
-  &:focus
-    background-color: color.mix($container-color, $container-overlay, 100% - $container-overlay--focused)
-  &:active
-    background-color: color.mix($container-color, $container-overlay, 100% - $container-overlay--pressed)
-  @if $elevation != 0
-    @include elevation($elevation)
-    &:hover
-      @include elevation($elevation + $elevation-scale)
-    &:focus
-      @include elevation($elevation + $elevation-scale * 2)
-    &:active
-      @include elevation($elevation + $elevation-scale * 3)
 
 .mtrl-button
   @include typography(button)
   @include density(button)
   @include touch-target(button)
   @include shape(rounded, 4px)
-  @include button-container($surface, $primary)
+  @include elevation(0)
   @include color($primary, $text--high-emphasis)
   @include margin(1)
   @include padding(0, 2)
   min-width: 64px
+  background-color: $surface
   position: relative
   display: inline-flex
   align-items: center
@@ -68,12 +45,20 @@
 
   &:hover
     cursor: pointer
+    background-color: color.mix($surface, $primary, 100% - $container-overlay--hovered)
+
+  &:focus
+    background-color: color.mix($surface, $primary, 100% - $container-overlay--focused)
+
+  &:active
+    background-color: color.mix($surface, $primary, 100% - $container-overlay--pressed)
 
   &:disabled
-    @include color($on-surface, $text--disabled)
+    @include elevation(0)
+    @include color(color.grayscale($primary), $text--disabled)
+    background-color: rgba($surface, $disabled-filled-container)
     cursor: default
     pointer-events: none
-    border-color: rgba($on-surface, $stroke)
 
   &--outlined, &--contained, &--choice
     @include padding(0, 4)
@@ -82,11 +67,27 @@
     @include stroke(rgba($on-surface, $stroke), 1px)
     @if tone($surface) == dark
       &:focus
-        border-color: $primary
+        @include stroke($primary, 1px)
 
   &--contained
-    @include button-container($primary, white, 2)
     @include color($on-primary, $text--high-emphasis)
+    @include elevation(2)
+    background-color: $primary
+
+    &:hover
+      @include elevation(4)
+      background-color: color.mix($primary, $on-primary, 100% - $container-overlay--hovered)
+
+    &:focus
+      @include elevation(6)
+      background-color: color.mix($primary, $on-primary, 100% - $container-overlay--focused)
+
+    &:active
+      @include elevation(8)
+      background-color: color.mix($primary, $on-primary, 100% - $container-overlay--pressed)
+
+    &:disabled
+      background-color: rgba($on-surface, $disabled-filled-container)
 
   &--vertical
     @include density(vertical-button)
@@ -107,16 +108,6 @@
       @include shape($radius: height(vertical-button) / 2)
       @include padding(8, 6)
 
-  &--choice
-    @include button-container($surface, $on-surface)
-    @include color($on-surface, $text--high-emphasis)
-    border-bottom: 2px solid $on-surface
-
-    &--active
-      @include button-container($surface, $primary)
-      @include color($primary, $text--high-emphasis)
-      border-color: $primary
-
   &--rounded
     @include shape($radius: height(button) / 2)
 
@@ -124,7 +115,7 @@
     width: 100%
 
   &--transparent
-    @include button-container(transparent, $primary)
+    background-color: transparent
 
   &--no-touch-target
     overflow: hidden

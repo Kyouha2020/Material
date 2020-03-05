@@ -130,9 +130,9 @@ registerPaint('corner-shape', class {
             ctx.closePath()
         }
 
-        if (args == 'filled') {
+        if (args.toString() === 'filled') {
             ctx.fill()
-        } else if (args == 'outlined') {
+        } else if (args.toString() === 'outlined') {
             ctx.strokeStyle = properties.get('--stroke-color')
             ctx.lineWidth = properties.get('--stroke-width').toString().replace('px', '') * 2
             ctx.stroke()

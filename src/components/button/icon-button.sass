@@ -6,30 +6,17 @@
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
 @use "../../design/typography/typography" as *
-//@use "../ripple/ripple" as *
-
-@mixin icon-button-container($container-color, $container-overlay)
-  //@include ripple(rgba($container-overlay, $container-overlay--pressed))
-  background-color: $container-color
-  &:disabled
-    background-color: rgba(color.grayscale($container-color), $disabled-filled-container)
-  &:hover
-    background-color: color.mix($container-color, $container-overlay, 100% - $container-overlay--hovered)
-  &:focus
-    background-color: color.mix($container-color, $container-overlay, 100% - $container-overlay--focused)
-  &:active
-    background-color: color.mix($container-color, $container-overlay, 100% - $container-overlay--pressed)
 
 .mtrl-icon-button
   @include typography(button)
   @include touch-target(icon-button)
   @include shape(rounded, 50%)
-  @include icon-button-container($surface, $primary)
-  @include color($primary, $text--high-emphasis)
+  @include color($primary, $icon--active)
   @include margin(1)
   @include padding(3)
   width: 48px
   height: 48px
+  background-color: $surface
   position: relative
   display: inline-flex
   align-items: center
@@ -63,25 +50,47 @@
 
   &:hover
     cursor: pointer
+    background-color: color.mix($surface, $primary, 100% - $container-overlay--hovered)
+
+  &:focus
+    background-color: color.mix($surface, $primary, 100% - $container-overlay--focused)
+
+  &:active
+    background-color: color.mix($surface, $primary, 100% - $container-overlay--pressed)
+
+  &:disabled
+    background-color: rgba(color.grayscale($surface), $disabled-filled-container)
 
   &:disabled
     @include color($on-surface, $text--disabled)
     cursor: default
     pointer-events: none
-    border-color: rgba($on-surface, $stroke)
 
   &--outlined
     @include stroke(rgba($on-surface, $stroke), 1px)
     @if tone($surface) == dark
       &:focus
-        border-color: $primary
+        @include stroke($primary, 1px)
 
   &--contained
-    @include icon-button-container($primary, white)
     @include color($on-primary, $text--high-emphasis)
+    background-color: $primary
+
+    &:hover
+      cursor: pointer
+      background-color: color.mix($primary, $on-primary, 100% - $container-overlay--hovered)
+
+    &:focus
+      background-color: color.mix($primary, $on-primary, 100% - $container-overlay--focused)
+
+    &:active
+      background-color: color.mix($primary, $on-primary, 100% - $container-overlay--pressed)
+
+    &:disabled
+      background-color: rgba(color.grayscale($on-primary), $disabled-filled-container)
 
   &--transparent
-    @include icon-button-container(transparent, $primary)
+    background-color: transparent
 
   &--no-touch-target
     overflow: hidden
