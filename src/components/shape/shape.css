@@ -1,41 +1,41 @@
 .mtrl-shape--rounded-corners {
-  --border-shape: rounded;
-  border-radius: 0;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
+    --border-shape: rounded;
+    border-radius: 0;
+    -webkit-mask-image: paint(corner-shape, filled);
+    --corner-shape: var(--border-shape);
+    --corner-radius: var(--border-radius);
 }
 
 .mtrl-shape--cut-corners {
-  --border-shape: cut;
-  border-radius: 0;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
+    --border-shape: cut;
+    border-radius: 0;
+    -webkit-mask-image: paint(corner-shape, filled);
+    --corner-shape: var(--border-shape);
+    --corner-radius: var(--border-radius);
 }
 
 .mtrl-shape--scoop-corners {
-  --border-shape: scoop;
-  border-radius: 0;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
+    --border-shape: scoop;
+    border-radius: 0;
+    -webkit-mask-image: paint(corner-shape, filled);
+    --corner-shape: var(--border-shape);
+    --corner-radius: var(--border-radius);
 }
 
 .mtrl-shape--notch-corners {
-  --border-shape: notch;
-  border-radius: 0;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
+    --border-shape: notch;
+    border-radius: 0;
+    -webkit-mask-image: paint(corner-shape, filled);
+    --corner-shape: var(--border-shape);
+    --corner-radius: var(--border-radius);
 }
 
 .mtrl-shape--smooth-rounded-corners {
-  --border-shape: smooth-rounded;
-  border-radius: 0;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
+    --border-shape: smooth-rounded;
+    border-radius: 0;
+    -webkit-mask-image: paint(corner-shape, filled);
+    --corner-shape: var(--border-shape);
+    --corner-radius: var(--border-radius);
 }
 
 /*# sourceMappingURL=shape.css.map */

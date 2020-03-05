@@ -1,189 +1,221 @@
 .mtrl-button {
-  font-family: Roboto, sans-serif;
-  font-display: swap;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.0892857143rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-decoration: none;
-  text-transform: uppercase;
-  height: 36px;
-  --border-shape: rounded;
-  --border-radius: 4px;
-  border-radius: 4px;
-  color: rgba(98, 0, 238, 0.87);
-  margin: 4px;
-  padding: 0px 8px;
-  min-width: 64px;
-  background-color: #ffffff;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-  user-select: none;
-  white-space: nowrap;
-  border: none;
-  -webkit-tap-highlight-color: transparent;
-  transition: box-shadow 150ms;
+    font-family: Roboto, sans-serif;
+    font-display: swap;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.0892857143rem;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 36px;
+    --border-shape: rounded;
+    --border-radius: 4px;
+    border-radius: 4px;
+    color: rgba(98, 0, 238, 0.87);
+    margin: 4px;
+    padding: 0px 8px;
+    min-width: 64px;
+    background-color: #ffffff;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    user-select: none;
+    white-space: nowrap;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: box-shadow 150ms;
 }
+
 .mtrl-button::after {
-  content: "";
-  position: absolute;
-  top: -6px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 48px;
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
 }
+
 .mtrl-button[unsafe] {
-  --border-radius: 8px;
-  border-radius: 0;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
+    --border-radius: 8px;
+    border-radius: 0;
+    -webkit-mask-image: paint(corner-shape, filled);
+    --corner-shape: var(--border-shape);
+    --corner-radius: var(--border-radius);
 }
+
 .mtrl-button[unsafe].mtrl-button--outlined {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+    border: none;
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --stroke-color: var(--border-color);
+    --stroke-width: var(--border-width);
 }
+
 .mtrl-button:not(:focus-visible) {
-  outline: none;
+    outline: none;
 }
+
 .mtrl-button:focus-visible {
-  overflow: hidden;
+    overflow: hidden;
 }
+
 .mtrl-button:hover {
-  cursor: pointer;
-  background-color: #f9f5fe;
+    cursor: pointer;
+    background-color: #f9f5fe;
 }
+
 .mtrl-button:focus {
-  background-color: #ece0fd;
+    background-color: #ece0fd;
 }
+
 .mtrl-button:active {
-  background-color: #efe6fd;
+    background-color: #efe6fd;
 }
+
 .mtrl-button:disabled {
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
-  z-index: 0;
-  color: rgba(0, 0, 0, 0.38);
-  background-color: rgba(255, 255, 255, 0.12);
-  cursor: default;
-  pointer-events: none;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+    z-index: 0;
+    color: rgba(0, 0, 0, 0.38);
+    background-color: rgba(255, 255, 255, 0.12);
+    cursor: default;
+    pointer-events: none;
 }
+
 .mtrl-button--outlined, .mtrl-button--contained, .mtrl-button--choice {
-  padding: 0px 16px;
+    padding: 0px 16px;
 }
+
 .mtrl-button--outlined {
-  --border-color: rgba(0, 0, 0, 0.12);
-  --border-width: 1px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+    --border-color: rgba(0, 0, 0, 0.12);
+    --border-width: 1px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
 }
+
 .mtrl-button--contained {
-  color: rgba(255, 255, 255, 0.87);
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-  z-index: 2;
-  background-color: #6200ee;
+    color: rgba(255, 255, 255, 0.87);
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    z-index: 2;
+    background-color: #6200ee;
 }
+
 .mtrl-button--contained:hover {
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-  z-index: 4;
-  background-color: #680aef;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    z-index: 4;
+    background-color: #680aef;
 }
+
 .mtrl-button--contained:focus {
-  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-  z-index: 6;
-  background-color: #751ff0;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    z-index: 6;
+    background-color: #751ff0;
 }
+
 .mtrl-button--contained:active {
-  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
-  z-index: 8;
-  background-color: #721af0;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    z-index: 8;
+    background-color: #721af0;
 }
+
 .mtrl-button--contained:disabled {
-  background-color: rgba(0, 0, 0, 0.12);
+    background-color: rgba(0, 0, 0, 0.12);
 }
+
 .mtrl-button--vertical {
-  height: 64px;
-  padding: 32px 16px;
-  flex-direction: column;
+    height: 64px;
+    padding: 32px 16px;
+    flex-direction: column;
 }
+
 .mtrl-button--vertical::after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 48px;
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
 }
+
 .mtrl-button--vertical .mtrl-button__icon {
-  margin: 0px 0px 8px;
+    margin: 0px 0px 8px;
 }
+
 .mtrl-button--vertical .mtrl-button__label {
-  font-family: Roboto, sans-serif;
-  font-display: swap;
-  font-size: 0.765625rem;
-  font-weight: 500;
-  letter-spacing: 0.0892857143rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-decoration: none;
-  text-transform: uppercase;
+    font-family: Roboto, sans-serif;
+    font-display: swap;
+    font-size: 0.765625rem;
+    font-weight: 500;
+    letter-spacing: 0.0892857143rem;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    text-transform: uppercase;
 }
+
 .mtrl-button--vertical .mtrl-button__label + .mtrl-button__icon {
-  margin: 8px 0px 0px;
+    margin: 8px 0px 0px;
 }
+
 .mtrl-button--vertical.mtrl-button--rounded {
-  --border-radius: 32px;
-  border-radius: 32px;
-  padding: 32px 24px;
+    --border-radius: 32px;
+    border-radius: 32px;
+    padding: 32px 24px;
 }
+
 .mtrl-button--rounded {
-  --border-radius: 18px;
-  border-radius: 18px;
+    --border-radius: 18px;
+    border-radius: 18px;
 }
+
 .mtrl-button--block {
-  width: 100%;
+    width: 100%;
 }
+
 .mtrl-button--transparent {
-  background-color: transparent;
+    background-color: transparent;
 }
+
 .mtrl-button--no-touch-target {
-  overflow: hidden;
+    overflow: hidden;
 }
+
 .mtrl-button__label {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .mtrl-button__label--sentence-case {
-  text-transform: none;
+    text-transform: none;
 }
+
 .mtrl-button__icon {
-  margin-left: -4px;
-  margin-right: 8px;
-  width: 18px;
-  height: 18px;
-  font-size: 18px;
-  fill: currentColor;
+    margin-left: -4px;
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    fill: currentColor;
 }
+
 [dir=rtl] .mtrl-button__icon {
-  margin-left: 8px;
-  margin-right: -4px;
+    margin-left: 8px;
+    margin-right: -4px;
 }
+
 .mtrl-button__label + .mtrl-button__icon {
-  margin-left: 8px;
-  margin-right: -4px;
+    margin-left: 8px;
+    margin-right: -4px;
 }
+
 [dir=rtl] .mtrl-button__label + .mtrl-button__icon {
-  margin-left: -4px;
-  margin-right: 8px;
+    margin-left: -4px;
+    margin-right: 8px;
 }
 
 /*# sourceMappingURL=button.css.map */
