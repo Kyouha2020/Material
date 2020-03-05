@@ -12,6 +12,7 @@
 @mixin typography($scale-category, $scale: 1)
   $font-size: map.get($size, $scale-category)
   font-family: Roboto, sans-serif
+  font-display: swap
   font-size: font-size($font-size) * $scale
   font-weight: map.get($weight, map.get($font, $scale-category))
   letter-spacing: letter-spacing(map.get($letter-spacing, $scale-category), $font-size)
