@@ -1,5 +1,4 @@
 @use "sass:color"
-@use "sass:map"
 @use "../../design/color/light-theme" as *
 @use "../../design/usability/accessibility" as *
 @use "../../design/environment/elevation" as *
@@ -14,7 +13,6 @@
   @include density(button)
   @include touch-target(button)
   @include shape(rounded, 4px)
-  @include elevation(0)
   @include color($primary, $text--high-emphasis)
   @include margin(1)
   @include padding(0, 2)
@@ -55,7 +53,7 @@
 
   &:disabled
     @include elevation(0)
-    @include color(color.grayscale($primary), $text--disabled)
+    @include color($on-surface, $text--disabled)
     background-color: rgba($surface, $disabled-filled-container)
     cursor: default
     pointer-events: none

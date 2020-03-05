@@ -1,13 +1,4 @@
 .mtrl-icon-button {
-  font-family: Roboto, sans-serif;
-  font-display: swap;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.0892857143rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-decoration: none;
-  text-transform: uppercase;
   --border-shape: rounded;
   --border-radius: 50%;
   border-radius: 50%;
@@ -56,12 +47,6 @@
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);
   --corner-radius: var(--border-radius);
-}
-.mtrl-icon-button[unsafe].mtrl-icon-button--smooth-corners.mtrl-icon-button--outlined {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-icon-button[unsafe].mtrl-icon-button--polygon {
   --size: 4;

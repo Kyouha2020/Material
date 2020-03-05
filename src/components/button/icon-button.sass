@@ -1,14 +1,11 @@
 @use "sass:color"
-@use "sass:map"
 @use "../../design/color/light-theme" as *
 @use "../../design/usability/accessibility" as *
 @use "../../design/interaction/states" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
-@use "../../design/typography/typography" as *
 
 .mtrl-icon-button
-  @include typography(button)
   @include touch-target(icon-button)
   @include shape(rounded, 50%)
   @include color($primary, $icon--active)
@@ -35,9 +32,6 @@
 
     &.mtrl-icon-button--smooth-corners
       @include shape(smooth-rounded, 2, false)
-
-      &.mtrl-icon-button--outlined
-        @include stroke($safe: false)
 
     &.mtrl-icon-button--polygon
       @include polygon(4, 0deg, false)
