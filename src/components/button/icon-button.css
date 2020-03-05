@@ -1,4 +1,7 @@
 .mtrl-icon-button {
+  background-image: paint(ripple);
+  --ripple-color: rgba(98, 0, 238, 0.1);
+  --ripple-speed: 2;
   --border-shape: rounded;
   --border-radius: 50%;
   border-radius: 50%;
@@ -86,6 +89,9 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 .mtrl-icon-button--contained {
+  background-image: paint(ripple);
+  --ripple-color: rgba(255, 255, 255, 0.1);
+  --ripple-speed: 2;
   color: rgba(255, 255, 255, 0.87);
   background-color: #6200ee;
 }

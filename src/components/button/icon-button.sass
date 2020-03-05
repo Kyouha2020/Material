@@ -4,9 +4,11 @@
 @use "../../design/interaction/states" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
+@use "../ripple/ripple" as *
 
 .mtrl-icon-button
   @include touch-target(icon-button)
+  @include ripple(rgba($primary, $container-overlay--pressed))
   @include shape(rounded, 50%)
   @include color($primary, $icon--active)
   @include margin(1)
@@ -68,6 +70,7 @@
         @include stroke($primary, 1px)
 
   &--contained
+    @include ripple(rgba($on-primary, $container-overlay--pressed))
     @include color($on-primary, $text--high-emphasis)
     background-color: $primary
 

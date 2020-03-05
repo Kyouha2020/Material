@@ -7,11 +7,13 @@
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
 @use "../../design/typography/typography" as *
+@use "../ripple/ripple" as *
 
 .mtrl-button
   @include typography(button)
   @include density(button)
   @include touch-target(button)
+  @include ripple(rgba($primary, $container-overlay--pressed))
   @include shape(rounded, 4px)
   @include color($primary, $text--high-emphasis)
   @include margin(1)
@@ -68,6 +70,7 @@
         @include stroke($primary, 1px)
 
   &--contained
+    @include ripple(rgba($on-primary, $container-overlay--pressed))
     @include color($on-primary, $text--high-emphasis)
     @include elevation(2)
     background-color: $primary
