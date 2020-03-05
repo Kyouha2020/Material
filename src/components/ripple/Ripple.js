@@ -20,7 +20,10 @@ function rippleIn(evt) {
         if (count > 1000) {
             button.style.removeProperty('--ripple-x')
             button.style.removeProperty('--ripple-y')
-            button.style.setProperty('--animation-tick', '1000')
+            if (evt.keyCode === 32)
+                button.style.removeProperty('--animation-tick')
+            else
+                button.style.setProperty('--animation-tick', '1000')
         }
         requestAnimationFrame(raf)
     })

@@ -1,4 +1,24 @@
-@mixin ripple($color, $speed: 2)
+@use "../../design/interaction/states" as *
+
+@mixin ripple($color, $width, $height)
   background-image: paint(ripple)
   --ripple-color: #{$color}
-  --ripple-speed: #{$speed}
+  --ripple-speed: 2
+
+  &:focus-visible::before
+    content: ''
+    position: absolute
+    left: (100% - $width) / 2
+    width: $width
+    height: $height
+    background-color: rgba($color, $container-overlay--pressed)
+    border-radius: 50%
+    animation: breath 2.5s infinite
+
+  @keyframes breath
+    0%
+      transform: scale(1)
+    50%
+      transform: scale(1.1)
+    100%
+      transform: scale(1)

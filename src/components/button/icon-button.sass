@@ -8,7 +8,7 @@
 
 .mtrl-icon-button
   @include touch-target(icon-button)
-  @include ripple(rgba($primary, $container-overlay--pressed))
+  @include ripple(rgba($primary, $container-overlay--pressed), 90%, 90%)
   @include shape(rounded, 50%)
   @include color($primary, $icon--active)
   @include margin(1)
@@ -41,15 +41,15 @@
   &:not(:focus-visible)
     outline: none
 
+    &:focus
+      background-color: color.mix($surface, $primary, 100% - $container-overlay--focused)
+
   &:focus-visible
     overflow: hidden
 
   &:hover
     cursor: pointer
     background-color: color.mix($surface, $primary, 100% - $container-overlay--hovered)
-
-  &:focus
-    background-color: color.mix($surface, $primary, 100% - $container-overlay--focused)
 
   &:active
     background-color: color.mix($surface, $primary, 100% - $container-overlay--pressed)
@@ -70,7 +70,7 @@
         @include stroke($primary, 1px)
 
   &--contained
-    @include ripple(rgba($on-primary, $container-overlay--pressed))
+    @include ripple(rgba($on-primary, $container-overlay--pressed), 90%, 90%)
     @include color($on-primary, $text--high-emphasis)
     background-color: $primary
 
@@ -78,7 +78,7 @@
       cursor: pointer
       background-color: color.mix($primary, $on-primary, 100% - $container-overlay--hovered)
 
-    &:focus
+    &:not(:focus-visible):focus
       background-color: color.mix($primary, $on-primary, 100% - $container-overlay--focused)
 
     &:active

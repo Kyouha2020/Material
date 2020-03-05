@@ -13,7 +13,7 @@
   @include typography(button)
   @include density(button)
   @include touch-target(button)
-  @include ripple(rgba($primary, $container-overlay--pressed))
+  @include ripple(rgba($primary, $container-overlay--pressed), 80%, 100vh)
   @include shape(rounded, 4px)
   @include color($primary, $text--high-emphasis)
   @include margin(1)
@@ -70,7 +70,7 @@
         @include stroke($primary, 1px)
 
   &--contained
-    @include ripple(rgba($on-primary, $container-overlay--pressed))
+    @include ripple(rgba($on-primary, $container-overlay--pressed), 80%, 100vh)
     @include color($on-primary, $text--high-emphasis)
     @include elevation(2)
     background-color: $primary
