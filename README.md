@@ -1,8 +1,8 @@
 # Material
 
-The next-generation Web Component library is here.
-
 Docs: https://raw.githack.com/Kyouha2020/Material/master/docs/
 
-* Based on Material Design.
-* Use CSS Houdini and the latest CSS features.
+The next-generation Web Component library is here.
+
+* Based on [Material Design](https://material.io/).
+* Use [CSS Houdini](https://ishoudinireadyyet.com/) and the latest CSS features.
