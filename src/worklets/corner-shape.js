@@ -4,25 +4,18 @@ registerPaint('corner-shape', class {
     }
 
     static get inputProperties() {
-        return [
-            '--corner-radius',
-            '--corner-shape',
-            '--stroke-width',
-            '--stroke-color',
-            '--polygon-sides',
-            '--polygon-angle'
-        ]
+        return ['--corner-radius', '--corner-shape', '--stroke-width', '--stroke-color', '--polygon-sides', '--polygon-angle']
     }
 
     static get inputArguments() {
-        return [
-            '<custom-ident>'
-        ]
+        return ['<custom-ident>']
     }
 
     paint(ctx, geom, properties, args) {
         this.shape = properties.get('--corner-shape').toString().toLowerCase().trim()
-        let radii = properties.get('--corner-radius').toString().replace(/px|%/g, '').split(' ').slice(1)
+        const radii = properties.get('--corner-radius').toString().replace(/px|%/g, '').split(' ').slice(1)
+        const numSides = properties.get('--polygon-sides').toString()
+        const rotate = properties.get('--polygon-angle').toString().replace(/ |deg/g, '')
 
         if (this.shape === 'smooth-rounded') {
             const n = properties.get('--corner-radius').toString()
@@ -33,29 +26,20 @@ registerPaint('corner-shape', class {
             const w = geom.width / 2
             const h = geom.height / 2
 
-            ctx.beginPath();
-
+            ctx.beginPath()
             for (let i = 0; i < (2 * r + 1); i++) {
                 const x = (i - r) + w
                 const y = (Math.pow(Math.abs(Math.pow(r, m) - Math.pow(Math.abs(i - r), m)), 1 / m)) + h
-
-                if (i === 0)
-                    ctx.moveTo(x, y)
-                else
-                    ctx.lineTo(x, y)
+                if (i === 0) ctx.moveTo(x, y)
+                else ctx.lineTo(x, y)
             }
-
             for (let i = (2 * r); i < (4 * r + 1); i++) {
                 const x = (3 * r - i) + w
                 const y = (-Math.pow(Math.abs(Math.pow(r, m) - Math.pow(Math.abs(3 * r - i), m)), 1 / m)) + h
                 ctx.lineTo(x, y)
             }
-
             ctx.closePath()
         } else if (this.shape === 'polygon') {
-            const numSides = properties.get('--polygon-sides').toString()
-            const rotate = properties.get('--polygon-angle').toString().replace(/ |deg/g, '')
-
             const center = {x: geom.width / 2, y: geom.height / 2}
             const radius = Math.min(geom.width, geom.height) / 2
 
@@ -64,28 +48,22 @@ registerPaint('corner-shape', class {
             ctx.translate(-geom.width / 2, -geom.height / 2)
 
             ctx.beginPath()
-
             for (let i = 1; i <= numSides; i++) {
                 const xPos = center.x + radius * Math.cos(2 * Math.PI * i / numSides)
                 const yPos = center.y + radius * Math.sin(2 * Math.PI * i / numSides)
-                if (i === 0)
-                    ctx.moveTo(xPos, yPos)
-                else
-                    ctx.lineTo(xPos, yPos)
+                if (i === 0) ctx.moveTo(xPos, yPos)
+                else ctx.lineTo(xPos, yPos)
             }
-
             ctx.closePath()
         } else {
             const radius1 = radii[0]
             const radius2 = radii[1] || radii[0]
             const radius3 = radii[2] || radii[0]
             const radius4 = radii[3] || radii[1] || radii[0]
-
             const bezierRadius1 = radius1 * this.k
             const bezierRadius2 = radius2 * this.k
             const bezierRadius3 = radius3 * this.k
             const bezierRadius4 = radius4 * this.k
-
             const points = [
                 {x: radius1, y: 0},
                 {x: geom.width - radius2, y: 0},
@@ -130,9 +108,8 @@ registerPaint('corner-shape', class {
             ctx.closePath()
         }
 
-        if (args.toString() === 'filled') {
-            ctx.fill()
-        } else if (args.toString() === 'outlined') {
+        if (args.toString() === 'filled') ctx.fill()
+        else if (args.toString() === 'outlined') {
             ctx.strokeStyle = properties.get('--stroke-color')
             ctx.lineWidth = properties.get('--stroke-width').toString().replace('px', '') * 2
             ctx.stroke()
@@ -140,20 +117,15 @@ registerPaint('corner-shape', class {
     }
 
     goTo(ctx, point, scoop, round, notch) {
-        switch (this.shape) {
-            case 'cut':
-                ctx.lineTo(point[0], point[1])
-                return
-            case 'scoop':
-                ctx.bezierCurveTo(scoop[0], scoop[1], scoop[2], scoop[3], point[0], point[1])
-                return
-            case 'rounded':
-                ctx.bezierCurveTo(round[0], round[1], round[2], round[3], point[0], point[1])
-                return
-            case 'notch':
-                ctx.lineTo(notch[0], notch[1])
-                ctx.lineTo(point[0], point[1])
-                return
+        if (this.shape === 'cut')
+            ctx.lineTo(point[0], point[1])
+        else if (this.shape === 'scoop')
+            ctx.bezierCurveTo(scoop[0], scoop[1], scoop[2], scoop[3], point[0], point[1])
+        else if (this.shape === 'rounded')
+            ctx.bezierCurveTo(round[0], round[1], round[2], round[3], point[0], point[1])
+        else if (this.shape === 'notch') {
+            ctx.lineTo(notch[0], notch[1])
+            ctx.lineTo(point[0], point[1])
         }
     }
 })
