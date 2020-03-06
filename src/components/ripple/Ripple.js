@@ -1,7 +1,20 @@
+function ripple() {
+    const button = this, start = performance.now()
+
+    requestAnimationFrame(function raf(now) {
+        button.removeEventListener('mouseleave', rippleOut)
+
+        const count = Math.floor(now - start) + 100
+        if (count > 1000) {
+            button.style.removeProperty('--animation-tick')
+            button.addEventListener('mouseleave', rippleOut)
+        }
+        requestAnimationFrame(raf)
+    })
+}
+
 function rippleIn(evt) {
-    const button = this,
-        rect = button.getBoundingClientRect(),
-        start = performance.now()
+    const button = this, rect = button.getBoundingClientRect(), start = performance.now()
     let x, y
 
     if (evt.keyCode === 32) {
@@ -13,6 +26,7 @@ function rippleIn(evt) {
     }
 
     requestAnimationFrame(function raf(now) {
+        button.addEventListener('mouseleave', rippleOut)
         const count = Math.floor(now - start) + 100
         button.style.setProperty('--ripple-x', x.toString())
         button.style.setProperty('--ripple-y', y.toString())
@@ -30,11 +44,8 @@ function rippleIn(evt) {
 }
 
 function rippleOut(evt) {
-    const button = this,
-        rect = button.getBoundingClientRect(),
-        start = performance.now(),
-        x = evt.clientX - rect.left,
-        y = evt.clientY - rect.top,
+    const button = this, rect = button.getBoundingClientRect(), start = performance.now(),
+        x = evt.clientX - rect.left, y = evt.clientY - rect.top,
         t = button.style.getPropertyValue('--animation-tick').trim()
 
     requestAnimationFrame(function raf(now) {
@@ -42,10 +53,8 @@ function rippleOut(evt) {
         button.style.setProperty('--ripple-x', x.toString())
         button.style.setProperty('--ripple-y', y.toString())
         button.style.setProperty('--animation-tick', count.toString())
-        if (count === 1000) {
-            const count = count - Math.floor(now - start)
+        if (count === 1000)
             button.style.setProperty('--animation-tick', count.toString())
-        }
         if (count <= 0) {
             button.style.removeProperty('--ripple-x')
             button.style.removeProperty('--ripple-y')
@@ -56,6 +65,7 @@ function rippleOut(evt) {
 }
 
 document.querySelectorAll('.mtrl-button, .mtrl-toggle-button, .mtrl-icon-button, .mtrl-fab').forEach(el => {
+    el.addEventListener('click', ripple)
     el.addEventListener('mousedown', rippleIn)
     el.addEventListener('keydown', rippleIn)
     el.addEventListener('mouseleave', rippleOut)
