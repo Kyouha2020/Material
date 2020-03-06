@@ -1,6 +1,6 @@
-# Material
+# Material - v0
 
-Docs: https://raw.githack.com/Kyouha2020/Material/master/docs/
+Docs: https://kyouha2020.github.io/Material/docs/
 
 (Before assessing the doc, make sure your browser is **Chrome 78** or later, and enable
 **this flag** (chrome://flags/#enable-experimental-web-platform-features) in Chrome.)
