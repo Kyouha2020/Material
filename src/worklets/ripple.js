@@ -4,10 +4,10 @@ registerPaint('ripple', class {
     }
 
     paint(ctx, geom, properties) {
-        const rippleColor = properties.get('--ripple-color').toString()
-        const x = parseFloat(properties.get('--ripple-x').toString())
-        const y = parseFloat(properties.get('--ripple-y').toString())
-        const speed = parseFloat((properties.get('--ripple-speed') || '').toString()) || 1
+        const rippleColor = properties.get('--ripple-color').toString(),
+            x = parseFloat(properties.get('--ripple-x').toString()),
+            y = parseFloat(properties.get('--ripple-y').toString()),
+            speed = parseFloat((properties.get('--ripple-speed') || '').toString()) || 1
         let tick = parseFloat(properties.get('--animation-tick').toString())
         tick *= speed
         if (tick < 0) tick = 0

@@ -3,7 +3,6 @@ function ripple() {
 
     requestAnimationFrame(function raf(now) {
         button.removeEventListener('mouseleave', rippleOut)
-
         const count = Math.floor(now - start) + 100
         if (count > 1000) {
             button.style.removeProperty('--animation-tick')
