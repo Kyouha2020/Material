@@ -1,5 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Google+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Material+Icons&display=swap");
+body {
+  font-family: Google Sans, Roboto, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
 div[demo-container] {
   margin: 24px 0;
   padding: 8px;
@@ -13,7 +19,6 @@ div[demo-title] {
   margin-top: -1.25rem;
   padding: 0 8px;
   color: rgba(0, 0, 0, 0.87);
-  font-weight: 700;
 }
 
 code[demo-code] {
