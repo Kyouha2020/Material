@@ -196,6 +196,10 @@
   --border-radius: 18px;
   border-radius: 18px;
 }
+.mtrl-button--tile {
+  --border-radius: 0;
+  border-radius: 0;
+}
 .mtrl-button--block {
   width: 100%;
 }

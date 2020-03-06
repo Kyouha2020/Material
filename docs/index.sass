@@ -1,2 +1,52 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap")
 @import url("https://fonts.googleapis.com/css?family=Material+Icons&display=swap")
+
+div[demo-container]
+  margin: 24px 0
+  padding: 8px
+  border: 1px solid rgba(#000000, 12%)
+  border-radius: 8px
+
+div[demo-title]
+  float: left
+  background-color: #ffffff
+  margin-top: -1.25rem
+  padding: 0 8px
+  color: rgba(#000000, 87%)
+  font-weight: 700
+
+code[demo-code]
+  float: right
+  display: flex
+  background-color: #ffffff
+  margin: -1.25rem 8px 0 0
+  padding: 0 8px
+  font-size: 0.8rem
+  color: rgba(#000000, 60%)
+
+div[demo]
+  clear: both
+  padding-top: 16px
+
+mark
+  margin: 0 0 0 8px
+
+  &::after
+    top: 0
+    left: 0
+    padding: 2px 8px
+    border-radius: 4px
+    color: #ffffff
+    font-size: 0.8rem
+
+  &[against]::after
+    content: 'Against MD Spec'
+    background-color: #ff9800
+
+  &[unsafe]::after
+    content: 'Unsafe'
+    background-color: #b00020
+
+  &[add-ons]::after
+    content: 'Add-ons'
+    background-color: #03dac6
