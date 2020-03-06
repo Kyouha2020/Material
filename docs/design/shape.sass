@@ -25,14 +25,9 @@
   &--smooth-corners-5
     @include shape(smooth-rounded, 5, false)
 
-  &--polygon-3
-    @include polygon(3, 0deg, false)
-
-  &--polygon-4
-    @include polygon(4, 0deg, false)
-
-  &--polygon-8
-    @include polygon(8, 0deg, false)
+  @for $i from 3 through 16
+    &--polygon-#{$i}
+      @include polygon($i, 0deg, false)
 
   &--polygon-rotated
     @include polygon(4, 30deg, false)

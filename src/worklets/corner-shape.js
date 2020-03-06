@@ -50,7 +50,12 @@ registerPaint('corner-shape', class {
             center = {x: geom.width / 2, y: geom.height / 2}, radius = Math.min(geom.width, geom.height) / 2
 
         ctx.translate(geom.width / 2, geom.height / 2)
-        ctx.rotate(rotate * Math.PI / 180)
+        if (numSides % 4 === 0)
+            ctx.rotate((rotate + 45 * (numSides / 4)) * Math.PI / 180)
+        else if (numSides % 2 === 0)
+            ctx.rotate((rotate + 0 * (numSides / 0)) * Math.PI / 180)
+        else
+            ctx.rotate((rotate - 90) * Math.PI / 180)
         ctx.translate(-geom.width / 2, -geom.height / 2)
 
         ctx.beginPath()

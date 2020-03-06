@@ -68,8 +68,85 @@
   --polygon-sides: var(--size);
   --polygon-angle: var(--angle);
 }
+.demo-card--polygon-5 {
+  --size: 5;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: polygon;
+  --polygon-sides: var(--size);
+  --polygon-angle: var(--angle);
+}
+.demo-card--polygon-6 {
+  --size: 6;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: polygon;
+  --polygon-sides: var(--size);
+  --polygon-angle: var(--angle);
+}
+.demo-card--polygon-7 {
+  --size: 7;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: polygon;
+  --polygon-sides: var(--size);
+  --polygon-angle: var(--angle);
+}
 .demo-card--polygon-8 {
   --size: 8;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: polygon;
+  --polygon-sides: var(--size);
+  --polygon-angle: var(--angle);
+}
+.demo-card--polygon-9 {
+  --size: 9;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: polygon;
+  --polygon-sides: var(--size);
+  --polygon-angle: var(--angle);
+}
+.demo-card--polygon-10 {
+  --size: 10;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: polygon;
+  --polygon-sides: var(--size);
+  --polygon-angle: var(--angle);
+}
+.demo-card--polygon-11 {
+  --size: 11;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: polygon;
+  --polygon-sides: var(--size);
+  --polygon-angle: var(--angle);
+}
+.demo-card--polygon-12 {
+  --size: 12;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: polygon;
+  --polygon-sides: var(--size);
+  --polygon-angle: var(--angle);
+}
+.demo-card--polygon-13 {
+  --size: 13;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: polygon;
+  --polygon-sides: var(--size);
+  --polygon-angle: var(--angle);
+}
+.demo-card--polygon-14 {
+  --size: 14;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: polygon;
+  --polygon-sides: var(--size);
+  --polygon-angle: var(--angle);
+}
+.demo-card--polygon-15 {
+  --size: 15;
+  -webkit-mask-image: paint(corner-shape, filled);
+  --corner-shape: polygon;
+  --polygon-sides: var(--size);
+  --polygon-angle: var(--angle);
+}
+.demo-card--polygon-16 {
+  --size: 16;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: polygon;
   --polygon-sides: var(--size);
