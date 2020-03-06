@@ -84,8 +84,8 @@ function rippleOut(evt) {
 document.querySelectorAll('.mtrl-button, .mtrl-toggle-button, .mtrl-icon-button, .mtrl-fab').forEach(el => {
     el.addEventListener('click', ripple)
     el.addEventListener('mousedown', rippleIn)
-    el.addEventListener('touchstart', rippleIn)
+    el.addEventListener('touchstart', rippleIn, {passive: true})
     el.addEventListener('keydown', rippleIn)
     el.addEventListener('mouseleave', rippleOut)
-    el.addEventListener('touchmove', rippleOut)
+    el.addEventListener('touchmove', rippleOut, {passive: true})
 })

@@ -8,4 +8,5 @@ Docs: https://kyouha2020.github.io/Material/docs/
 ## The next-generation Web Component library is here.
 
 * Based on [Material Design](https://material.io/).
+* a11y and i18n
 * Use [CSS Houdini](https://ishoudinireadyyet.com/) and the latest CSS features.
