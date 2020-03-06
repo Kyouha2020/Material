@@ -10,11 +10,6 @@ h2
   color: rgba(#6200ee, 87%)
   margin-top: 3rem
 
-div[demo-container]
-  margin: 24px 0
-  padding: 8px
-  border-top: 1px solid rgba(#000000, 12%)
-
 div[demo-title]
   color: rgba(#000000, 87%)
   margin-top: 24px
@@ -33,14 +28,14 @@ mark
     color: #ffffff
     font-size: 0.8rem
 
-  &[against]::after
-    content: 'Against MD Spec'
-    background-color: #ff9800
+  &[add-on]::after
+    content: 'Add-on'
+    background-color: #03dac6
 
   &[unsafe]::after
     content: 'Unsafe'
     background-color: #b00020
 
-  &[add-ons]::after
-    content: 'Add-ons'
-    background-color: #03dac6
+  &[against]::after
+    content: 'Against MD Spec'
+    background-color: #ff9800

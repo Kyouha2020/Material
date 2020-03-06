@@ -1,0 +1,38 @@
+@use "../../src/design/shape/shape" as *
+
+.demo-card
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 128px
+  height: 128px
+  margin: 8px
+  @include shape($radius: 16px)
+  @include stroke(#6200ee, 1px, false)
+
+  &--smooth-corners-0d5
+    @include shape(smooth-rounded, 0.5, false)
+
+  &--smooth-corners-1
+    @include shape(smooth-rounded, 1, false)
+
+  &--smooth-corners-2
+    @include shape(smooth-rounded, 2, false)
+
+  &--smooth-corners-4
+    @include shape(smooth-rounded, 4, false)
+
+  &--smooth-corners-5
+    @include shape(smooth-rounded, 5, false)
+
+  &--polygon-3
+    @include polygon(3, 0deg, false)
+
+  &--polygon-4
+    @include polygon(4, 0deg, false)
+
+  &--polygon-8
+    @include polygon(8, 0deg, false)
+
+  &--polygon-rotated
+    @include polygon(4, 30deg, false)

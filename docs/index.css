@@ -11,12 +11,6 @@ h2 {
   margin-top: 3rem;
 }
 
-div[demo-container] {
-  margin: 24px 0;
-  padding: 8px;
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
-}
-
 div[demo-title] {
   color: rgba(0, 0, 0, 0.87);
   margin-top: 24px;
@@ -37,17 +31,17 @@ mark::after {
   color: #ffffff;
   font-size: 0.8rem;
 }
-mark[against]::after {
-  content: "Against MD Spec";
-  background-color: #ff9800;
+mark[add-on]::after {
+  content: "Add-on";
+  background-color: #03dac6;
 }
 mark[unsafe]::after {
   content: "Unsafe";
   background-color: #b00020;
 }
-mark[add-ons]::after {
-  content: "Add-ons";
-  background-color: #03dac6;
+mark[against]::after {
+  content: "Against MD Spec";
+  background-color: #ff9800;
 }
 
 /*# sourceMappingURL=index.css.map */
