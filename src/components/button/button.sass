@@ -11,9 +11,9 @@
 
 .mtrl-button
   @include typography(button)
-  @include density(button)
+  @include height(9)
   @include touch-target(button)
-  @include ripple(rgba($primary, $container-overlay--pressed), 80%, 100vh)
+  @include ripple(rgba($primary, $container-overlay--pressed))
   @include shape(rounded, 4px)
   @include color($primary, $text--high-emphasis)
   @include margin(1)
@@ -70,7 +70,7 @@
         @include stroke($primary, 1px)
 
   &--contained
-    @include ripple(rgba($on-primary, $container-overlay--pressed), 80%, 100vh)
+    @include ripple(rgba($on-primary, $container-overlay--pressed))
     @include color($on-primary, $text--high-emphasis)
     @include elevation(2)
     background-color: $primary
@@ -91,26 +91,26 @@
       background-color: rgba($on-surface, $disabled-filled-container)
 
   &--vertical
-    @include density(vertical-button)
-    @include touch-target(vertical-button)
-    @include padding(8, 4)
+    @include height(14)
     flex-direction: column
 
     .mtrl-button__icon
-      @include margin(0, 0, 2)
+      @include margin(0, 0, 1)
 
     .mtrl-button__label
       @include typography(button, 0.875)
 
     .mtrl-button__label + .mtrl-button__icon
-      @include margin(2, 0, 0)
+      @include margin(1, 0, 0)
 
-    &.mtrl-button--rounded
-      @include shape($radius: height(vertical-button) / 2)
-      @include padding(8, 6)
+  &--two-column
+    @include height(12)
+
+    .mtrl-button__label
+      flex-direction: column
 
   &--rounded
-    @include shape($radius: height(button) / 2)
+    @include shape($radius: calc(var(--height) / 2))
 
   &--tile
     @include shape($radius: 0)
@@ -126,10 +126,21 @@
 
   &__label
     display: inline-flex
-    align-items: center
+    align-items: flex-start
     justify-content: center
 
+    &--uppercase
+      text-transform: uppercase
+
     &--sentence-case
+      text-transform: none
+
+    &--primary
+      text-transform: none
+
+    &--secondary
+      @include typography(caption)
+      @include color($primary, $text--medium-emphasis)
       text-transform: none
 
   &__icon

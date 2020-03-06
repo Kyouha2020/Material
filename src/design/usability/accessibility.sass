@@ -1,6 +1,5 @@
 @use "sass:color"
 @use "sass:list"
-@use "sass:map"
 @use "sass:math"
 @use "constant-ratios" as *
 @use "../layout/density" as *
@@ -61,7 +60,7 @@ $stroke: 12%
 // touch targets
 
 @mixin touch-target($component, $touch-target: 48px)
-  $height: map.get($component-height, $component)
+  $height: #{var(--height)}
   $touch-target: $touch-target
 
   &::after

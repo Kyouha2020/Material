@@ -1,15 +1,11 @@
 @use "sass:map"
+@use "spacing" as *
 
 // https://material.io/design/layout/applying-density.html
 
-$component-height: (button: 36px, vertical-button: 64px, icon-button: 48px)
+@mixin height($height)
+  --height: #{get($height)}
+  height: var(--height)
 
-@mixin density($component, $value: 0, $scale: 4px)
-  $height: map.get($component-height, $component)
-  $density: $value * $scale
-
-  height: $height + $density
-
-
-@function height($component)
-  @return map.get($component-height, $component)
+@mixin density($value: 0, $scale: 4px)
+  height: calc(var(--height) + #{$value} * #{$scale})

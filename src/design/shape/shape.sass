@@ -6,7 +6,7 @@
   @if $radius != null
     --border-radius: #{$radius}
   @if $safe == true
-    border-radius: $radius
+    border-radius: var(--border-radius)
   @else
     border-radius: 0
     -webkit-mask-image: paint(corner-shape, filled)
@@ -19,7 +19,7 @@
   @if $width != null
     --border-width: #{$width}
   @if $safe == true
-    border: $width solid $color
+    border: var(--border-width) solid var(--border-color)
   @else
     border: none
     border-image: paint(corner-shape, outlined) 0 fill
