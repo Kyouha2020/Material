@@ -10,14 +10,14 @@
 @use "../ripple/ripple" as *
 
 .mtrl-button
-  @include typography(button)
-  @include height(9)
-  @include touch-target(button)
   @include ripple(rgba($primary, $container-overlay--pressed))
+  @include touch-target(button)
   @include shape(rounded, 4px)
-  @include color($primary, $text--high-emphasis)
+  @include height(9)
   @include margin(1)
   @include padding(0, 2)
+  @include typography(button)
+  @include color($primary, $text--high-emphasis)
   min-width: 64px
   background-color: $surface
   position: relative
@@ -98,7 +98,7 @@
       @include margin(0, 0, 1)
 
     .mtrl-button__label
-      @include typography(button, 0.875)
+      @include font-size(button, 0.875)
 
     .mtrl-button__label + .mtrl-button__icon
       @include margin(1, 0, 0)
@@ -139,7 +139,7 @@
       text-transform: none
 
     &--secondary
-      @include typography(caption)
+      @include font-size(caption)
       @include color($primary, $text--medium-emphasis)
       text-transform: none
 

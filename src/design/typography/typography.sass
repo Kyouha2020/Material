@@ -9,6 +9,7 @@
 @function letter-spacing($letter-spacing, $size)
   @return $letter-spacing / $size * 1rem
 
+
 @mixin typography($scale-category, $scale: 1)
   $font-size: map.get($size, $scale-category)
   font-family: Roboto, sans-serif
@@ -22,4 +23,12 @@
     text-transform: inherit
   @else if map.get($case, $scale-category) == all_caps
     text-decoration: none
+    text-transform: uppercase
+
+@mixin font-size($scale-category, $scale: 1)
+  $font-size: map.get($size, $scale-category)
+  font-size: font-size($font-size) * $scale
+  @if map.get($case, $scale-category) == sentence
+    text-transform: inherit
+  @else if map.get($case, $scale-category) == all_caps
     text-transform: uppercase

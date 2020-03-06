@@ -8,13 +8,13 @@
 @use "../ripple/ripple" as *
 
 .mtrl-icon-button
-  @include height(12)
-  @include touch-target(icon-button)
   @include ripple(rgba($primary, $container-overlay--pressed))
+  @include touch-target(icon-button)
   @include shape(rounded, 50%)
-  @include color($primary, $icon--active)
+  @include height(12)
   @include margin(1)
   @include padding(3)
+  @include color($primary, $icon--active)
   width: 48px
   background-color: $surface
   position: relative
