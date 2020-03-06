@@ -20,6 +20,10 @@ function rippleIn(evt) {
     if (evt.keyCode === 32) {
         x = rect.width / 2
         y = rect.height / 2
+    } else if (evt.type === 'touchstart') {
+        const touch = evt.touches[0]
+        x = Number(touch.clientX) - rect.left
+        y = Number(touch.clientY) - rect.top
     } else {
         x = evt.clientX - rect.left
         y = evt.clientY - rect.top
@@ -27,11 +31,15 @@ function rippleIn(evt) {
 
     requestAnimationFrame(function raf(now) {
         button.addEventListener('mouseleave', rippleOut)
+        if (evt.type === 'touchstart')
+            button.removeEventListener('mousedown', rippleIn)
         const count = Math.floor(now - start) + 100
         button.style.setProperty('--ripple-x', x.toString())
         button.style.setProperty('--ripple-y', y.toString())
         button.style.setProperty('--animation-tick', count.toString())
         if (count > 1000) {
+            if (evt.type === 'touchstart')
+                button.addEventListener('mousedown', rippleIn)
             button.style.removeProperty('--ripple-x')
             button.style.removeProperty('--ripple-y')
             if (evt.keyCode === 32)
@@ -45,8 +53,17 @@ function rippleIn(evt) {
 
 function rippleOut(evt) {
     const button = this, rect = button.getBoundingClientRect(), start = performance.now(),
-        x = evt.clientX - rect.left, y = evt.clientY - rect.top,
         t = button.style.getPropertyValue('--animation-tick').trim()
+    let x, y
+
+    if (evt.type === 'touchmove') {
+        const touch = evt.touches[0]
+        x = Number(touch.clientX) - rect.left
+        y = Number(touch.clientY) - rect.top
+    } else {
+        x = evt.clientX - rect.left
+        y = evt.clientY - rect.top
+    }
 
     requestAnimationFrame(function raf(now) {
         const count = t - Math.floor(now - start)
@@ -67,6 +84,8 @@ function rippleOut(evt) {
 document.querySelectorAll('.mtrl-button, .mtrl-toggle-button, .mtrl-icon-button, .mtrl-fab').forEach(el => {
     el.addEventListener('click', ripple)
     el.addEventListener('mousedown', rippleIn)
+    el.addEventListener('touchstart', rippleIn)
     el.addEventListener('keydown', rippleIn)
     el.addEventListener('mouseleave', rippleOut)
+    el.addEventListener('touchmove', rippleOut)
 })
