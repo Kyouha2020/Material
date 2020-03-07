@@ -1,11 +1,11 @@
 @use "sass:color"
 @use "../../design/color/theme" as *
 @use "../../design/usability/accessibility" as *
+@use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
 @use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
-@use "../ripple/ripple" as *
 
 .mtrl-icon-button
   @include ripple($primary, $surface)
@@ -22,7 +22,6 @@
   justify-content: center
   vertical-align: middle
   user-select: none
-  white-space: nowrap
   border: none
   outline: none
   -webkit-tap-highlight-color: transparent
