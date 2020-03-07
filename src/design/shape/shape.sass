@@ -1,39 +1,24 @@
 // https://material.io/design/shape/applying-shape-to-ui.html
 
-@mixin shape($shape: null, $radius: null, $safe: true)
-  @if $shape != null
-    --border-shape: #{$shape}
-  @if $radius != null
-    --border-radius: #{$radius}
-  @if $safe == true
-    border-radius: var(--border-radius)
-  @else
-    border-radius: 0
-    -webkit-mask-image: paint(corner-shape, filled)
-    --corner-shape: var(--border-shape)
-    --corner-radius: var(--border-radius)
+@mixin corner($radius: null)
+  --corner-radius: #{$radius}
+  border-radius: var(--corner-radius)
 
-@mixin stroke($color: null, $width: null, $safe: true)
-  @if $color != null
-    --border-color: #{$color}
+@mixin stroke($width: null, $color: null)
   @if $width != null
-    --border-width: #{$width}
-  @if $safe == true
-    border: var(--border-width) solid var(--border-color)
-  @else
-    border: none
-    border-image: paint(corner-shape, outlined) 0 fill
-    --stroke-color: var(--border-color)
-    --stroke-width: var(--border-width)
+    --stroke-width: #{$width}
+  @if $color != null
+    --stroke-color: #{$color}
+  border: var(--stroke-width) solid var(--stroke-color)
 
-@mixin polygon($sides: null, $angle: 0deg, $safe: true)
-  @if $sides != null
-    --size: #{$sides}
-  @if $angle != 0deg
-    --angle: #{$angle}
-  @if $safe == true
-  @else
+@mixin shape($shape: null, $sides: null, $angle: null)
+  @if $shape != null
+    border: none
+    border-radius: 0
+    --corner-shape: #{$shape}
     -webkit-mask-image: paint(corner-shape, filled)
-    --corner-shape: polygon
-    --polygon-sides: var(--size)
-    --polygon-angle: var(--angle)
+    border-image: paint(corner-shape, outlined) 0 fill
+  @if $sides != null
+    --polygon-sides: #{$sides}
+  @if $angle != null
+    --polygon-angle: #{$angle}

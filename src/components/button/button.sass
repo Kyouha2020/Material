@@ -1,5 +1,5 @@
 @use "sass:color"
-@use "../../design/color/light-theme" as *
+@use "../../design/color/theme" as *
 @use "../../design/usability/accessibility" as *
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/states" as *
@@ -10,15 +10,14 @@
 @use "../ripple/ripple" as *
 
 .mtrl-button
-  @include ripple(rgba($primary, $container-overlay--pressed))
+  @include ripple($primary, $surface)
   @include touch-target(button)
-  @include shape(rounded, 4px)
+  @include corner(4px)
   @include height(9)
   @include padding(0, 2)
   @include typography(button)
   @include color($primary, $text--high-emphasis)
   min-width: 64px
-  background-color: $surface
   position: relative
   display: inline-flex
   align-items: center
@@ -31,18 +30,11 @@
   -webkit-tap-highlight-color: transparent
   transition: box-shadow 150ms
 
-  &:focus-visible
-    overflow: hidden
-
   &:hover
     cursor: pointer
-    background-color: color.mix($primary, $surface, $container-overlay--hovered)
 
-  &:focus
-    background-color: color.mix($primary, $surface, $container-overlay--focused)
-
-  &:active
-    background-color: color.mix($primary, $surface, $container-overlay--pressed)
+  &:focus-visible
+    overflow: hidden
 
   &:disabled
     @include elevation(0)
@@ -51,32 +43,18 @@
     cursor: default
     pointer-events: none
 
-  &--outlined, &--contained, &--choice
-    @include padding(0, 4)
-
   &--outlined
-    @include stroke(rgba($on-surface, $stroke), 1px)
+    @include padding(0, 4)
+    @include stroke(1px, rgba($on-surface, $stroke))
     @if tone($surface) == dark
       &:focus
-        @include stroke($primary, 1px)
+        @include stroke(1px, $primary)
 
   &--contained
-    @include ripple(rgba($on-primary, $container-overlay--pressed))
+    @include ripple($on-primary, $primary)
+    @include padding(0, 4)
     @include color($on-primary, $text--high-emphasis)
-    @include elevation(2)
-    background-color: $primary
-
-    &:hover
-      @include elevation(4)
-      background-color: color.mix($on-primary, $primary, $container-overlay--hovered)
-
-    &:focus
-      @include elevation(6)
-      background-color: color.mix($on-primary, $primary, $container-overlay--focused)
-
-    &:active
-      @include elevation(8)
-      background-color: color.mix($on-primary, $primary, $container-overlay--pressed)
+    @include elevation(2, 4, 6, 8)
 
     &:disabled
       background-color: rgba($on-surface, $disabled-filled-container)
@@ -101,19 +79,13 @@
       flex-direction: column
 
   &--rounded
-    @include shape($radius: calc(var(--helper-height, var(--height)) / 2))
+    @include corner(calc(var(--helper-height, var(--height)) / 2))
 
   &--tile
-    @include shape($radius: 0)
+    @include corner(0)
 
   &--block
     width: 100%
-
-  &--transparent
-    background-color: transparent
-
-  &--no-touch-target
-    overflow: hidden
 
   &__label
     display: inline-flex

@@ -1,6 +1,14 @@
+@use "sass:color"
 @use "../../design/interaction/states" as *
 
-@mixin ripple($color, $speed: 2)
+@mixin ripple($color, $overlay, $speed: 2)
   background-image: paint(ripple)
-  --ripple-color: #{$color}
+  --ripple-color: #{rgba($color, $container-overlay--pressed)}
   --ripple-speed: #{$speed}
+  background-color: $overlay
+  &:hover
+    background-color: color.mix($color, $overlay, $container-overlay--hovered)
+  &:focus
+    background-color: color.mix($color, $overlay, $container-overlay--focused)
+  &:active
+    background-color: color.mix($color, $overlay, $container-overlay--pressed)

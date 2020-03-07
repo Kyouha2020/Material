@@ -1,524 +1,264 @@
 .mtrl-shape--rounded-corners {
-  --border-shape: rounded;
+  border: none;
   border-radius: 0;
+  --corner-shape: rounded;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--rounded-corners:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--cut-corners {
-  --border-shape: cut;
+  border: none;
   border-radius: 0;
+  --corner-shape: cut;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--cut-corners:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--scoop-corners {
-  --border-shape: scoop;
+  border: none;
   border-radius: 0;
+  --corner-shape: scoop;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--scoop-corners:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--notch-corners {
-  --border-shape: notch;
+  border: none;
   border-radius: 0;
+  --corner-shape: notch;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--notch-corners:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--smooth-corners-1 {
-  --border-shape: smooth-rounded;
-  --border-radius: 1;
+  --corner-radius: 1;
+  border-radius: var(--corner-radius);
+  border: none;
   border-radius: 0;
+  --corner-shape: smooth-rounded;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--smooth-corners-1:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--smooth-corners-2 {
-  --border-shape: smooth-rounded;
-  --border-radius: 2;
+  --corner-radius: 2;
+  border-radius: var(--corner-radius);
+  border: none;
   border-radius: 0;
+  --corner-shape: smooth-rounded;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--smooth-corners-2:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--smooth-corners-3 {
-  --border-shape: smooth-rounded;
-  --border-radius: 3;
+  --corner-radius: 3;
+  border-radius: var(--corner-radius);
+  border: none;
   border-radius: 0;
+  --corner-shape: smooth-rounded;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--smooth-corners-3:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--smooth-corners-4 {
-  --border-shape: smooth-rounded;
-  --border-radius: 4;
+  --corner-radius: 4;
+  border-radius: var(--corner-radius);
+  border: none;
   border-radius: 0;
+  --corner-shape: smooth-rounded;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--smooth-corners-4:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--smooth-corners-5 {
-  --border-shape: smooth-rounded;
-  --border-radius: 5;
+  --corner-radius: 5;
+  border-radius: var(--corner-radius);
+  border: none;
   border-radius: 0;
+  --corner-shape: smooth-rounded;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--smooth-corners-5:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--smooth-corners-6 {
-  --border-shape: smooth-rounded;
-  --border-radius: 6;
+  --corner-radius: 6;
+  border-radius: var(--corner-radius);
+  border: none;
   border-radius: 0;
+  --corner-shape: smooth-rounded;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--smooth-corners-6:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--smooth-corners-7 {
-  --border-shape: smooth-rounded;
-  --border-radius: 7;
+  --corner-radius: 7;
+  border-radius: var(--corner-radius);
+  border: none;
   border-radius: 0;
+  --corner-shape: smooth-rounded;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--smooth-corners-7:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--smooth-corners-8 {
-  --border-shape: smooth-rounded;
-  --border-radius: 8;
+  --corner-radius: 8;
+  border-radius: var(--corner-radius);
+  border: none;
   border-radius: 0;
+  --corner-shape: smooth-rounded;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--smooth-corners-8:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--smooth-corners-9 {
-  --border-shape: smooth-rounded;
-  --border-radius: 9;
+  --corner-radius: 9;
+  border-radius: var(--corner-radius);
+  border: none;
   border-radius: 0;
+  --corner-shape: smooth-rounded;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--smooth-corners-9:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--smooth-corners-10 {
-  --border-shape: smooth-rounded;
-  --border-radius: 10;
+  --corner-radius: 10;
+  border-radius: var(--corner-radius);
+  border: none;
   border-radius: 0;
+  --corner-shape: smooth-rounded;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--smooth-corners-10:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--smooth-corners-11 {
-  --border-shape: smooth-rounded;
-  --border-radius: 11;
+  --corner-radius: 11;
+  border-radius: var(--corner-radius);
+  border: none;
   border-radius: 0;
+  --corner-shape: smooth-rounded;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--smooth-corners-11:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--smooth-corners-12 {
-  --border-shape: smooth-rounded;
-  --border-radius: 12;
+  --corner-radius: 12;
+  border-radius: var(--corner-radius);
+  border: none;
   border-radius: 0;
+  --corner-shape: smooth-rounded;
   -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-  border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--smooth-corners-12:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
 }
 .mtrl-shape--polygon-3 {
-  --size: 3;
-  -webkit-mask-image: paint(corner-shape, filled);
+  border: none;
+  border-radius: 0;
   --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-  border: none;
+  -webkit-mask-image: paint(corner-shape, filled);
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--polygon-3:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+  --polygon-sides: 3;
+  --polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-4 {
-  --size: 4;
-  -webkit-mask-image: paint(corner-shape, filled);
+  border: none;
+  border-radius: 0;
   --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-  border: none;
+  -webkit-mask-image: paint(corner-shape, filled);
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--polygon-4:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+  --polygon-sides: 4;
+  --polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-5 {
-  --size: 5;
-  -webkit-mask-image: paint(corner-shape, filled);
+  border: none;
+  border-radius: 0;
   --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-  border: none;
+  -webkit-mask-image: paint(corner-shape, filled);
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--polygon-5:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+  --polygon-sides: 5;
+  --polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-6 {
-  --size: 6;
-  -webkit-mask-image: paint(corner-shape, filled);
+  border: none;
+  border-radius: 0;
   --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-  border: none;
+  -webkit-mask-image: paint(corner-shape, filled);
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--polygon-6:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+  --polygon-sides: 6;
+  --polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-7 {
-  --size: 7;
-  -webkit-mask-image: paint(corner-shape, filled);
+  border: none;
+  border-radius: 0;
   --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-  border: none;
+  -webkit-mask-image: paint(corner-shape, filled);
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--polygon-7:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+  --polygon-sides: 7;
+  --polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-8 {
-  --size: 8;
-  -webkit-mask-image: paint(corner-shape, filled);
+  border: none;
+  border-radius: 0;
   --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-  border: none;
+  -webkit-mask-image: paint(corner-shape, filled);
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--polygon-8:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+  --polygon-sides: 8;
+  --polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-9 {
-  --size: 9;
-  -webkit-mask-image: paint(corner-shape, filled);
+  border: none;
+  border-radius: 0;
   --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-  border: none;
+  -webkit-mask-image: paint(corner-shape, filled);
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--polygon-9:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+  --polygon-sides: 9;
+  --polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-10 {
-  --size: 10;
-  -webkit-mask-image: paint(corner-shape, filled);
+  border: none;
+  border-radius: 0;
   --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-  border: none;
+  -webkit-mask-image: paint(corner-shape, filled);
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--polygon-10:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+  --polygon-sides: 10;
+  --polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-11 {
-  --size: 11;
-  -webkit-mask-image: paint(corner-shape, filled);
+  border: none;
+  border-radius: 0;
   --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-  border: none;
+  -webkit-mask-image: paint(corner-shape, filled);
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--polygon-11:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+  --polygon-sides: 11;
+  --polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-12 {
-  --size: 12;
-  -webkit-mask-image: paint(corner-shape, filled);
+  border: none;
+  border-radius: 0;
   --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-  border: none;
+  -webkit-mask-image: paint(corner-shape, filled);
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--polygon-12:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+  --polygon-sides: 12;
+  --polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-13 {
-  --size: 13;
-  -webkit-mask-image: paint(corner-shape, filled);
+  border: none;
+  border-radius: 0;
   --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-  border: none;
+  -webkit-mask-image: paint(corner-shape, filled);
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--polygon-13:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+  --polygon-sides: 13;
+  --polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-14 {
-  --size: 14;
-  -webkit-mask-image: paint(corner-shape, filled);
+  border: none;
+  border-radius: 0;
   --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-  border: none;
+  -webkit-mask-image: paint(corner-shape, filled);
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--polygon-14:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+  --polygon-sides: 14;
+  --polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-15 {
-  --size: 15;
-  -webkit-mask-image: paint(corner-shape, filled);
+  border: none;
+  border-radius: 0;
   --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-  border: none;
+  -webkit-mask-image: paint(corner-shape, filled);
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--polygon-15:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+  --polygon-sides: 15;
+  --polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-16 {
-  --size: 16;
-  -webkit-mask-image: paint(corner-shape, filled);
+  border: none;
+  border-radius: 0;
   --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-  border: none;
+  -webkit-mask-image: paint(corner-shape, filled);
   border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-shape--polygon-16:focus {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
+  --polygon-sides: 16;
+  --polygon-angle: 0deg;
 }
 
 /*# sourceMappingURL=shape.css.map */

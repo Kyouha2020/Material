@@ -1,5 +1,5 @@
 @use "sass:color"
-@use "../../design/color/light-theme" as *
+@use "../../design/color/theme" as *
 @use "../../design/usability/accessibility" as *
 @use "../../design/interaction/states" as *
 @use "../../design/layout/density" as *
@@ -8,9 +8,9 @@
 @use "../ripple/ripple" as *
 
 .mtrl-icon-button
-  @include ripple(rgba($primary, $container-overlay--pressed))
+  @include ripple($primary, $surface)
   @include touch-target(icon-button)
-  @include shape(rounded, 50%)
+  @include corner(50%)
   @include height(12)
   @include padding(3)
   @include color($primary, $icon--active)
@@ -27,21 +27,11 @@
   outline: none
   -webkit-tap-highlight-color: transparent
 
-  &:focus-visible
-    overflow: hidden
-
   &:hover
     cursor: pointer
-    background-color: color.mix($primary, $surface, $container-overlay--hovered)
 
-  &:focus
-    background-color: color.mix($primary, $surface, $container-overlay--focused)
-
-  &:active
-    background-color: color.mix($primary, $surface, $container-overlay--pressed)
-
-  &:disabled
-    background-color: rgba(color.grayscale($surface), $disabled-filled-container)
+  &:focus-visible
+    overflow: hidden
 
   &:disabled
     @include color($on-surface, $text--disabled)
@@ -50,37 +40,21 @@
     pointer-events: none
 
   &--outlined
-    @include stroke(rgba($on-surface, $stroke), 1px)
+    @include stroke(1px, rgba($on-surface, $stroke))
     @if tone($surface) == dark
       &:focus
-        @include stroke($primary, 1px)
+        @include stroke(1px, $primary)
 
   &--contained
-    @include ripple(rgba($on-primary, $container-overlay--pressed))
+    @include ripple($on-primary, $primary)
     @include color($on-primary, $text--high-emphasis)
     background-color: $primary
 
-    &:hover
-      cursor: pointer
-      background-color: color.mix($on-primary, $primary, $container-overlay--hovered)
-
-    &:focus
-      background-color: color.mix($on-primary, $primary, $container-overlay--focused)
-
-    &:active
-      background-color: color.mix($on-primary, $primary, $container-overlay--pressed)
-
     &:disabled
-      background-color: rgba(color.grayscale($on-primary), $disabled-filled-container)
+      background-color: rgba($on-surface, $disabled-filled-container)
 
   &--tile
-    @include shape($radius: 0)
-
-  &--transparent
-    background-color: transparent
-
-  &--no-touch-target
-    overflow: hidden
+    @include corner(0)
 
   &__icon
     width: 24px

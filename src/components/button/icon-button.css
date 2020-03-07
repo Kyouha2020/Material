@@ -2,9 +2,9 @@
   background-image: paint(ripple);
   --ripple-color: rgba(98, 0, 238, 0.1);
   --ripple-speed: 2;
-  --border-shape: rounded;
-  --border-radius: 50%;
-  border-radius: var(--border-radius);
+  background-color: #ffffff;
+  --corner-radius: 50%;
+  border-radius: var(--corner-radius);
   --height: 48px;
   height: var(--height);
   padding: 12px;
@@ -22,6 +22,15 @@
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
+.mtrl-icon-button:hover {
+  background-color: #f9f5fe;
+}
+.mtrl-icon-button:focus {
+  background-color: #ece0fd;
+}
+.mtrl-icon-button:active {
+  background-color: #efe6fd;
+}
 .mtrl-icon-button::after {
   content: "";
   position: absolute;
@@ -32,21 +41,11 @@
   width: 100%;
   height: 48px;
 }
-.mtrl-icon-button:focus-visible {
-  overflow: hidden;
-}
 .mtrl-icon-button:hover {
   cursor: pointer;
-  background-color: #f9f5fe;
 }
-.mtrl-icon-button:focus {
-  background-color: #ece0fd;
-}
-.mtrl-icon-button:active {
-  background-color: #efe6fd;
-}
-.mtrl-icon-button:disabled {
-  background-color: rgba(255, 255, 255, 0.12);
+.mtrl-icon-button:focus-visible {
+  overflow: hidden;
 }
 .mtrl-icon-button:disabled {
   color: rgba(0, 0, 0, 0.38);
@@ -55,19 +54,19 @@
   pointer-events: none;
 }
 .mtrl-icon-button--outlined {
-  --border-color: rgba(0, 0, 0, 0.12);
-  --border-width: 1px;
-  border: var(--border-width) solid var(--border-color);
+  --stroke-width: 1px;
+  --stroke-color: rgba(0, 0, 0, 0.12);
+  border: var(--stroke-width) solid var(--stroke-color);
 }
 .mtrl-icon-button--contained {
   background-image: paint(ripple);
   --ripple-color: rgba(255, 255, 255, 0.1);
   --ripple-speed: 2;
+  background-color: #6200ee;
   color: rgba(255, 255, 255, 0.87);
   background-color: #6200ee;
 }
 .mtrl-icon-button--contained:hover {
-  cursor: pointer;
   background-color: #680aef;
 }
 .mtrl-icon-button--contained:focus {
@@ -77,17 +76,11 @@
   background-color: #721af0;
 }
 .mtrl-icon-button--contained:disabled {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-icon-button--tile {
-  --border-radius: 0;
-  border-radius: var(--border-radius);
-}
-.mtrl-icon-button--transparent {
-  background-color: transparent;
-}
-.mtrl-icon-button--no-touch-target {
-  overflow: hidden;
+  --corner-radius: 0;
+  border-radius: var(--corner-radius);
 }
 .mtrl-icon-button__icon {
   width: 24px;
