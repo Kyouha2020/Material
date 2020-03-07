@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Google+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Material+Icons&display=swap");
-
 body {
     font-family: Google Sans, Roboto, sans-serif;
     -moz-osx-font-smoothing: grayscale;
@@ -12,19 +11,14 @@ h2 {
     margin-top: 3rem;
 }
 
-div[demo-title] {
+h3, h4 {
     color: rgba(0, 0, 0, 0.87);
     margin-top: 24px;
-}
-
-div[demo] {
-    padding-top: 16px;
 }
 
 mark {
     margin: 0 0 0 8px;
 }
-
 mark::after {
     top: 0;
     left: 0;
@@ -32,18 +26,12 @@ mark::after {
     border-radius: 4px;
     color: #ffffff;
     font-size: 0.8rem;
+    font-weight: 500;
 }
-
-mark[add-on]::after {
-    content: "Add-on";
-    background-color: #03dac6;
-}
-
 mark[unsafe]::after {
     content: "Unsafe";
     background-color: #b00020;
 }
-
 mark[against]::after {
     content: "Against MD Spec";
     background-color: #ff9800;

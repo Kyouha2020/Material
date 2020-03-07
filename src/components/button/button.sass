@@ -52,8 +52,8 @@
   &--contained
     @include ripple($on-primary, $primary)
     @include padding(0, 4)
-    @include color($on-primary, $text--high-emphasis)
     @include elevation(2, 4, 6, 8)
+    @include color($on-primary, $text--high-emphasis)
 
     &:disabled
       background-color: rgba($on-surface, $disabled-filled-container)
@@ -77,6 +77,17 @@
     .mtrl-button__label
       flex-direction: column
 
+  &--float
+    @include padding(0, 4)
+    @include elevation(0, 0, 2, 4)
+
+  &--raised
+    @include padding(0, 4)
+    @include elevation(2, 4, 6, 8)
+
+  &--unelevated
+    @include elevation(0, 0, 0, 0)
+
   &--rounded
     @include corner(calc(var(--helper-height, var(--height)) / 2))
 
@@ -86,15 +97,8 @@
   &--block
     width: 100%
 
-  &--float
-    @include elevation(0, 0, 2, 4)
-
-
-  &--raised
-    @include elevation(2, 4, 6, 8)
-
-  &--unelevated
-    @include elevation(0, 0, 0, 0)
+    &--between
+      justify-content: space-between
 
   &__label
     display: inline-flex
