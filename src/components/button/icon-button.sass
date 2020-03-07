@@ -88,6 +88,9 @@
     &:disabled
       background-color: rgba(color.grayscale($on-primary), $disabled-filled-container)
 
+  &--tile
+    @include shape($radius: 0)
+
   &--transparent
     background-color: transparent
 
