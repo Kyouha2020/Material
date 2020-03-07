@@ -27,6 +27,7 @@
   user-select: none;
   white-space: nowrap;
   border: none;
+  outline: none;
   -webkit-tap-highlight-color: transparent;
   transition: box-shadow 150ms;
 }
@@ -39,9 +40,6 @@
   left: 0;
   width: 100%;
   height: 48px;
-}
-.mtrl-button:not(:focus-visible) {
-  outline: none;
 }
 .mtrl-button:focus-visible {
   overflow: hidden;

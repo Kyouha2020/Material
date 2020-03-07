@@ -6,12 +6,21 @@
       @include shape($shape, $safe: false)
       @include stroke($safe: false)
 
+      &:focus
+        @include stroke($safe: false)
+
   @for $i from 1 through 12
     &--smooth-corners-#{$i}
       @include shape(smooth-rounded, $i, false)
       @include stroke($safe: false)
 
+      &:focus
+        @include stroke($safe: false)
+
   @for $i from 3 through 16
     &--polygon-#{$i}
       @include polygon($i, 0deg, false)
       @include stroke($safe: false)
+
+      &:focus
+        @include stroke($safe: false)

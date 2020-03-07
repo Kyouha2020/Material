@@ -1,0 +1,10 @@
+@use "../src/design/color/palette" as *
+@use "../src/design/color/light-theme" with ($primary: $primary-200, $primary-variant: $primary-700, $secondary: $secondary-200, $background: #121212, $surface: #121212, $error: #cf6679)
+@use "../src/components/button/button"
+@use "../src/components/button/icon-button"
+
+h1, h2, h3, h4, h5, h6, div[demo-title]
+  color: rgba(#ffffff, 87%)
+
+body
+  background-color: #121212

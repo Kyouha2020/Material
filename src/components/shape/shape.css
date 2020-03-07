@@ -9,12 +9,24 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--rounded-corners:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--cut-corners {
   --border-shape: cut;
   border-radius: 0;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);
   --corner-radius: var(--border-radius);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--cut-corners:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
@@ -31,12 +43,24 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--scoop-corners:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--notch-corners {
   --border-shape: notch;
   border-radius: 0;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);
   --corner-radius: var(--border-radius);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--notch-corners:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
@@ -54,6 +78,12 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--smooth-corners-1:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--smooth-corners-2 {
   --border-shape: smooth-rounded;
   --border-radius: 2;
@@ -61,6 +91,12 @@
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);
   --corner-radius: var(--border-radius);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--smooth-corners-2:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
@@ -78,6 +114,12 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--smooth-corners-3:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--smooth-corners-4 {
   --border-shape: smooth-rounded;
   --border-radius: 4;
@@ -85,6 +127,12 @@
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);
   --corner-radius: var(--border-radius);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--smooth-corners-4:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
@@ -102,6 +150,12 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--smooth-corners-5:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--smooth-corners-6 {
   --border-shape: smooth-rounded;
   --border-radius: 6;
@@ -109,6 +163,12 @@
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);
   --corner-radius: var(--border-radius);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--smooth-corners-6:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
@@ -126,6 +186,12 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--smooth-corners-7:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--smooth-corners-8 {
   --border-shape: smooth-rounded;
   --border-radius: 8;
@@ -133,6 +199,12 @@
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);
   --corner-radius: var(--border-radius);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--smooth-corners-8:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
@@ -150,6 +222,12 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--smooth-corners-9:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--smooth-corners-10 {
   --border-shape: smooth-rounded;
   --border-radius: 10;
@@ -157,6 +235,12 @@
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);
   --corner-radius: var(--border-radius);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--smooth-corners-10:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
@@ -174,6 +258,12 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--smooth-corners-11:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--smooth-corners-12 {
   --border-shape: smooth-rounded;
   --border-radius: 12;
@@ -181,6 +271,12 @@
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);
   --corner-radius: var(--border-radius);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--smooth-corners-12:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
@@ -197,12 +293,24 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--polygon-3:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--polygon-4 {
   --size: 4;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: polygon;
   --polygon-sides: var(--size);
   --polygon-angle: var(--angle);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--polygon-4:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
@@ -219,12 +327,24 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--polygon-5:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--polygon-6 {
   --size: 6;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: polygon;
   --polygon-sides: var(--size);
   --polygon-angle: var(--angle);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--polygon-6:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
@@ -241,12 +361,24 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--polygon-7:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--polygon-8 {
   --size: 8;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: polygon;
   --polygon-sides: var(--size);
   --polygon-angle: var(--angle);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--polygon-8:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
@@ -263,12 +395,24 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--polygon-9:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--polygon-10 {
   --size: 10;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: polygon;
   --polygon-sides: var(--size);
   --polygon-angle: var(--angle);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--polygon-10:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
@@ -285,12 +429,24 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--polygon-11:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--polygon-12 {
   --size: 12;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: polygon;
   --polygon-sides: var(--size);
   --polygon-angle: var(--angle);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--polygon-12:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
@@ -307,12 +463,24 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--polygon-13:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--polygon-14 {
   --size: 14;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: polygon;
   --polygon-sides: var(--size);
   --polygon-angle: var(--angle);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--polygon-14:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
@@ -329,12 +497,24 @@
   --stroke-color: var(--border-color);
   --stroke-width: var(--border-width);
 }
+.mtrl-shape--polygon-15:focus {
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
 .mtrl-shape--polygon-16 {
   --size: 16;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: polygon;
   --polygon-sides: var(--size);
   --polygon-angle: var(--angle);
+  border: none;
+  border-image: paint(corner-shape, outlined) 0 fill;
+  --stroke-color: var(--border-color);
+  --stroke-width: var(--border-width);
+}
+.mtrl-shape--polygon-16:focus {
   border: none;
   border-image: paint(corner-shape, outlined) 0 fill;
   --stroke-color: var(--border-color);
