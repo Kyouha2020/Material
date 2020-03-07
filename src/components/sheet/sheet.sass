@@ -2,20 +2,20 @@
 @use "../../design/shape/shape" as *
 
 .mtrl-sheet
-  &--stroke
-    @include stroke(#6200ee, 1px, false)
-
   @each $shape in (rounded, cut, scoop, notch)
     &--#{$shape}-corners
       @include shape($shape, 16px, false)
+      @include stroke($safe: false)
 
   @for $i from 1 through 12
     &--smooth-corners-#{$i}
       @include shape(smooth-rounded, $i, false)
+      @include stroke($safe: false)
 
   @for $i from 3 through 16
     &--polygon-#{$i}
       @include polygon($i, 0deg, false)
+      @include stroke($safe: false)
 
   &--aspect-ratio--16-9
     @include aspect-ratio(16, 9)

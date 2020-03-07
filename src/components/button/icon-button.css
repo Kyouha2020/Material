@@ -31,33 +31,6 @@
   width: 100%;
   height: 48px;
 }
-.mtrl-icon-button[unsafe] {
-  border-radius: 0;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-}
-.mtrl-icon-button[unsafe].mtrl-icon-button--outlined {
-  border: none;
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --stroke-color: var(--border-color);
-  --stroke-width: var(--border-width);
-}
-.mtrl-icon-button[unsafe].mtrl-icon-button--smooth-corners {
-  --border-shape: smooth-rounded;
-  --border-radius: 2;
-  border-radius: 0;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: var(--border-shape);
-  --corner-radius: var(--border-radius);
-}
-.mtrl-icon-button[unsafe].mtrl-icon-button--polygon {
-  --size: 4;
-  -webkit-mask-image: paint(corner-shape, filled);
-  --corner-shape: polygon;
-  --polygon-sides: var(--size);
-  --polygon-angle: var(--angle);
-}
 .mtrl-icon-button:not(:focus-visible) {
   outline: none;
 }

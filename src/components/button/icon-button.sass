@@ -26,18 +26,6 @@
   border: none
   -webkit-tap-highlight-color: transparent
 
-  &[unsafe]
-    @include shape($safe: false)
-
-    &.mtrl-icon-button--outlined
-      @include stroke($safe: false)
-
-    &.mtrl-icon-button--smooth-corners
-      @include shape(smooth-rounded, 2, false)
-
-    &.mtrl-icon-button--polygon
-      @include polygon(4, 0deg, false)
-
   &:not(:focus-visible)
     outline: none
 
