@@ -1,47 +1,52 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Google+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Material+Icons&display=swap");
+
 body {
-  font-family: Google Sans, Roboto, sans-serif;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+    font-family: Google Sans, Roboto, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 h2 {
-  color: rgba(98, 0, 238, 0.87);
-  margin-top: 3rem;
+    color: rgba(98, 0, 238, 0.87);
+    margin-top: 3rem;
 }
 
 div[demo-title] {
-  color: rgba(0, 0, 0, 0.87);
-  margin-top: 24px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-top: 24px;
 }
 
 div[demo] {
-  padding-top: 16px;
+    padding-top: 16px;
 }
 
 mark {
-  margin: 0 0 0 8px;
+    margin: 0 0 0 8px;
 }
+
 mark::after {
-  top: 0;
-  left: 0;
-  padding: 2px 8px;
-  border-radius: 4px;
-  color: #ffffff;
-  font-size: 0.8rem;
+    top: 0;
+    left: 0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 0.8rem;
 }
+
 mark[add-on]::after {
-  content: "Add-on";
-  background-color: #03dac6;
+    content: "Add-on";
+    background-color: #03dac6;
 }
+
 mark[unsafe]::after {
-  content: "Unsafe";
-  background-color: #b00020;
+    content: "Unsafe";
+    background-color: #b00020;
 }
+
 mark[against]::after {
-  content: "Against MD Spec";
-  background-color: #ff9800;
+    content: "Against MD Spec";
+    background-color: #ff9800;
 }
 
 /*# sourceMappingURL=index.css.map */

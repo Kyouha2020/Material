@@ -30,15 +30,13 @@ function rippleIn(evt) {
 
     requestAnimationFrame(function raf(now) {
         button.addEventListener('mouseleave', rippleOut)
-        if (evt.type === 'touchstart')
-            button.removeEventListener('mousedown', rippleIn)
+        if (evt.type === 'touchstart') button.removeEventListener('mousedown', rippleIn)
         const count = Math.floor(now - start) + 100
         button.style.setProperty('--ripple-x', x.toString())
         button.style.setProperty('--ripple-y', y.toString())
         button.style.setProperty('--animation-tick', count.toString())
         if (count > 1000) {
-            if (evt.type === 'touchstart')
-                button.addEventListener('mousedown', rippleIn)
+            if (evt.type === 'touchstart') button.addEventListener('mousedown', rippleIn)
             button.style.removeProperty('--ripple-x')
             button.style.removeProperty('--ripple-y')
             if (evt.keyCode === 32)
@@ -71,7 +69,7 @@ function rippleOut(evt) {
         button.style.setProperty('--animation-tick', count.toString())
         if (count === 1000)
             button.style.setProperty('--animation-tick', count.toString())
-        if (count <= 0) {
+        if (count < 0) {
             button.style.removeProperty('--ripple-x')
             button.style.removeProperty('--ripple-y')
             button.style.removeProperty('--animation-tick')

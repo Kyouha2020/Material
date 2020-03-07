@@ -1,264 +1,293 @@
 .mtrl-shape--rounded-corners {
-  border: none;
-  border-radius: 0;
-  --corner-shape: rounded;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    border: none;
+    border-radius: 0;
+    --corner-shape: rounded;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--cut-corners {
-  border: none;
-  border-radius: 0;
-  --corner-shape: cut;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    border: none;
+    border-radius: 0;
+    --corner-shape: cut;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--scoop-corners {
-  border: none;
-  border-radius: 0;
-  --corner-shape: scoop;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    border: none;
+    border-radius: 0;
+    --corner-shape: scoop;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--notch-corners {
-  border: none;
-  border-radius: 0;
-  --corner-shape: notch;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    border: none;
+    border-radius: 0;
+    --corner-shape: notch;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--smooth-corners-1 {
-  --corner-radius: 1;
-  border-radius: var(--corner-radius);
-  border: none;
-  border-radius: 0;
-  --corner-shape: smooth-rounded;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    --corner-radius: 1;
+    border-radius: var(--corner-radius);
+    border: none;
+    border-radius: 0;
+    --corner-shape: smooth-rounded;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--smooth-corners-2 {
-  --corner-radius: 2;
-  border-radius: var(--corner-radius);
-  border: none;
-  border-radius: 0;
-  --corner-shape: smooth-rounded;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    --corner-radius: 2;
+    border-radius: var(--corner-radius);
+    border: none;
+    border-radius: 0;
+    --corner-shape: smooth-rounded;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--smooth-corners-3 {
-  --corner-radius: 3;
-  border-radius: var(--corner-radius);
-  border: none;
-  border-radius: 0;
-  --corner-shape: smooth-rounded;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    --corner-radius: 3;
+    border-radius: var(--corner-radius);
+    border: none;
+    border-radius: 0;
+    --corner-shape: smooth-rounded;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--smooth-corners-4 {
-  --corner-radius: 4;
-  border-radius: var(--corner-radius);
-  border: none;
-  border-radius: 0;
-  --corner-shape: smooth-rounded;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    --corner-radius: 4;
+    border-radius: var(--corner-radius);
+    border: none;
+    border-radius: 0;
+    --corner-shape: smooth-rounded;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--smooth-corners-5 {
-  --corner-radius: 5;
-  border-radius: var(--corner-radius);
-  border: none;
-  border-radius: 0;
-  --corner-shape: smooth-rounded;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    --corner-radius: 5;
+    border-radius: var(--corner-radius);
+    border: none;
+    border-radius: 0;
+    --corner-shape: smooth-rounded;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--smooth-corners-6 {
-  --corner-radius: 6;
-  border-radius: var(--corner-radius);
-  border: none;
-  border-radius: 0;
-  --corner-shape: smooth-rounded;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    --corner-radius: 6;
+    border-radius: var(--corner-radius);
+    border: none;
+    border-radius: 0;
+    --corner-shape: smooth-rounded;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--smooth-corners-7 {
-  --corner-radius: 7;
-  border-radius: var(--corner-radius);
-  border: none;
-  border-radius: 0;
-  --corner-shape: smooth-rounded;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    --corner-radius: 7;
+    border-radius: var(--corner-radius);
+    border: none;
+    border-radius: 0;
+    --corner-shape: smooth-rounded;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--smooth-corners-8 {
-  --corner-radius: 8;
-  border-radius: var(--corner-radius);
-  border: none;
-  border-radius: 0;
-  --corner-shape: smooth-rounded;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    --corner-radius: 8;
+    border-radius: var(--corner-radius);
+    border: none;
+    border-radius: 0;
+    --corner-shape: smooth-rounded;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--smooth-corners-9 {
-  --corner-radius: 9;
-  border-radius: var(--corner-radius);
-  border: none;
-  border-radius: 0;
-  --corner-shape: smooth-rounded;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    --corner-radius: 9;
+    border-radius: var(--corner-radius);
+    border: none;
+    border-radius: 0;
+    --corner-shape: smooth-rounded;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--smooth-corners-10 {
-  --corner-radius: 10;
-  border-radius: var(--corner-radius);
-  border: none;
-  border-radius: 0;
-  --corner-shape: smooth-rounded;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    --corner-radius: 10;
+    border-radius: var(--corner-radius);
+    border: none;
+    border-radius: 0;
+    --corner-shape: smooth-rounded;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--smooth-corners-11 {
-  --corner-radius: 11;
-  border-radius: var(--corner-radius);
-  border: none;
-  border-radius: 0;
-  --corner-shape: smooth-rounded;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    --corner-radius: 11;
+    border-radius: var(--corner-radius);
+    border: none;
+    border-radius: 0;
+    --corner-shape: smooth-rounded;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--smooth-corners-12 {
-  --corner-radius: 12;
-  border-radius: var(--corner-radius);
-  border: none;
-  border-radius: 0;
-  --corner-shape: smooth-rounded;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
+    --corner-radius: 12;
+    border-radius: var(--corner-radius);
+    border: none;
+    border-radius: 0;
+    --corner-shape: smooth-rounded;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
 }
+
 .mtrl-shape--polygon-3 {
-  border: none;
-  border-radius: 0;
-  --corner-shape: polygon;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --polygon-sides: 3;
-  --polygon-angle: 0deg;
+    border: none;
+    border-radius: 0;
+    --corner-shape: polygon;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --polygon-sides: 3;
+    --polygon-angle: 0deg;
 }
+
 .mtrl-shape--polygon-4 {
-  border: none;
-  border-radius: 0;
-  --corner-shape: polygon;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --polygon-sides: 4;
-  --polygon-angle: 0deg;
+    border: none;
+    border-radius: 0;
+    --corner-shape: polygon;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --polygon-sides: 4;
+    --polygon-angle: 0deg;
 }
+
 .mtrl-shape--polygon-5 {
-  border: none;
-  border-radius: 0;
-  --corner-shape: polygon;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --polygon-sides: 5;
-  --polygon-angle: 0deg;
+    border: none;
+    border-radius: 0;
+    --corner-shape: polygon;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --polygon-sides: 5;
+    --polygon-angle: 0deg;
 }
+
 .mtrl-shape--polygon-6 {
-  border: none;
-  border-radius: 0;
-  --corner-shape: polygon;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --polygon-sides: 6;
-  --polygon-angle: 0deg;
+    border: none;
+    border-radius: 0;
+    --corner-shape: polygon;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --polygon-sides: 6;
+    --polygon-angle: 0deg;
 }
+
 .mtrl-shape--polygon-7 {
-  border: none;
-  border-radius: 0;
-  --corner-shape: polygon;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --polygon-sides: 7;
-  --polygon-angle: 0deg;
+    border: none;
+    border-radius: 0;
+    --corner-shape: polygon;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --polygon-sides: 7;
+    --polygon-angle: 0deg;
 }
+
 .mtrl-shape--polygon-8 {
-  border: none;
-  border-radius: 0;
-  --corner-shape: polygon;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --polygon-sides: 8;
-  --polygon-angle: 0deg;
+    border: none;
+    border-radius: 0;
+    --corner-shape: polygon;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --polygon-sides: 8;
+    --polygon-angle: 0deg;
 }
+
 .mtrl-shape--polygon-9 {
-  border: none;
-  border-radius: 0;
-  --corner-shape: polygon;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --polygon-sides: 9;
-  --polygon-angle: 0deg;
+    border: none;
+    border-radius: 0;
+    --corner-shape: polygon;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --polygon-sides: 9;
+    --polygon-angle: 0deg;
 }
+
 .mtrl-shape--polygon-10 {
-  border: none;
-  border-radius: 0;
-  --corner-shape: polygon;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --polygon-sides: 10;
-  --polygon-angle: 0deg;
+    border: none;
+    border-radius: 0;
+    --corner-shape: polygon;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --polygon-sides: 10;
+    --polygon-angle: 0deg;
 }
+
 .mtrl-shape--polygon-11 {
-  border: none;
-  border-radius: 0;
-  --corner-shape: polygon;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --polygon-sides: 11;
-  --polygon-angle: 0deg;
+    border: none;
+    border-radius: 0;
+    --corner-shape: polygon;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --polygon-sides: 11;
+    --polygon-angle: 0deg;
 }
+
 .mtrl-shape--polygon-12 {
-  border: none;
-  border-radius: 0;
-  --corner-shape: polygon;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --polygon-sides: 12;
-  --polygon-angle: 0deg;
+    border: none;
+    border-radius: 0;
+    --corner-shape: polygon;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --polygon-sides: 12;
+    --polygon-angle: 0deg;
 }
+
 .mtrl-shape--polygon-13 {
-  border: none;
-  border-radius: 0;
-  --corner-shape: polygon;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --polygon-sides: 13;
-  --polygon-angle: 0deg;
+    border: none;
+    border-radius: 0;
+    --corner-shape: polygon;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --polygon-sides: 13;
+    --polygon-angle: 0deg;
 }
+
 .mtrl-shape--polygon-14 {
-  border: none;
-  border-radius: 0;
-  --corner-shape: polygon;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --polygon-sides: 14;
-  --polygon-angle: 0deg;
+    border: none;
+    border-radius: 0;
+    --corner-shape: polygon;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --polygon-sides: 14;
+    --polygon-angle: 0deg;
 }
+
 .mtrl-shape--polygon-15 {
-  border: none;
-  border-radius: 0;
-  --corner-shape: polygon;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --polygon-sides: 15;
-  --polygon-angle: 0deg;
+    border: none;
+    border-radius: 0;
+    --corner-shape: polygon;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --polygon-sides: 15;
+    --polygon-angle: 0deg;
 }
+
 .mtrl-shape--polygon-16 {
-  border: none;
-  border-radius: 0;
-  --corner-shape: polygon;
-  -webkit-mask-image: paint(corner-shape, filled);
-  border-image: paint(corner-shape, outlined) 0 fill;
-  --polygon-sides: 16;
-  --polygon-angle: 0deg;
+    border: none;
+    border-radius: 0;
+    --corner-shape: polygon;
+    -webkit-mask-image: paint(corner-shape, filled);
+    border-image: paint(corner-shape, outlined) 0 fill;
+    --polygon-sides: 16;
+    --polygon-angle: 0deg;
 }
 
 /*# sourceMappingURL=shape.css.map */

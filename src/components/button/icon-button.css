@@ -1,91 +1,106 @@
 .mtrl-icon-button {
-  background-image: paint(ripple);
-  --ripple-color: rgba(98, 0, 238, 0.1);
-  --ripple-speed: 2;
-  background-color: #ffffff;
-  --corner-radius: 50%;
-  border-radius: var(--corner-radius);
-  --height: 48px;
-  height: var(--height);
-  padding: 12px;
-  color: rgba(98, 0, 238, 0.87);
-  width: 48px;
-  background-color: #ffffff;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-  user-select: none;
-  border: none;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
+    background-image: paint(ripple);
+    --ripple-color: rgba(98, 0, 238, 0.1);
+    --ripple-speed: 2;
+    background-color: #ffffff;
+    --corner-radius: 50%;
+    border-radius: var(--corner-radius);
+    --height: 48px;
+    height: var(--height);
+    padding: 12px;
+    color: rgba(98, 0, 238, 0.87);
+    width: 48px;
+    background-color: #ffffff;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    user-select: none;
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
+
 .mtrl-icon-button:hover {
-  background-color: #f9f5fe;
+    background-color: #f9f5fe;
 }
+
 .mtrl-icon-button:focus {
-  background-color: #ece0fd;
+    background-color: #ece0fd;
 }
+
 .mtrl-icon-button:active {
-  background-color: #efe6fd;
+    background-color: #efe6fd;
 }
+
 .mtrl-icon-button::after {
-  content: "";
-  position: absolute;
-  top: var(--height)-48px/2;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 48px;
+    content: "";
+    position: absolute;
+    top: var(--height) -48px/2;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
 }
+
 .mtrl-icon-button:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
+
 .mtrl-icon-button:focus-visible {
-  overflow: hidden;
+    overflow: hidden;
 }
+
 .mtrl-icon-button:disabled {
-  color: rgba(0, 0, 0, 0.38);
-  background-color: rgba(255, 255, 255, 0.12);
-  cursor: default;
-  pointer-events: none;
+    color: rgba(0, 0, 0, 0.38);
+    background-color: rgba(255, 255, 255, 0.12);
+    cursor: default;
+    pointer-events: none;
 }
+
 .mtrl-icon-button--outlined {
-  --stroke-width: 1px;
-  --stroke-color: rgba(0, 0, 0, 0.12);
-  border: var(--stroke-width) solid var(--stroke-color);
+    --stroke-width: 1px;
+    --stroke-color: rgba(0, 0, 0, 0.12);
+    border: var(--stroke-width) solid var(--stroke-color);
 }
+
 .mtrl-icon-button--contained {
-  background-image: paint(ripple);
-  --ripple-color: rgba(255, 255, 255, 0.1);
-  --ripple-speed: 2;
-  background-color: #6200ee;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #6200ee;
+    background-image: paint(ripple);
+    --ripple-color: rgba(255, 255, 255, 0.1);
+    --ripple-speed: 2;
+    background-color: #6200ee;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #6200ee;
 }
+
 .mtrl-icon-button--contained:hover {
-  background-color: #680aef;
+    background-color: #680aef;
 }
+
 .mtrl-icon-button--contained:focus {
-  background-color: #751ff0;
+    background-color: #751ff0;
 }
+
 .mtrl-icon-button--contained:active {
-  background-color: #721af0;
+    background-color: #721af0;
 }
+
 .mtrl-icon-button--contained:disabled {
-  background-color: rgba(0, 0, 0, 0.12);
+    background-color: rgba(0, 0, 0, 0.12);
 }
+
 .mtrl-icon-button--tile {
-  --corner-radius: 0;
-  border-radius: var(--corner-radius);
+    --corner-radius: 0;
+    border-radius: var(--corner-radius);
 }
+
 .mtrl-icon-button__icon {
-  width: 24px;
-  height: 24px;
-  font-size: 24px;
-  fill: currentColor;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    fill: currentColor;
 }
 
 /*# sourceMappingURL=icon-button.css.map */
