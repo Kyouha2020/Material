@@ -1,7 +1,6 @@
-@use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
 
-.mtrl-sheet
+.mtrl-shape
   @each $shape in (rounded, cut, scoop, notch)
     &--#{$shape}-corners
       @include shape($shape, 16px, false)
@@ -16,21 +15,3 @@
     &--polygon-#{$i}
       @include polygon($i, 0deg, false)
       @include stroke($safe: false)
-
-  &--aspect-ratio--16-9
-    @include aspect-ratio(16, 9)
-
-  &--aspect-ratio--3-2
-    @include aspect-ratio(3, 2)
-
-  &--aspect-ratio--4-3
-    @include aspect-ratio(4, 3)
-
-  &--aspect-ratio--square
-    @include aspect-ratio(1, 1)
-
-  &--aspect-ratio--3-4
-    @include aspect-ratio(3, 4)
-
-  &--aspect-ratio--2-3
-    @include aspect-ratio(2, 3)
