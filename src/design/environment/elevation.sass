@@ -25,18 +25,14 @@ $ambient-map: (0: 0px 0px 0px 0px, 1: 0px 1px 3px 0px, 2: 0px 1px 5px 0px, 3: 0p
   @if $active == 0
     $box-shadow--active: none
 
-  @if $z-value == $hover and $hover == $focus and $focus == $active
-    box-shadow: $box-shadow
-    z-index: $z-value
-  @else
-    box-shadow: $box-shadow
-    z-index: $z-value
-    &:hover
-      box-shadow: $box-shadow--hover
-      z-index: $hover
-    &:focus
-      box-shadow: $box-shadow--focus
-      z-index: $focus
-    &:active
-      box-shadow: $box-shadow--active
-      z-index: $active
+  box-shadow: $box-shadow
+  z-index: $z-value
+  &:hover
+    box-shadow: $box-shadow--hover
+    z-index: $hover
+  &:focus
+    box-shadow: $box-shadow--focus
+    z-index: $focus
+  &:active
+    box-shadow: $box-shadow--active
+    z-index: $active

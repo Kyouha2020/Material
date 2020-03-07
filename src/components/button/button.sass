@@ -51,10 +51,10 @@
         @include stroke(1px, $primary)
 
   &--contained
+    @extend .mtrl-button--raised
     @include ripple($on-primary, $primary)
     @include padding(0, 4)
     @include color($on-primary, $text--high-emphasis)
-    @include elevation(2, 4, 6, 8)
 
     &:disabled
       background-color: rgba($on-surface, $disabled-filled-container)
@@ -86,6 +86,15 @@
 
   &--block
     width: 100%
+
+  &--float
+    @include elevation(0, 0, 2, 4)
+
+  &--raised
+    @include elevation(2, 4, 6, 8)
+
+  &--unelevated
+    @include elevation(0, 0, 0, 0)
 
   &__label
     display: inline-flex
