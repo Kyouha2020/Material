@@ -3,7 +3,7 @@
 .mtrl-shape
   @each $shape in (rounded, cut, scoop, notch)
     &--#{$shape}-corners
-      @include shape($shape, 16px, false)
+      @include shape($shape, $safe: false)
       @include stroke($safe: false)
 
   @for $i from 1 through 12

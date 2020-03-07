@@ -1,6 +1,5 @@
 .mtrl-shape--rounded-corners {
   --border-shape: rounded;
-  --border-radius: 16px;
   border-radius: 0;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);
@@ -12,7 +11,6 @@
 }
 .mtrl-shape--cut-corners {
   --border-shape: cut;
-  --border-radius: 16px;
   border-radius: 0;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);
@@ -24,7 +22,6 @@
 }
 .mtrl-shape--scoop-corners {
   --border-shape: scoop;
-  --border-radius: 16px;
   border-radius: 0;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);
@@ -36,7 +33,6 @@
 }
 .mtrl-shape--notch-corners {
   --border-shape: notch;
-  --border-radius: 16px;
   border-radius: 0;
   -webkit-mask-image: paint(corner-shape, filled);
   --corner-shape: var(--border-shape);

@@ -9,7 +9,6 @@
 @use "../../design/typography/typography" as *
 @use "../ripple/ripple" as *
 
-
 .mtrl-button
   @include ripple(rgba($primary, $container-overlay--pressed))
   @include touch-target(button)
@@ -30,12 +29,6 @@
   border: none
   -webkit-tap-highlight-color: transparent
   transition: box-shadow 150ms
-
-  &[unsafe]
-    @include shape($radius: 8px, $safe: false)
-
-    &.mtrl-button--outlined
-      @include stroke($safe: false)
 
   &:not(:focus-visible)
     outline: none
