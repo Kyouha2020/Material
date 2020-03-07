@@ -60,14 +60,11 @@ $stroke: 12%
 // Layout and typography
 // touch targets
 
-@mixin touch-target($component, $touch-target: 48px)
-  $height: #{var(--height)}
-  $touch-target: $touch-target
-
+@mixin touch-target($touch-target: 48px)
   &::after
     content: ''
     position: absolute
-    top: ($height - $touch-target) / 2
+    top: calc((var(--helper-height, var(--height)) - #{$touch-target}) / 2)
     right: 0
     bottom: 0
     left: 0

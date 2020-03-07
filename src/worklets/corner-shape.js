@@ -50,16 +50,13 @@ registerPaint('corner-shape', class {
             center = {x: geom.width / 2, y: geom.height / 2}, radius = Math.min(geom.width, geom.height) / 2
 
         ctx.translate(geom.width / 2, geom.height / 2)
-        if (numSides % 2 === 0)
-            ctx.rotate((rotate + 45 * numSides) * Math.PI / 180)
-        else
-            ctx.rotate((rotate - 90) * Math.PI / 180)
+        ctx.rotate((rotate + 180) * Math.PI / 180)
         ctx.translate(-geom.width / 2, -geom.height / 2)
 
         ctx.beginPath()
         for (let i = 1; i <= numSides; i++) {
-            const xPos = center.x + radius * Math.cos(2 * Math.PI * i / numSides),
-                yPos = center.y + radius * Math.sin(2 * Math.PI * i / numSides)
+            const xPos = center.x + radius * Math.sin(2 * Math.PI * i / numSides),
+                yPos = center.y + radius * Math.cos(2 * Math.PI * i / numSides)
             if (i === 0) ctx.moveTo(xPos, yPos)
             else ctx.lineTo(xPos, yPos)
         }

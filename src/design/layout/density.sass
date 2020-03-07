@@ -5,8 +5,7 @@
 
 @mixin height($height)
   --height: #{get($height)}
-  height: var(--height)
+  height: var(--helper-height, var(--height))
 
 @mixin density($value: 0, $scale: 4px)
   --helper-height: #{calc(var(--height) + #{$value} * #{$scale})}
-  height: var(--helper-height)
