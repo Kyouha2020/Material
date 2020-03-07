@@ -28,7 +28,6 @@
   border: none;
   outline: none;
   -webkit-tap-highlight-color: transparent;
-  transition: box-shadow 150ms;
 }
 .mtrl-button:hover {
   background-color: #f9f5fe;
@@ -66,14 +65,17 @@
 .mtrl-button:disabled:hover {
   box-shadow: none;
   z-index: 0;
+  transition: box-shadow 150ms;
 }
 .mtrl-button:disabled:focus {
   box-shadow: none;
   z-index: 0;
+  transition: box-shadow 150ms;
 }
 .mtrl-button:disabled:active {
   box-shadow: none;
   z-index: 0;
+  transition: box-shadow 150ms;
 }
 .mtrl-button--outlined {
   padding: 0px 16px;
@@ -91,44 +93,38 @@
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   z-index: 2;
 }
-
 .mtrl-button--contained:hover {
   background-color: #680aef;
 }
-
 .mtrl-button--contained:focus {
   background-color: #751ff0;
 }
-
 .mtrl-button--contained:active {
   background-color: #721af0;
 }
-
 .mtrl-button--contained:hover {
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   z-index: 4;
+  transition: box-shadow 150ms;
 }
-
 .mtrl-button--contained:focus {
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   z-index: 6;
+  transition: box-shadow 150ms;
 }
-
 .mtrl-button--contained:active {
   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
   z-index: 8;
+  transition: box-shadow 150ms;
 }
-
 .mtrl-button--contained:disabled {
   background-color: rgba(0, 0, 0, 0.12);
 }
-
 .mtrl-button--vertical {
   --height: 56px;
   height: var(--height);
   flex-direction: column;
 }
-
 .mtrl-button--vertical .mtrl-button__icon {
   margin: 0px 0px 4px;
 }
@@ -164,37 +160,37 @@
 .mtrl-button--float:hover {
   box-shadow: none;
   z-index: 0;
+  transition: box-shadow 150ms;
 }
 .mtrl-button--float:focus {
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   z-index: 2;
+  transition: box-shadow 150ms;
 }
-
 .mtrl-button--float:active {
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   z-index: 4;
+  transition: box-shadow 150ms;
 }
-
 .mtrl-button--raised {
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   z-index: 2;
 }
-
 .mtrl-button--raised:hover {
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   z-index: 4;
+  transition: box-shadow 150ms;
 }
-
 .mtrl-button--raised:focus {
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   z-index: 6;
+  transition: box-shadow 150ms;
 }
-
 .mtrl-button--raised:active {
   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
   z-index: 8;
+  transition: box-shadow 150ms;
 }
-
 .mtrl-button--unelevated {
   box-shadow: none;
   z-index: 0;
@@ -202,14 +198,17 @@
 .mtrl-button--unelevated:hover {
   box-shadow: none;
   z-index: 0;
+  transition: box-shadow 150ms;
 }
 .mtrl-button--unelevated:focus {
   box-shadow: none;
   z-index: 0;
+  transition: box-shadow 150ms;
 }
 .mtrl-button--unelevated:active {
   box-shadow: none;
   z-index: 0;
+  transition: box-shadow 150ms;
 }
 .mtrl-button__label {
   display: inline-flex;
