@@ -9,6 +9,7 @@
 @use "../../design/typography/typography" as *
 @use "../ripple/ripple" as *
 
+
 .mtrl-button
   @include ripple(rgba($primary, $container-overlay--pressed))
   @include touch-target(button)
@@ -109,7 +110,7 @@
       flex-direction: column
 
   &--rounded
-    @include shape($radius: calc(var(--height) / 2))
+    @include shape($radius: calc(var(--helper-height, var(--height)) / 2))
 
   &--tile
     @include shape($radius: 0)

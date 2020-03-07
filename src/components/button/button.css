@@ -135,7 +135,7 @@
   flex-direction: column;
 }
 .mtrl-button--rounded {
-  --border-radius: calc(var(--height) / 2);
+  --border-radius: calc(var(--helper-height, var(--height)) / 2);
   border-radius: var(--border-radius);
 }
 .mtrl-button--tile {
