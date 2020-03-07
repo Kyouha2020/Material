@@ -32,13 +32,13 @@
 
   &:hover
     cursor: pointer
-    background-color: color.mix($surface, $primary, 100% - $container-overlay--hovered)
+    background-color: color.mix($primary, $surface, $container-overlay--hovered)
 
   &:focus
-    background-color: color.mix($surface, $primary, 100% - $container-overlay--focused)
+    background-color: color.mix($primary, $surface, $container-overlay--focused)
 
   &:active
-    background-color: color.mix($surface, $primary, 100% - $container-overlay--pressed)
+    background-color: color.mix($primary, $surface, $container-overlay--pressed)
 
   &:disabled
     background-color: rgba(color.grayscale($surface), $disabled-filled-container)
@@ -62,13 +62,13 @@
 
     &:hover
       cursor: pointer
-      background-color: color.mix($primary, $on-primary, 100% - $container-overlay--hovered)
+      background-color: color.mix($on-primary, $primary, $container-overlay--hovered)
 
     &:focus
-      background-color: color.mix($primary, $on-primary, 100% - $container-overlay--focused)
+      background-color: color.mix($on-primary, $primary, $container-overlay--focused)
 
     &:active
-      background-color: color.mix($primary, $on-primary, 100% - $container-overlay--pressed)
+      background-color: color.mix($on-primary, $primary, $container-overlay--pressed)
 
     &:disabled
       background-color: rgba(color.grayscale($on-primary), $disabled-filled-container)
