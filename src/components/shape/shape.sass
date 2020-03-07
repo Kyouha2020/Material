@@ -1,5 +1,0 @@
-@use "../../design/shape/shape" as *
-
-@each $shape in (rounded, cut, scoop, notch, smooth-rounded)
-  .mtrl-shape--#{$shape}-corners
-    @include shape($shape, $safe: false)

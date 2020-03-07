@@ -6,15 +6,19 @@
   <meta content="Material Components: Button & Icon Button" name="Description">
   <title>Button</title>
   <link href="../index.css" rel="stylesheet">
+  <style>
+    .mtrl-button, .mtrl-icon-button {
+      margin: 4px;
+    }
+  </style>
   <link href="../../src/components/button/button.css" rel="stylesheet">
   <link href="../../src/components/button/icon-button.css" rel="stylesheet">
-  <link href="../../src/components/shape/shape.css" rel="stylesheet">
+  <link href="../../src/components/sheet/sheet.css" rel="stylesheet">
 </head>
 <body>
 
 <h2>Button</h2>
 <section id="button">
-
   <div demo-title>Text Button</div>
   <div demo>
     <button class="mtrl-button">
@@ -176,29 +180,27 @@
     <mark unsafe></mark>
   </div>
   <div demo>
-    <button class="mtrl-button mtrl-button--outlined mtrl-button--vertical mtrl-shape--rounded-corners" unsafe>
+    <button class="mtrl-button mtrl-button--outlined mtrl-button--vertical mtrl-sheet--rounded-corners" unsafe>
       <i class="mtrl-button__icon material-icons">favorite</i>
       <span class="mtrl-button__label">Rounded</span>
     </button>
-    <button class="mtrl-button mtrl-button--outlined mtrl-button--vertical mtrl-shape--cut-corners" unsafe>
+    <button class="mtrl-button mtrl-button--outlined mtrl-button--vertical mtrl-sheet--cut-corners" unsafe>
       <i class="mtrl-button__icon material-icons">favorite</i>
       <span class="mtrl-button__label">Cut</span>
     </button>
-    <button class="mtrl-button mtrl-button--outlined mtrl-button--vertical mtrl-shape--scoop-corners" unsafe>
+    <button class="mtrl-button mtrl-button--outlined mtrl-button--vertical mtrl-sheet--scoop-corners" unsafe>
       <i class="mtrl-button__icon material-icons">favorite</i>
       <span class="mtrl-button__label">Scoop</span>
     </button>
-    <button class="mtrl-button mtrl-button--outlined mtrl-button--vertical mtrl-shape--notch-corners" unsafe>
+    <button class="mtrl-button mtrl-button--outlined mtrl-button--vertical mtrl-sheet--notch-corners" unsafe>
       <i class="mtrl-button__icon material-icons">favorite</i>
       <span class="mtrl-button__label">Notch</span>
     </button>
   </div>
-
 </section>
 
 <h2>Icon button</h2>
 <section id="icon-button">
-
   <button class="mtrl-icon-button">
     <i class="mtrl-icon-button__icon material-icons">favorite</i>
   </button>
@@ -247,8 +249,8 @@
       <i class="mtrl-icon-button__icon material-icons">favorite</i>
     </button>
     <div demo-title>Polygon
-      <mark unsafe></mark>
       <mark add-on></mark>
+      <mark unsafe></mark>
     </div>
     <div demo>
       <button class="mtrl-icon-button mtrl-icon-button--contained mtrl-icon-button--polygon" unsafe>
@@ -256,7 +258,6 @@
       </button>
     </div>
   </div>
-
 </section>
 
 <script src="../index.js" type="module" async></script>

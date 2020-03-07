@@ -1,0 +1,36 @@
+@use "../../design/layout/spacing" as *
+@use "../../design/shape/shape" as *
+
+.mtrl-sheet
+  &--stroke
+    @include stroke(#6200ee, 1px, false)
+
+  @each $shape in (rounded, cut, scoop, notch)
+    &--#{$shape}-corners
+      @include shape($shape, 16px, false)
+
+  @for $i from 1 through 12
+    &--smooth-corners-#{$i}
+      @include shape(smooth-rounded, $i, false)
+
+  @for $i from 3 through 16
+    &--polygon-#{$i}
+      @include polygon($i, 0deg, false)
+
+  &--aspect-ratio--16-9
+    @include aspect-ratio(16, 9)
+
+  &--aspect-ratio--3-2
+    @include aspect-ratio(3, 2)
+
+  &--aspect-ratio--4-3
+    @include aspect-ratio(4, 3)
+
+  &--aspect-ratio--square
+    @include aspect-ratio(1, 1)
+
+  &--aspect-ratio--3-4
+    @include aspect-ratio(3, 4)
+
+  &--aspect-ratio--2-3
+    @include aspect-ratio(2, 3)
