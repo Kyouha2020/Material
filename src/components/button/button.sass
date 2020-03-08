@@ -42,8 +42,9 @@
     @include padding(0, 4)
     @include stroke(1px, rgba($on-surface, $stroke))
     @include dark-theme
-      .mtrl-button--outlined:focus
-        @include stroke(1px, rgb($primary))
+
+    &:focus
+      @include stroke(1px, rgb($primary))
 
   &--contained
     @include ripple($primary, $on-primary)

@@ -96,12 +96,11 @@ html[dark] {
   --stroke-color: rgba(var(--mtrl-theme-on-surface, #000), 12%);
   border: var(--stroke-width) solid var(--stroke-color);
 }
-html[dark] .mtrl-button--outlined:focus {
+.mtrl-icon-button--outlined:focus {
   --stroke-width: 1px;
   --stroke-color: rgb(var(--mtrl-theme-primary, #6200ee));
   border: var(--stroke-width) solid var(--stroke-color);
 }
-
 .mtrl-icon-button--contained {
   --ripple-color: rgba(var(--mtrl-theme-on-primary, #fff), 10%);
   --ripple-speed: 2;

@@ -5,11 +5,20 @@
     &--#{$shape}-corners
       @include shape($shape)
 
+      &:focus
+        @include shape($shape)
+
   @for $i from 1 through 12
     &--smooth-corners-#{$i}
       @include corner($i)
       @include shape(smooth-rounded)
 
+      &:focus
+        @include shape(smooth-rounded)
+
   @for $i from 3 through 16
     &--polygon-#{$i}
       @include shape(polygon, $i, 0deg)
+
+      &:focus
+        @include shape(polygon)
