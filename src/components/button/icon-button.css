@@ -1,25 +1,30 @@
 .mtrl-icon-button {
-  background-image: paint(ripple);
-  --ripple-color: rgba(98, 0, 238, 0.1);
-  --ripple-speed: 2;
-  background-color: #ffffff;
-  --corner-radius: 50%;
-  border-radius: var(--corner-radius);
-  --height: 48px;
-  height: var(--height);
-  padding: 12px;
-  color: rgba(98, 0, 238, 0.87);
-  width: 48px;
-  background-color: #ffffff;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-  user-select: none;
+    --ripple-color: rgba(98, 0, 238, 0.1);
+    --ripple-speed: 2;
+    background-color: #ffffff;
+    --corner-radius: 50%;
+    border-radius: var(--corner-radius);
+    --height: 48px;
+    height: var(--helper-height, var(--height));
+    padding: 12px;
+    color: rgba(98, 0, 238, 0.87);
+    width: 48px;
+    background-color: #ffffff;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    user-select: none;
   border: none;
   outline: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+@supports (background-image: paint(ripple)) {
+    .mtrl-icon-button {
+        background-image: paint(ripple);
+    }
 }
 .mtrl-icon-button:hover {
   background-color: #f9f5fe;
@@ -33,12 +38,12 @@
 .mtrl-icon-button::after {
     content: "";
     position: absolute;
-    top: var(--height) -48px/2;
+    top: calc((var(--helper-height, var(--height)) - icon-button) / 2);
     right: 0;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 48px;
+    height: icon-button;
 }
 .mtrl-icon-button:hover {
   cursor: pointer;
@@ -55,12 +60,17 @@
   border: var(--stroke-width) solid var(--stroke-color);
 }
 .mtrl-icon-button--contained {
-  background-image: paint(ripple);
   --ripple-color: rgba(255, 255, 255, 0.1);
   --ripple-speed: 2;
   background-color: #6200ee;
   color: rgba(255, 255, 255, 0.87);
   background-color: #6200ee;
+}
+
+@supports (background-image: paint(ripple)) {
+    .mtrl-icon-button--contained {
+        background-image: paint(ripple);
+    }
 }
 .mtrl-icon-button--contained:hover {
   background-color: #680aef;

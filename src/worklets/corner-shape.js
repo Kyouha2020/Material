@@ -1,4 +1,4 @@
-registerPaint('corner-shape', class {
+if (typeof registerPaint !== 'undefined') registerPaint('corner-shape', class {
     static get inputProperties() {
         return ['--corner-radius', '--corner-shape', '--stroke-width', '--stroke-color', '--polygon-sides', '--polygon-angle']
     }

@@ -1,4 +1,4 @@
-registerPaint('ripple', class {
+if (typeof registerPaint !== 'undefined') registerPaint('ripple', class {
     static get inputProperties() {
         return ['--ripple-color', '--animation-tick', '--ripple-x', '--ripple-y', '--ripple-speed']
     }
