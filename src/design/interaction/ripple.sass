@@ -1,15 +1,35 @@
 @use "sass:color"
 @use "states" as *
 
-@mixin ripple($color, $overlay, $speed: 2)
+@mixin ripple($container, $overlay, $speed: 2)
   @supports (background-image: unquote('paint(ripple)'))
     background-image: unquote('paint(ripple)')
-  --ripple-color: #{rgba($color, $container-overlay--pressed)}
+  --ripple-color: #{rgba($overlay, $container-overlay--pressed)}
   --ripple-speed: #{$speed}
-  background-color: $overlay
+  --container-color: #{$container}
+  --overlay-color: #{$overlay}
+  background-color: rgb(var(--container-color))
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border-radius: var(--corner-radius)
+    background-color: rgb(var(--overlay-color))
+    opacity: 0
+
   &:hover
-    background-color: color.mix($color, $overlay, $container-overlay--hovered)
+    &::before
+      opacity: $container-overlay--hovered
+
   &:focus
-    background-color: color.mix($color, $overlay, $container-overlay--focused)
+    &::before
+      opacity: $container-overlay--focused
+
   &:active
-    background-color: color.mix($color, $overlay, $container-overlay--pressed)
+    &::before
+      opacity: $container-overlay--pressed

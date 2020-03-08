@@ -1,1 +1,29 @@
+:root {
+  --mtrl-theme-primary: 98, 0, 238;
+  --mtrl-theme-surface: 255, 255, 255;
+  --mtrl-theme-on-primary: 255, 255, 255;
+  --mtrl-theme-on-surface: 0, 0, 0;
+  --mtrl-dark-theme-primary: 187, 134, 252;
+  --mtrl-dark-theme-surface: 18, 18, 18;
+  --mtrl-dark-theme-on-primary: 0, 0, 0;
+  --mtrl-dark-theme-on-surface: 255, 255, 255;
+}
+
+html:not([dark]) {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
+}
+
+html[dark] {
+  --mtrl-theme-primary: var(--mtrl-dark-theme-primary);
+  --mtrl-theme-surface: var(--mtrl-dark-theme-surface);
+  --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-primary);
+  --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface);
+  background-color: #121212;
+}
+html[dark] > *, html[dark] span, html[dark] h1, html[dark] h2, html[dark] h3, html[dark] h4, html[dark] h5, html[dark] h6 {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
 /*# sourceMappingURL=theme.css.map */

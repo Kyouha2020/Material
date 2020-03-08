@@ -85,4 +85,5 @@ document.querySelectorAll('.mtrl-button, .mtrl-toggle-button, .mtrl-icon-button,
     el.addEventListener('keydown', rippleIn)
     el.addEventListener('mouseleave', rippleOut)
     el.addEventListener('touchmove', rippleOut, {passive: true})
+    el.style.toString().replace('#ffffff', '#03dac6')
 })

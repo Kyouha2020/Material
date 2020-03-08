@@ -7,14 +7,13 @@
 @use "../../design/usability/accessibility" as *
 
 .mtrl-icon-button
-  @include ripple($primary, $surface)
+  @include ripple($surface, $primary)
   @include touch-target()
   @include corner(50%)
   @include height(12)
   @include padding(3)
   @include color($primary, $icon--active)
   width: 48px
-  background-color: $surface
   position: relative
   display: inline-flex
   align-items: center
@@ -36,14 +35,13 @@
 
   &--outlined
     @include stroke(1px, rgba($on-surface, $stroke))
-    @if tone($surface) == dark
-      &:focus
-        @include stroke(1px, $primary)
+    @include dark-theme
+      .mtrl-button--outlined:focus
+        @include stroke(1px, rgb($primary))
 
   &--contained
-    @include ripple($on-primary, $primary)
+    @include ripple($primary, $on-primary)
     @include color($on-primary, $text--high-emphasis)
-    background-color: $primary
 
     &:disabled
       background-color: rgba($on-surface, $disabled-filled-container)

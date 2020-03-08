@@ -16,3 +16,58 @@ $on-secondary: if(contrast-tone($secondary) == "dark", #000, #fff)
 $on-background: if(contrast-tone($background) == "dark", #000, #fff)
 $on-surface: if(contrast-tone($surface) == "dark", #000, #fff)
 $on-error: if(contrast-tone($error) == "dark", #000, #fff)
+
+
+$dark--primary: $primary-200 !default
+$dark--primary-variant: $primary-700 !default
+$dark--dark-primary: #1f1b24 !default
+$dark--secondary: $secondary-200 !default
+$dark--background: #121212 !default
+$dark--surface: #121212 !default
+$dark--error: #cf6679 !default
+
+$dark--on-primary: if(contrast-tone($dark--primary) == "dark", #000, #fff)
+$dark--on-secondary: if(contrast-tone($dark--secondary) == "dark", #000, #fff)
+$dark--on-background: if(contrast-tone($dark--background) == "dark", #000, #fff)
+$dark--on-surface: if(contrast-tone($dark--surface) == "dark", #000, #fff)
+$dark--on-error: if(contrast-tone($dark--error) == "dark", #000, #fff)
+
+
+@function hex2rgb($color)
+  @return red($color), green($color), blue($color)
+
+@mixin dark-theme
+  @at-root html[dark]
+    @content
+
+
+\:root
+  --mtrl-theme-primary: #{hex2rgb($primary)}
+  --mtrl-theme-surface: #{hex2rgb($surface)}
+  --mtrl-theme-on-primary: #{hex2rgb($on-primary)}
+  --mtrl-theme-on-surface: #{hex2rgb($on-surface)}
+
+  --mtrl-dark-theme-primary: #{hex2rgb($dark--primary)}
+  --mtrl-dark-theme-surface: #{hex2rgb($dark--surface)}
+  --mtrl-dark-theme-on-primary: #{hex2rgb($dark--on-primary)}
+  --mtrl-dark-theme-on-surface: #{hex2rgb($dark--on-surface)}
+
+html:not([dark])
+  @include color($on-surface, $text--high-emphasis)
+  background-color: $surface
+
+html[dark]
+  --mtrl-theme-primary: var(--mtrl-dark-theme-primary)
+  --mtrl-theme-surface: var(--mtrl-dark-theme-surface)
+  --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-primary)
+  --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface)
+  background-color: $dark--surface
+
+  > *, span, h1, h2, h3, h4, h5, h6
+    @include color($dark--on-surface, $text--medium-emphasis)
+    font-weight: 500
+
+$primary: var(--mtrl-theme-primary, $primary)
+$surface: var(--mtrl-theme-surface, $surface)
+$on-primary: var(--mtrl-theme-on-primary, $on-primary)
+$on-surface: var(--mtrl-theme-on-surface, $on-surface)
