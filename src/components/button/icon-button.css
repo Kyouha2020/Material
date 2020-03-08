@@ -16,9 +16,9 @@
     justify-content: center;
     vertical-align: middle;
     user-select: none;
-  border: none;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 @supports (background-image: paint(ripple)) {

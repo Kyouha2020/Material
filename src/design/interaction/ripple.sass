@@ -2,8 +2,8 @@
 @use "states" as *
 
 @mixin ripple($color, $overlay, $speed: 2)
-  @supports (background-image: paint(ripple))
-    background-image: paint(ripple)
+  @supports (background-image: unquote('paint(ripple)'))
+    background-image: unquote('paint(ripple)')
   --ripple-color: #{rgba($color, $container-overlay--pressed)}
   --ripple-speed: #{$speed}
   background-color: $overlay

@@ -14,12 +14,12 @@
 @mixin shape($shape: null, $sides: null, $angle: null)
   @if $shape != null
     --corner-shape: #{$shape}
-    @supports (-webkit-mask-image: paint(corner-shape))
-      -webkit-mask-image: paint(corner-shape, filled)
-    @supports (border-image: paint(corner-shape))
+    @supports (-webkit-mask-image: unquote('paint(corner-shape)'))
+      -webkit-mask-image: unquote('paint(corner-shape, filled)')
+    @supports (border-image: unquote('paint(corner-shape)'))
       border: none
       border-radius: 0
-      border-image: paint(corner-shape, outlined) 0 fill
+      border-image: unquote('paint(corner-shape, outlined)') 0 fill
 
   @if $sides != null
     --polygon-sides: #{$sides}

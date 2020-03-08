@@ -15,7 +15,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--cut-corners {
     --corner-shape: cut;
 }
@@ -33,7 +32,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--scoop-corners {
     --corner-shape: scoop;
 }
@@ -51,7 +49,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--notch-corners {
     --corner-shape: notch;
 }
@@ -69,7 +66,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--smooth-corners-1 {
     --corner-radius: 1;
     border-radius: var(--corner-radius);
@@ -89,7 +85,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--smooth-corners-2 {
     --corner-radius: 2;
     border-radius: var(--corner-radius);
@@ -109,7 +104,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--smooth-corners-3 {
     --corner-radius: 3;
     border-radius: var(--corner-radius);
@@ -129,7 +123,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--smooth-corners-4 {
     --corner-radius: 4;
     border-radius: var(--corner-radius);
@@ -149,7 +142,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--smooth-corners-5 {
     --corner-radius: 5;
     border-radius: var(--corner-radius);
@@ -169,7 +161,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--smooth-corners-6 {
     --corner-radius: 6;
     border-radius: var(--corner-radius);
@@ -189,7 +180,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--smooth-corners-7 {
     --corner-radius: 7;
     border-radius: var(--corner-radius);
@@ -209,7 +199,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--smooth-corners-8 {
     --corner-radius: 8;
     border-radius: var(--corner-radius);
@@ -229,7 +218,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--smooth-corners-9 {
     --corner-radius: 9;
     border-radius: var(--corner-radius);
@@ -249,7 +237,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--smooth-corners-10 {
     --corner-radius: 10;
     border-radius: var(--corner-radius);
@@ -269,7 +256,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--smooth-corners-11 {
     --corner-radius: 11;
     border-radius: var(--corner-radius);
@@ -289,7 +275,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--smooth-corners-12 {
     --corner-radius: 12;
     border-radius: var(--corner-radius);
@@ -309,7 +294,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--polygon-3 {
     --corner-shape: polygon;
     --polygon-sides: 3;
@@ -329,7 +313,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--polygon-4 {
     --corner-shape: polygon;
     --polygon-sides: 4;
@@ -349,7 +332,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--polygon-5 {
     --corner-shape: polygon;
     --polygon-sides: 5;
@@ -369,7 +351,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--polygon-6 {
     --corner-shape: polygon;
     --polygon-sides: 6;
@@ -389,7 +370,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--polygon-7 {
     --corner-shape: polygon;
     --polygon-sides: 7;
@@ -409,7 +389,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--polygon-8 {
     --corner-shape: polygon;
     --polygon-sides: 8;
@@ -429,7 +408,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--polygon-9 {
     --corner-shape: polygon;
     --polygon-sides: 9;
@@ -449,7 +427,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--polygon-10 {
     --corner-shape: polygon;
     --polygon-sides: 10;
@@ -469,7 +446,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--polygon-11 {
     --corner-shape: polygon;
     --polygon-sides: 11;
@@ -489,7 +465,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--polygon-12 {
     --corner-shape: polygon;
     --polygon-sides: 12;
@@ -509,7 +484,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--polygon-13 {
     --corner-shape: polygon;
     --polygon-sides: 13;
@@ -529,7 +503,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--polygon-14 {
     --corner-shape: polygon;
     --polygon-sides: 14;
@@ -549,7 +522,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--polygon-15 {
     --corner-shape: polygon;
     --polygon-sides: 15;
@@ -569,7 +541,6 @@
         border-image: paint(corner-shape, outlined) 0 fill;
     }
 }
-
 .mtrl-shape--polygon-16 {
     --corner-shape: polygon;
     --polygon-sides: 16;
