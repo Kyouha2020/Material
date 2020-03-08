@@ -1,17 +1,1 @@
-{
-  "version": 3,
-  "sourceRoot": "",
-  "sources": [
-    "icon-button.sass",
-    "../../design/interaction/ripple.sass",
-    "../../design/color/theme.sass",
-    "../../design/shape/shape.sass",
-    "../../design/layout/density.sass",
-    "../../design/layout/spacing.sass",
-    "../../design/usability/accessibility.sass",
-    "../../design/color/palette.sass"
-  ],
-  "names": [],
-  "mappings": "AASA;ECHE;EACA;EACA,kBCEQ;ECPR;EACA;ECEA;EACA;EC4EE,SANI;ECrBN;ENxCA;EACA,kBEPQ;EFQR;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;ACtBA;EDKF;ICJI;;;AAIF;EACE;;AACF;EACE;;AACF;EACE;;AKiDF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,QAT+B;;ANlCjC;EACE;;AAEF;EMyBA;ENvBE;EACA;EACA;;AAEF;EG7BE;EAEA;EACF;;AHgCA;ECrCA;EACA;EACA,kBMHY;EDmDZ;ENVE,kBOzCU;;ANDZ;EDuCA;ICtCE;;;AAIF;EACE;;AACF;EACE;;AACF;EACE;;ADkCA;EACE;;AAEJ;EGhDA;EACA;;AHkDA;EACE;EACA;EACA;EACA",
-  "file": "icon-button.css"
-}
+{"version":3,"sourceRoot":"","sources":["icon-button.sass","../../design/interaction/ripple.sass","../../design/color/theme.sass","../../design/shape/shape.sass","../../design/layout/density.sass","../../design/layout/spacing.sass","../../design/usability/accessibility.sass","../../design/color/palette.sass"],"names":[],"mappings":"AAQA;ECFE;EACA;EACA,kBCEQ;ECPR;EACA;ECEA;EACA;EC4EE,SANI;ECrBN;ENzCA;EACA,kBENQ;EFOR;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;ACrBA;EDIF;ICHI;;;AAIF;EACE;;AACF;EACE;;AACF;EACE;;AKiDF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,QAT+B;;ANnCjC;EACE;;AAEF;EM0BA;ENxBE;EACA;EACA;;AAEF;EG5BE;EAEA;EACF;;AH+BA;ECpCA;EACA;EACA,kBMHY;EDmDZ;ENXE,kBOxCU;;ANDZ;EDsCA;ICrCE;;;AAIF;EACE;;AACF;EACE;;AACF;EACE;;ADiCA;EACE;;AAEJ;EG/CA;EACA;;AHiDA;EACE;EACA;EACA;EACA","file":"icon-button.css"}

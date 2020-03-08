@@ -1,4 +1,3 @@
-@use "sass:color"
 @use "../../design/color/theme" as *
 @use "../../design/usability/accessibility" as *
 @use "../../design/environment/elevation" as *
@@ -55,13 +54,13 @@
     &:disabled
       background-color: rgba($on-surface, $disabled-filled-container)
 
-  &--split .mtrl-button__icon
+  &--split &__icon
     @include height(9)
     @include margin-horizontal(-2, 3)
     @include padding-horizontal(0, 2)
     border-right: 1px solid rgba($on-surface, $stroke)
 
-  &--split .mtrl-button__label + .mtrl-button__icon
+  &--split &__label + &__icon
     @include margin-horizontal(3, -2)
     @include padding-horizontal(2, 0)
     border: none
