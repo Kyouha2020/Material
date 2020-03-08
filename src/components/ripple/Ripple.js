@@ -50,7 +50,7 @@ function rippleIn(evt) {
 
 function rippleOut(evt) {
     const button = this, rect = button.getBoundingClientRect(), start = performance.now(),
-        t = button.style.getPropertyValue('--animation-tick').trim()
+        t = button.style.getPropertyValue('--animation-tick')
     let x, y
 
     if (evt.type === 'touchmove') {

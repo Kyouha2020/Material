@@ -8,7 +8,7 @@ if (typeof registerPaint !== 'undefined') registerPaint('corner-shape', class {
     }
 
     paint(ctx, geom, properties, args) {
-        this.shape = properties.get('--corner-shape').toString().toLowerCase().trim()
+        this.shape = properties.get('--corner-shape').toString().trim()
 
         if (this.shape === 'smooth-rounded') this.smoothRounded(ctx, geom, properties)
         else if (this.shape === 'polygon') this.polygon(ctx, geom, properties)

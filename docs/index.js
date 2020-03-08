@@ -1,4 +1,4 @@
-import('../src/design/interaction/Ripple.js')
+import('../src/components/ripple/Ripple.js')
 
 if (typeof CSS.paintWorklet !== 'undefined') {
     CSS.paintWorklet.addModule('../../src/worklets/corner-shape.js')
