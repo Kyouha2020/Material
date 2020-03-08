@@ -38,12 +38,12 @@
 .mtrl-icon-button::after {
     content: "";
     position: absolute;
-    top: calc((var(--helper-height, var(--height)) - icon-button) / 2);
+    top: calc((var(--helper-height, var(--height)) - 48px) / 2);
     right: 0;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: icon-button;
+    height: 48px;
 }
 .mtrl-icon-button:hover {
   cursor: pointer;
