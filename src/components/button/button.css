@@ -21,10 +21,6 @@ html[dark] {
   --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface);
   background-color: #121212;
 }
-html[dark] > *, html[dark] span, html[dark] h1, html[dark] h2, html[dark] h3, html[dark] h4, html[dark] h5, html[dark] h6 {
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 500;
-}
 
 .mtrl-button {
   --ripple-color: rgba(var(--mtrl-theme-primary, #6200ee), 10%);
