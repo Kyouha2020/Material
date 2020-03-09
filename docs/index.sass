@@ -1,7 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto|Google+Sans&display=swap")
-@import url("https://fonts.googleapis.com/css?family=Material+Icons&display=swap")
+@import url("https://fonts.googleapis.com/css?family=Roboto|Google+Sans|Material+Icons&display=swap")
+
+html:not([dark])
+  color: rgba(#000000, 87%)
+  background-color: #ffffff
 
 html[dark]
+  background-color: #121212
+
   > h1, h2, h3, h4, h5, h6, #theme-toggle
     color: rgba(#ffffff, 60%)
     font-weight: 500

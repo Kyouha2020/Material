@@ -69,10 +69,6 @@ $elevation-overlay: (00: 0%, 01: 5%, 02: 7%, 03: 8%, 04: 9%, 06: 11%, 08: 12%, 1
   --mtrl-dark-theme-on-secondary:  #{hex2rgb($dark--on-secondary)}
   --mtrl-dark-theme-on-surface: #{hex2rgb($dark--on-surface)}
 
-html:not([dark])
-  @include color($on-surface, $text--high-emphasis)
-  background-color: $surface
-
 html[dark]
   --mtrl-theme-primary: var(--mtrl-dark-theme-primary)
   --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary-variant)
@@ -82,7 +78,6 @@ html[dark]
   --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-primary)
   --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-secondary-variant)
   --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface)
-  background-color: $dark--surface
 
 $primary: var(--mtrl-theme-primary, $primary)
 $primary-variant: var(--mtrl-theme-primary-variant, $primary-variant)

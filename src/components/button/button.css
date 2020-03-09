@@ -19,11 +19,6 @@
   --mtrl-dark-theme-on-surface: 255, 255, 255;
 }
 
-html:not([dark]) {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #ffffff;
-}
-
 html[dark] {
   --mtrl-theme-primary: var(--mtrl-dark-theme-primary);
   --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary-variant);
@@ -33,7 +28,6 @@ html[dark] {
   --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-primary);
   --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-secondary-variant);
   --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface);
-  background-color: #121212;
 }
 
 .mtrl-button {
