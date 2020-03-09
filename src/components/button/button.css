@@ -103,6 +103,10 @@ html[dark] {
   cursor: default;
   pointer-events: none;
 }
+html[dark] .mtrl-button:disabled:not(:hover):not(:focus):not(:active)::before {
+  background-color: white;
+  opacity: 0%;
+}
 .mtrl-button--outlined {
   padding: 0px 16px;
   --stroke-width: 1px;
@@ -114,7 +118,6 @@ html[dark] .mtrl-button--outlined:focus {
   --stroke-color: rgb(var(--mtrl-theme-primary, #6200ee));
   border: var(--stroke-width) solid var(--stroke-color);
 }
-
 .mtrl-button--contained {
   --ripple-color: rgba(var(--mtrl-theme-on-primary, #fff), 10%);
   --ripple-speed: 2;
@@ -153,6 +156,10 @@ html[dark] .mtrl-button--outlined:focus {
 }
 .mtrl-button--contained:active::before {
   opacity: 10%;
+}
+html[dark] .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before {
+  background-color: white;
+  opacity: 7%;
 }
 .mtrl-button--contained:hover {
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
@@ -230,6 +237,10 @@ html[dark] .mtrl-button--outlined:focus {
   z-index: 0;
   padding: 0px 16px;
 }
+html[dark] .mtrl-button--float:not(:hover):not(:focus):not(:active)::before {
+  background-color: white;
+  opacity: 0%;
+}
 .mtrl-button--float:hover {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   z-index: 0;
@@ -248,6 +259,10 @@ html[dark] .mtrl-button--outlined:focus {
   z-index: 2;
   padding: 0px 16px;
 }
+html[dark] .mtrl-button--raised:not(:hover):not(:focus):not(:active)::before {
+  background-color: white;
+  opacity: 7%;
+}
 .mtrl-button--raised:hover {
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   z-index: 4;
@@ -264,6 +279,10 @@ html[dark] .mtrl-button--outlined:focus {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 0;
+}
+html[dark] .mtrl-button--unelevated:not(:hover):not(:focus):not(:active)::before {
+  background-color: white;
+  opacity: 0%;
 }
 .mtrl-button--unelevated:hover {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);

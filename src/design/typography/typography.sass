@@ -1,5 +1,3 @@
-@use "sass:map"
-
 // https://material.io/design/typography/the-type-system.html
 
 $weight: (thin: 100, light: 300, regular: 400, medium: 500, bold: 700, black: 900)
@@ -19,24 +17,24 @@ $letter-spacing: (h1: -1.5, h2: -0.5, h3: 0, h4: 0.25, h5: 0, h6: 0.15, subtitle
 
 
 @mixin typography($scale-category, $scale: 1)
-  $font-size: map.get($size, $scale-category)
+  $font-size: map-get($size, $scale-category)
   font-family: Roboto, sans-serif
   font-size: font-size($font-size) * $scale
-  font-weight: map.get($weight, map.get($font, $scale-category))
-  letter-spacing: letter-spacing(map.get($letter-spacing, $scale-category), $font-size)
+  font-weight: map-get($weight, map-get($font, $scale-category))
+  letter-spacing: letter-spacing(map-get($letter-spacing, $scale-category), $font-size)
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
-  @if map.get($case, $scale-category) == sentence
+  @if map-get($case, $scale-category) == sentence
     text-decoration: inherit
     text-transform: inherit
-  @else if map.get($case, $scale-category) == all_caps
+  @else if map-get($case, $scale-category) == all_caps
     text-decoration: none
     text-transform: uppercase
 
 @mixin font-size($scale-category, $scale: 1)
-  $font-size: map.get($size, $scale-category)
+  $font-size: map-get($size, $scale-category)
   font-size: font-size($font-size) * $scale
-  @if map.get($case, $scale-category) == sentence
+  @if map-get($case, $scale-category) == sentence
     text-transform: inherit
-  @else if map.get($case, $scale-category) == all_caps
+  @else if map-get($case, $scale-category) == all_caps
     text-transform: uppercase

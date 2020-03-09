@@ -101,7 +101,6 @@ html[dark] .mtrl-icon-button--outlined:focus {
   --stroke-color: rgb(var(--mtrl-theme-primary, #6200ee));
   border: var(--stroke-width) solid var(--stroke-color);
 }
-
 .mtrl-icon-button--contained {
   --ripple-color: rgba(var(--mtrl-theme-on-primary, #fff), 10%);
   --ripple-speed: 2;

@@ -1,4 +1,4 @@
-@use "sass:map"
+@use "../color/theme" as *
 
 // https://material.io/design/environment/elevation.html
 
@@ -11,10 +11,15 @@ $ambient-map: (0: 0px 0px 0px 0px, 1: 0px 1px 3px 0px, 2: 0px 1px 5px 0px, 3: 0p
   $penumbra-color: rgba($color, 0.14 + $opacity-boost)
   $ambient-color: rgba($color, 0.12 + $opacity-boost)
 
-  $box-shadow: (map.get($umbra-map, $z-value) $umbra-color, map.get($penumbra-map, $z-value) $penumbra-color, map.get($ambient-map, $z-value) $ambient-color)
-  $box-shadow--hover: (map.get($umbra-map, $hover) $umbra-color, map.get($penumbra-map, $hover) $penumbra-color, map.get($ambient-map, $hover) $ambient-color)
-  $box-shadow--focus: (map.get($umbra-map, $focus) $umbra-color, map.get($penumbra-map, $focus) $penumbra-color, map.get($ambient-map, $focus) $ambient-color)
-  $box-shadow--active: (map.get($umbra-map, $active) $umbra-color, map.get($penumbra-map, $active) $penumbra-color, map.get($ambient-map, $active) $ambient-color)
+  $box-shadow: (map-get($umbra-map, $z-value) $umbra-color, map-get($penumbra-map, $z-value) $penumbra-color, map-get($ambient-map, $z-value) $ambient-color)
+  $box-shadow--hover: (map-get($umbra-map, $hover) $umbra-color, map-get($penumbra-map, $hover) $penumbra-color, map-get($ambient-map, $hover) $ambient-color)
+  $box-shadow--focus: (map-get($umbra-map, $focus) $umbra-color, map-get($penumbra-map, $focus) $penumbra-color, map-get($ambient-map, $focus) $ambient-color)
+  $box-shadow--active: (map-get($umbra-map, $active) $umbra-color, map-get($penumbra-map, $active) $penumbra-color, map-get($ambient-map, $active) $ambient-color)
+
+  @include dark-theme
+    &:not(:hover):not(:focus):not(:active)::before
+      background-color: white
+      opacity: map-get($elevation-overlay, $z-value)
 
   box-shadow: $box-shadow
   transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1)
