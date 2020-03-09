@@ -2,8 +2,6 @@
 
 Docs: https://kyouha2020.github.io/Material/docs/
 
-(Before assessing docs, make sure your browser is **Chrome 78** or later, and enable
-**this flag** (chrome://flags/#enable-experimental-web-platform-features) in Chrome.)
 
 ## The next-generation Web Component library
 
@@ -11,9 +9,14 @@ Docs: https://kyouha2020.github.io/Material/docs/
 * a11y and i18n
 * Use [CSS Houdini](https://ishoudinireadyyet.com/).
 
-Notice: As a next-generation web component library, it only supports
- Chrome 80+, Firefox 73+, Safari 13+, Edge 80+ and Opera 66+,
-doesn't support IE 11.
+## Browser compatibility ##
+
+**Recommended:** Chrome 80+ (with Enable experimental Web Platform features preference)
+ Edge 80+ Firefox 73+ Opera 66+ Safari 13+
+
+**CSS Variables:** Don't support IE 11
+
+**Paint API & Typed OM:** Chrome 66+ Edge 79+ Opera 53+ Samsung Internet 9.2+
 
 ## Example
 
