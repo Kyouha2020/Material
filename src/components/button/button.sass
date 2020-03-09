@@ -10,12 +10,7 @@
 
 $button-ink-color: rgba($primary, $text--high-emphasis)
 $contained-button-ink-color: rgba($on-primary, $text--high-emphasis)
-
-//\:root
-  --mtrl-button-ink-color: red
-
-@function prop($var, $value)
-  @return var(--mtrl-#{$var}, $value)
+$disabled-button-ink-color: rgba($on-surface, $text--disabled)
 
 .mtrl-button
   @include ripple($surface, $primary)
@@ -42,7 +37,7 @@ $contained-button-ink-color: rgba($on-primary, $text--high-emphasis)
 
   &:disabled
     @include elevation(0)
-    @include color($on-surface, $text--disabled)
+    color: prop(button-ink-color, $disabled-button-ink-color)
     background-color: rgba($surface, $disabled-filled-container)
     cursor: default
     pointer-events: none

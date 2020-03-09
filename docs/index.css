@@ -21,10 +21,10 @@ h3, h4 {
   margin-top: 24px;
 }
 
-mark {
+span[unsafe], span[against] {
   margin: 0 0 0 8px;
 }
-mark::after {
+span[unsafe]::after, span[against]::after {
   top: 0;
   left: 0;
   padding: 2px 8px;
@@ -33,11 +33,11 @@ mark::after {
   font-size: 0.8rem;
   font-weight: 500;
 }
-mark[unsafe]::after {
+span[unsafe][unsafe]::after, span[against][unsafe]::after {
   content: "Unsafe";
   background-color: #b00020;
 }
-mark[against]::after {
+span[unsafe][against]::after, span[against][against]::after {
   content: "Against MD Spec";
   background-color: #ff9800;
 }

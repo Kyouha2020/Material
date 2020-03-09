@@ -1,3 +1,41 @@
+:root {
+  --mtrl-theme-primary: 98, 0, 238;
+  --mtrl-theme-primary-variant: 55, 0, 179;
+  --mtrl-theme-secondary: 3, 218, 198;
+  --mtrl-theme-secondary-variant: 1, 135, 134;
+  --mtrl-theme-surface: 255, 255, 255;
+  --mtrl-theme-on-primary: 255, 255, 255;
+  --mtrl-theme-on-primary-variant: 255, 255, 255;
+  --mtrl-theme-on-secondary: 0, 0, 0;
+  --mtrl-theme-on-secondary-variant: 255, 255, 255;
+  --mtrl-theme-on-surface: 0, 0, 0;
+  --mtrl-dark-theme-primary: 187, 134, 252;
+  --mtrl-dark-theme-primary-variant: 55, 0, 179;
+  --mtrl-dark-theme-secondary: 3, 218, 198;
+  --mtrl-dark-theme-surface: 18, 18, 18;
+  --mtrl-dark-theme-on-primary: 0, 0, 0;
+  --mtrl-dark-theme-on-primary-variant: 255, 255, 255;
+  --mtrl-dark-theme-on-secondary: 0, 0, 0;
+  --mtrl-dark-theme-on-surface: 255, 255, 255;
+}
+
+html:not([dark]) {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
+}
+
+html[dark] {
+  --mtrl-theme-primary: var(--mtrl-dark-theme-primary);
+  --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary-variant);
+  --mtrl-theme-secondary: var(--mtrl-dark-theme-secondary);
+  --mtrl-theme-surface: var(--mtrl-dark-theme-surface);
+  --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-primary);
+  --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-primary);
+  --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-secondary-variant);
+  --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface);
+  background-color: #121212;
+}
+
 .mtrl-shape--rounded-corners {
   --corner-shape: rounded;
 }
@@ -23,6 +61,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--rounded-corners:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--rounded-corners:focus {
+  --corner-shape: rounded;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--rounded-corners:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--rounded-corners:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
@@ -58,6 +111,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--cut-corners:focus {
+  --corner-shape: cut;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--cut-corners:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--cut-corners:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--scoop-corners {
   --corner-shape: scoop;
 }
@@ -88,6 +156,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--scoop-corners:focus {
+  --corner-shape: scoop;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--scoop-corners:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--scoop-corners:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--notch-corners {
   --corner-shape: notch;
 }
@@ -113,6 +196,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--notch-corners:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--notch-corners:focus {
+  --corner-shape: notch;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--notch-corners:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--notch-corners:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
@@ -150,6 +248,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--smooth-corners-1:focus {
+  --corner-shape: smooth-rounded;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-1:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-1:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--smooth-corners-2 {
   --corner-radius: 2;
   border-radius: var(--corner-radius);
@@ -177,6 +290,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--smooth-corners-2:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--smooth-corners-2:focus {
+  --corner-shape: smooth-rounded;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-2:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-2:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
@@ -214,6 +342,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--smooth-corners-3:focus {
+  --corner-shape: smooth-rounded;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-3:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-3:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--smooth-corners-4 {
   --corner-radius: 4;
   border-radius: var(--corner-radius);
@@ -241,6 +384,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--smooth-corners-4:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--smooth-corners-4:focus {
+  --corner-shape: smooth-rounded;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-4:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-4:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
@@ -278,6 +436,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--smooth-corners-5:focus {
+  --corner-shape: smooth-rounded;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-5:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-5:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--smooth-corners-6 {
   --corner-radius: 6;
   border-radius: var(--corner-radius);
@@ -305,6 +478,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--smooth-corners-6:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--smooth-corners-6:focus {
+  --corner-shape: smooth-rounded;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-6:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-6:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
@@ -342,6 +530,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--smooth-corners-7:focus {
+  --corner-shape: smooth-rounded;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-7:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-7:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--smooth-corners-8 {
   --corner-radius: 8;
   border-radius: var(--corner-radius);
@@ -369,6 +572,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--smooth-corners-8:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--smooth-corners-8:focus {
+  --corner-shape: smooth-rounded;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-8:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-8:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
@@ -406,6 +624,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--smooth-corners-9:focus {
+  --corner-shape: smooth-rounded;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-9:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-9:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--smooth-corners-10 {
   --corner-radius: 10;
   border-radius: var(--corner-radius);
@@ -433,6 +666,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--smooth-corners-10:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--smooth-corners-10:focus {
+  --corner-shape: smooth-rounded;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-10:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-10:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
@@ -470,6 +718,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--smooth-corners-11:focus {
+  --corner-shape: smooth-rounded;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-11:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-11:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--smooth-corners-12 {
   --corner-radius: 12;
   border-radius: var(--corner-radius);
@@ -497,6 +760,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--smooth-corners-12:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--smooth-corners-12:focus {
+  --corner-shape: smooth-rounded;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-12:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--smooth-corners-12:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
@@ -534,6 +812,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--polygon-3:focus {
+  --corner-shape: polygon;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-3:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-3:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--polygon-4 {
   --corner-shape: polygon;
   --polygon-sides: 4;
@@ -561,6 +854,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--polygon-4:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--polygon-4:focus {
+  --corner-shape: polygon;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-4:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-4:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
@@ -598,6 +906,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--polygon-5:focus {
+  --corner-shape: polygon;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-5:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-5:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--polygon-6 {
   --corner-shape: polygon;
   --polygon-sides: 6;
@@ -625,6 +948,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--polygon-6:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--polygon-6:focus {
+  --corner-shape: polygon;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-6:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-6:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
@@ -662,6 +1000,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--polygon-7:focus {
+  --corner-shape: polygon;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-7:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-7:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--polygon-8 {
   --corner-shape: polygon;
   --polygon-sides: 8;
@@ -689,6 +1042,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--polygon-8:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--polygon-8:focus {
+  --corner-shape: polygon;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-8:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-8:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
@@ -726,6 +1094,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--polygon-9:focus {
+  --corner-shape: polygon;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-9:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-9:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--polygon-10 {
   --corner-shape: polygon;
   --polygon-sides: 10;
@@ -753,6 +1136,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--polygon-10:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--polygon-10:focus {
+  --corner-shape: polygon;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-10:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-10:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
@@ -790,6 +1188,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--polygon-11:focus {
+  --corner-shape: polygon;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-11:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-11:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--polygon-12 {
   --corner-shape: polygon;
   --polygon-sides: 12;
@@ -817,6 +1230,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--polygon-12:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--polygon-12:focus {
+  --corner-shape: polygon;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-12:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-12:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
@@ -854,6 +1282,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--polygon-13:focus {
+  --corner-shape: polygon;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-13:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-13:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--polygon-14 {
   --corner-shape: polygon;
   --polygon-sides: 14;
@@ -881,6 +1324,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--polygon-14:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--polygon-14:focus {
+  --corner-shape: polygon;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-14:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-14:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
@@ -918,6 +1376,21 @@
     border-image: paint(corner-shape, outlined) 0 fill;
   }
 }
+html[dark] .mtrl-shape--polygon-15:focus {
+  --corner-shape: polygon;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-15:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-15:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
 .mtrl-shape--polygon-16 {
   --corner-shape: polygon;
   --polygon-sides: 16;
@@ -945,6 +1418,21 @@
 }
 @supports (border-image: paint(corner-shape)) {
   .mtrl-shape--polygon-16:focus {
+    border: none;
+    border-radius: 0;
+    border-image: paint(corner-shape, outlined) 0 fill;
+  }
+}
+html[dark] .mtrl-shape--polygon-16:focus {
+  --corner-shape: polygon;
+}
+@supports (-webkit-mask-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-16:focus {
+    -webkit-mask-image: paint(corner-shape, filled);
+  }
+}
+@supports (border-image: paint(corner-shape)) {
+  html[dark] .mtrl-shape--polygon-16:focus {
     border: none;
     border-radius: 0;
     border-image: paint(corner-shape, outlined) 0 fill;
