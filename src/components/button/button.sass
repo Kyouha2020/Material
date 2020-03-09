@@ -8,6 +8,15 @@
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 
+$button-ink-color: rgba($primary, $text--high-emphasis)
+$contained-button-ink-color: rgba($on-primary, $text--high-emphasis)
+
+//\:root
+  --mtrl-button-ink-color: red
+
+@function prop($var, $value)
+  @return var(--mtrl-#{$var}, $value)
+
 .mtrl-button
   @include ripple($surface, $primary)
   @include touch-target()
@@ -15,7 +24,7 @@
   @include height(9)
   @include padding(0, 2)
   @include typography(button)
-  @include color($primary, $text--high-emphasis)
+  color: prop(button-ink-color, $button-ink-color)
   min-width: 64px
   position: relative
   display: inline-flex
@@ -49,7 +58,7 @@
     @include ripple($primary, $on-primary)
     @include padding(0, 4)
     @include elevation(2, 4, 6, 8)
-    @include color($on-primary, $text--high-emphasis)
+    color: prop(button-ink-color, $contained-button-ink-color)
 
     &:disabled
       background-color: rgba($on-surface, $disabled-filled-container)
