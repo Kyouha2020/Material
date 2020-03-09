@@ -20,11 +20,20 @@ Docs: https://kyouha2020.github.io/Material/docs/
   <button class="mtrl-button" disabled>Disabled</button>
 ```
 
-## This is v0, what will v1 be like?
+### This is v0, what will v1 be like?
 
 ```html
   <button mtrl>Text Button</button>
   <button mtrl float>Float</button>
   <button mtrl raised>Raised</button>
   <button mtrl disabled>Disabled</button>
+```
+
+### v2?
+
+```html
+  <m-button>Text Button</m-button>
+  <m-button float>Float</m-button>
+  <m-button raised>Raised</m-button>
+  <m-button disabled>Disabled</m-button>
 ```
