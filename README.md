@@ -13,20 +13,18 @@ Docs: https://kyouha2020.github.io/Material/docs/
 
 ## Example
 
-<code>`<button class="mtrl-button">Text Button</button>`</code>
-
-<code>`<button class="mtrl-button mtrl-button--float">Float</button>`</code>
-
-<code>`<button class="mtrl-button mtrl-button--raised">Raised</button>`</code>
-
-<code>`<button class="mtrl-button" disabled>Disabled</button>`</code>
+```html
+  <button class="mtrl-button">Text Button</button></code>
+  <button class="mtrl-button mtrl-button--float">Float</button>
+  <button class="mtrl-button mtrl-button--raised">Raised</button>
+  <button class="mtrl-button" disabled>Disabled</button>
+```
 
 ## This is v0, what will v1 be like?
 
-<code>`<button mtrl>Text Button</button>`</code>
-
-<code>`<button mtrl float>Float</button>`</code>
-
-<code>`<button mtrl raised>Raised</button>`</code>
-
-<code>`<button mtrl disabled>Disabled</button>`</code>
+```html
+  <button mtrl>Text Button</button>
+  <button mtrl float>Float</button>
+  <button mtrl raised>Raised</button>
+  <button mtrl disabled>Disabled</button>
+```
