@@ -11,6 +11,10 @@ Docs: https://kyouha2020.github.io/Material/docs/
 * a11y and i18n
 * Use [CSS Houdini](https://ishoudinireadyyet.com/).
 
+Notice: As a next-generation web component library, it only supports
+ Chrome 80+, Firefox 73+, Safari 13+, Edge 80+ and Opera 66+,
+doesn't support IE 11.
+
 ## Example
 
 ```html
