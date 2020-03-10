@@ -136,3 +136,7 @@ document.querySelector('#demo-select--5').addEventListener('change', (event) => 
             break;
     }
 })
+
+document.querySelector('#demo-input--1').addEventListener('change', (event) => {
+    demoButton.style.setProperty('--mtrl-button-corner-radius', event.target.value)
+})
