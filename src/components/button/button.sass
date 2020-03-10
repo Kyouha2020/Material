@@ -32,18 +32,21 @@ $dark-stroke-color: rgb($primary)
     --mtrl-button-disabled-ink-color: green
 
   &.corner-radius
-    --corner-radius: 16px
+    --mtrl-button-corner-radius: 16px
 
   &.stroke-width
-    --stroke-width: 4px
+    --mtrl-button-stroke-width: 4px
 
   &.stroke-color
-    --stroke-color: green
+    --mtrl-button-stroke-color: green
+
+  &.dark-stroke-color
+    --mtrl-button-dark-stroke-color: green
 
 .mtrl-button
   @include ripple($primary)
   @include touch-target()
-  @include corner(4px)
+  @include corner(prop(mtrl-button-corner-radius, 4px))
   @include height(9)
   @include padding(0, 2)
   @include typography(button)
@@ -73,10 +76,10 @@ $dark-stroke-color: rgb($primary)
 
   &--outlined
     @include padding(0, 4)
-    @include stroke($stroke-width, $stroke-color)
+    @include stroke(prop(mtrl-button-stroke-width, $stroke-width), prop(mtrl-button-stroke-color, $stroke-color))
     @include dark-theme
       &:focus
-        @include stroke($color: $dark-stroke-color)
+        @include stroke($color: prop(mtrl-button-dark-stroke-color, $dark-stroke-color))
 
   &--contained
     @include ripple($on-primary)
