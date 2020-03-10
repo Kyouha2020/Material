@@ -43,7 +43,7 @@ $dark-stroke-color: rgb($primary)
     --mtrl-button-disabled-icon-color: green
 
   &.corner-radius
-    --mtrl-button-corner-radius: 8px
+    --mtrl-button-corner-radius: 0 4px 8px 16px
 
   &.stroke-width
     --mtrl-button-stroke-width: 2px
@@ -58,6 +58,7 @@ $dark-stroke-color: rgb($primary)
   @include ripple(prop(button-ripple-color, $ripple-color))
   @include touch-target()
   @include corner(prop(button-corner-radius, 4px))
+  @include stroke(0, transparent)
   @include height(9)
   @include padding(0, 2)
   @include typography(button)
