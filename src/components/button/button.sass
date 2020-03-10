@@ -22,7 +22,6 @@ $dark-stroke-color: rgb($primary)
 
 .mtrl-button[test]
   &.ripple-color
-    --ripple-color: green
     --mtrl-button-ripple-color: green
 
   &.container-color
@@ -44,10 +43,10 @@ $dark-stroke-color: rgb($primary)
     --mtrl-button-disabled-icon-color: green
 
   &.corner-radius
-    --mtrl-button-corner-radius: 16px
+    --mtrl-button-corner-radius: 8px
 
   &.stroke-width
-    --mtrl-button-stroke-width: 4px
+    --mtrl-button-stroke-width: 2px
 
   &.stroke-color
     --mtrl-button-stroke-color: green
@@ -56,14 +55,14 @@ $dark-stroke-color: rgb($primary)
     --mtrl-button-dark-stroke-color: green
 
 .mtrl-button
-  @include ripple(prop(mtrl-button-ripple-color, $ripple-color))
+  @include ripple(prop(button-ripple-color, $ripple-color))
   @include touch-target()
-  @include corner(prop(mtrl-button-corner-radius, 4px))
+  @include corner(prop(button-corner-radius, 4px))
   @include height(9)
   @include padding(0, 2)
   @include typography(button)
-  background-color: prop(mtrl-button-container-color, $container-color)
-  color: prop(mtrl-button-ink-color, $ink-color)
+  background-color: prop(button-container-color, $container-color)
+  color: prop(button-ink-color, $ink-color)
   min-width: 64px
   position: relative
   display: inline-flex
@@ -81,27 +80,27 @@ $dark-stroke-color: rgb($primary)
 
   &:disabled
     @include elevation(0)
-    color: prop(mtrl-button-disabled-ink-color, $disabled-ink-color)
-    background-color: prop(mtrl-button-disabled-container-color, $disabled-container-color)
+    color: prop(button-disabled-ink-color, $disabled-ink-color)
+    background-color: prop(button-disabled-container-color, $disabled-container-color)
     cursor: default
     pointer-events: none
 
     .mtrl-button__icon
-      color: prop(mtrl-button-disabled-icon-color, prop(mtrl-button-disabled-ink-color))
+      color: prop(button-disabled-icon-color, prop(button-disabled-ink-color))
 
   &--outlined
     @include padding(0, 4)
-    @include stroke(prop(mtrl-button-stroke-width, $stroke-width), prop(mtrl-button-stroke-color, $stroke-color))
+    @include stroke(prop(button-stroke-width, $stroke-width), prop(button-stroke-color, $stroke-color))
     @include dark-theme
       &:focus
-        @include stroke($color: prop(mtrl-button-dark-stroke-color, $dark-stroke-color))
+        @include stroke($color: prop(button-dark-stroke-color, $dark-stroke-color))
 
   &--contained
-    @include ripple(prop(mtrl-button-ripple-color, $contained-ripple-color))
+    @include ripple(prop(button-ripple-color, $contained-ripple-color))
     @include padding(0, 4)
     @include elevation(2, 4, 6, 8)
-    background-color: prop(mtrl-button-container-color, $contained-container-color)
-    color: prop(mtrl-button-ink-color, $contained-ink-color)
+    background-color: prop(button-container-color, $contained-container-color)
+    color: prop(button-ink-color, $contained-ink-color)
 
     &:disabled
       background-color: rgba($on-surface, $disabled-filled-container)
@@ -188,7 +187,7 @@ $dark-stroke-color: rgb($primary)
     align-items: center
     justify-content: center
     vertical-align: middle
-    color: prop(mtrl-button-icon-color, prop(mtrl-button-ink-color))
+    color: prop(button-icon-color, prop(button-ink-color))
     font-size: 18px
     fill: currentColor
 

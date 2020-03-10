@@ -31,7 +31,6 @@ html[dark] {
 }
 
 .mtrl-button[test].ripple-color {
-  --ripple-color: green;
   --mtrl-button-ripple-color: green;
 }
 .mtrl-button[test].container-color {
@@ -53,10 +52,10 @@ html[dark] {
   --mtrl-button-disabled-icon-color: green;
 }
 .mtrl-button[test].corner-radius {
-  --mtrl-button-corner-radius: 16px;
+  --mtrl-button-corner-radius: 8px;
 }
 .mtrl-button[test].stroke-width {
-  --mtrl-button-stroke-width: 4px;
+  --mtrl-button-stroke-width: 2px;
 }
 .mtrl-button[test].stroke-color {
   --mtrl-button-stroke-color: green;
