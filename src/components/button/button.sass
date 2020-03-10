@@ -8,18 +8,47 @@
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 
-$button-ink-color: rgba($primary, $text--high-emphasis)
-$contained-button-ink-color: rgba($on-primary, $text--high-emphasis)
-$disabled-button-ink-color: rgba($on-surface, $text--disabled)
+$container-color: rgb($surface)
+$contained-container-color: rgb($primary)
+$disabled-container-color: rgba($surface, $disabled-filled-container)
+$ink-color: rgba($primary, $text--high-emphasis)
+$contained-ink-color: rgba($on-primary, $text--high-emphasis)
+$disabled-ink-color: rgba($on-surface, $text--disabled)
+$stroke-width: 1px
+$stroke-color: rgba($on-surface, $stroke)
+$dark-stroke-color: rgb($primary)
+
+.mtrl-button[test]
+  &.container-color
+    --mtrl-button-container-color: green
+
+  &.disabled-container-color
+    --mtrl-button-disabled-container-color: green
+
+  &.ink-color
+    --mtrl-button-ink-color: green
+
+  &.disabled-ink-color
+    --mtrl-button-disabled-ink-color: green
+
+  &.corner-radius
+    --corner-radius: 16px
+
+  &.stroke-width
+    --stroke-width: 4px
+
+  &.stroke-color
+    --stroke-color: green
 
 .mtrl-button
-  @include ripple($surface, $primary)
+  @include ripple($primary)
   @include touch-target()
   @include corner(4px)
   @include height(9)
   @include padding(0, 2)
   @include typography(button)
-  color: prop(button-ink-color, $button-ink-color)
+  background-color: prop(mtrl-button-container-color, $container-color)
+  color: prop(mtrl-button-ink-color, $ink-color)
   min-width: 64px
   position: relative
   display: inline-flex
@@ -37,23 +66,24 @@ $disabled-button-ink-color: rgba($on-surface, $text--disabled)
 
   &:disabled
     @include elevation(0)
-    color: prop(button-ink-color, $disabled-button-ink-color)
-    background-color: rgba($surface, $disabled-filled-container)
+    color: prop(mtrl-button-disabled-ink-color, $disabled-ink-color)
+    background-color: prop(mtrl-button-disabled-container-color, $disabled-container-color)
     cursor: default
     pointer-events: none
 
   &--outlined
     @include padding(0, 4)
-    @include stroke(1px, rgba($on-surface, $stroke))
+    @include stroke($stroke-width, $stroke-color)
     @include dark-theme
       &:focus
-        @include stroke(1px, rgb($primary))
+        @include stroke($color: $dark-stroke-color)
 
   &--contained
-    @include ripple($primary, $on-primary)
+    @include ripple($on-primary)
     @include padding(0, 4)
     @include elevation(2, 4, 6, 8)
-    color: prop(button-ink-color, $contained-button-ink-color)
+    background-color: prop(mtrl-button-container-color, $contained-container-color)
+    color: prop(mtrl-button-ink-color, $contained-ink-color)
 
     &:disabled
       background-color: rgba($on-surface, $disabled-filled-container)
