@@ -1,11 +1,12 @@
 @use "states" as *
 
-@mixin ripple($overlay, $speed: 2)
+@mixin ripple($overlay, $opacity: $container-overlay--pressed, $speed: 2)
   @supports (background-image: unquote('paint(ripple)'))
     background-image: unquote('paint(ripple)')
-  --ripple-color: #{rgba($overlay, $container-overlay--pressed)}
+  --ripple-color: #{$overlay}
+  --ripple-opacity: #{$opacity}
   --ripple-speed: #{$speed}
-  --overlay-color: #{$overlay}
+
   &::before
     content: ''
     position: absolute
@@ -18,7 +19,7 @@
     margin-top: calc(-1 * var(--stroke-width, 0))
     margin-left: calc(-1 * var(--stroke-width, 0))
     border-radius: inherit
-    background-color: rgb(var(--overlay-color))
+    background-color: #{$overlay}
     opacity: 0
 
   &:hover

@@ -7,13 +7,14 @@
 @use "../../design/usability/accessibility" as *
 
 .mtrl-icon-button
-  @include ripple($surface, $primary)
+  @include ripple(rgb($primary))
   @include touch-target()
   @include corner(50%)
   @include height(12)
   @include padding(3)
   @include color($primary, $icon--active)
   width: 48px
+  background-color: $surface
   position: relative
   display: inline-flex
   align-items: center
@@ -40,8 +41,9 @@
         @include stroke(1px, rgb($primary))
 
   &--contained
-    @include ripple($primary, $on-primary)
+    @include ripple(rgb($on-primary))
     @include color($on-primary, $text--high-emphasis)
+    background-color: rgb($primary)
 
     &:disabled
       background-color: rgba($on-surface, $disabled-filled-container)

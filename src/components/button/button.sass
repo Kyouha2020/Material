@@ -8,8 +8,8 @@
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 
-$ripple-color: $primary
-$contained-ripple-color: $on-primary
+$ripple-color: rgb($primary)
+$contained-ripple-color: rgb($on-primary)
 $container-color: rgb($surface)
 $contained-container-color: rgb($primary)
 $disabled-container-color: rgba($surface, $disabled-filled-container)
@@ -23,7 +23,7 @@ $dark-stroke-color: rgb($primary)
 .mtrl-button[test]
   &.ripple-color
     --ripple-color: green
-    --mtrl-button-ripple-color: #{hex2rgb(green)}
+    --mtrl-button-ripple-color: green
 
   &.container-color
     --mtrl-button-container-color: green
