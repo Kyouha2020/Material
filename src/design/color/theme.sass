@@ -37,8 +37,11 @@ $dark--on-error: if(contrast-tone($dark--error) == "dark", #000, #fff)
 $elevation-overlay: (00: 0%, 01: 5%, 02: 7%, 03: 8%, 04: 9%, 06: 11%, 08: 12%, 12: 14%, 16: 15%, 24: 16%,)
 
 
-@function prop($var, $value)
-  @return var(--#{$var}, $value)
+@function prop($var, $value: null)
+  @if value == null
+    @return var(--#{$var})
+  @else
+    @return var(--#{$var}, $value)
 
 @function hex2rgb($color)
   @return red($color), green($color), blue($color)

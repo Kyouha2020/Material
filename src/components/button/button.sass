@@ -8,6 +8,8 @@
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 
+$ripple-color: $primary
+$contained-ripple-color: $on-primary
 $container-color: rgb($surface)
 $contained-container-color: rgb($primary)
 $disabled-container-color: rgba($surface, $disabled-filled-container)
@@ -19,6 +21,10 @@ $stroke-color: rgba($on-surface, $stroke)
 $dark-stroke-color: rgb($primary)
 
 .mtrl-button[test]
+  &.ripple-color
+    --ripple-color: green
+    --mtrl-button-ripple-color: #{hex2rgb(green)}
+
   &.container-color
     --mtrl-button-container-color: green
 
@@ -30,6 +36,12 @@ $dark-stroke-color: rgb($primary)
 
   &.disabled-ink-color
     --mtrl-button-disabled-ink-color: green
+
+  &.icon-color
+    --mtrl-button-icon-color: green
+
+  &.disabled-icon-color
+    --mtrl-button-disabled-icon-color: green
 
   &.corner-radius
     --mtrl-button-corner-radius: 16px
@@ -44,7 +56,7 @@ $dark-stroke-color: rgb($primary)
     --mtrl-button-dark-stroke-color: green
 
 .mtrl-button
-  @include ripple($primary)
+  @include ripple(prop(mtrl-button-ripple-color, $ripple-color))
   @include touch-target()
   @include corner(prop(mtrl-button-corner-radius, 4px))
   @include height(9)
@@ -74,6 +86,9 @@ $dark-stroke-color: rgb($primary)
     cursor: default
     pointer-events: none
 
+    .mtrl-button__icon
+      color: prop(mtrl-button-disabled-icon-color, prop(mtrl-button-disabled-ink-color))
+
   &--outlined
     @include padding(0, 4)
     @include stroke(prop(mtrl-button-stroke-width, $stroke-width), prop(mtrl-button-stroke-color, $stroke-color))
@@ -82,7 +97,7 @@ $dark-stroke-color: rgb($primary)
         @include stroke($color: prop(mtrl-button-dark-stroke-color, $dark-stroke-color))
 
   &--contained
-    @include ripple($on-primary)
+    @include ripple(prop(mtrl-button-ripple-color, $contained-ripple-color))
     @include padding(0, 4)
     @include elevation(2, 4, 6, 8)
     background-color: prop(mtrl-button-container-color, $contained-container-color)
@@ -173,6 +188,7 @@ $dark-stroke-color: rgb($primary)
     align-items: center
     justify-content: center
     vertical-align: middle
+    color: prop(mtrl-button-icon-color, prop(mtrl-button-ink-color))
     font-size: 18px
     fill: currentColor
 
