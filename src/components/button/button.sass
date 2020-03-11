@@ -22,40 +22,6 @@ $stroke-width: 1px
 $stroke-color: rgba($on-surface, $stroke)
 $dark-stroke-color: rgb($primary)
 
-.mtrl-button[test]
-  &.ripple-color
-    --mtrl-button-ripple-color: green
-
-  &.container-color
-    --mtrl-button-container-color: green
-
-  &.disabled-container-color
-    --mtrl-button-disabled-container-color: green
-
-  &.ink-color
-    --mtrl-button-ink-color: green
-
-  &.disabled-ink-color
-    --mtrl-button-disabled-ink-color: green
-
-  &.icon-color
-    --mtrl-button-icon-color: green
-
-  &.disabled-icon-color
-    --mtrl-button-disabled-icon-color: green
-
-  &.corner-radius
-    --mtrl-button-corner-radius: 0 4px 8px 16px
-
-  &.stroke-width
-    --mtrl-button-stroke-width: 2px
-
-  &.stroke-color
-    --mtrl-button-stroke-color: green
-
-  &.dark-stroke-color
-    --mtrl-button-dark-stroke-color: green
-
 .mtrl-button
   @include ripple_
   @include ripple(prop(button-ripple-color, $ripple-color))

@@ -90,4 +90,38 @@ span[unsafe][against]::after, span[against][against]::after {
   cursor: pointer;
 }
 
+.mtrl-button[test].ripple-color {
+  --mtrl-button-ripple-color: green;
+}
+.mtrl-button[test].container-color {
+  --mtrl-button-container-color: pink;
+}
+.mtrl-button[test].disabled-container-color {
+  --mtrl-button-disabled-container-color: yellow;
+}
+.mtrl-button[test].ink-color {
+  --mtrl-button-ink-color: green;
+}
+.mtrl-button[test].disabled-ink-color {
+  --mtrl-button-disabled-ink-color: orange;
+}
+.mtrl-button[test].icon-color {
+  --mtrl-button-icon-color: blue;
+}
+.mtrl-button[test].disabled-icon-color {
+  --mtrl-button-disabled-icon-color: orange;
+}
+.mtrl-button[test].corner-radius {
+  --mtrl-button-corner-radius: 8px;
+}
+.mtrl-button[test].stroke-width {
+  --mtrl-button-stroke-width: 2px;
+}
+.mtrl-button[test].stroke-color {
+  --mtrl-button-stroke-color: green;
+}
+.mtrl-button[test].dark-stroke-color {
+  --mtrl-button-dark-stroke-color: green;
+}
+
 /*# sourceMappingURL=index.css.map */
