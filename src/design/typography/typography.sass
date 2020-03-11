@@ -16,7 +16,7 @@ $letter-spacing: (h1: -1.5, h2: -0.5, h3: 0, h4: 0.25, h5: 0, h6: 0.15, subtitle
   @return $letter-spacing / $size * 1rem
 
 
-@mixin typography($scale-category, $scale: 1)
+@mixin typography_($scale-category, $scale: 1)
   $font-size: map-get($size, $scale-category)
   font-family: Roboto, sans-serif
   font-size: font-size($font-size) * $scale
@@ -31,7 +31,7 @@ $letter-spacing: (h1: -1.5, h2: -0.5, h3: 0, h4: 0.25, h5: 0, h6: 0.15, subtitle
     text-decoration: none
     text-transform: uppercase
 
-@mixin font-size($scale-category, $scale: 1)
+@mixin typography($scale-category, $scale: 1)
   $font-size: map-get($size, $scale-category)
   font-size: font-size($font-size) * $scale
   @if map-get($case, $scale-category) == sentence

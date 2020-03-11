@@ -62,7 +62,7 @@ $dark-stroke-color: rgb($primary)
   @include corner(prop(button-corner-radius, $corner-radius))
   @include height(prop(button-height, 36px))
   @include padding(0, 2)
-  @include typography(button)
+  @include typography_(button)
   background-color: prop(button-container-color, $container-color)
   color: prop(button-ink-color, $ink-color)
   min-width: 64px
@@ -128,7 +128,7 @@ $dark-stroke-color: rgb($primary)
       @include margin(0, 0, 1)
 
     .mtrl-button__label
-      @include font-size(button, 0.875)
+      @include typography(button, 0.875)
 
     .mtrl-button__label + .mtrl-button__icon
       @include margin(1, 0, 0)
@@ -178,7 +178,7 @@ $dark-stroke-color: rgb($primary)
       text-transform: none
 
     &--secondary
-      @include font-size(caption)
+      @include typography(caption)
       @include color($primary, $text--medium-emphasis)
       text-transform: none
 
