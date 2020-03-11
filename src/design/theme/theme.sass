@@ -10,3 +10,10 @@
 
 @mixin var($var, $value)
   --mtrl-#{$var}: #{$value}
+
+@mixin dark-theme
+  html[dark] &
+    @content
+
+@function hex2rgb($color)
+  @return red($color), green($color), blue($color)
