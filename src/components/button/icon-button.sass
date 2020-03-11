@@ -1,4 +1,5 @@
 @use "../../design/color/theme" as *
+@use "../../design/theme/theme" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
 @use "../../design/layout/density" as *
@@ -7,12 +8,14 @@
 @use "../../design/usability/accessibility" as *
 
 .mtrl-icon-button
+  @include ripple_
   @include ripple(rgb($primary))
-  @include touch-target()
+  @include touch-target
   @include corner(50%)
+  @include stroke($color: transparent)
   @include height(12)
   @include padding(3)
-  @include color($primary, $icon--active)
+  color: rgba($primary, $icon--active)
   width: 48px
   background-color: $surface
   position: relative
@@ -29,12 +32,13 @@
     cursor: pointer
 
   &:disabled
-    @include color($on-surface, $text--disabled)
+    color: rgba($on-surface, $text--disabled)
     background-color: rgba($surface, $disabled-filled-container)
     cursor: default
     pointer-events: none
 
   &--outlined
+    @include stroke_
     @include stroke(1px, rgba($on-surface, $stroke))
     @include dark-theme
       &:focus
@@ -42,7 +46,7 @@
 
   &--contained
     @include ripple(rgb($on-primary))
-    @include color($on-primary, $text--high-emphasis)
+    color: rgba($on-primary, $text--high-emphasis)
     background-color: rgb($primary)
 
     &:disabled

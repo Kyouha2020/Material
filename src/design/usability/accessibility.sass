@@ -1,3 +1,5 @@
+@use "../../design/theme/theme" as *
+
 // https://material.io/design/usability/accessibility.html
 // https://material.io/design/color/text-legibility.html
 
@@ -48,10 +50,6 @@ $stroke: 12%
   @return if(tone($color) == "dark", "light", "dark")
 
 
-@mixin color($color, $type)
-  color: rgba($color, $type)
-
-
 // Layout and typography
 // touch targets
 
@@ -59,7 +57,7 @@ $stroke: 12%
   &::after
     content: ''
     position: absolute
-    top: calc((var(--helper-height, var(--height)) - #{$touch-target}) / 2)
+    top: calc((#{prop(component-height)} - #{$touch-target}) / 2)
     right: 0
     bottom: 0
     left: 0

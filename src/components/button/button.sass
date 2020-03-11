@@ -1,4 +1,5 @@
 @use "../../design/color/theme" as *
+@use "../../design/theme/theme" as *
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
@@ -58,8 +59,9 @@ $dark-stroke-color: rgb($primary)
 .mtrl-button
   @include ripple_
   @include ripple(prop(button-ripple-color, $ripple-color))
-  @include touch-target()
+  @include touch-target
   @include corner(prop(button-corner-radius, $corner-radius))
+  @include stroke($color: transparent)
   @include height(prop(button-height, 36px))
   @include padding(0, 2)
   @include typography_(button)
@@ -179,7 +181,7 @@ $dark-stroke-color: rgb($primary)
 
     &--secondary
       @include typography(caption)
-      @include color($primary, $text--medium-emphasis)
+      color: rgba($primary, $text--medium-emphasis)
       text-transform: none
 
   &__icon

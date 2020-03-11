@@ -1,4 +1,4 @@
-@use "../../design/color/theme" as *
+@use "../theme/theme" as *
 
 // https://material.io/design/shape/applying-shape-to-ui.html
 
@@ -24,8 +24,8 @@
 
 @mixin shape_
   @supports (-webkit-mask-image: paint(sth))
+    border-radius: 0
     -webkit-mask-image: paint(corner-shape, filled)
   @supports (border-image: paint(sth))
     border: none
-    border-radius: 0
     border-image: paint(corner-shape, outlined) 0 fill

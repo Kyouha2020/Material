@@ -38,6 +38,7 @@
   --mtrl-ripple--speed: 2;
   --mtrl-shape--corner-radius: var(--mtrl-button-corner-radius, 4px);
   border-radius: var(--mtrl-shape--corner-radius, var(--mtrl-button-corner-radius, 4px));
+  --mtrl-shape--stroke-color: transparent;
   --mtrl-component-height: var(--mtrl-button-height, 36px);
   height: var(--mtrl-component-height, var(--mtrl-button-height, 36px));
   padding: 0px 8px;
@@ -95,7 +96,7 @@
 .mtrl-button::after {
   content: "";
   position: absolute;
-  top: calc((var(--helper-height, var(--height)) - 48px) / 2);
+  top: calc((var(--mtrl-component-height) - 48px) / 2);
   right: 0;
   bottom: 0;
   left: 0;

@@ -1,0 +1,12 @@
+@function prop($var, $value: null)
+  @if $value == null
+    @return var(--mtrl-#{$var})
+  @else
+    @return var(--mtrl-#{$var}, $value)
+
+@mixin prop($prop, $var, $value)
+  --mtrl-#{$var}: #{$value}
+  #{$prop}: var(--mtrl-#{$var}, $value)
+
+@mixin var($var, $value)
+  --mtrl-#{$var}: #{$value}
