@@ -52,105 +52,61 @@
   border-radius: var(--mtrl-shape--corner-radius, 6);
   --mtrl-shape--corner-shape: smooth-rounded;
 }
-.mtrl-shape--smooth-corners-7 {
-  --mtrl-shape--corner-radius: 7;
-  border-radius: var(--mtrl-shape--corner-radius, 7);
-  --mtrl-shape--corner-shape: smooth-rounded;
-}
-.mtrl-shape--smooth-corners-8 {
-  --mtrl-shape--corner-radius: 8;
-  border-radius: var(--mtrl-shape--corner-radius, 8);
-  --mtrl-shape--corner-shape: smooth-rounded;
-}
-.mtrl-shape--smooth-corners-9 {
-  --mtrl-shape--corner-radius: 9;
-  border-radius: var(--mtrl-shape--corner-radius, 9);
-  --mtrl-shape--corner-shape: smooth-rounded;
-}
-.mtrl-shape--smooth-corners-10 {
-  --mtrl-shape--corner-radius: 10;
-  border-radius: var(--mtrl-shape--corner-radius, 10);
-  --mtrl-shape--corner-shape: smooth-rounded;
-}
-.mtrl-shape--smooth-corners-11 {
-  --mtrl-shape--corner-radius: 11;
-  border-radius: var(--mtrl-shape--corner-radius, 11);
-  --mtrl-shape--corner-shape: smooth-rounded;
-}
-.mtrl-shape--smooth-corners-12 {
-  --mtrl-shape--corner-radius: 12;
-  border-radius: var(--mtrl-shape--corner-radius, 12);
-  --mtrl-shape--corner-shape: smooth-rounded;
-}
 .mtrl-shape--polygon-3 {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: 3;
-  --mtrl-shape--polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-4 {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: 4;
-  --mtrl-shape--polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-5 {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: 5;
-  --mtrl-shape--polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-6 {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: 6;
-  --mtrl-shape--polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-7 {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: 7;
-  --mtrl-shape--polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-8 {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: 8;
-  --mtrl-shape--polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-9 {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: 9;
-  --mtrl-shape--polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-10 {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: 10;
-  --mtrl-shape--polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-11 {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: 11;
-  --mtrl-shape--polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-12 {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: 12;
-  --mtrl-shape--polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-13 {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: 13;
-  --mtrl-shape--polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-14 {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: 14;
-  --mtrl-shape--polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-15 {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: 15;
-  --mtrl-shape--polygon-angle: 0deg;
 }
 .mtrl-shape--polygon-16 {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: 16;
-  --mtrl-shape--polygon-angle: 0deg;
 }
 
 /*# sourceMappingURL=shape.css.map */

@@ -2,15 +2,16 @@
 
 .mtrl-shape
   @include shape_
+
   @each $shape in (rounded, cut, scoop, notch)
     &--#{$shape}-corners
       @include shape($shape)
 
-  @for $i from 1 through 12
+  @for $i from 1 through 6
     &--smooth-corners-#{$i}
       @include corner($i)
       @include shape(smooth-rounded)
 
   @for $i from 3 through 16
     &--polygon-#{$i}
-      @include shape(polygon, $i, 0deg)
+      @include shape(polygon, $i)
