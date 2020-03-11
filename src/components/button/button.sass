@@ -8,6 +8,7 @@
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 
+$corner-radius: 4px
 $ripple-color: rgb($primary)
 $contained-ripple-color: rgb($on-primary)
 $container-color: rgb($surface)
@@ -55,11 +56,11 @@ $dark-stroke-color: rgb($primary)
     --mtrl-button-dark-stroke-color: green
 
 .mtrl-button
+  @include ripple_
   @include ripple(prop(button-ripple-color, $ripple-color))
   @include touch-target()
-  @include corner(prop(button-corner-radius, 4px))
-  @include stroke(0, transparent)
-  @include height(9)
+  @include corner(prop(button-corner-radius, $corner-radius))
+  @include height(prop(button-height, 36px))
   @include padding(0, 2)
   @include typography(button)
   background-color: prop(button-container-color, $container-color)
@@ -91,6 +92,7 @@ $dark-stroke-color: rgb($primary)
 
   &--outlined
     @include padding(0, 4)
+    @include stroke_
     @include stroke(prop(button-stroke-width, $stroke-width), prop(button-stroke-color, $stroke-color))
     @include dark-theme
       &:focus
@@ -107,7 +109,7 @@ $dark-stroke-color: rgb($primary)
       background-color: rgba($on-surface, $disabled-filled-container)
 
   &--split &__icon
-    @include height(9)
+    @include height(prop(button-height, 36px))
     @include margin-horizontal(-2, 3)
     @include padding-horizontal(0, 2)
     border-right: 1px solid rgba($on-surface, $stroke)
@@ -119,7 +121,7 @@ $dark-stroke-color: rgb($primary)
     border-left: 1px solid rgba($on-surface, $stroke)
 
   &--vertical
-    @include height(14)
+    @include height(prop(button-height, 56px))
     flex-direction: column
 
     .mtrl-button__icon
@@ -132,7 +134,7 @@ $dark-stroke-color: rgb($primary)
       @include margin(1, 0, 0)
 
   &--two-column
-    @include height(12)
+    @include height(prop(button-height, 48px))
 
     .mtrl-button__label
       flex-direction: column
@@ -149,7 +151,7 @@ $dark-stroke-color: rgb($primary)
     @include elevation(0, 0, 0, 0)
 
   &--rounded
-    @include corner(calc(var(--helper-height, var(--height)) / 2))
+    @include corner(calc(#{prop(button-height, prop(component-height))} / 2))
 
   &--tile
     @include corner(0)

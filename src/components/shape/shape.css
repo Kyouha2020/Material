@@ -1,50 +1,12 @@
-:root {
-  --mtrl-theme-primary: 98, 0, 238;
-  --mtrl-theme-primary-variant: 55, 0, 179;
-  --mtrl-theme-secondary: 3, 218, 198;
-  --mtrl-theme-secondary-variant: 1, 135, 134;
-  --mtrl-theme-surface: 255, 255, 255;
-  --mtrl-theme-on-primary: 255, 255, 255;
-  --mtrl-theme-on-primary-variant: 255, 255, 255;
-  --mtrl-theme-on-secondary: 0, 0, 0;
-  --mtrl-theme-on-secondary-variant: 255, 255, 255;
-  --mtrl-theme-on-surface: 0, 0, 0;
-  --mtrl-dark-theme-primary: 187, 134, 252;
-  --mtrl-dark-theme-primary-variant: 55, 0, 179;
-  --mtrl-dark-theme-secondary: 3, 218, 198;
-  --mtrl-dark-theme-surface: 18, 18, 18;
-  --mtrl-dark-theme-on-primary: 0, 0, 0;
-  --mtrl-dark-theme-on-primary-variant: 255, 255, 255;
-  --mtrl-dark-theme-on-secondary: 0, 0, 0;
-  --mtrl-dark-theme-on-surface: 255, 255, 255;
-}
-
-html:not([dark]) {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #ffffff;
-}
-
-html[dark] {
-  --mtrl-theme-primary: var(--mtrl-dark-theme-primary);
-  --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary-variant);
-  --mtrl-theme-secondary: var(--mtrl-dark-theme-secondary);
-  --mtrl-theme-surface: var(--mtrl-dark-theme-surface);
-  --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-primary);
-  --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-primary);
-  --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-secondary-variant);
-  --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface);
-  background-color: #121212;
-}
-
 .mtrl-shape--rounded-corners {
-  --corner-shape: rounded;
+  --mtrl-shape--corner-shape: rounded;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--rounded-corners {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--rounded-corners {
     border: none;
     border-radius: 0;
@@ -52,44 +14,20 @@ html[dark] {
   }
 }
 .mtrl-shape--rounded-corners:focus {
-  --corner-shape: rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--rounded-corners:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--rounded-corners:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: rounded;
 }
 html[dark] .mtrl-shape--rounded-corners:focus {
-  --corner-shape: rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--rounded-corners:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--rounded-corners:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: rounded;
 }
 .mtrl-shape--cut-corners {
-  --corner-shape: cut;
+  --mtrl-shape--corner-shape: cut;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--cut-corners {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--cut-corners {
     border: none;
     border-radius: 0;
@@ -97,44 +35,20 @@ html[dark] .mtrl-shape--rounded-corners:focus {
   }
 }
 .mtrl-shape--cut-corners:focus {
-  --corner-shape: cut;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--cut-corners:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--cut-corners:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: cut;
 }
 html[dark] .mtrl-shape--cut-corners:focus {
-  --corner-shape: cut;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--cut-corners:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--cut-corners:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: cut;
 }
 .mtrl-shape--scoop-corners {
-  --corner-shape: scoop;
+  --mtrl-shape--corner-shape: scoop;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--scoop-corners {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--scoop-corners {
     border: none;
     border-radius: 0;
@@ -142,44 +56,20 @@ html[dark] .mtrl-shape--cut-corners:focus {
   }
 }
 .mtrl-shape--scoop-corners:focus {
-  --corner-shape: scoop;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--scoop-corners:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--scoop-corners:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: scoop;
 }
 html[dark] .mtrl-shape--scoop-corners:focus {
-  --corner-shape: scoop;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--scoop-corners:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--scoop-corners:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: scoop;
 }
 .mtrl-shape--notch-corners {
-  --corner-shape: notch;
+  --mtrl-shape--corner-shape: notch;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--notch-corners {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--notch-corners {
     border: none;
     border-radius: 0;
@@ -187,46 +77,22 @@ html[dark] .mtrl-shape--scoop-corners:focus {
   }
 }
 .mtrl-shape--notch-corners:focus {
-  --corner-shape: notch;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--notch-corners:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--notch-corners:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: notch;
 }
 html[dark] .mtrl-shape--notch-corners:focus {
-  --corner-shape: notch;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--notch-corners:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--notch-corners:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: notch;
 }
 .mtrl-shape--smooth-corners-1 {
-  --corner-radius: 1;
-  border-radius: var(--corner-radius);
-  --corner-shape: smooth-rounded;
+  --mtrl-shape--corner-radius: 1;
+  border-radius: var(--mtrl-shape--corner-radius, 1);
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--smooth-corners-1 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--smooth-corners-1 {
     border: none;
     border-radius: 0;
@@ -234,46 +100,22 @@ html[dark] .mtrl-shape--notch-corners:focus {
   }
 }
 .mtrl-shape--smooth-corners-1:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-1:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-1:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 html[dark] .mtrl-shape--smooth-corners-1:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-1:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-1:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 .mtrl-shape--smooth-corners-2 {
-  --corner-radius: 2;
-  border-radius: var(--corner-radius);
-  --corner-shape: smooth-rounded;
+  --mtrl-shape--corner-radius: 2;
+  border-radius: var(--mtrl-shape--corner-radius, 2);
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--smooth-corners-2 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--smooth-corners-2 {
     border: none;
     border-radius: 0;
@@ -281,46 +123,22 @@ html[dark] .mtrl-shape--smooth-corners-1:focus {
   }
 }
 .mtrl-shape--smooth-corners-2:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-2:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-2:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 html[dark] .mtrl-shape--smooth-corners-2:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-2:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-2:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 .mtrl-shape--smooth-corners-3 {
-  --corner-radius: 3;
-  border-radius: var(--corner-radius);
-  --corner-shape: smooth-rounded;
+  --mtrl-shape--corner-radius: 3;
+  border-radius: var(--mtrl-shape--corner-radius, 3);
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--smooth-corners-3 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--smooth-corners-3 {
     border: none;
     border-radius: 0;
@@ -328,46 +146,22 @@ html[dark] .mtrl-shape--smooth-corners-2:focus {
   }
 }
 .mtrl-shape--smooth-corners-3:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-3:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-3:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 html[dark] .mtrl-shape--smooth-corners-3:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-3:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-3:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 .mtrl-shape--smooth-corners-4 {
-  --corner-radius: 4;
-  border-radius: var(--corner-radius);
-  --corner-shape: smooth-rounded;
+  --mtrl-shape--corner-radius: 4;
+  border-radius: var(--mtrl-shape--corner-radius, 4);
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--smooth-corners-4 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--smooth-corners-4 {
     border: none;
     border-radius: 0;
@@ -375,46 +169,22 @@ html[dark] .mtrl-shape--smooth-corners-3:focus {
   }
 }
 .mtrl-shape--smooth-corners-4:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-4:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-4:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 html[dark] .mtrl-shape--smooth-corners-4:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-4:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-4:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 .mtrl-shape--smooth-corners-5 {
-  --corner-radius: 5;
-  border-radius: var(--corner-radius);
-  --corner-shape: smooth-rounded;
+  --mtrl-shape--corner-radius: 5;
+  border-radius: var(--mtrl-shape--corner-radius, 5);
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--smooth-corners-5 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--smooth-corners-5 {
     border: none;
     border-radius: 0;
@@ -422,46 +192,22 @@ html[dark] .mtrl-shape--smooth-corners-4:focus {
   }
 }
 .mtrl-shape--smooth-corners-5:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-5:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-5:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 html[dark] .mtrl-shape--smooth-corners-5:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-5:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-5:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 .mtrl-shape--smooth-corners-6 {
-  --corner-radius: 6;
-  border-radius: var(--corner-radius);
-  --corner-shape: smooth-rounded;
+  --mtrl-shape--corner-radius: 6;
+  border-radius: var(--mtrl-shape--corner-radius, 6);
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--smooth-corners-6 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--smooth-corners-6 {
     border: none;
     border-radius: 0;
@@ -469,46 +215,22 @@ html[dark] .mtrl-shape--smooth-corners-5:focus {
   }
 }
 .mtrl-shape--smooth-corners-6:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-6:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-6:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 html[dark] .mtrl-shape--smooth-corners-6:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-6:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-6:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 .mtrl-shape--smooth-corners-7 {
-  --corner-radius: 7;
-  border-radius: var(--corner-radius);
-  --corner-shape: smooth-rounded;
+  --mtrl-shape--corner-radius: 7;
+  border-radius: var(--mtrl-shape--corner-radius, 7);
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--smooth-corners-7 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--smooth-corners-7 {
     border: none;
     border-radius: 0;
@@ -516,46 +238,22 @@ html[dark] .mtrl-shape--smooth-corners-6:focus {
   }
 }
 .mtrl-shape--smooth-corners-7:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-7:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-7:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 html[dark] .mtrl-shape--smooth-corners-7:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-7:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-7:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 .mtrl-shape--smooth-corners-8 {
-  --corner-radius: 8;
-  border-radius: var(--corner-radius);
-  --corner-shape: smooth-rounded;
+  --mtrl-shape--corner-radius: 8;
+  border-radius: var(--mtrl-shape--corner-radius, 8);
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--smooth-corners-8 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--smooth-corners-8 {
     border: none;
     border-radius: 0;
@@ -563,46 +261,22 @@ html[dark] .mtrl-shape--smooth-corners-7:focus {
   }
 }
 .mtrl-shape--smooth-corners-8:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-8:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-8:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 html[dark] .mtrl-shape--smooth-corners-8:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-8:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-8:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 .mtrl-shape--smooth-corners-9 {
-  --corner-radius: 9;
-  border-radius: var(--corner-radius);
-  --corner-shape: smooth-rounded;
+  --mtrl-shape--corner-radius: 9;
+  border-radius: var(--mtrl-shape--corner-radius, 9);
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--smooth-corners-9 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--smooth-corners-9 {
     border: none;
     border-radius: 0;
@@ -610,46 +284,22 @@ html[dark] .mtrl-shape--smooth-corners-8:focus {
   }
 }
 .mtrl-shape--smooth-corners-9:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-9:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-9:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 html[dark] .mtrl-shape--smooth-corners-9:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-9:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-9:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 .mtrl-shape--smooth-corners-10 {
-  --corner-radius: 10;
-  border-radius: var(--corner-radius);
-  --corner-shape: smooth-rounded;
+  --mtrl-shape--corner-radius: 10;
+  border-radius: var(--mtrl-shape--corner-radius, 10);
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--smooth-corners-10 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--smooth-corners-10 {
     border: none;
     border-radius: 0;
@@ -657,46 +307,22 @@ html[dark] .mtrl-shape--smooth-corners-9:focus {
   }
 }
 .mtrl-shape--smooth-corners-10:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-10:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-10:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 html[dark] .mtrl-shape--smooth-corners-10:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-10:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-10:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 .mtrl-shape--smooth-corners-11 {
-  --corner-radius: 11;
-  border-radius: var(--corner-radius);
-  --corner-shape: smooth-rounded;
+  --mtrl-shape--corner-radius: 11;
+  border-radius: var(--mtrl-shape--corner-radius, 11);
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--smooth-corners-11 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--smooth-corners-11 {
     border: none;
     border-radius: 0;
@@ -704,46 +330,22 @@ html[dark] .mtrl-shape--smooth-corners-10:focus {
   }
 }
 .mtrl-shape--smooth-corners-11:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-11:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-11:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 html[dark] .mtrl-shape--smooth-corners-11:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-11:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-11:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 .mtrl-shape--smooth-corners-12 {
-  --corner-radius: 12;
-  border-radius: var(--corner-radius);
-  --corner-shape: smooth-rounded;
+  --mtrl-shape--corner-radius: 12;
+  border-radius: var(--mtrl-shape--corner-radius, 12);
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--smooth-corners-12 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--smooth-corners-12 {
     border: none;
     border-radius: 0;
@@ -751,46 +353,22 @@ html[dark] .mtrl-shape--smooth-corners-11:focus {
   }
 }
 .mtrl-shape--smooth-corners-12:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-12:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--smooth-corners-12:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 html[dark] .mtrl-shape--smooth-corners-12:focus {
-  --corner-shape: smooth-rounded;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-12:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--smooth-corners-12:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: smooth-rounded;
 }
 .mtrl-shape--polygon-3 {
-  --corner-shape: polygon;
-  --polygon-sides: 3;
-  --polygon-angle: 0deg;
+  --mtrl-shape--corner-shape: polygon;
+  --mtrl-shape--polygon-sides: 3;
+  --mtrl-shape--polygon-angle: 0deg;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--polygon-3 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--polygon-3 {
     border: none;
     border-radius: 0;
@@ -798,46 +376,22 @@ html[dark] .mtrl-shape--smooth-corners-12:focus {
   }
 }
 .mtrl-shape--polygon-3:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-3:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-3:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 html[dark] .mtrl-shape--polygon-3:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-3:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-3:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 .mtrl-shape--polygon-4 {
-  --corner-shape: polygon;
-  --polygon-sides: 4;
-  --polygon-angle: 0deg;
+  --mtrl-shape--corner-shape: polygon;
+  --mtrl-shape--polygon-sides: 4;
+  --mtrl-shape--polygon-angle: 0deg;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--polygon-4 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--polygon-4 {
     border: none;
     border-radius: 0;
@@ -845,46 +399,22 @@ html[dark] .mtrl-shape--polygon-3:focus {
   }
 }
 .mtrl-shape--polygon-4:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-4:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-4:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 html[dark] .mtrl-shape--polygon-4:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-4:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-4:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 .mtrl-shape--polygon-5 {
-  --corner-shape: polygon;
-  --polygon-sides: 5;
-  --polygon-angle: 0deg;
+  --mtrl-shape--corner-shape: polygon;
+  --mtrl-shape--polygon-sides: 5;
+  --mtrl-shape--polygon-angle: 0deg;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--polygon-5 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--polygon-5 {
     border: none;
     border-radius: 0;
@@ -892,46 +422,22 @@ html[dark] .mtrl-shape--polygon-4:focus {
   }
 }
 .mtrl-shape--polygon-5:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-5:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-5:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 html[dark] .mtrl-shape--polygon-5:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-5:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-5:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 .mtrl-shape--polygon-6 {
-  --corner-shape: polygon;
-  --polygon-sides: 6;
-  --polygon-angle: 0deg;
+  --mtrl-shape--corner-shape: polygon;
+  --mtrl-shape--polygon-sides: 6;
+  --mtrl-shape--polygon-angle: 0deg;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--polygon-6 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--polygon-6 {
     border: none;
     border-radius: 0;
@@ -939,46 +445,22 @@ html[dark] .mtrl-shape--polygon-5:focus {
   }
 }
 .mtrl-shape--polygon-6:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-6:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-6:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 html[dark] .mtrl-shape--polygon-6:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-6:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-6:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 .mtrl-shape--polygon-7 {
-  --corner-shape: polygon;
-  --polygon-sides: 7;
-  --polygon-angle: 0deg;
+  --mtrl-shape--corner-shape: polygon;
+  --mtrl-shape--polygon-sides: 7;
+  --mtrl-shape--polygon-angle: 0deg;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--polygon-7 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--polygon-7 {
     border: none;
     border-radius: 0;
@@ -986,46 +468,22 @@ html[dark] .mtrl-shape--polygon-6:focus {
   }
 }
 .mtrl-shape--polygon-7:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-7:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-7:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 html[dark] .mtrl-shape--polygon-7:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-7:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-7:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 .mtrl-shape--polygon-8 {
-  --corner-shape: polygon;
-  --polygon-sides: 8;
-  --polygon-angle: 0deg;
+  --mtrl-shape--corner-shape: polygon;
+  --mtrl-shape--polygon-sides: 8;
+  --mtrl-shape--polygon-angle: 0deg;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--polygon-8 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--polygon-8 {
     border: none;
     border-radius: 0;
@@ -1033,46 +491,22 @@ html[dark] .mtrl-shape--polygon-7:focus {
   }
 }
 .mtrl-shape--polygon-8:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-8:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-8:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 html[dark] .mtrl-shape--polygon-8:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-8:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-8:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 .mtrl-shape--polygon-9 {
-  --corner-shape: polygon;
-  --polygon-sides: 9;
-  --polygon-angle: 0deg;
+  --mtrl-shape--corner-shape: polygon;
+  --mtrl-shape--polygon-sides: 9;
+  --mtrl-shape--polygon-angle: 0deg;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--polygon-9 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--polygon-9 {
     border: none;
     border-radius: 0;
@@ -1080,46 +514,22 @@ html[dark] .mtrl-shape--polygon-8:focus {
   }
 }
 .mtrl-shape--polygon-9:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-9:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-9:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 html[dark] .mtrl-shape--polygon-9:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-9:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-9:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 .mtrl-shape--polygon-10 {
-  --corner-shape: polygon;
-  --polygon-sides: 10;
-  --polygon-angle: 0deg;
+  --mtrl-shape--corner-shape: polygon;
+  --mtrl-shape--polygon-sides: 10;
+  --mtrl-shape--polygon-angle: 0deg;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--polygon-10 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--polygon-10 {
     border: none;
     border-radius: 0;
@@ -1127,46 +537,22 @@ html[dark] .mtrl-shape--polygon-9:focus {
   }
 }
 .mtrl-shape--polygon-10:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-10:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-10:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 html[dark] .mtrl-shape--polygon-10:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-10:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-10:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 .mtrl-shape--polygon-11 {
-  --corner-shape: polygon;
-  --polygon-sides: 11;
-  --polygon-angle: 0deg;
+  --mtrl-shape--corner-shape: polygon;
+  --mtrl-shape--polygon-sides: 11;
+  --mtrl-shape--polygon-angle: 0deg;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--polygon-11 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--polygon-11 {
     border: none;
     border-radius: 0;
@@ -1174,46 +560,22 @@ html[dark] .mtrl-shape--polygon-10:focus {
   }
 }
 .mtrl-shape--polygon-11:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-11:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-11:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 html[dark] .mtrl-shape--polygon-11:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-11:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-11:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 .mtrl-shape--polygon-12 {
-  --corner-shape: polygon;
-  --polygon-sides: 12;
-  --polygon-angle: 0deg;
+  --mtrl-shape--corner-shape: polygon;
+  --mtrl-shape--polygon-sides: 12;
+  --mtrl-shape--polygon-angle: 0deg;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--polygon-12 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--polygon-12 {
     border: none;
     border-radius: 0;
@@ -1221,46 +583,22 @@ html[dark] .mtrl-shape--polygon-11:focus {
   }
 }
 .mtrl-shape--polygon-12:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-12:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-12:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 html[dark] .mtrl-shape--polygon-12:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-12:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-12:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 .mtrl-shape--polygon-13 {
-  --corner-shape: polygon;
-  --polygon-sides: 13;
-  --polygon-angle: 0deg;
+  --mtrl-shape--corner-shape: polygon;
+  --mtrl-shape--polygon-sides: 13;
+  --mtrl-shape--polygon-angle: 0deg;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--polygon-13 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--polygon-13 {
     border: none;
     border-radius: 0;
@@ -1268,46 +606,22 @@ html[dark] .mtrl-shape--polygon-12:focus {
   }
 }
 .mtrl-shape--polygon-13:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-13:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-13:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 html[dark] .mtrl-shape--polygon-13:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-13:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-13:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 .mtrl-shape--polygon-14 {
-  --corner-shape: polygon;
-  --polygon-sides: 14;
-  --polygon-angle: 0deg;
+  --mtrl-shape--corner-shape: polygon;
+  --mtrl-shape--polygon-sides: 14;
+  --mtrl-shape--polygon-angle: 0deg;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--polygon-14 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--polygon-14 {
     border: none;
     border-radius: 0;
@@ -1315,46 +629,22 @@ html[dark] .mtrl-shape--polygon-13:focus {
   }
 }
 .mtrl-shape--polygon-14:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-14:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-14:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 html[dark] .mtrl-shape--polygon-14:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-14:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-14:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 .mtrl-shape--polygon-15 {
-  --corner-shape: polygon;
-  --polygon-sides: 15;
-  --polygon-angle: 0deg;
+  --mtrl-shape--corner-shape: polygon;
+  --mtrl-shape--polygon-sides: 15;
+  --mtrl-shape--polygon-angle: 0deg;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--polygon-15 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--polygon-15 {
     border: none;
     border-radius: 0;
@@ -1362,46 +652,22 @@ html[dark] .mtrl-shape--polygon-14:focus {
   }
 }
 .mtrl-shape--polygon-15:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-15:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-15:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 html[dark] .mtrl-shape--polygon-15:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-15:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-15:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 .mtrl-shape--polygon-16 {
-  --corner-shape: polygon;
-  --polygon-sides: 16;
-  --polygon-angle: 0deg;
+  --mtrl-shape--corner-shape: polygon;
+  --mtrl-shape--polygon-sides: 16;
+  --mtrl-shape--polygon-angle: 0deg;
 }
-@supports (-webkit-mask-image: paint(corner-shape)) {
+@supports (-webkit-mask-image: paint(sth)) {
   .mtrl-shape--polygon-16 {
     -webkit-mask-image: paint(corner-shape, filled);
   }
 }
-@supports (border-image: paint(corner-shape)) {
+@supports (border-image: paint(sth)) {
   .mtrl-shape--polygon-16 {
     border: none;
     border-radius: 0;
@@ -1409,34 +675,10 @@ html[dark] .mtrl-shape--polygon-15:focus {
   }
 }
 .mtrl-shape--polygon-16:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-16:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  .mtrl-shape--polygon-16:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 html[dark] .mtrl-shape--polygon-16:focus {
-  --corner-shape: polygon;
-}
-@supports (-webkit-mask-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-16:focus {
-    -webkit-mask-image: paint(corner-shape, filled);
-  }
-}
-@supports (border-image: paint(corner-shape)) {
-  html[dark] .mtrl-shape--polygon-16:focus {
-    border: none;
-    border-radius: 0;
-    border-image: paint(corner-shape, outlined) 0 fill;
-  }
+  --mtrl-shape--corner-shape: polygon;
 }
 
 /*# sourceMappingURL=shape.css.map */

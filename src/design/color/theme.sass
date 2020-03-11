@@ -3,45 +3,52 @@
 
 // https://material.io/design/color/the-color-system.html
 
-$primary: $primary-500 !default
-$primary-variant: $primary-700 !default
-$secondary: $secondary-200 !default
-$secondary-variant: $secondary-700 !default
-$background: #ffffff !default
-$surface: #ffffff !default
-$error: #b00020 !default
+$o-primary: $primary-500 !default
+$o-primary-variant: $primary-700 !default
+$o-secondary: $secondary-200 !default
+$o-secondary-variant: $secondary-700 !default
+$o-background: #ffffff !default
+$o-surface: #ffffff !default
+$o-error: #b00020 !default
 
-$on-primary: if(contrast-tone($primary) == "dark", #000, #fff)
-$on-primary-variant: if(contrast-tone($primary-variant) == "dark", #000, #fff)
-$on-secondary: if(contrast-tone($secondary) == "dark", #000, #fff)
-$on-secondary-variant: if(contrast-tone($secondary-variant) == "dark", #000, #fff)
-$on-background: if(contrast-tone($background) == "dark", #000, #fff)
-$on-surface: if(contrast-tone($surface) == "dark", #000, #fff)
-$on-error: if(contrast-tone($error) == "dark", #000, #fff)
+$o-on-primary: if(contrast-tone($o-primary) == "dark", #000, #fff)
+$o-on-primary-variant: if(contrast-tone($o-primary-variant) == "dark", #000, #fff)
+$o-on-secondary: if(contrast-tone($o-secondary) == "dark", #000, #fff)
+$o-on-secondary-variant: if(contrast-tone($o-secondary-variant) == "dark", #000, #fff)
+$o-on-background: if(contrast-tone($o-background) == "dark", #000, #fff)
+$o-on-surface: if(contrast-tone($o-surface) == "dark", #000, #fff)
+$o-on-error: if(contrast-tone($o-error) == "dark", #000, #fff)
 
-$dark--primary: $primary-200 !default
-$dark--primary-variant: $primary-700 !default
-$dark--dark-primary: #1f1b24 !default
-$dark--secondary: $secondary-200 !default
-$dark--background: #121212 !default
-$dark--surface: #121212 !default
-$dark--error: #cf6679 !default
+$o-dark--primary: $primary-200 !default
+$o-dark--primary-variant: $primary-700 !default
+$o-dark--dark-primary: #1f1b24 !default
+$o-dark--secondary: $secondary-200 !default
+$o-dark--background: #121212 !default
+$o-dark--surface: #121212 !default
+$o-dark--error: #cf6679 !default
 
-$dark--on-primary: if(contrast-tone($dark--primary) == "dark", #000, #fff)
-$dark--on-primary-variant: if(contrast-tone($dark--primary-variant) == "dark", #000, #fff)
-$dark--on-secondary: if(contrast-tone($dark--secondary) == "dark", #000, #fff)
-$dark--on-background: if(contrast-tone($dark--background) == "dark", #000, #fff)
-$dark--on-surface: if(contrast-tone($dark--surface) == "dark", #000, #fff)
-$dark--on-error: if(contrast-tone($dark--error) == "dark", #000, #fff)
+$o-dark--on-primary: if(contrast-tone($o-dark--primary) == "dark", #000, #fff)
+$o-dark--on-primary-variant: if(contrast-tone($o-dark--primary-variant) == "dark", #000, #fff)
+$o-dark--on-secondary: if(contrast-tone($o-dark--secondary) == "dark", #000, #fff)
+$o-dark--on-background: if(contrast-tone($o-dark--background) == "dark", #000, #fff)
+$o-dark--on-surface: if(contrast-tone($o-dark--surface) == "dark", #000, #fff)
+$o-dark--on-error: if(contrast-tone($o-dark--error) == "dark", #000, #fff)
 
 $elevation-overlay: (00: 0%, 01: 5%, 02: 7%, 03: 8%, 04: 9%, 06: 11%, 08: 12%, 12: 14%, 16: 15%, 24: 16%,)
 
 
 @function prop($var, $value: null)
-  @if value == null
+  @if $value == null
     @return var(--mtrl-#{$var})
   @else
     @return var(--mtrl-#{$var}, $value)
+
+@mixin prop($prop, $var, $value)
+  --mtrl-#{$var}: #{$value}
+  #{$prop}: var(--mtrl-#{$var}, $value)
+
+@mixin var($var, $value)
+  --mtrl-#{$var}: #{$value}
 
 @function hex2rgb($color)
   @return red($color), green($color), blue($color)
@@ -50,45 +57,45 @@ $elevation-overlay: (00: 0%, 01: 5%, 02: 7%, 03: 8%, 04: 9%, 06: 11%, 08: 12%, 1
   html[dark] &
     @content
 
+@mixin mtrl-theme
+  @at-root :root
+    --mtrl-theme-primary: #{hex2rgb($o-primary)}
+    --mtrl-theme-primary-variant: #{hex2rgb($o-primary-variant)}
+    --mtrl-theme-secondary: #{hex2rgb($o-secondary)}
+    --mtrl-theme-secondary-variant: #{hex2rgb($o-secondary-variant)}
+    --mtrl-theme-surface: #{hex2rgb($o-surface)}
+    --mtrl-theme-on-primary: #{hex2rgb($o-on-primary)}
+    --mtrl-theme-on-primary-variant: #{hex2rgb($o-on-primary-variant)}
+    --mtrl-theme-on-secondary: #{hex2rgb($o-on-secondary)}
+    --mtrl-theme-on-secondary-variant: #{hex2rgb($o-on-secondary-variant)}
+    --mtrl-theme-on-surface: #{hex2rgb($o-on-surface)}
 
-\:root
-  --mtrl-theme-primary: #{hex2rgb($primary)}
-  --mtrl-theme-primary-variant: #{hex2rgb($primary-variant)}
-  --mtrl-theme-secondary: #{hex2rgb($secondary)}
-  --mtrl-theme-secondary-variant: #{hex2rgb($secondary-variant)}
-  --mtrl-theme-surface: #{hex2rgb($surface)}
-  --mtrl-theme-on-primary: #{hex2rgb($on-primary)}
-  --mtrl-theme-on-primary-variant: #{hex2rgb($on-primary-variant)}
-  --mtrl-theme-on-secondary: #{hex2rgb($on-secondary)}
-  --mtrl-theme-on-secondary-variant: #{hex2rgb($on-secondary-variant)}
-  --mtrl-theme-on-surface: #{hex2rgb($on-surface)}
+    --mtrl-dark-theme-primary: #{hex2rgb($o-dark--primary)}
+    --mtrl-dark-theme-primary-variant: #{hex2rgb($o-dark--primary-variant)}
+    --mtrl-dark-theme-secondary: #{hex2rgb($o-dark--secondary)}
+    --mtrl-dark-theme-surface: #{hex2rgb($o-dark--surface)}
+    --mtrl-dark-theme-on-primary: #{hex2rgb($o-dark--on-primary)}
+    --mtrl-dark-theme-on-primary-variant: #{hex2rgb($o-dark--on-primary-variant)}
+    --mtrl-dark-theme-on-secondary: #{hex2rgb($o-dark--on-secondary)}
+    --mtrl-dark-theme-on-surface: #{hex2rgb($o-dark--on-surface)}
 
-  --mtrl-dark-theme-primary: #{hex2rgb($dark--primary)}
-  --mtrl-dark-theme-primary-variant: #{hex2rgb($dark--primary-variant)}
-  --mtrl-dark-theme-secondary:  #{hex2rgb($dark--secondary)}
-  --mtrl-dark-theme-surface: #{hex2rgb($dark--surface)}
-  --mtrl-dark-theme-on-primary: #{hex2rgb($dark--on-primary)}
-  --mtrl-dark-theme-on-primary-variant: #{hex2rgb($dark--on-primary-variant)}
-  --mtrl-dark-theme-on-secondary:  #{hex2rgb($dark--on-secondary)}
-  --mtrl-dark-theme-on-surface: #{hex2rgb($dark--on-surface)}
+  @at-root html[dark]
+    --mtrl-theme-primary: var(--mtrl-dark-theme-primary)
+    --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary-variant)
+    --mtrl-theme-secondary: var(--mtrl-dark-theme-secondary)
+    --mtrl-theme-surface: var(--mtrl-dark-theme-surface)
+    --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-primary)
+    --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-primary)
+    --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-secondary-variant)
+    --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface)
 
-html[dark]
-  --mtrl-theme-primary: var(--mtrl-dark-theme-primary)
-  --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary-variant)
-  --mtrl-theme-secondary: var(--mtrl-dark-theme-secondary)
-  --mtrl-theme-surface: var(--mtrl-dark-theme-surface)
-  --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-primary)
-  --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-primary)
-  --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-secondary-variant)
-  --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface)
-
-$primary: var(--mtrl-theme-primary, $primary)
-$primary-variant: var(--mtrl-theme-primary-variant, $primary-variant)
+$primary: var(--mtrl-theme-primary, $o-primary)
+$primary-variant: var(--mtrl-theme-primary-variant, $o-primary-variant)
 $secondary: var(--mtrl-theme-secondary, $primary)
-$secondary-variant: var(--mtrl-theme-secondary-variant, $secondary-variant)
-$surface: var(--mtrl-theme-surface, $surface)
-$on-primary: var(--mtrl-theme-on-primary, $on-primary)
-$on-primary-variant: var(--mtrl-theme-on-primary, $on-primary-variant)
-$on-secondary: var(--mtrl-theme-on-secondary, $on-secondary)
-$on-secondary-variant: var(--mtrl-theme-on-secondary, $on-secondary-variant)
-$on-surface: var(--mtrl-theme-on-surface, $on-surface)
+$secondary-variant: var(--mtrl-theme-secondary-variant, $o-secondary-variant)
+$surface: var(--mtrl-theme-surface, $o-surface)
+$on-primary: var(--mtrl-theme-on-primary, $o-on-primary)
+$on-primary-variant: var(--mtrl-theme-on-primary, $o-on-primary-variant)
+$on-secondary: var(--mtrl-theme-on-secondary, $o-on-secondary)
+$on-secondary-variant: var(--mtrl-theme-on-secondary, $o-on-secondary-variant)
+$on-surface: var(--mtrl-theme-on-surface, $o-on-surface)

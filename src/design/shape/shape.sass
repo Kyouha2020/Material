@@ -1,27 +1,31 @@
+@use "../../design/color/theme" as *
+
 // https://material.io/design/shape/applying-shape-to-ui.html
 
 @mixin corner($radius: null)
-  --corner-radius: #{$radius}
-  border-radius: var(--corner-radius)
+  @include prop(border-radius, shape--corner-radius, $radius)
 
 @mixin stroke($width: null, $color: null)
   @if $width != null
-    --stroke-width: #{$width}
+    @include var(shape--stroke-width, $width)
   @if $color != null
-    --stroke-color: #{$color}
-  border: var(--stroke-width) solid var(--stroke-color)
+    @include var(shape--stroke-color, $color)
+
+@mixin stroke_
+  border: #{prop(shape--stroke-width)} solid #{prop(shape--stroke-color)}
 
 @mixin shape($shape: null, $sides: null, $angle: null)
   @if $shape != null
-    --corner-shape: #{$shape}
-    @supports (-webkit-mask-image: unquote('paint(corner-shape)'))
-      -webkit-mask-image: unquote('paint(corner-shape, filled)')
-    @supports (border-image: unquote('paint(corner-shape)'))
-      border: none
-      border-radius: 0
-      border-image: unquote('paint(corner-shape, outlined)') 0 fill
-
+    @include var(shape--corner-shape, $shape)
   @if $sides != null
-    --polygon-sides: #{$sides}
+    @include var(shape--polygon-sides, $sides)
   @if $angle != null
-    --polygon-angle: #{$angle}
+    @include var(shape--polygon-angle, $angle)
+
+@mixin shape_
+  @supports (-webkit-mask-image: paint(sth))
+    -webkit-mask-image: paint(corner-shape, filled)
+  @supports (border-image: paint(sth))
+    border: none
+    border-radius: 0
+    border-image: paint(corner-shape, outlined) 0 fill

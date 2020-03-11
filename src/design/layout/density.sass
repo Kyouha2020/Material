@@ -1,10 +1,9 @@
-@use "spacing" as *
+@use "../../design/color/theme" as *
 
 // https://material.io/design/layout/applying-density.html
 
 @mixin height($height)
-  --height: #{get($height)}
-  height: var(--helper-height, var(--height))
+  @include prop(height, component-height, $height)
 
 @mixin density($value: 0, $scale: 4px)
-  --helper-height: #{calc(var(--height) + #{$value} * #{$scale})}
+  height: calc(#{prop(component-height)} + #{$value} * #{$scale})

@@ -1,35 +1,3 @@
-:root {
-  --mtrl-theme-primary: 98, 0, 238;
-  --mtrl-theme-primary-variant: 55, 0, 179;
-  --mtrl-theme-secondary: 3, 218, 198;
-  --mtrl-theme-secondary-variant: 1, 135, 134;
-  --mtrl-theme-surface: 255, 255, 255;
-  --mtrl-theme-on-primary: 255, 255, 255;
-  --mtrl-theme-on-primary-variant: 255, 255, 255;
-  --mtrl-theme-on-secondary: 0, 0, 0;
-  --mtrl-theme-on-secondary-variant: 255, 255, 255;
-  --mtrl-theme-on-surface: 0, 0, 0;
-  --mtrl-dark-theme-primary: 187, 134, 252;
-  --mtrl-dark-theme-primary-variant: 55, 0, 179;
-  --mtrl-dark-theme-secondary: 3, 218, 198;
-  --mtrl-dark-theme-surface: 18, 18, 18;
-  --mtrl-dark-theme-on-primary: 0, 0, 0;
-  --mtrl-dark-theme-on-primary-variant: 255, 255, 255;
-  --mtrl-dark-theme-on-secondary: 0, 0, 0;
-  --mtrl-dark-theme-on-surface: 255, 255, 255;
-}
-
-html[dark] {
-  --mtrl-theme-primary: var(--mtrl-dark-theme-primary);
-  --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary-variant);
-  --mtrl-theme-secondary: var(--mtrl-dark-theme-secondary);
-  --mtrl-theme-surface: var(--mtrl-dark-theme-surface);
-  --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-primary);
-  --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-primary);
-  --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-secondary-variant);
-  --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface);
-}
-
 .mtrl-button[test].ripple-color {
   --mtrl-button-ripple-color: green;
 }
@@ -65,16 +33,13 @@ html[dark] {
 }
 
 .mtrl-button {
-  --ripple-color: var(--mtrl-button-ripple-color, rgb(var(--mtrl-theme-primary, #6200ee)));
-  --ripple-opacity: 10%;
-  --ripple-speed: 2;
-  --corner-radius: var(--mtrl-button-corner-radius, 4px);
-  border-radius: var(--corner-radius);
-  --stroke-width: 0;
-  --stroke-color: transparent;
-  border: var(--stroke-width) solid var(--stroke-color);
-  --height: 36px;
-  height: var(--helper-height, var(--height));
+  --mtrl-ripple--color: var(--mtrl-button-ripple-color, rgb(var(--mtrl-theme-primary, #6200ee)));
+  --mtrl-ripple--opacity: 10%;
+  --mtrl-ripple--speed: 2;
+  --mtrl-shape--corner-radius: var(--mtrl-button-corner-radius, 4px);
+  border-radius: var(--mtrl-shape--corner-radius, var(--mtrl-button-corner-radius, 4px));
+  --mtrl-component-height: var(--mtrl-button-height, 36px);
+  height: var(--mtrl-component-height, var(--mtrl-button-height, 36px));
   padding: 0px 8px;
   font-family: Roboto, sans-serif;
   font-size: 0.875rem;
@@ -98,7 +63,7 @@ html[dark] {
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
-@supports (background-image: paint(ripple)) {
+@supports (background-image: paint(sth)) {
   .mtrl-button {
     background-image: paint(ripple);
   }
@@ -110,12 +75,9 @@ html[dark] {
   right: 0;
   bottom: 0;
   left: 0;
-  width: calc(100% + 2 * var(--stroke-width));
-  height: calc(100% + 2 * var(--stroke-width));
-  margin-top: calc(-1 * var(--stroke-width, 0));
-  margin-left: calc(-1 * var(--stroke-width, 0));
+  width: 100%;
+  height: 100%;
   border-radius: inherit;
-  background-color: var(--mtrl-button-ripple-color, rgb(var(--mtrl-theme-primary, #6200ee)));
   opacity: 0;
 }
 .mtrl-button:hover::before {
@@ -126,6 +88,9 @@ html[dark] {
 }
 .mtrl-button:active::before {
   opacity: 10%;
+}
+.mtrl-button::before {
+  background-color: var(--mtrl-button-ripple-color, rgb(var(--mtrl-theme-primary, #6200ee)));
 }
 .mtrl-button::after {
   content: "";
@@ -154,22 +119,21 @@ html[dark] .mtrl-button:disabled:not(:hover):not(:focus):not(:active)::before {
   opacity: 0%;
 }
 .mtrl-button:disabled .mtrl-button__icon {
-  color: var(--mtrl-button-disabled-icon-color, var(--mtrl-button-disabled-ink-color, ));
+  color: var(--mtrl-button-disabled-icon-color, var(--mtrl-button-disabled-ink-color));
 }
 .mtrl-button--outlined {
   padding: 0px 16px;
-  --stroke-width: var(--mtrl-button-stroke-width, 1px);
-  --stroke-color: var(--mtrl-button-stroke-color, rgba(var(--mtrl-theme-on-surface, #000), 12%));
-  border: var(--stroke-width) solid var(--stroke-color);
+  border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
+  --mtrl-shape--stroke-width: var(--mtrl-button-stroke-width, 1px);
+  --mtrl-shape--stroke-color: var(--mtrl-button-stroke-color, rgba(var(--mtrl-theme-on-surface, #000), 12%));
 }
 html[dark] .mtrl-button--outlined:focus {
-  --stroke-color: var(--mtrl-button-dark-stroke-color, rgb(var(--mtrl-theme-primary, #6200ee)));
-  border: var(--stroke-width) solid var(--stroke-color);
+  --mtrl-shape--stroke-color: var(--mtrl-button-dark-stroke-color, rgb(var(--mtrl-theme-primary, #6200ee)));
 }
 .mtrl-button--contained {
-  --ripple-color: var(--mtrl-button-ripple-color, rgb(var(--mtrl-theme-on-primary, #fff)));
-  --ripple-opacity: 10%;
-  --ripple-speed: 2;
+  --mtrl-ripple--color: var(--mtrl-button-ripple-color, rgb(var(--mtrl-theme-on-primary, #fff)));
+  --mtrl-ripple--opacity: 10%;
+  --mtrl-ripple--speed: 2;
   padding: 0px 16px;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -177,34 +141,8 @@ html[dark] .mtrl-button--outlined:focus {
   background-color: var(--mtrl-button-container-color, rgb(var(--mtrl-theme-primary, #6200ee)));
   color: var(--mtrl-button-ink-color, rgba(var(--mtrl-theme-on-primary, #fff), 87%));
 }
-@supports (background-image: paint(ripple)) {
-  .mtrl-button--contained {
-    background-image: paint(ripple);
-  }
-}
 .mtrl-button--contained::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: calc(100% + 2 * var(--stroke-width));
-  height: calc(100% + 2 * var(--stroke-width));
-  margin-top: calc(-1 * var(--stroke-width, 0));
-  margin-left: calc(-1 * var(--stroke-width, 0));
-  border-radius: inherit;
   background-color: var(--mtrl-button-ripple-color, rgb(var(--mtrl-theme-on-primary, #fff)));
-  opacity: 0;
-}
-.mtrl-button--contained:hover::before {
-  opacity: 4%;
-}
-.mtrl-button--contained:focus::before {
-  opacity: 12%;
-}
-.mtrl-button--contained:active::before {
-  opacity: 10%;
 }
 html[dark] .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before {
   background-color: white;
@@ -226,8 +164,8 @@ html[dark] .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before 
   background-color: rgba(var(--mtrl-theme-on-surface, #000), 12%);
 }
 .mtrl-button--split .mtrl-button__icon {
-  --height: 36px;
-  height: var(--helper-height, var(--height));
+  --mtrl-component-height: var(--mtrl-button-height, 36px);
+  height: var(--mtrl-component-height, var(--mtrl-button-height, 36px));
   margin-left: -8px;
   margin-right: 12px;
   padding-left: 0px;
@@ -259,8 +197,8 @@ html[dark] .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before 
   padding-right: 8px;
 }
 .mtrl-button--vertical {
-  --height: 56px;
-  height: var(--helper-height, var(--height));
+  --mtrl-component-height: var(--mtrl-button-height, 56px);
+  height: var(--mtrl-component-height, var(--mtrl-button-height, 56px));
   flex-direction: column;
 }
 .mtrl-button--vertical .mtrl-button__icon {
@@ -274,8 +212,8 @@ html[dark] .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before 
   margin: 4px 0px 0px;
 }
 .mtrl-button--two-column {
-  --height: 48px;
-  height: var(--helper-height, var(--height));
+  --mtrl-component-height: var(--mtrl-button-height, 48px);
+  height: var(--mtrl-component-height, var(--mtrl-button-height, 48px));
 }
 .mtrl-button--two-column .mtrl-button__label {
   flex-direction: column;
@@ -346,12 +284,12 @@ html[dark] .mtrl-button--unelevated:not(:hover):not(:focus):not(:active)::before
   z-index: 0;
 }
 .mtrl-button--rounded {
-  --corner-radius: calc(var(--helper-height, var(--height)) / 2);
-  border-radius: var(--corner-radius);
+  --mtrl-shape--corner-radius: calc(var(--mtrl-button-height, var(--mtrl-component-height)) / 2);
+  border-radius: var(--mtrl-shape--corner-radius, calc(var(--mtrl-button-height, var(--mtrl-component-height)) / 2));
 }
 .mtrl-button--tile {
-  --corner-radius: 0;
-  border-radius: var(--corner-radius);
+  --mtrl-shape--corner-radius: 0;
+  border-radius: var(--mtrl-shape--corner-radius, 0);
 }
 .mtrl-button--block {
   width: 100%;
@@ -389,7 +327,7 @@ html[dark] .mtrl-button--unelevated:not(:hover):not(:focus):not(:active)::before
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-  color: var(--mtrl-button-icon-color, var(--mtrl-button-ink-color, ));
+  color: var(--mtrl-button-icon-color, var(--mtrl-button-ink-color));
   font-size: 18px;
   fill: currentColor;
 }

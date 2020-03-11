@@ -4,6 +4,7 @@
 .mtrl-shape
   @each $shape in (rounded, cut, scoop, notch)
     &--#{$shape}-corners
+      @include shape_
       @include shape($shape)
 
       &:focus
@@ -15,6 +16,7 @@
 
   @for $i from 1 through 12
     &--smooth-corners-#{$i}
+      @include shape_
       @include corner($i)
       @include shape(smooth-rounded)
 
@@ -27,6 +29,7 @@
 
   @for $i from 3 through 16
     &--polygon-#{$i}
+      @include shape_
       @include shape(polygon, $i, 0deg)
 
       &:focus

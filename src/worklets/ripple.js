@@ -1,14 +1,14 @@
 if (typeof registerPaint !== 'undefined') registerPaint('ripple', class {
     static get inputProperties() {
-        return ['--ripple-color', '--ripple-opacity', '--animation-tick', '--ripple-x', '--ripple-y', '--ripple-speed']
+        return ['--mtrl-ripple--color', '--mtrl-ripple--opacity', '--animation-tick', '--mtrl-ripple--x', '--mtrl-ripple--y', '--mtrl-ripple--speed']
     }
 
     paint(ctx, geom, properties) {
-        const rippleColor = properties.get('--ripple-color').toString(),
-            rippleOpacity = properties.get('--ripple-opacity').toString().replace(/[ %]/g, '') / 100,
-            x = parseFloat(properties.get('--ripple-x').toString()),
-            y = parseFloat(properties.get('--ripple-y').toString()),
-            speed = parseFloat((properties.get('--ripple-speed') || '').toString()) || 1
+        const rippleColor = properties.get('--mtrl-ripple--color').toString(),
+            rippleOpacity = properties.get('--mtrl-ripple--opacity').toString().replace(/[ %]/g, '') / 100,
+            x = parseFloat(properties.get('--mtrl-ripple--x').toString()),
+            y = parseFloat(properties.get('--mtrl-ripple--y').toString()),
+            speed = parseFloat((properties.get('--mtrl-ripple--speed') || '').toString()) || 1
         let tick = parseFloat(properties.get('--animation-tick').toString())
         tick *= speed
         if (tick < 0) tick = 0

@@ -1,6 +1,6 @@
 if (typeof registerPaint !== 'undefined') registerPaint('corner-shape', class {
     static get inputProperties() {
-        return ['--corner-radius', '--corner-shape', '--stroke-width', '--stroke-color', '--polygon-sides', '--polygon-angle']
+        return ['--mtrl-shape--corner-radius', '--mtrl-shape--corner-shape', '--mtrl-shape--stroke-width', '--mtrl-shape--stroke-color', '--mtrl-shape--polygon-sides', '--mtrl-shape--polygon-angle']
     }
 
     static get inputArguments() {
@@ -8,7 +8,7 @@ if (typeof registerPaint !== 'undefined') registerPaint('corner-shape', class {
     }
 
     paint(ctx, geom, properties, args) {
-        this.shape = properties.get('--corner-shape').toString().trim()
+        this.shape = properties.get('--mtrl-shape--corner-shape').toString().trim()
 
         if (this.shape === 'smooth-rounded') this.smoothRounded(ctx, geom, properties)
         else if (this.shape === 'polygon') this.polygon(ctx, geom, properties)
@@ -16,14 +16,14 @@ if (typeof registerPaint !== 'undefined') registerPaint('corner-shape', class {
 
         if (args.toString() === 'filled') ctx.fill()
         else if (args.toString() === 'outlined') {
-            ctx.strokeStyle = properties.get('--stroke-color')
-            ctx.lineWidth = properties.get('--stroke-width').toString().replace('px', '') * 2
+            ctx.strokeStyle = properties.get('--mtrl-shape--stroke-color')
+            ctx.lineWidth = properties.get('--mtrl-shape--stroke-width').toString().replace('px', '') * 2
             ctx.stroke()
         }
     }
 
     smoothRounded(ctx, geom, properties) {
-        const n = properties.get('--corner-radius').toString(), r = geom.width / 2, w = geom.width / 2,
+        const n = properties.get('--mtrl-shape--corner-radius').toString(), r = geom.width / 2, w = geom.width / 2,
             h = geom.height / 2
         let m = n
         if (n > 100) m = 100
@@ -45,8 +45,8 @@ if (typeof registerPaint !== 'undefined') registerPaint('corner-shape', class {
     }
 
     polygon(ctx, geom, properties) {
-        const numSides = properties.get('--polygon-sides').toString(),
-            rotate = properties.get('--polygon-angle').toString().replace(/ |deg/g, ''),
+        const numSides = properties.get('--mtrl-shape--polygon-sides').toString(),
+            rotate = properties.get('--mtrl-shape--polygon-angle').toString().replace(/ |deg/g, ''),
             center = {x: geom.width / 2, y: geom.height / 2}, radius = Math.min(geom.width, geom.height) / 2
 
         ctx.translate(geom.width / 2, geom.height / 2)
@@ -65,7 +65,7 @@ if (typeof registerPaint !== 'undefined') registerPaint('corner-shape', class {
 
     cornerShapes(ctx, geom, properties) {
         const k = 0.5522847498307933984022516322796,
-            radii = properties.get('--corner-radius').toString().replace(/px|%/g, '').split(' ').slice(1),
+            radii = properties.get('--mtrl-shape--corner-radius').toString().replace(/px|%/g, '').split(' ').slice(1),
             radius1 = radii[0], radius2 = radii[1] || radii[0], radius3 = radii[2] || radii[0],
             radius4 = radii[3] || radii[1] || radii[0], bezierRadius1 = radius1 * k, bezierRadius2 = radius2 * k,
             bezierRadius3 = radius3 * k, bezierRadius4 = radius4 * k,
