@@ -37,8 +37,8 @@ function rippleIn(evt) {
         button.style.setProperty('--animation-tick', count.toString())
         if (count > 1000) {
             if (evt.type === 'touchstart') button.addEventListener('mousedown', rippleIn)
-            button.style.removeProperty('--mtrl--ripple-x')
-            button.style.removeProperty('--mtrl--ripple-y')
+            button.style.removeProperty('--mtrl-ripple--x')
+            button.style.removeProperty('--mtrl-ripple--y')
             if (evt.keyCode === 32)
                 button.style.removeProperty('--animation-tick')
             else
