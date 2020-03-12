@@ -8,6 +8,7 @@
 @use "../../design/shape/shape" as *
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
+@use "../../design/usability/bidirectionality" as *
 
 $corner-radius: 4px
 $ripple-color: rgb($primary)
@@ -82,26 +83,38 @@ $dark-stroke-color: rgb($primary)
     @include height(prop(button-height, 36px))
     @include margin-horizontal(-2, 3)
     @include padding-horizontal(0, 2)
-    border-right: 1px solid rgba($on-surface, $stroke)
+    @include ltr
+      border-right: 1px solid rgba($on-surface, $stroke)
+    @include rtl
+      border-left: 1px solid rgba($on-surface, $stroke)
 
   &--split &__label + &__icon
     @include margin-horizontal(3, -2)
     @include padding-horizontal(2, 0)
     border: none
-    border-left: 1px solid rgba($on-surface, $stroke)
+    @include ltr
+      border-right: none
+      border-left: 1px solid rgba($on-surface, $stroke)
+    @include rtl
+      border-left: none
+      border-right: 1px solid rgba($on-surface, $stroke)
 
   &--vertical
     @include height(prop(button-height, 56px))
     flex-direction: column
 
     .mtrl-button__icon
-      @include margin(0, 0, 1)
+      @include margin(0, 0, 1, 0)
+      @include rtl
+        @include margin(0, 0, 1, 0)
 
     .mtrl-button__label
       @include typography(button, 0.875)
 
     .mtrl-button__label + .mtrl-button__icon
-      @include margin(1, 0, 0)
+      @include margin(1, 0, 0, 0)
+      @include rtl
+        @include margin(1, 0, 0, 0)
 
   &--two-column
     @include height(prop(button-height, 48px))

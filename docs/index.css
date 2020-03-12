@@ -39,7 +39,7 @@ html:not([dark]) {
 html[dark] {
   background-color: #121212;
 }
-html[dark] > h1, html[dark] h2, html[dark] h3, html[dark] h4, html[dark] h5, html[dark] h6, html[dark] #theme-toggle {
+html[dark] > h1, html[dark] h2, html[dark] h3, html[dark] h4, html[dark] h5, html[dark] h6, html[dark] #theme-toggle, html[dark] #dir-toggle {
   color: rgba(255, 255, 255, 0.6);
   font-weight: 500;
 }
@@ -82,11 +82,22 @@ span[unsafe][against]::after, span[against][against]::after {
 }
 
 #theme-toggle {
+  margin-bottom: 8px;
   padding: 8px;
   border: 1px solid #03dac6;
   font-size: 1.25rem;
 }
 #theme-toggle:hover {
+  cursor: pointer;
+}
+
+#dir-toggle {
+  margin-bottom: 8px;
+  padding: 8px;
+  border: 1px solid #03dac6;
+  font-size: 1.25rem;
+}
+#dir-toggle:hover {
   cursor: pointer;
 }
 

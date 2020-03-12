@@ -129,15 +129,20 @@ html[dark] .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before 
   margin-right: 12px;
   padding-left: 0px;
   padding-right: 8px;
-  border-right: 1px solid rgba(var(--mtrl-theme-on-surface, #000), 12%);
 }
-[dir=rtl] .mtrl-button--split .mtrl-button__icon {
+html[dir=rtl] .mtrl-button--split .mtrl-button__icon {
   margin-left: 12px;
   margin-right: -8px;
 }
-[dir=rtl] .mtrl-button--split .mtrl-button__icon {
+html[dir=rtl] .mtrl-button--split .mtrl-button__icon {
   padding-left: 8px;
   padding-right: 0px;
+}
+html:not([dir=rtl]) .mtrl-button--split .mtrl-button__icon {
+  border-right: 1px solid rgba(var(--mtrl-theme-on-surface, #000), 12%);
+}
+html[dir=rtl] .mtrl-button--split .mtrl-button__icon {
+  border-left: 1px solid rgba(var(--mtrl-theme-on-surface, #000), 12%);
 }
 .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
   margin-left: 12px;
@@ -145,15 +150,22 @@ html[dark] .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before 
   padding-left: 8px;
   padding-right: 0px;
   border: none;
-  border-left: 1px solid rgba(var(--mtrl-theme-on-surface, #000), 12%);
 }
-[dir=rtl] .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
+html[dir=rtl] .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
   margin-left: -8px;
   margin-right: 12px;
 }
-[dir=rtl] .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
+html[dir=rtl] .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
   padding-left: 0px;
   padding-right: 8px;
+}
+html:not([dir=rtl]) .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
+  border-right: none;
+  border-left: 1px solid rgba(var(--mtrl-theme-on-surface, #000), 12%);
+}
+html[dir=rtl] .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
+  border-left: none;
+  border-right: 1px solid rgba(var(--mtrl-theme-on-surface, #000), 12%);
 }
 .mtrl-button--vertical {
   --mtrl-component-height: var(--mtrl-button-height, 56px);
@@ -163,11 +175,17 @@ html[dark] .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before 
 .mtrl-button--vertical .mtrl-button__icon {
   margin: 0px 0px 4px;
 }
+html[dir=rtl] .mtrl-button--vertical .mtrl-button__icon {
+  margin: 0px 0px 4px;
+}
 .mtrl-button--vertical .mtrl-button__label {
   font-size: 0.765625rem;
   text-transform: uppercase;
 }
 .mtrl-button--vertical .mtrl-button__label + .mtrl-button__icon {
+  margin: 4px 0px 0px;
+}
+html[dir=rtl] .mtrl-button--vertical .mtrl-button__label + .mtrl-button__icon {
   margin: 4px 0px 0px;
 }
 .mtrl-button--two-column {
@@ -290,7 +308,7 @@ html[dark] .mtrl-button--unelevated:not(:hover):not(:focus):not(:active)::before
   font-size: 18px;
   fill: currentColor;
 }
-[dir=rtl] .mtrl-button__icon {
+html[dir=rtl] .mtrl-button__icon {
   margin-left: 8px;
   margin-right: -4px;
 }
@@ -298,7 +316,7 @@ html[dark] .mtrl-button--unelevated:not(:hover):not(:focus):not(:active)::before
   margin-left: 8px;
   margin-right: -4px;
 }
-[dir=rtl] .mtrl-button__label + .mtrl-button__icon {
+html[dir=rtl] .mtrl-button__label + .mtrl-button__icon {
   margin-left: -4px;
   margin-right: 8px;
 }

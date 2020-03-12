@@ -1,3 +1,5 @@
+@use "../usability/bidirectionality" as *
+
 // https://material.io/design/layout/spacing-methods.html
 
 // baseline grid
@@ -10,14 +12,14 @@
   $start: $start * $baseline
 
   margin-left: $start
-  [dir=rtl] &
+  @include rtl
     margin-right: $start
 
 @mixin margin-end($end, $baseline: 4px)
   $end: $end * $baseline
 
   margin-right: $end
-  [dir=rtl] &
+  @include rtl
     margin-left: $end
 
 @mixin margin-horizontal($start, $end: $start, $baseline: 4px)
@@ -26,7 +28,7 @@
 
   margin-left: $start
   margin-right: $end
-  [dir=rtl] &
+  @include rtl
     margin-left: $end
     margin-right: $start
 
@@ -44,7 +46,7 @@
     margin: $top $start $bottom
   @else
     margin: $top $end $bottom $start
-    [dir=rtl] &
+    @include rtl
       margin: $top $start $bottom $end
 
 
@@ -52,14 +54,14 @@
   $start: $start * $baseline
 
   padding-left: $start
-  [dir=rtl] &
+  @include rtl
     padding-right: $start
 
 @mixin padding-end($end, $baseline: 4px)
   $end: $end * $baseline
 
   padding-right: $end
-  [dir=rtl] &
+  @include rtl
     padding-left: $end
 
 @mixin padding-horizontal($start, $end: $start, $baseline: 4px)
@@ -68,7 +70,7 @@
 
   padding-left: $start
   padding-right: $end
-  [dir=rtl] &
+  @include rtl
     padding-left: $end
     padding-right: $start
 
@@ -86,7 +88,7 @@
     padding: $top $start $bottom
   @else
     padding: $top $end $bottom $start
-    [dir=rtl] &
+    @include rtl
       padding: $top $start $bottom $end
 
 

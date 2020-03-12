@@ -8,7 +8,7 @@ html:not([dark])
 html[dark]
   background-color: #121212
 
-  > h1, h2, h3, h4, h5, h6, #theme-toggle
+  > h1, h2, h3, h4, h5, h6, #theme-toggle, #dir-toggle
     color: rgba(#ffffff, 60%)
     font-weight: 500
 
@@ -46,6 +46,16 @@ span[unsafe], span[against]
     background-color: #ff9800
 
 #theme-toggle
+  margin-bottom: 8px
+  padding: 8px
+  border: 1px solid #03dac6
+  font-size: 1.25rem
+
+  &:hover
+    cursor: pointer
+
+#dir-toggle
+  margin-bottom: 8px
   padding: 8px
   border: 1px solid #03dac6
   font-size: 1.25rem
