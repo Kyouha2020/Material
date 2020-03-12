@@ -46,6 +46,8 @@
 
   &--contained
     @include ripple(rgb($on-primary))
+    @include dark-theme
+      @include ripple(prop(button-ripple-color, #ffffff))
     color: rgba($on-primary, $text--high-emphasis)
     background-color: rgb($primary)
 

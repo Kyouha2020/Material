@@ -68,6 +68,8 @@ $dark-stroke-color: rgb($primary)
 
   &--contained
     @include ripple(prop(button-ripple-color, $contained-ripple-color))
+    @include dark-theme
+      @include ripple(prop(button-ripple-color, #ffffff))
     @include padding(0, 4)
     @include elevation(2, 4, 6, 8)
     background-color: prop(button-container-color, $contained-container-color)
