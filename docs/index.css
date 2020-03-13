@@ -157,7 +157,6 @@ html[dir=rtl] #toggle-container {
   padding: 8px;
   border: 1px solid #dddddd;
   border-radius: 50%;
-  color: #03dac6ee;
   user-select: none;
 }
 #theme-toggle:hover, #dir-toggle:hover {

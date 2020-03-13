@@ -62,6 +62,14 @@
 }
 .mtrl-icon-button--outlined {
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
+}
+@media (prefers-color-scheme: light) {
+  .mtrl-icon-button--outlined {
+    --mtrl-shape--stroke-width: 1px;
+    --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 12%);
+  }
+}
+.mtrl-icon-button--outlined, html[light] .mtrl-icon-button--outlined {
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 12%);
 }

@@ -37,7 +37,8 @@
 
   &--outlined
     @include stroke_
-    @include stroke(1px, theme-prop(on-surface, $stroke))
+    @include light-theme
+      @include stroke(1px, theme-prop(on-surface, $stroke))
     @include dark-theme
       &:focus
         @include stroke(1px, theme-prop(primary))

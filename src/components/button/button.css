@@ -87,6 +87,14 @@ html[dark] .mtrl-button:disabled:not(:hover):not(:focus):not(:active)::before {
 }
 .mtrl-button--outlined {
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
+}
+@media (prefers-color-scheme: light) {
+  .mtrl-button--outlined {
+    --mtrl-shape--stroke-width: var(--mtrl-button-stroke-width, 1px);
+    --mtrl-shape--stroke-color: var(--mtrl-button-stroke-color, rgba(var(--mtrl-theme-on-surface), 12%));
+  }
+}
+.mtrl-button--outlined, html[light] .mtrl-button--outlined {
   --mtrl-shape--stroke-width: var(--mtrl-button-stroke-width, 1px);
   --mtrl-shape--stroke-color: var(--mtrl-button-stroke-color, rgba(var(--mtrl-theme-on-surface), 12%));
 }
@@ -145,53 +153,48 @@ html[dark] .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before 
   --mtrl-component-height: var(--mtrl-button-height, 36px);
   height: var(--mtrl-component-height, var(--mtrl-button-height, 36px));
 }
-html:not([dir=rtl]) .mtrl-button--split .mtrl-button__icon {
+html:not([dir=rtl]) .mtrl-button--split .mtrl-button__icon--leading {
   margin-left: -8px;
   margin-right: 12px;
 }
-html[dir=rtl] .mtrl-button--split .mtrl-button__icon {
+html[dir=rtl] .mtrl-button--split .mtrl-button__icon--leading {
   margin-left: 12px;
   margin-right: -8px;
 }
-html:not([dir=rtl]) .mtrl-button--split .mtrl-button__icon {
+html:not([dir=rtl]) .mtrl-button--split .mtrl-button__icon--leading {
   padding-left: 0px;
   padding-right: 8px;
 }
-html[dir=rtl] .mtrl-button--split .mtrl-button__icon {
+html[dir=rtl] .mtrl-button--split .mtrl-button__icon--leading {
   padding-left: 8px;
   padding-right: 0px;
 }
-html:not([dir=rtl]) .mtrl-button--split .mtrl-button__icon {
+html:not([dir=rtl]) .mtrl-button--split .mtrl-button__icon--leading {
   border-right: 1px solid rgba(var(--mtrl-theme-on-surface), 12%);
 }
-html[dir=rtl] .mtrl-button--split .mtrl-button__icon {
+html[dir=rtl] .mtrl-button--split .mtrl-button__icon--leading {
   border-left: 1px solid rgba(var(--mtrl-theme-on-surface), 12%);
 }
-.mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
-  border: none;
-}
-html:not([dir=rtl]) .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
+html:not([dir=rtl]) .mtrl-button--split .mtrl-button__icon--trailing {
   margin-left: 12px;
   margin-right: -8px;
 }
-html[dir=rtl] .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
+html[dir=rtl] .mtrl-button--split .mtrl-button__icon--trailing {
   margin-left: -8px;
   margin-right: 12px;
 }
-html:not([dir=rtl]) .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
+html:not([dir=rtl]) .mtrl-button--split .mtrl-button__icon--trailing {
   padding-left: 8px;
   padding-right: 0px;
 }
-html[dir=rtl] .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
+html[dir=rtl] .mtrl-button--split .mtrl-button__icon--trailing {
   padding-left: 0px;
   padding-right: 8px;
 }
-html:not([dir=rtl]) .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
-  border-right: none;
+html:not([dir=rtl]) .mtrl-button--split .mtrl-button__icon--trailing {
   border-left: 1px solid rgba(var(--mtrl-theme-on-surface), 12%);
 }
-html[dir=rtl] .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
-  border-left: none;
+html[dir=rtl] .mtrl-button--split .mtrl-button__icon--trailing {
   border-right: 1px solid rgba(var(--mtrl-theme-on-surface), 12%);
 }
 .mtrl-button--vertical {

@@ -62,7 +62,8 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
 
   &--outlined
     @include stroke_
-    @include stroke(prop(button-stroke-width, $stroke-width), prop(button-stroke-color, $stroke-color))
+    @include light-theme
+      @include stroke(prop(button-stroke-width, $stroke-width), prop(button-stroke-color, $stroke-color))
     @include dark-theme
       &:focus
         @include stroke($color: prop(button-dark-stroke-color, $dark-stroke-color))
@@ -78,25 +79,24 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
     &:disabled
       background-color: prop(button-disabled-container-color, $disabled-contained-container-color)
 
-  &--split &__icon
+  &--split .mtrl-button__icon
     @include height(prop(button-height, 36px))
-    @include margin-horizontal(-2, 3)
-    @include padding-horizontal(0, 2)
-    @include ltr
-      border-right: 1px solid theme-prop(on-surface, $stroke)
-    @include rtl
-      border-left: 1px solid theme-prop(on-surface, $stroke)
 
-  &--split &__label + &__icon
-    @include margin-horizontal(3, -2)
-    @include padding-horizontal(2, 0)
-    border: none
-    @include ltr
-      border-right: none
-      border-left: 1px solid theme-prop(on-surface, $stroke)
-    @include rtl
-      border-left: none
-      border-right: 1px solid theme-prop(on-surface, $stroke)
+    &--leading
+      @include margin-horizontal(-2, 3)
+      @include padding-horizontal(0, 2)
+      @include ltr
+        border-right: 1px solid theme-prop(on-surface, $stroke)
+      @include rtl
+        border-left: 1px solid theme-prop(on-surface, $stroke)
+
+    &--trailing
+      @include margin-horizontal(3, -2)
+      @include padding-horizontal(2, 0)
+      @include ltr
+        border-left: 1px solid theme-prop(on-surface, $stroke)
+      @include rtl
+        border-right: 1px solid theme-prop(on-surface, $stroke)
 
   &--vertical
     @include height(prop(button-height, 56px))
