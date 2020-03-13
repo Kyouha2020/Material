@@ -5,9 +5,9 @@
   --mtrl-component-height: 12;
   height: var(--mtrl-component-height, 12);
   padding: 12px;
-  color: rgba(var(--mtrl-theme-primary, 98, 0, 238), 87%);
+  color: rgba(var(--mtrl-theme-primary), 87%);
   width: 48px;
-  background-color: var(--mtrl-theme-surface, 255, 255, 255);
+  background-color: rgba(var(--mtrl-theme-surface), 1);
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -40,7 +40,7 @@
   opacity: 10%;
 }
 .mtrl-icon-button::before {
-  background-color: rgb(var(--mtrl-theme-primary, 98, 0, 238));
+  background-color: rgba(var(--mtrl-theme-primary), 1);
 }
 .mtrl-icon-button::after {
   content: "";
@@ -56,32 +56,32 @@
   cursor: pointer;
 }
 .mtrl-icon-button:disabled {
-  color: rgba(var(--mtrl-theme-on-surface, 0, 0, 0), 38%);
-  background-color: rgba(var(--mtrl-theme-surface, 255, 255, 255), 12%);
+  color: rgba(var(--mtrl-theme-on-surface), 38%);
+  background-color: rgba(var(--mtrl-theme-surface), 12%);
   cursor: default;
   pointer-events: none;
 }
 .mtrl-icon-button--outlined {
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
   --mtrl-shape--stroke-width: 1px;
-  --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface, 0, 0, 0), 12%);
+  --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 12%);
 }
 html[dark] .mtrl-icon-button--outlined:focus {
   --mtrl-shape--stroke-width: 1px;
-  --mtrl-shape--stroke-color: rgb(var(--mtrl-theme-primary, 98, 0, 238));
+  --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
 }
 .mtrl-icon-button--contained {
-  color: rgba(var(--mtrl-theme-on-primary, 255, 255, 255), 87%);
-  background-color: rgb(var(--mtrl-theme-primary, 98, 0, 238));
+  color: rgba(var(--mtrl-theme-on-primary), 87%);
+  background-color: rgba(var(--mtrl-theme-primary), 1);
 }
 .mtrl-icon-button--contained::before {
-  background-color: rgb(var(--mtrl-theme-on-primary, 255, 255, 255));
+  background-color: rgba(var(--mtrl-theme-on-primary), 1);
 }
 html[dark] .mtrl-icon-button--contained::before {
   background-color: var(--mtrl-button-ripple-color, #ffffff);
 }
 .mtrl-icon-button--contained:disabled {
-  background-color: rgba(var(--mtrl-theme-on-surface, 0, 0, 0), 12%);
+  background-color: rgba(var(--mtrl-theme-on-surface), 12%);
 }
 .mtrl-icon-button--tile {
   --mtrl-shape--corner-radius: 0;

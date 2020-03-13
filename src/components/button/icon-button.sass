@@ -8,13 +8,13 @@
 
 .mtrl-icon-button
   @include ripple_
-  @include ripple(rgb(theme-prop(primary)))
+  @include ripple(theme-prop(primary))
   @include touch-target
   @include corner(50%)
   @include stroke($color: transparent)
   @include height(12)
   @include padding(3)
-  color: rgba(theme-prop(primary), $icon--active)
+  color: theme-prop(primary, $icon--active)
   width: 48px
   background-color: theme-prop(surface)
   position: relative
@@ -31,27 +31,27 @@
     cursor: pointer
 
   &:disabled
-    color: rgba(theme-prop(on-surface), $text--disabled)
-    background-color: rgba(theme-prop(surface), $disabled-filled-container)
+    color: theme-prop(on-surface, $text--disabled)
+    background-color: theme-prop(surface, $disabled-filled-container)
     cursor: default
     pointer-events: none
 
   &--outlined
     @include stroke_
-    @include stroke(1px, rgba(theme-prop(on-surface), $stroke))
+    @include stroke(1px, theme-prop(on-surface, $stroke))
     @include dark-theme
       &:focus
-        @include stroke(1px, rgb(theme-prop(primary)))
+        @include stroke(1px, theme-prop(primary))
 
   &--contained
-    @include ripple(rgb(theme-prop(on-primary)))
+    @include ripple(theme-prop(on-primary))
     @include dark-theme
       @include ripple(prop(button-ripple-color, #ffffff))
-    color: rgba(theme-prop(on-primary), $text--high-emphasis)
-    background-color: rgb(theme-prop(primary))
+    color: theme-prop(on-primary, $text--high-emphasis)
+    background-color: theme-prop(primary)
 
     &:disabled
-      background-color: rgba(theme-prop(on-surface), $disabled-filled-container)
+      background-color: theme-prop(on-surface, $disabled-filled-container)
 
   &--tile
     @include corner(0)

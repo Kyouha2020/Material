@@ -20,24 +20,24 @@
 @function hex2rgb($color)
   @return red($color), green($color), blue($color)
 
-@function theme-prop($theme)
+@function theme-prop($theme, $alpha: 1)
   @if $theme == primary
-    @return prop(theme-primary, hex2rgb($primary))
+    @return rgba(prop(theme-primary), $alpha)
   @else if $theme == primary-variant
-    @return prop(theme-primary-variant, hex2rgb($primary-variant))
+    @return rgba(prop(theme-primary-variant), $alpha)
   @else if $theme == secondary
-    @return prop(theme-secondary, hex2rgb($secondary))
+    @return rgba(prop(theme-secondary), $alpha)
   @else if $theme == secondary-variant
-    @return prop(theme-secondary-variant, hex2rgb($secondary-variant))
+    @return rgba(prop(theme-secondary-variant), $alpha)
   @else if $theme == surface
-    @return prop(theme-surface, hex2rgb($surface))
+    @return rgba(prop(theme-surface), $alpha)
   @else if $theme == on-primary
-    @return prop(theme-on-primary, hex2rgb($on-primary))
+    @return rgba(prop(theme-on-primary), $alpha)
   @else if $theme == on-primary-variant
-    @return prop(theme-on-primary, hex2rgb($on-primary-variant))
+    @return rgba(prop(theme-on-primary), $alpha)
   @else if $theme == on-secondary
-    @return prop(theme-on-secondary, hex2rgb($on-secondary))
+    @return rgba(prop(theme-on-secondary), $alpha)
   @else if $theme == on-secondary-variant
-    @return prop(theme-on-secondary, hex2rgb($on-secondary-variant))
+    @return rgba(prop(theme-on-secondary), $alpha)
   @else if $theme == on-surface
-    @return prop(theme-on-surface, hex2rgb($on-surface))
+    @return rgba(prop(theme-on-surface), $alpha)

@@ -12,20 +12,20 @@
 $corner-radius: 4px
 $stroke-width: 1px
 
-$ripple-color: rgb(theme-prop(primary))
-$contained-ripple-color: rgb(theme-prop(on-primary))
+$ripple-color: theme-prop(primary)
+$contained-ripple-color: theme-prop(on-primary)
 
-$container-color: rgb(theme-prop(surface))
-$contained-container-color: rgb(theme-prop(primary))
-$disabled-container-color: rgba(theme-prop(surface), $disabled-filled-container)
-$contained-disabled-container-color: rgba(theme-prop(on-surface), $disabled-filled-container)
+$container-color: theme-prop(surface)
+$contained-container-color: theme-prop(primary)
+$disabled-container-color: theme-prop(surface, $disabled-filled-container)
+$contained-disabled-container-color: theme-prop(on-surface, $disabled-filled-container)
 
-$ink-color: rgba(theme-prop(primary), $text--high-emphasis)
-$contained-ink-color: rgba(theme-prop(on-primary), $text--high-emphasis)
-$disabled-ink-color: rgba(theme-prop(on-surface), $text--disabled)
+$ink-color: theme-prop(primary, $text--high-emphasis)
+$contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
+$disabled-ink-color: theme-prop(on-surface, $text--disabled)
 
-$stroke-color: rgba(theme-prop(on-surface), $stroke)
-$dark-stroke-color: rgb(theme-prop(primary))
+$stroke-color: theme-prop(on-surface, $stroke)
+$dark-stroke-color: theme-prop(primary)
 
 .mtrl-button
   @include ripple_
@@ -88,9 +88,9 @@ $dark-stroke-color: rgb(theme-prop(primary))
     @include margin-horizontal(-2, 3)
     @include padding-horizontal(0, 2)
     @include ltr
-      border-right: 1px solid rgba(theme-prop(on-surface), $stroke)
+      border-right: 1px solid theme-prop(on-surface, $stroke)
     @include rtl
-      border-left: 1px solid rgba(theme-prop(on-surface), $stroke)
+      border-left: 1px solid theme-prop(on-surface, $stroke)
 
   &--split &__label + &__icon
     @include margin-horizontal(3, -2)
@@ -98,10 +98,10 @@ $dark-stroke-color: rgb(theme-prop(primary))
     border: none
     @include ltr
       border-right: none
-      border-left: 1px solid rgba(theme-prop(on-surface), $stroke)
+      border-left: 1px solid theme-prop(on-surface, $stroke)
     @include rtl
       border-left: none
-      border-right: 1px solid rgba(theme-prop(on-surface), $stroke)
+      border-right: 1px solid theme-prop(on-surface, $stroke)
 
   &--vertical
     @include height(prop(button-height, 56px))
@@ -166,7 +166,7 @@ $dark-stroke-color: rgb(theme-prop(primary))
 
     &--secondary
       @include typography(caption)
-      color: rgba(theme-prop(primary), $text--medium-emphasis)
+      color: theme-prop(primary, $text--medium-emphasis)
       text-transform: none
 
   &__icon
