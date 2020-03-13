@@ -35,7 +35,6 @@ $dark--on-background: if(contrast-tone($dark--background) == "dark", #000, #fff)
 $dark--on-surface: if(contrast-tone($dark--surface) == "dark", #000, #fff)
 $dark--on-error: if(contrast-tone($dark--error) == "dark", #000, #fff)
 
-
 \:root
   --mtrl-theme-primary: #{hex2rgb($primary)}
   --mtrl-theme-primary-variant: #{hex2rgb($primary-variant)}
@@ -56,6 +55,31 @@ $dark--on-error: if(contrast-tone($dark--error) == "dark", #000, #fff)
   --mtrl-dark-theme-on-primary-variant: #{hex2rgb($dark--on-primary-variant)}
   --mtrl-dark-theme-on-secondary: #{hex2rgb($dark--on-secondary)}
   --mtrl-dark-theme-on-surface: #{hex2rgb($dark--on-surface)}
+
+@media (prefers-color-scheme: light)
+  \:root
+    --mtrl-theme-primary: #{hex2rgb($primary)}
+    --mtrl-theme-primary-variant: #{hex2rgb($primary-variant)}
+    --mtrl-theme-secondary: #{hex2rgb($secondary)}
+    --mtrl-theme-secondary-variant: #{hex2rgb($secondary-variant)}
+    --mtrl-theme-surface: #{hex2rgb($surface)}
+    --mtrl-theme-on-primary: #{hex2rgb($on-primary)}
+    --mtrl-theme-on-primary-variant: #{hex2rgb($on-primary-variant)}
+    --mtrl-theme-on-secondary: #{hex2rgb($on-secondary)}
+    --mtrl-theme-on-secondary-variant: #{hex2rgb($on-secondary-variant)}
+    --mtrl-theme-on-surface: #{hex2rgb($on-surface)}
+
+html[light]
+  --mtrl-theme-primary: #{hex2rgb($primary)}
+  --mtrl-theme-primary-variant: #{hex2rgb($primary-variant)}
+  --mtrl-theme-secondary: #{hex2rgb($secondary)}
+  --mtrl-theme-secondary-variant: #{hex2rgb($secondary-variant)}
+  --mtrl-theme-surface: #{hex2rgb($surface)}
+  --mtrl-theme-on-primary: #{hex2rgb($on-primary)}
+  --mtrl-theme-on-primary-variant: #{hex2rgb($on-primary-variant)}
+  --mtrl-theme-on-secondary: #{hex2rgb($on-secondary)}
+  --mtrl-theme-on-secondary-variant: #{hex2rgb($on-secondary-variant)}
+  --mtrl-theme-on-surface: #{hex2rgb($on-surface)}
 
 @media (prefers-color-scheme: dark)
   \:root

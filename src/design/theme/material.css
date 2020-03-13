@@ -19,6 +19,33 @@
   --mtrl-dark-theme-on-surface: 255, 255, 255;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --mtrl-theme-primary: 98, 0, 238;
+    --mtrl-theme-primary-variant: 55, 0, 179;
+    --mtrl-theme-secondary: 3, 218, 198;
+    --mtrl-theme-secondary-variant: 1, 135, 134;
+    --mtrl-theme-surface: 255, 255, 255;
+    --mtrl-theme-on-primary: 255, 255, 255;
+    --mtrl-theme-on-primary-variant: 255, 255, 255;
+    --mtrl-theme-on-secondary: 0, 0, 0;
+    --mtrl-theme-on-secondary-variant: 255, 255, 255;
+    --mtrl-theme-on-surface: 0, 0, 0;
+  }
+}
+html[light] {
+  --mtrl-theme-primary: 98, 0, 238;
+  --mtrl-theme-primary-variant: 55, 0, 179;
+  --mtrl-theme-secondary: 3, 218, 198;
+  --mtrl-theme-secondary-variant: 1, 135, 134;
+  --mtrl-theme-surface: 255, 255, 255;
+  --mtrl-theme-on-primary: 255, 255, 255;
+  --mtrl-theme-on-primary-variant: 255, 255, 255;
+  --mtrl-theme-on-secondary: 0, 0, 0;
+  --mtrl-theme-on-secondary-variant: 255, 255, 255;
+  --mtrl-theme-on-surface: 0, 0, 0;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --mtrl-theme-primary: var(--mtrl-dark-theme-primary);
