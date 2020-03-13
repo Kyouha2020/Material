@@ -18,9 +18,8 @@ $ambient-map: (0: 0px 0px 0px 0px, 1: 0px 1px 3px 0px, 2: 0px 1px 5px 0px, 3: 0p
   $box-shadow--active: (map-get($umbra-map, $active) $umbra-color, map-get($penumbra-map, $active) $penumbra-color, map-get($ambient-map, $active) $ambient-color)
 
   @include dark-theme
-    &:not(:hover):not(:focus):not(:active)::before
-      background-color: white
-      opacity: map-get($elevation-overlay, $z-value)
+    @include var(elevation-overlay, white)
+    @include var(elevation-overlay-opacity, map-get($elevation-overlay, $z-value))
 
   box-shadow: $box-shadow
   transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1)

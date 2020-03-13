@@ -5,6 +5,9 @@
   &::before
     background-color: $color
 
+  &:not(:hover):not(:focus):not(:active)::before
+    background-color: prop(elevation-overlay, $color)
+
 @mixin ripple_
   &::before
     content: ''
@@ -16,13 +19,13 @@
     width: 100%
     height: 100%
     border-radius: inherit
-    opacity: 0
+    opacity: prop(elevation-overlay-opacity, 0%)
 
   &:hover::before
-    opacity: $container-overlay--hovered
+    opacity: calc(#{$container-overlay--hovered} + #{prop(elevation-overlay-opacity, 0%)})
 
   &:focus::before
-    opacity: $container-overlay--focused
+    opacity: calc(#{$container-overlay--focused} + #{prop(elevation-overlay-opacity, 0%)})
 
   &:active::before
-    opacity: $container-overlay--pressed
+    opacity: calc(#{$container-overlay--pressed} + #{prop(elevation-overlay-opacity, 0%)})
