@@ -1,4 +1,3 @@
-@use "../../design/color/theme" as *
 @use "../../design/theme/theme" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
@@ -9,15 +8,15 @@
 
 .mtrl-icon-button
   @include ripple_
-  @include ripple(rgb($primary))
+  @include ripple(rgb(theme-prop(primary)))
   @include touch-target
   @include corner(50%)
   @include stroke($color: transparent)
   @include height(12)
   @include padding(3)
-  color: rgba($primary, $icon--active)
+  color: rgba(theme-prop(primary), $icon--active)
   width: 48px
-  background-color: $surface
+  background-color: theme-prop(surface)
   position: relative
   display: inline-flex
   align-items: center
@@ -32,27 +31,27 @@
     cursor: pointer
 
   &:disabled
-    color: rgba($on-surface, $text--disabled)
-    background-color: rgba($surface, $disabled-filled-container)
+    color: rgba(theme-prop(on-surface), $text--disabled)
+    background-color: rgba(theme-prop(surface), $disabled-filled-container)
     cursor: default
     pointer-events: none
 
   &--outlined
     @include stroke_
-    @include stroke(1px, rgba($on-surface, $stroke))
+    @include stroke(1px, rgba(theme-prop(on-surface), $stroke))
     @include dark-theme
       &:focus
-        @include stroke(1px, rgb($primary))
+        @include stroke(1px, rgb(theme-prop(primary)))
 
   &--contained
-    @include ripple(rgb($on-primary))
+    @include ripple(rgb(theme-prop(on-primary)))
     @include dark-theme
       @include ripple(prop(button-ripple-color, #ffffff))
-    color: rgba($on-primary, $text--high-emphasis)
-    background-color: rgb($primary)
+    color: rgba(theme-prop(on-primary), $text--high-emphasis)
+    background-color: rgb(theme-prop(primary))
 
     &:disabled
-      background-color: rgba($on-surface, $disabled-filled-container)
+      background-color: rgba(theme-prop(on-surface), $disabled-filled-container)
 
   &--tile
     @include corner(0)

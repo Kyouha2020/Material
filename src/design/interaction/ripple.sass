@@ -1,9 +1,9 @@
 @use "../theme/theme" as *
 @use "states" as *
 
-@mixin ripple($overlay)
+@mixin ripple($color)
   &::before
-    background-color: #{$overlay}
+    background-color: $color
 
 @mixin ripple_
   &::before

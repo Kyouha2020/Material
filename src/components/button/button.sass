@@ -1,4 +1,3 @@
-@use "../../design/color/theme" as *
 @use "../../design/theme/theme" as *
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
@@ -11,17 +10,17 @@
 @use "../../design/usability/bidirectionality" as *
 
 $corner-radius: 4px
-$ripple-color: rgb($primary)
-$contained-ripple-color: rgb($on-primary)
-$container-color: rgb($surface)
-$contained-container-color: rgb($primary)
-$disabled-container-color: rgba($surface, $disabled-filled-container)
-$ink-color: rgba($primary, $text--high-emphasis)
-$contained-ink-color: rgba($on-primary, $text--high-emphasis)
-$disabled-ink-color: rgba($on-surface, $text--disabled)
+$ripple-color: rgb(theme-prop(primary))
+$contained-ripple-color: rgb(theme-prop(on-primary))
+$container-color: rgb(theme-prop(surface))
+$contained-container-color: rgb(theme-prop(primary))
+$disabled-container-color: rgba(theme-prop(surface), $disabled-filled-container)
+$ink-color: rgba(theme-prop(primary), $text--high-emphasis)
+$contained-ink-color: rgba(theme-prop(on-primary), $text--high-emphasis)
+$disabled-ink-color: rgba(theme-prop(on-surface), $text--disabled)
 $stroke-width: 1px
-$stroke-color: rgba($on-surface, $stroke)
-$dark-stroke-color: rgb($primary)
+$stroke-color: rgba(theme-prop(on-surface), $stroke)
+$dark-stroke-color: rgb(theme-prop(primary))
 
 .mtrl-button
   @include ripple_
@@ -77,16 +76,16 @@ $dark-stroke-color: rgb($primary)
     color: prop(button-ink-color, $contained-ink-color)
 
     &:disabled
-      background-color: rgba($on-surface, $disabled-filled-container)
+      background-color: rgba(theme-prop(on-surface), $disabled-filled-container)
 
   &--split &__icon
     @include height(prop(button-height, 36px))
     @include margin-horizontal(-2, 3)
     @include padding-horizontal(0, 2)
     @include ltr
-      border-right: 1px solid rgba($on-surface, $stroke)
+      border-right: 1px solid rgba(theme-prop(on-surface), $stroke)
     @include rtl
-      border-left: 1px solid rgba($on-surface, $stroke)
+      border-left: 1px solid rgba(theme-prop(on-surface), $stroke)
 
   &--split &__label + &__icon
     @include margin-horizontal(3, -2)
@@ -94,10 +93,10 @@ $dark-stroke-color: rgb($primary)
     border: none
     @include ltr
       border-right: none
-      border-left: 1px solid rgba($on-surface, $stroke)
+      border-left: 1px solid rgba(theme-prop(on-surface), $stroke)
     @include rtl
       border-left: none
-      border-right: 1px solid rgba($on-surface, $stroke)
+      border-right: 1px solid rgba(theme-prop(on-surface), $stroke)
 
   &--vertical
     @include height(prop(button-height, 56px))
@@ -162,7 +161,7 @@ $dark-stroke-color: rgb($primary)
 
     &--secondary
       @include typography(caption)
-      color: rgba($primary, $text--medium-emphasis)
+      color: rgba(theme-prop(primary), $text--medium-emphasis)
       text-transform: none
 
   &__icon

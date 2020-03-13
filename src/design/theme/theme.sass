@@ -1,3 +1,5 @@
+@use "../color/theme" as *
+
 @function prop($var, $value: null)
   @if $value == null
     @return var(--mtrl-#{$var})
@@ -17,3 +19,25 @@
 
 @function hex2rgb($color)
   @return red($color), green($color), blue($color)
+
+@function theme-prop($theme)
+  @if $theme == primary
+    @return var(--mtrl-theme-primary, hex2rgb($primary))
+  @if $theme == primary-variant
+    @return var(--mtrl-theme-primary-variant, hex2rgb($primary-variant))
+  @if $theme == secondary
+    @return var(--mtrl-theme-secondary, hex2rgb($secondary))
+  @if $theme == secondary-variant
+    @return var(--mtrl-theme-secondary-variant, hex2rgb($secondary-variant))
+  @if $theme == surface
+    @return var(--mtrl-theme-surface, hex2rgb($surface))
+  @if $theme == on-primary
+    @return var(--mtrl-theme-on-primary, hex2rgb($on-primary))
+  @if $theme == on-primary-variant
+    @return var(--mtrl-theme-on-primary, hex2rgb($on-primary-variant))
+  @if $theme == on-secondary
+    @return var(--mtrl-theme-on-secondary, hex2rgb($on-secondary))
+  @if $theme == on-secondary-variant
+    @return var(--mtrl-theme-on-secondary, hex2rgb($on-secondary-variant))
+  @if $theme == on-surface
+    @return var(--mtrl-theme-on-surface, hex2rgb($on-surface))

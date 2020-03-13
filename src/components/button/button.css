@@ -13,8 +13,8 @@
   -webkit-font-smoothing: antialiased;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: var(--mtrl-button-container-color, rgb(var(--mtrl-theme-surface, #ffffff)));
-  color: var(--mtrl-button-ink-color, rgba(var(--mtrl-theme-primary, #6200ee), 87%));
+  background-color: var(--mtrl-button-container-color, rgb(var(--mtrl-theme-surface, 255, 255, 255)));
+  color: var(--mtrl-button-ink-color, rgba(var(--mtrl-theme-primary, 98, 0, 238), 87%));
   min-width: 64px;
   position: relative;
   display: inline-flex;
@@ -49,7 +49,7 @@
   opacity: 10%;
 }
 .mtrl-button::before {
-  background-color: var(--mtrl-button-ripple-color, rgb(var(--mtrl-theme-primary, #6200ee)));
+  background-color: var(--mtrl-button-ripple-color, rgb(var(--mtrl-theme-primary, 98, 0, 238)));
 }
 .mtrl-button::after {
   content: "";
@@ -68,8 +68,8 @@
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 0;
-  color: var(--mtrl-button-disabled-ink-color, rgba(var(--mtrl-theme-on-surface, #000), 38%));
-  background-color: var(--mtrl-button-disabled-container-color, rgba(var(--mtrl-theme-surface, #ffffff), 12%));
+  color: var(--mtrl-button-disabled-ink-color, rgba(var(--mtrl-theme-on-surface, 0, 0, 0), 38%));
+  background-color: var(--mtrl-button-disabled-container-color, rgba(var(--mtrl-theme-surface, 255, 255, 255), 12%));
   cursor: default;
   pointer-events: none;
 }
@@ -84,21 +84,21 @@ html[dark] .mtrl-button:disabled:not(:hover):not(:focus):not(:active)::before {
   padding: 0px 16px;
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
   --mtrl-shape--stroke-width: var(--mtrl-button-stroke-width, 1px);
-  --mtrl-shape--stroke-color: var(--mtrl-button-stroke-color, rgba(var(--mtrl-theme-on-surface, #000), 12%));
+  --mtrl-shape--stroke-color: var(--mtrl-button-stroke-color, rgba(var(--mtrl-theme-on-surface, 0, 0, 0), 12%));
 }
 html[dark] .mtrl-button--outlined:focus {
-  --mtrl-shape--stroke-color: var(--mtrl-button-dark-stroke-color, rgb(var(--mtrl-theme-primary, #6200ee)));
+  --mtrl-shape--stroke-color: var(--mtrl-button-dark-stroke-color, rgb(var(--mtrl-theme-primary, 98, 0, 238)));
 }
 .mtrl-button--contained {
   padding: 0px 16px;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
-  background-color: var(--mtrl-button-container-color, rgb(var(--mtrl-theme-primary, #6200ee)));
-  color: var(--mtrl-button-ink-color, rgba(var(--mtrl-theme-on-primary, #fff), 87%));
+  background-color: var(--mtrl-button-container-color, rgb(var(--mtrl-theme-primary, 98, 0, 238)));
+  color: var(--mtrl-button-ink-color, rgba(var(--mtrl-theme-on-primary, 255, 255, 255), 87%));
 }
 .mtrl-button--contained::before {
-  background-color: var(--mtrl-button-ripple-color, rgb(var(--mtrl-theme-on-primary, #fff)));
+  background-color: var(--mtrl-button-ripple-color, rgb(var(--mtrl-theme-on-primary, 255, 255, 255)));
 }
 html[dark] .mtrl-button--contained::before {
   background-color: var(--mtrl-button-ripple-color, #ffffff);
@@ -120,7 +120,7 @@ html[dark] .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before 
   z-index: 8;
 }
 .mtrl-button--contained:disabled {
-  background-color: rgba(var(--mtrl-theme-on-surface, #000), 12%);
+  background-color: rgba(var(--mtrl-theme-on-surface, 0, 0, 0), 12%);
 }
 .mtrl-button--split .mtrl-button__icon {
   --mtrl-component-height: var(--mtrl-button-height, 36px);
@@ -139,10 +139,10 @@ html[dir=rtl] .mtrl-button--split .mtrl-button__icon {
   padding-right: 0px;
 }
 html:not([dir=rtl]) .mtrl-button--split .mtrl-button__icon {
-  border-right: 1px solid rgba(var(--mtrl-theme-on-surface, #000), 12%);
+  border-right: 1px solid rgba(var(--mtrl-theme-on-surface, 0, 0, 0), 12%);
 }
 html[dir=rtl] .mtrl-button--split .mtrl-button__icon {
-  border-left: 1px solid rgba(var(--mtrl-theme-on-surface, #000), 12%);
+  border-left: 1px solid rgba(var(--mtrl-theme-on-surface, 0, 0, 0), 12%);
 }
 .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
   margin-left: 12px;
@@ -161,11 +161,11 @@ html[dir=rtl] .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
 }
 html:not([dir=rtl]) .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
   border-right: none;
-  border-left: 1px solid rgba(var(--mtrl-theme-on-surface, #000), 12%);
+  border-left: 1px solid rgba(var(--mtrl-theme-on-surface, 0, 0, 0), 12%);
 }
 html[dir=rtl] .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
   border-left: none;
-  border-right: 1px solid rgba(var(--mtrl-theme-on-surface, #000), 12%);
+  border-right: 1px solid rgba(var(--mtrl-theme-on-surface, 0, 0, 0), 12%);
 }
 .mtrl-button--vertical {
   --mtrl-component-height: var(--mtrl-button-height, 56px);
@@ -292,7 +292,7 @@ html[dark] .mtrl-button--unelevated:not(:hover):not(:focus):not(:active)::before
 .mtrl-button__label--secondary {
   font-size: 0.75rem;
   text-transform: inherit;
-  color: rgba(var(--mtrl-theme-primary, #6200ee), 60%);
+  color: rgba(var(--mtrl-theme-primary, 98, 0, 238), 60%);
   text-transform: none;
 }
 .mtrl-button__icon {
