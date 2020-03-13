@@ -52,6 +52,9 @@
 .mtrl-fab::before {
   background-color: var(--mtrl-fab-ripple-color, rgba(var(--mtrl-theme-surface), 1));
 }
+html[dark] .mtrl-fab::before {
+  background-color: var(--mtrl-fab-ripple-color, #ffffff);
+}
 .mtrl-fab::after {
   content: "";
   position: absolute;

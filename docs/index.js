@@ -6,10 +6,10 @@ const themeToggle = document.querySelector('#theme-toggle')
 themeToggle.addEventListener('click', () => {
     if (!document.documentElement.hasAttribute('dark')) {
         document.documentElement.setAttribute('dark', '')
-        themeToggle.innerHTML = `Dark Theme is on`
+        themeToggle.innerHTML = `<i class="material-icons">brightness_7</i>`
     } else {
         document.documentElement.removeAttribute('dark')
-        themeToggle.innerHTML = `Dark Theme is off`
+        themeToggle.innerHTML = `<i class="material-icons">brightness_4</i>`
     }
 })
 
@@ -17,9 +17,9 @@ const dirToggle = document.querySelector('#dir-toggle')
 dirToggle.addEventListener('click', () => {
     if (!document.documentElement.hasAttribute('dir')) {
         document.documentElement.setAttribute('dir', 'rtl')
-        dirToggle.innerHTML = `RTL is on`
+        dirToggle.innerHTML = `<i class="material-icons">navigate_next</i>`
     } else {
         document.documentElement.removeAttribute('dir')
-        dirToggle.innerHTML = `RTL is off`
+        dirToggle.innerHTML = `<i class="material-icons">navigate_before</i>`
     }
 })

@@ -81,24 +81,35 @@ span[unsafe][against]::after, span[against][against]::after {
   background-color: #ff9800;
 }
 
-#theme-toggle {
-  margin-bottom: 8px;
-  padding: 8px;
-  border: 1px solid #03dac6;
-  font-size: 1.25rem;
-}
-#theme-toggle:hover {
-  cursor: pointer;
+#toggle-container {
+  display: inline-flex;
+  position: fixed;
+  left: initial;
+  right: 16px;
+  flex-direction: column;
 }
 
-#dir-toggle {
+html[dir=rtl] #toggle-container {
+  left: 16px;
+  right: initial;
+}
+
+#theme-toggle, #dir-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 8px;
   padding: 8px;
-  border: 1px solid #03dac6;
-  font-size: 1.25rem;
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  color: #03dac6ee;
+  user-select: none;
 }
-#dir-toggle:hover {
+#theme-toggle:hover, #dir-toggle:hover {
   cursor: pointer;
+}
+#theme-toggle i, #dir-toggle i {
+  font-size: 1.5rem;
 }
 
 .mtrl-button[test].ripple-color {
