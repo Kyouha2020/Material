@@ -43,11 +43,6 @@ html[dark] {
   --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface);
 }
 
-html:not([dark]) {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #ffffff;
-}
-
 @media (prefers-color-scheme: dark) {
   html {
     background-color: #121212;
