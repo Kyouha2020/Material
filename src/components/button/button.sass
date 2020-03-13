@@ -32,7 +32,6 @@ $dark-stroke-color: theme-prop(primary)
   @include ripple(prop(button-ripple-color, $ripple-color))
   @include touch-target
   @include corner(prop(button-corner-radius, $corner-radius))
-  @include stroke($color: transparent)
   @include height(prop(button-height, 36px))
   @include padding(0, 2)
   @include typography_(button)
@@ -63,8 +62,10 @@ $dark-stroke-color: theme-prop(primary)
     .mtrl-button__icon
       color: prop(button-disabled-icon-color, prop(button-disabled-ink-color))
 
-  &--outlined
+  &--outlined, &--contained, &--float, &--raised
     @include padding(0, 4)
+
+  &--outlined
     @include stroke_
     @include stroke(prop(button-stroke-width, $stroke-width), prop(button-stroke-color, $stroke-color))
     @include dark-theme
@@ -75,7 +76,6 @@ $dark-stroke-color: theme-prop(primary)
     @include ripple(prop(button-ripple-color, $contained-ripple-color))
     @include dark-theme
       @include ripple(prop(button-ripple-color, #ffffff))
-    @include padding(0, 4)
     @include elevation(2, 4, 6, 8)
     background-color: prop(button-container-color, $contained-container-color)
     color: prop(button-ink-color, $contained-ink-color)
@@ -128,11 +128,9 @@ $dark-stroke-color: theme-prop(primary)
 
   &--float
     @include elevation(0, 0, 2, 4)
-    @include padding(0, 4)
 
   &--raised
     @include elevation(2, 4, 6, 8)
-    @include padding(0, 4)
 
   &--unelevated
     @include elevation(0, 0, 0, 0)

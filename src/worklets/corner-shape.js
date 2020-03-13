@@ -15,7 +15,7 @@ if (typeof registerPaint !== 'undefined') registerPaint('corner-shape', class {
         else this.cornerShapes(ctx, geom, properties)
 
         if (args.toString() === 'filled') ctx.fill()
-        else if (args.toString() === 'outlined') {
+        else if (args.toString() === 'outlined' &&properties.get('--mtrl-shape--stroke-width').toString().replace('px', '') * 2　!== 0) {
             ctx.strokeStyle = properties.get('--mtrl-shape--stroke-color')
             ctx.lineWidth = properties.get('--mtrl-shape--stroke-width').toString().replace('px', '') * 2
             ctx.stroke()
