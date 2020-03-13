@@ -11,24 +11,24 @@
 // spacing
 @mixin margin-start($start, $baseline: 4px)
   $start: $start * $baseline
-
-  margin-left: $start
+  @include ltr
+    margin-left: $start
   @include rtl
     margin-right: $start
 
 @mixin margin-end($end, $baseline: 4px)
   $end: $end * $baseline
-
-  margin-right: $end
+  @include ltr
+    margin-right: $end
   @include rtl
     margin-left: $end
 
 @mixin margin-horizontal($start, $end: $start, $baseline: 4px)
   $start: $start * $baseline
   $end: $end * $baseline
-
-  margin-left: $start
-  margin-right: $end
+  @include ltr
+    margin-left: $start
+    margin-right: $end
   @include rtl
     margin-left: $end
     margin-right: $start
@@ -46,31 +46,32 @@
   @else if $start == $end
     margin: $top $start $bottom
   @else
-    margin: $top $end $bottom $start
+    @include ltr
+      margin: $top $end $bottom $start
     @include rtl
       margin: $top $start $bottom $end
 
 
 @mixin padding-start($start, $baseline: 4px)
   $start: $start * $baseline
-
-  padding-left: $start
+  @include ltr
+    padding-left: $start
   @include rtl
     padding-right: $start
 
 @mixin padding-end($end, $baseline: 4px)
   $end: $end * $baseline
-
-  padding-right: $end
+  @include ltr
+    padding-right: $end
   @include rtl
     padding-left: $end
 
 @mixin padding-horizontal($start, $end: $start, $baseline: 4px)
   $start: $start * $baseline
   $end: $end * $baseline
-
-  padding-left: $start
-  padding-right: $end
+  @include ltr
+    padding-left: $start
+    padding-right: $end
   @include rtl
     padding-left: $end
     padding-right: $start
@@ -88,7 +89,8 @@
   @else if $start == $end
     padding: $top $start $bottom
   @else
-    padding: $top $end $bottom $start
+    @include ltr
+      padding: $top $end $bottom $start
     @include rtl
       padding: $top $start $bottom $end
 

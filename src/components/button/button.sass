@@ -13,19 +13,17 @@ $corner-radius: 4px
 $stroke-width: 1px
 
 $ripple-color: theme-prop(primary)
-$contained-ripple-color: theme-prop(on-primary)
-
 $container-color: theme-prop(surface)
-$contained-container-color: theme-prop(primary)
 $disabled-container-color: theme-prop(surface, $disabled-filled-container)
-$contained-disabled-container-color: theme-prop(on-surface, $disabled-filled-container)
-
 $ink-color: theme-prop(primary, $text--high-emphasis)
-$contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
 $disabled-ink-color: theme-prop(on-surface, $text--disabled)
-
 $stroke-color: theme-prop(on-surface, $stroke)
 $dark-stroke-color: theme-prop(primary)
+
+$contained-ripple-color: theme-prop(on-primary)
+$contained-container-color: theme-prop(primary)
+$disabled-contained-container-color: theme-prop(on-surface, $disabled-filled-container)
+$contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
 
 .mtrl-button
   @include ripple_
@@ -59,9 +57,6 @@ $dark-stroke-color: theme-prop(primary)
     cursor: default
     pointer-events: none
 
-    .mtrl-button__icon
-      color: prop(button-disabled-icon-color, prop(button-disabled-ink-color))
-
   &--outlined, &--contained, &--float, &--raised
     @include padding(0, 4)
 
@@ -81,7 +76,7 @@ $dark-stroke-color: theme-prop(primary)
     color: prop(button-ink-color, $contained-ink-color)
 
     &:disabled
-      background-color: prop(button-disabled-container-color, $contained-disabled-container-color)
+      background-color: prop(button-disabled-container-color, $disabled-contained-container-color)
 
   &--split &__icon
     @include height(prop(button-height, 36px))
@@ -108,17 +103,17 @@ $dark-stroke-color: theme-prop(primary)
     flex-direction: column
 
     .mtrl-button__icon
-      @include margin(0, 0, 1, 0)
-      @include rtl
-        @include margin(0, 0, 1, 0)
+      @include margin-horizontal(0)
+
+      &--leading
+        margin-bottom: 4px
+
+      &--trailing
+        margin-top: 4px
 
     .mtrl-button__label
       @include typography(button, 0.875)
 
-    .mtrl-button__label + .mtrl-button__icon
-      @include margin(1, 0, 0, 0)
-      @include rtl
-        @include margin(1, 0, 0, 0)
 
   &--two-column
     @include height(prop(button-height, 48px))
@@ -136,7 +131,7 @@ $dark-stroke-color: theme-prop(primary)
     @include elevation(0, 0, 0, 0)
 
   &--rounded
-    @include corner(calc(#{prop(button-height, prop(component-height))} / 2))
+    @include corner(rounded)
 
   &--tile
     @include corner(0)

@@ -11,6 +11,15 @@ html[dark] .mtrl-theme--primary-primary-variant {
   --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-primary-variant);
 }
 
+.mtrl-theme--on-primary-primary-variant {
+  --mtrl-theme-on-primary: var(--mtrl-theme-primary-variant);
+  --mtrl-theme-primary: var(--mtrl-theme-on-primary-variant);
+}
+html[dark] .mtrl-theme--on-primary-primary-variant {
+  --mtrl-theme-on-primary: var(--mtrl-dark-theme-primary-variant);
+  --mtrl-theme-primary: var(--mtrl-dark-theme-on-primary-variant);
+}
+
 .mtrl-theme--primary-secondary {
   --mtrl-theme-primary: var(--mtrl-theme-secondary);
   --mtrl-theme-on-primary: var(--mtrl-theme-on-secondary);
@@ -18,6 +27,15 @@ html[dark] .mtrl-theme--primary-primary-variant {
 html[dark] .mtrl-theme--primary-secondary {
   --mtrl-theme-primary: var(--mtrl-dark-theme-secondary);
   --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-secondary);
+}
+
+.mtrl-theme--on-primary-secondary {
+  --mtrl-theme-on-primary: var(--mtrl-theme-secondary);
+  --mtrl-theme-primary: var(--mtrl-theme-on-secondary);
+}
+html[dark] .mtrl-theme--on-primary-secondary {
+  --mtrl-theme-on-primary: var(--mtrl-dark-theme-secondary);
+  --mtrl-theme-primary: var(--mtrl-dark-theme-on-secondary);
 }
 
 .mtrl-theme--primary-secondary-variant {
@@ -29,6 +47,15 @@ html[dark] .mtrl-theme--primary-secondary-variant {
   --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-secondary-variant);
 }
 
+.mtrl-theme--on-primary-secondary-variant {
+  --mtrl-theme-on-primary: var(--mtrl-theme-secondary-variant);
+  --mtrl-theme-primary: var(--mtrl-theme-on-secondary-variant);
+}
+html[dark] .mtrl-theme--on-primary-secondary-variant {
+  --mtrl-theme-on-primary: var(--mtrl-dark-theme-secondary-variant);
+  --mtrl-theme-primary: var(--mtrl-dark-theme-on-secondary-variant);
+}
+
 .mtrl-theme--primary-surface {
   --mtrl-theme-primary: var(--mtrl-theme-surface);
   --mtrl-theme-on-primary: var(--mtrl-theme-on-surface);
@@ -38,6 +65,15 @@ html[dark] .mtrl-theme--primary-surface {
   --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-surface);
 }
 
+.mtrl-theme--on-primary-surface {
+  --mtrl-theme-on-primary: var(--mtrl-theme-surface);
+  --mtrl-theme-primary: var(--mtrl-theme-on-surface);
+}
+html[dark] .mtrl-theme--on-primary-surface {
+  --mtrl-theme-on-primary: var(--mtrl-dark-theme-surface);
+  --mtrl-theme-primary: var(--mtrl-dark-theme-on-surface);
+}
+
 .mtrl-theme--primary-variant-primary {
   --mtrl-theme-primary-variant: var(--mtrl-theme-primary);
   --mtrl-theme-on-primary-variant: var(--mtrl-theme-on-primary);
@@ -45,6 +81,15 @@ html[dark] .mtrl-theme--primary-surface {
 html[dark] .mtrl-theme--primary-variant-primary {
   --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary);
   --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-primary);
+}
+
+.mtrl-theme--on-primary-variant-primary {
+  --mtrl-theme-on-primary-variant: var(--mtrl-theme-primary);
+  --mtrl-theme-primary-variant: var(--mtrl-theme-on-primary);
+}
+html[dark] .mtrl-theme--on-primary-variant-primary {
+  --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-primary);
+  --mtrl-theme-primary-variant: var(--mtrl-dark-theme-on-primary);
 }
 
 .mtrl-theme--primary-variant {
@@ -60,6 +105,15 @@ html[dark] .mtrl-theme--primary-variant-secondary {
   --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-secondary);
 }
 
+.mtrl-theme--on-primary-variant-secondary {
+  --mtrl-theme-on-primary-variant: var(--mtrl-theme-secondary);
+  --mtrl-theme-primary-variant: var(--mtrl-theme-on-secondary);
+}
+html[dark] .mtrl-theme--on-primary-variant-secondary {
+  --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-secondary);
+  --mtrl-theme-primary-variant: var(--mtrl-dark-theme-on-secondary);
+}
+
 .mtrl-theme--primary-variant-secondary-variant {
   --mtrl-theme-primary-variant: var(--mtrl-theme-secondary-variant);
   --mtrl-theme-on-primary-variant: var(--mtrl-theme-on-secondary-variant);
@@ -67,6 +121,15 @@ html[dark] .mtrl-theme--primary-variant-secondary {
 html[dark] .mtrl-theme--primary-variant-secondary-variant {
   --mtrl-theme-primary-variant: var(--mtrl-dark-theme-secondary-variant);
   --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-secondary-variant);
+}
+
+.mtrl-theme--on-primary-variant-secondary-variant {
+  --mtrl-theme-on-primary-variant: var(--mtrl-theme-secondary-variant);
+  --mtrl-theme-primary-variant: var(--mtrl-theme-on-secondary-variant);
+}
+html[dark] .mtrl-theme--on-primary-variant-secondary-variant {
+  --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-secondary-variant);
+  --mtrl-theme-primary-variant: var(--mtrl-dark-theme-on-secondary-variant);
 }
 
 .mtrl-theme--primary-variant-surface {
@@ -78,6 +141,15 @@ html[dark] .mtrl-theme--primary-variant-surface {
   --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-surface);
 }
 
+.mtrl-theme--on-primary-variant-surface {
+  --mtrl-theme-on-primary-variant: var(--mtrl-theme-surface);
+  --mtrl-theme-primary-variant: var(--mtrl-theme-on-surface);
+}
+html[dark] .mtrl-theme--on-primary-variant-surface {
+  --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-surface);
+  --mtrl-theme-primary-variant: var(--mtrl-dark-theme-on-surface);
+}
+
 .mtrl-theme--secondary-primary {
   --mtrl-theme-secondary: var(--mtrl-theme-primary);
   --mtrl-theme-on-secondary: var(--mtrl-theme-on-primary);
@@ -87,6 +159,15 @@ html[dark] .mtrl-theme--secondary-primary {
   --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-primary);
 }
 
+.mtrl-theme--on-secondary-primary {
+  --mtrl-theme-on-secondary: var(--mtrl-theme-primary);
+  --mtrl-theme-secondary: var(--mtrl-theme-on-primary);
+}
+html[dark] .mtrl-theme--on-secondary-primary {
+  --mtrl-theme-on-secondary: var(--mtrl-dark-theme-primary);
+  --mtrl-theme-secondary: var(--mtrl-dark-theme-on-primary);
+}
+
 .mtrl-theme--secondary-primary-variant {
   --mtrl-theme-secondary: var(--mtrl-theme-primary-variant);
   --mtrl-theme-on-secondary: var(--mtrl-theme-on-primary-variant);
@@ -94,6 +175,15 @@ html[dark] .mtrl-theme--secondary-primary {
 html[dark] .mtrl-theme--secondary-primary-variant {
   --mtrl-theme-secondary: var(--mtrl-dark-theme-primary-variant);
   --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-primary-variant);
+}
+
+.mtrl-theme--on-secondary-primary-variant {
+  --mtrl-theme-on-secondary: var(--mtrl-theme-primary-variant);
+  --mtrl-theme-secondary: var(--mtrl-theme-on-primary-variant);
+}
+html[dark] .mtrl-theme--on-secondary-primary-variant {
+  --mtrl-theme-on-secondary: var(--mtrl-dark-theme-primary-variant);
+  --mtrl-theme-secondary: var(--mtrl-dark-theme-on-primary-variant);
 }
 
 .mtrl-theme--secondary {
@@ -109,6 +199,15 @@ html[dark] .mtrl-theme--secondary-secondary-variant {
   --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-secondary-variant);
 }
 
+.mtrl-theme--on-secondary-secondary-variant {
+  --mtrl-theme-on-secondary: var(--mtrl-theme-secondary-variant);
+  --mtrl-theme-secondary: var(--mtrl-theme-on-secondary-variant);
+}
+html[dark] .mtrl-theme--on-secondary-secondary-variant {
+  --mtrl-theme-on-secondary: var(--mtrl-dark-theme-secondary-variant);
+  --mtrl-theme-secondary: var(--mtrl-dark-theme-on-secondary-variant);
+}
+
 .mtrl-theme--secondary-surface {
   --mtrl-theme-secondary: var(--mtrl-theme-surface);
   --mtrl-theme-on-secondary: var(--mtrl-theme-on-surface);
@@ -116,6 +215,15 @@ html[dark] .mtrl-theme--secondary-secondary-variant {
 html[dark] .mtrl-theme--secondary-surface {
   --mtrl-theme-secondary: var(--mtrl-dark-theme-surface);
   --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-surface);
+}
+
+.mtrl-theme--on-secondary-surface {
+  --mtrl-theme-on-secondary: var(--mtrl-theme-surface);
+  --mtrl-theme-secondary: var(--mtrl-theme-on-surface);
+}
+html[dark] .mtrl-theme--on-secondary-surface {
+  --mtrl-theme-on-secondary: var(--mtrl-dark-theme-surface);
+  --mtrl-theme-secondary: var(--mtrl-dark-theme-on-surface);
 }
 
 .mtrl-theme--secondary-variant-primary {
@@ -127,6 +235,15 @@ html[dark] .mtrl-theme--secondary-variant-primary {
   --mtrl-theme-on-secondary-variant: var(--mtrl-dark-theme-on-primary);
 }
 
+.mtrl-theme--on-secondary-variant-primary {
+  --mtrl-theme-on-secondary-variant: var(--mtrl-theme-primary);
+  --mtrl-theme-secondary-variant: var(--mtrl-theme-on-primary);
+}
+html[dark] .mtrl-theme--on-secondary-variant-primary {
+  --mtrl-theme-on-secondary-variant: var(--mtrl-dark-theme-primary);
+  --mtrl-theme-secondary-variant: var(--mtrl-dark-theme-on-primary);
+}
+
 .mtrl-theme--secondary-variant-primary-variant {
   --mtrl-theme-secondary-variant: var(--mtrl-theme-primary-variant);
   --mtrl-theme-on-secondary-variant: var(--mtrl-theme-on-primary-variant);
@@ -136,6 +253,15 @@ html[dark] .mtrl-theme--secondary-variant-primary-variant {
   --mtrl-theme-on-secondary-variant: var(--mtrl-dark-theme-on-primary-variant);
 }
 
+.mtrl-theme--on-secondary-variant-primary-variant {
+  --mtrl-theme-on-secondary-variant: var(--mtrl-theme-primary-variant);
+  --mtrl-theme-secondary-variant: var(--mtrl-theme-on-primary-variant);
+}
+html[dark] .mtrl-theme--on-secondary-variant-primary-variant {
+  --mtrl-theme-on-secondary-variant: var(--mtrl-dark-theme-primary-variant);
+  --mtrl-theme-secondary-variant: var(--mtrl-dark-theme-on-primary-variant);
+}
+
 .mtrl-theme--secondary-variant-secondary {
   --mtrl-theme-secondary-variant: var(--mtrl-theme-secondary);
   --mtrl-theme-on-secondary-variant: var(--mtrl-theme-on-secondary);
@@ -143,6 +269,15 @@ html[dark] .mtrl-theme--secondary-variant-primary-variant {
 html[dark] .mtrl-theme--secondary-variant-secondary {
   --mtrl-theme-secondary-variant: var(--mtrl-dark-theme-secondary);
   --mtrl-theme-on-secondary-variant: var(--mtrl-dark-theme-on-secondary);
+}
+
+.mtrl-theme--on-secondary-variant-secondary {
+  --mtrl-theme-on-secondary-variant: var(--mtrl-theme-secondary);
+  --mtrl-theme-secondary-variant: var(--mtrl-theme-on-secondary);
+}
+html[dark] .mtrl-theme--on-secondary-variant-secondary {
+  --mtrl-theme-on-secondary-variant: var(--mtrl-dark-theme-secondary);
+  --mtrl-theme-secondary-variant: var(--mtrl-dark-theme-on-secondary);
 }
 
 .mtrl-theme--secondary-variant {
@@ -158,6 +293,15 @@ html[dark] .mtrl-theme--secondary-variant-surface {
   --mtrl-theme-on-secondary-variant: var(--mtrl-dark-theme-on-surface);
 }
 
+.mtrl-theme--on-secondary-variant-surface {
+  --mtrl-theme-on-secondary-variant: var(--mtrl-theme-surface);
+  --mtrl-theme-secondary-variant: var(--mtrl-theme-on-surface);
+}
+html[dark] .mtrl-theme--on-secondary-variant-surface {
+  --mtrl-theme-on-secondary-variant: var(--mtrl-dark-theme-surface);
+  --mtrl-theme-secondary-variant: var(--mtrl-dark-theme-on-surface);
+}
+
 .mtrl-theme--surface-primary {
   --mtrl-theme-surface: var(--mtrl-theme-primary);
   --mtrl-theme-on-surface: var(--mtrl-theme-on-primary);
@@ -165,6 +309,15 @@ html[dark] .mtrl-theme--secondary-variant-surface {
 html[dark] .mtrl-theme--surface-primary {
   --mtrl-theme-surface: var(--mtrl-dark-theme-primary);
   --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-primary);
+}
+
+.mtrl-theme--on-surface-primary {
+  --mtrl-theme-on-surface: var(--mtrl-theme-primary);
+  --mtrl-theme-surface: var(--mtrl-theme-on-primary);
+}
+html[dark] .mtrl-theme--on-surface-primary {
+  --mtrl-theme-on-surface: var(--mtrl-dark-theme-primary);
+  --mtrl-theme-surface: var(--mtrl-dark-theme-on-primary);
 }
 
 .mtrl-theme--surface-primary-variant {
@@ -176,6 +329,15 @@ html[dark] .mtrl-theme--surface-primary-variant {
   --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-primary-variant);
 }
 
+.mtrl-theme--on-surface-primary-variant {
+  --mtrl-theme-on-surface: var(--mtrl-theme-primary-variant);
+  --mtrl-theme-surface: var(--mtrl-theme-on-primary-variant);
+}
+html[dark] .mtrl-theme--on-surface-primary-variant {
+  --mtrl-theme-on-surface: var(--mtrl-dark-theme-primary-variant);
+  --mtrl-theme-surface: var(--mtrl-dark-theme-on-primary-variant);
+}
+
 .mtrl-theme--surface-secondary {
   --mtrl-theme-surface: var(--mtrl-theme-secondary);
   --mtrl-theme-on-surface: var(--mtrl-theme-on-secondary);
@@ -185,6 +347,15 @@ html[dark] .mtrl-theme--surface-secondary {
   --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-secondary);
 }
 
+.mtrl-theme--on-surface-secondary {
+  --mtrl-theme-on-surface: var(--mtrl-theme-secondary);
+  --mtrl-theme-surface: var(--mtrl-theme-on-secondary);
+}
+html[dark] .mtrl-theme--on-surface-secondary {
+  --mtrl-theme-on-surface: var(--mtrl-dark-theme-secondary);
+  --mtrl-theme-surface: var(--mtrl-dark-theme-on-secondary);
+}
+
 .mtrl-theme--surface-secondary-variant {
   --mtrl-theme-surface: var(--mtrl-theme-secondary-variant);
   --mtrl-theme-on-surface: var(--mtrl-theme-on-secondary-variant);
@@ -192,6 +363,15 @@ html[dark] .mtrl-theme--surface-secondary {
 html[dark] .mtrl-theme--surface-secondary-variant {
   --mtrl-theme-surface: var(--mtrl-dark-theme-secondary-variant);
   --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-secondary-variant);
+}
+
+.mtrl-theme--on-surface-secondary-variant {
+  --mtrl-theme-on-surface: var(--mtrl-theme-secondary-variant);
+  --mtrl-theme-surface: var(--mtrl-theme-on-secondary-variant);
+}
+html[dark] .mtrl-theme--on-surface-secondary-variant {
+  --mtrl-theme-on-surface: var(--mtrl-dark-theme-secondary-variant);
+  --mtrl-theme-surface: var(--mtrl-dark-theme-on-secondary-variant);
 }
 
 .mtrl-theme--surface {

@@ -2,8 +2,10 @@
 
 // https://material.io/design/shape/applying-shape-to-ui.html
 
-@mixin corner($radius)
+@mixin corner($radius: null)
   @include prop(border-radius, shape--corner-radius, $radius)
+  @if $radius == rounded
+    border-radius: calc(#{prop(button-height, prop(component-height))} / 2)
 
 @mixin stroke($width: null, $color: null)
   @if $width != null

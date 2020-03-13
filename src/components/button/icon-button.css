@@ -1,7 +1,6 @@
 .mtrl-icon-button {
   --mtrl-shape--corner-radius: 50%;
   border-radius: var(--mtrl-shape--corner-radius, 50%);
-  --mtrl-shape--stroke-color: transparent;
   --mtrl-component-height: 12;
   height: var(--mtrl-component-height, 12);
   padding: 12px;

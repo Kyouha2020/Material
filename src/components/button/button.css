@@ -76,9 +76,6 @@ html[dark] .mtrl-button:disabled:not(:hover):not(:focus):not(:active)::before {
   background-color: white;
   opacity: 0%;
 }
-.mtrl-button:disabled .mtrl-button__icon {
-  color: var(--mtrl-button-disabled-icon-color, var(--mtrl-button-disabled-ink-color));
-}
 .mtrl-button--outlined, .mtrl-button--contained, .mtrl-button--float, .mtrl-button--raised {
   padding: 0px 16px;
 }
@@ -125,14 +122,18 @@ html[dark] .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before 
 .mtrl-button--split .mtrl-button__icon {
   --mtrl-component-height: var(--mtrl-button-height, 36px);
   height: var(--mtrl-component-height, var(--mtrl-button-height, 36px));
+}
+html:not([dir=rtl]) .mtrl-button--split .mtrl-button__icon {
   margin-left: -8px;
   margin-right: 12px;
-  padding-left: 0px;
-  padding-right: 8px;
 }
 html[dir=rtl] .mtrl-button--split .mtrl-button__icon {
   margin-left: 12px;
   margin-right: -8px;
+}
+html:not([dir=rtl]) .mtrl-button--split .mtrl-button__icon {
+  padding-left: 0px;
+  padding-right: 8px;
 }
 html[dir=rtl] .mtrl-button--split .mtrl-button__icon {
   padding-left: 8px;
@@ -145,15 +146,19 @@ html[dir=rtl] .mtrl-button--split .mtrl-button__icon {
   border-left: 1px solid rgba(var(--mtrl-theme-on-surface), 12%);
 }
 .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
+  border: none;
+}
+html:not([dir=rtl]) .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
   margin-left: 12px;
   margin-right: -8px;
-  padding-left: 8px;
-  padding-right: 0px;
-  border: none;
 }
 html[dir=rtl] .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
   margin-left: -8px;
   margin-right: 12px;
+}
+html:not([dir=rtl]) .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
+  padding-left: 8px;
+  padding-right: 0px;
 }
 html[dir=rtl] .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
   padding-left: 0px;
@@ -172,21 +177,23 @@ html[dir=rtl] .mtrl-button--split .mtrl-button__label + .mtrl-button__icon {
   height: var(--mtrl-component-height, var(--mtrl-button-height, 56px));
   flex-direction: column;
 }
-.mtrl-button--vertical .mtrl-button__icon {
-  margin: 0px 0px 4px;
+html:not([dir=rtl]) .mtrl-button--vertical .mtrl-button__icon {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 html[dir=rtl] .mtrl-button--vertical .mtrl-button__icon {
-  margin: 0px 0px 4px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.mtrl-button--vertical .mtrl-button__icon--leading {
+  margin-bottom: 4px;
+}
+.mtrl-button--vertical .mtrl-button__icon--trailing {
+  margin-top: 4px;
 }
 .mtrl-button--vertical .mtrl-button__label {
   font-size: 0.765625rem;
   text-transform: uppercase;
-}
-.mtrl-button--vertical .mtrl-button__label + .mtrl-button__icon {
-  margin: 4px 0px 0px;
-}
-html[dir=rtl] .mtrl-button--vertical .mtrl-button__label + .mtrl-button__icon {
-  margin: 4px 0px 0px;
 }
 .mtrl-button--two-column {
   --mtrl-component-height: var(--mtrl-button-height, 48px);
@@ -259,8 +266,9 @@ html[dark] .mtrl-button--unelevated:not(:hover):not(:focus):not(:active)::before
   z-index: 0;
 }
 .mtrl-button--rounded {
-  --mtrl-shape--corner-radius: calc(var(--mtrl-button-height, var(--mtrl-component-height)) / 2);
-  border-radius: var(--mtrl-shape--corner-radius, calc(var(--mtrl-button-height, var(--mtrl-component-height)) / 2));
+  --mtrl-shape--corner-radius: rounded;
+  border-radius: var(--mtrl-shape--corner-radius, rounded);
+  border-radius: calc(var(--mtrl-button-height, var(--mtrl-component-height)) / 2);
 }
 .mtrl-button--tile {
   --mtrl-shape--corner-radius: 0;
@@ -304,7 +312,7 @@ html[dark] .mtrl-button--unelevated:not(:hover):not(:focus):not(:active)::before
   font-size: 18px;
   fill: currentColor;
 }
-.mtrl-button__icon--leading {
+html:not([dir=rtl]) .mtrl-button__icon--leading {
   margin-left: -4px;
   margin-right: 8px;
 }
@@ -312,7 +320,7 @@ html[dir=rtl] .mtrl-button__icon--leading {
   margin-left: 8px;
   margin-right: -4px;
 }
-.mtrl-button__icon--trailing {
+html:not([dir=rtl]) .mtrl-button__icon--trailing {
   margin-left: 8px;
   margin-right: -4px;
 }

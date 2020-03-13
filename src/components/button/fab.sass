@@ -1,0 +1,62 @@
+@use "../../design/theme/theme" as *
+@use "../../design/environment/elevation" as *
+@use "../../design/interaction/ripple" as *
+@use "../../design/interaction/states" as *
+@use "../../design/layout/density" as *
+@use "../../design/layout/spacing" as *
+@use "../../design/shape/shape" as *
+@use "../../design/typography/typography" as *
+@use "../../design/usability/accessibility" as *
+
+$corner-radius: 50%
+
+$ripple-color: theme-prop(surface)
+$container-color: theme-prop(on-surface)
+$ink-color: theme-prop(surface, $text--high-emphasis)
+
+.mtrl-fab
+  @include ripple_
+  @include ripple(prop(fab-ripple-color, $ripple-color))
+  @include touch-target
+  @include elevation(6, 8, 10, 12)
+  @include corner(prop(fab-corner-radius, $corner-radius))
+  @include height(prop(fab-height, 56px))
+  @include typography_(button)
+  background-color: prop(fab-container-color, $container-color)
+  color: prop(fab-ink-color, $ink-color)
+  width: 56px
+  position: relative
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  vertical-align: middle
+  user-select: none
+  white-space: nowrap
+  border: none
+  outline: none
+  -webkit-tap-highlight-color: transparent
+
+  &:hover
+    cursor: pointer
+
+  &--mini
+    @include height(prop(fab-height, 40px))
+    width: 40px
+
+  &--extended
+    @include height(prop(fab-height, 48px))
+    @include corner(rounded)
+    width: initial
+
+    .mtrl-fab__icon
+      @include margin-horizontal(3)
+
+    .mtrl-fab__label
+      @include margin-end(5)
+
+  &__icon
+    width: 24px
+    height: 24px
+    font-size: 24px
+    color: prop(button-icon-color, prop(button-ink-color))
+    fill: currentColor

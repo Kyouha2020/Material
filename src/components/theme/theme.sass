@@ -14,3 +14,10 @@ $theme-map: (primary, primary-variant, secondary, secondary-variant, surface)
         @include dark-theme
           --mtrl-theme-#{$theme}: var(--mtrl-dark-theme-#{$theme-})
           --mtrl-theme-on-#{$theme}: var(--mtrl-dark-theme-on-#{$theme-})
+
+      .mtrl-theme--on-#{$theme}-#{$theme-}
+        --mtrl-theme-on-#{$theme}: var(--mtrl-theme-#{$theme-})
+        --mtrl-theme-#{$theme}: var(--mtrl-theme-on-#{$theme-})
+        @include dark-theme
+          --mtrl-theme-on-#{$theme}: var(--mtrl-dark-theme-#{$theme-})
+          --mtrl-theme-#{$theme}: var(--mtrl-dark-theme-on-#{$theme-})
