@@ -65,6 +65,12 @@
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 12%);
 }
+@media (prefers-color-scheme: dark) {
+  .mtrl-icon-button--outlined:focus {
+    --mtrl-shape--stroke-width: 1px;
+    --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
+  }
+}
 html[dark] .mtrl-icon-button--outlined:focus {
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
@@ -75,6 +81,11 @@ html[dark] .mtrl-icon-button--outlined:focus {
 }
 .mtrl-icon-button--contained::before {
   background-color: rgba(var(--mtrl-theme-on-primary), 1);
+}
+@media (prefers-color-scheme: dark) {
+  .mtrl-icon-button--contained::before {
+    background-color: var(--mtrl-button-ripple-color, #ffffff);
+  }
 }
 html[dark] .mtrl-icon-button--contained::before {
   background-color: var(--mtrl-button-ripple-color, #ffffff);

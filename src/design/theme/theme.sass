@@ -14,6 +14,8 @@
   --mtrl-#{$var}: #{$value}
 
 @mixin dark-theme
+  @media (prefers-color-scheme: dark)
+    @content
   html[dark] &
     @content
 

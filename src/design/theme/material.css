@@ -19,6 +19,18 @@
   --mtrl-dark-theme-on-surface: 255, 255, 255;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mtrl-theme-primary: var(--mtrl-dark-theme-primary);
+    --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary-variant);
+    --mtrl-theme-secondary: var(--mtrl-dark-theme-secondary);
+    --mtrl-theme-surface: var(--mtrl-dark-theme-surface);
+    --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-primary);
+    --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-primary);
+    --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-secondary-variant);
+    --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface);
+  }
+}
 html[dark] {
   --mtrl-theme-primary: var(--mtrl-dark-theme-primary);
   --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary-variant);

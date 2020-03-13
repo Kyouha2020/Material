@@ -52,6 +52,11 @@
 .mtrl-fab::before {
   background-color: var(--mtrl-fab-ripple-color, rgba(var(--mtrl-theme-surface), 1));
 }
+@media (prefers-color-scheme: dark) {
+  .mtrl-fab::before {
+    background-color: var(--mtrl-fab-ripple-color, #ffffff);
+  }
+}
 html[dark] .mtrl-fab::before {
   background-color: var(--mtrl-fab-ripple-color, #ffffff);
 }
@@ -64,6 +69,12 @@ html[dark] .mtrl-fab::before {
   left: 0;
   width: 100%;
   height: 48px;
+}
+@media (prefers-color-scheme: dark) {
+  .mtrl-fab:not(:hover):not(:focus):not(:active)::before {
+    background-color: white;
+    opacity: 11%;
+  }
 }
 html[dark] .mtrl-fab:not(:hover):not(:focus):not(:active)::before {
   background-color: white;
