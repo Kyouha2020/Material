@@ -120,7 +120,7 @@ html[dark] .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before 
   z-index: 8;
 }
 .mtrl-button--contained:disabled {
-  background-color: rgba(var(--mtrl-theme-on-surface, 0, 0, 0), 12%);
+  background-color: var(--mtrl-button-disabled-container-color, rgba(var(--mtrl-theme-on-surface, 0, 0, 0), 12%));
 }
 .mtrl-button--split .mtrl-button__icon {
   --mtrl-component-height: var(--mtrl-button-height, 36px);

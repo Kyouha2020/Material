@@ -10,15 +10,20 @@
 @use "../../design/usability/bidirectionality" as *
 
 $corner-radius: 4px
+$stroke-width: 1px
+
 $ripple-color: rgb(theme-prop(primary))
 $contained-ripple-color: rgb(theme-prop(on-primary))
+
 $container-color: rgb(theme-prop(surface))
 $contained-container-color: rgb(theme-prop(primary))
 $disabled-container-color: rgba(theme-prop(surface), $disabled-filled-container)
+$contained-disabled-container-color: rgba(theme-prop(on-surface), $disabled-filled-container)
+
 $ink-color: rgba(theme-prop(primary), $text--high-emphasis)
 $contained-ink-color: rgba(theme-prop(on-primary), $text--high-emphasis)
 $disabled-ink-color: rgba(theme-prop(on-surface), $text--disabled)
-$stroke-width: 1px
+
 $stroke-color: rgba(theme-prop(on-surface), $stroke)
 $dark-stroke-color: rgb(theme-prop(primary))
 
@@ -76,7 +81,7 @@ $dark-stroke-color: rgb(theme-prop(primary))
     color: prop(button-ink-color, $contained-ink-color)
 
     &:disabled
-      background-color: rgba(theme-prop(on-surface), $disabled-filled-container)
+      background-color: prop(button-disabled-container-color, $contained-disabled-container-color)
 
   &--split &__icon
     @include height(prop(button-height, 36px))

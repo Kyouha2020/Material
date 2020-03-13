@@ -1,3 +1,4 @@
+@use "../theme/theme" as *
 @use "../usability/bidirectionality" as *
 
 // https://material.io/design/layout/spacing-methods.html
@@ -100,3 +101,17 @@
     display: block
     content: ""
     margin-top: percentage($y / $x)
+
+
+// touch targets
+
+@mixin touch-target($touch-target: 48px)
+  &::after
+    content: ''
+    position: absolute
+    top: calc((#{prop(component-height)} - #{$touch-target}) / 2)
+    right: 0
+    bottom: 0
+    left: 0
+    width: 100%
+    height: $touch-target

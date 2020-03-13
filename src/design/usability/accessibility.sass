@@ -46,18 +46,3 @@ $stroke: 12%
 
 @function contrast-tone($color)
   @return if(tone($color) == "dark", "light", "dark")
-
-
-// Layout and typography
-// touch targets
-
-@mixin touch-target($touch-target: 48px)
-  &::after
-    content: ''
-    position: absolute
-    top: calc((var(--mtrl-component-height) - #{$touch-target}) / 2)
-    right: 0
-    bottom: 0
-    left: 0
-    width: 100%
-    height: $touch-target
