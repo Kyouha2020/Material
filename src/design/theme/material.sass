@@ -1,5 +1,40 @@
 @use "../color/theme" as *
+@use "../usability/accessibility" as *
 @use "theme" as *
+
+// https://material.io/design/color/the-color-system.html
+
+$primary: $primary !default
+$primary-variant: $primary-variant !default
+$secondary: $secondary !default
+$secondary-variant: $secondary-variant !default
+$background: $background !default
+$surface: $surface !default
+$error: $error !default
+
+$on-primary: if(contrast-tone($primary) == "dark", #000, #fff)
+$on-primary-variant: if(contrast-tone($primary-variant) == "dark", #000, #fff)
+$on-secondary: if(contrast-tone($secondary) == "dark", #000, #fff)
+$on-secondary-variant: if(contrast-tone($secondary-variant) == "dark", #000, #fff)
+$on-background: if(contrast-tone($background) == "dark", #000, #fff)
+$on-surface: if(contrast-tone($surface) == "dark", #000, #fff)
+$on-error: if(contrast-tone($error) == "dark", #000, #fff)
+
+$dark--primary: $dark--primary !default
+$dark--primary-variant: $dark--primary-variant !default
+$dark--dark-primary: $dark--dark-primary !default
+$dark--secondary: $dark--secondary !default
+$dark--background: $dark--background !default
+$dark--surface: $dark--surface !default
+$dark--error: $dark--error !default
+
+$dark--on-primary: if(contrast-tone($dark--primary) == "dark", #000, #fff)
+$dark--on-primary-variant: if(contrast-tone($dark--primary-variant) == "dark", #000, #fff)
+$dark--on-secondary: if(contrast-tone($dark--secondary) == "dark", #000, #fff)
+$dark--on-background: if(contrast-tone($dark--background) == "dark", #000, #fff)
+$dark--on-surface: if(contrast-tone($dark--surface) == "dark", #000, #fff)
+$dark--on-error: if(contrast-tone($dark--error) == "dark", #000, #fff)
+
 
 \:root
   --mtrl-theme-primary: #{hex2rgb($primary)}

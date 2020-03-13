@@ -3,13 +3,13 @@
 
 // https://material.io/design/color/the-color-system.html
 
-$primary: $primary-500 !default
-$primary-variant: $primary-700 !default
-$secondary: $secondary-200 !default
-$secondary-variant: $secondary-700 !default
-$background: #ffffff !default
-$surface: #ffffff !default
-$error: #b00020 !default
+$primary: $primary-500
+$primary-variant: $primary-700
+$secondary: $secondary-200
+$secondary-variant: $secondary-700
+$background: #ffffff
+$surface: #ffffff
+$error: #b00020
 
 $on-primary: if(contrast-tone($primary) == "dark", #000, #fff)
 $on-primary-variant: if(contrast-tone($primary-variant) == "dark", #000, #fff)
@@ -19,13 +19,13 @@ $on-background: if(contrast-tone($background) == "dark", #000, #fff)
 $on-surface: if(contrast-tone($surface) == "dark", #000, #fff)
 $on-error: if(contrast-tone($error) == "dark", #000, #fff)
 
-$dark--primary: $primary-200 !default
-$dark--primary-variant: $primary-700 !default
-$dark--dark-primary: #1f1b24 !default
-$dark--secondary: $secondary-200 !default
-$dark--background: #121212 !default
-$dark--surface: #121212 !default
-$dark--error: #cf6679 !default
+$dark--primary: $primary-200
+$dark--primary-variant: $primary-700
+$dark--dark-primary: #1f1b24
+$dark--secondary: $secondary-200
+$dark--background: #121212
+$dark--surface: #121212
+$dark--error: #cf6679
 
 $dark--on-primary: if(contrast-tone($dark--primary) == "dark", #000, #fff)
 $dark--on-primary-variant: if(contrast-tone($dark--primary-variant) == "dark", #000, #fff)
