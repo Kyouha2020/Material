@@ -296,8 +296,6 @@ html[dark] .mtrl-button--unelevated:not(:hover):not(:focus):not(:active)::before
   text-transform: none;
 }
 .mtrl-button__icon {
-  margin-left: -4px;
-  margin-right: 8px;
   width: 18px;
   height: 18px;
   display: inline-flex;
@@ -308,15 +306,19 @@ html[dark] .mtrl-button--unelevated:not(:hover):not(:focus):not(:active)::before
   font-size: 18px;
   fill: currentColor;
 }
-html[dir=rtl] .mtrl-button__icon {
+.mtrl-button__icon--leading {
+  margin-left: -4px;
+  margin-right: 8px;
+}
+html[dir=rtl] .mtrl-button__icon--leading {
   margin-left: 8px;
   margin-right: -4px;
 }
-.mtrl-button__label + .mtrl-button__icon {
+.mtrl-button__icon--trailing {
   margin-left: 8px;
   margin-right: -4px;
 }
-html[dir=rtl] .mtrl-button__label + .mtrl-button__icon {
+html[dir=rtl] .mtrl-button__icon--trailing {
   margin-left: -4px;
   margin-right: 8px;
 }

@@ -170,7 +170,6 @@ $dark-stroke-color: theme-prop(primary)
       text-transform: none
 
   &__icon
-    @include margin-horizontal(-1, 2)
     width: 18px
     height: 18px
     display: inline-flex
@@ -181,5 +180,8 @@ $dark-stroke-color: theme-prop(primary)
     font-size: 18px
     fill: currentColor
 
-  &__label + &__icon
-    @include margin-horizontal(2, -1)
+    &--leading
+      @include margin-horizontal(-1, 2)
+
+    &--trailing
+      @include margin-horizontal(2, -1)
