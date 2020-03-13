@@ -117,14 +117,6 @@ html[dark] .mtrl-button--outlined:focus {
   background-color: var(--mtrl-button-ripple-color, rgba(var(--mtrl-theme-on-primary), 1));
 }
 @media (prefers-color-scheme: dark) {
-  .mtrl-button--contained::before {
-    background-color: var(--mtrl-button-ripple-color, #ffffff);
-  }
-}
-html[dark] .mtrl-button--contained::before {
-  background-color: var(--mtrl-button-ripple-color, #ffffff);
-}
-@media (prefers-color-scheme: dark) {
   .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before {
     background-color: white;
     opacity: 7%;

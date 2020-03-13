@@ -70,8 +70,6 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
 
   &--contained
     @include ripple(prop(button-ripple-color, $contained-ripple-color))
-    @include dark-theme
-      @include ripple(prop(button-ripple-color, #ffffff))
     @include elevation(2, 4, 6, 8)
     background-color: prop(button-container-color, $contained-container-color)
     color: prop(button-ink-color, $contained-ink-color)

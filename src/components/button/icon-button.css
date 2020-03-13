@@ -90,14 +90,6 @@ html[dark] .mtrl-icon-button--outlined:focus {
 .mtrl-icon-button--contained::before {
   background-color: rgba(var(--mtrl-theme-on-primary), 1);
 }
-@media (prefers-color-scheme: dark) {
-  .mtrl-icon-button--contained::before {
-    background-color: var(--mtrl-button-ripple-color, #ffffff);
-  }
-}
-html[dark] .mtrl-icon-button--contained::before {
-  background-color: var(--mtrl-button-ripple-color, #ffffff);
-}
 .mtrl-icon-button--contained:disabled {
   background-color: rgba(var(--mtrl-theme-on-surface), 12%);
 }

@@ -17,8 +17,6 @@ $ink-color: theme-prop(surface, $text--high-emphasis)
 .mtrl-fab
   @include ripple_
   @include ripple(prop(fab-ripple-color, $ripple-color))
-  @include dark-theme
-    @include ripple(prop(fab-ripple-color, #ffffff))
   @include touch-target
   @include elevation(6, 8, 10, 12)
   @include corner(prop(fab-corner-radius, $corner-radius))
