@@ -3,29 +3,20 @@
 
 // https://material.io/design/layout/spacing-methods.html
 
-// baseline grid
-@function get($value, $baseline: 4px)
-  @return $value * $baseline
-
-
 // spacing
-@mixin margin-start($start, $baseline: 4px)
-  $start: $start * $baseline
+@mixin margin-start($start)
   @include ltr
     margin-left: $start
   @include rtl
     margin-right: $start
 
-@mixin margin-end($end, $baseline: 4px)
-  $end: $end * $baseline
+@mixin margin-end($end)
   @include ltr
     margin-right: $end
   @include rtl
     margin-left: $end
 
-@mixin margin-horizontal($start, $end: $start, $baseline: 4px)
-  $start: $start * $baseline
-  $end: $end * $baseline
+@mixin margin-horizontal($start, $end: $start)
   @include ltr
     margin-left: $start
     margin-right: $end
@@ -33,12 +24,7 @@
     margin-left: $end
     margin-right: $start
 
-@mixin margin($top, $start: $top, $bottom: $top, $end: $start, $baseline: 4px)
-  $top: $top * $baseline
-  $start: $start * $baseline
-  $bottom: $bottom * $baseline
-  $end: $end * $baseline
-
+@mixin margin($top, $start: $top, $bottom: $top, $end: $start)
   @if $top == $bottom and $start == $end and $top == $start
     margin: $top
   @else if $top == $bottom and $start == $end
@@ -52,23 +38,19 @@
       margin: $top $start $bottom $end
 
 
-@mixin padding-start($start, $baseline: 4px)
-  $start: $start * $baseline
+@mixin padding-start($start)
   @include ltr
     padding-left: $start
   @include rtl
     padding-right: $start
 
-@mixin padding-end($end, $baseline: 4px)
-  $end: $end * $baseline
+@mixin padding-end($end)
   @include ltr
     padding-right: $end
   @include rtl
     padding-left: $end
 
-@mixin padding-horizontal($start, $end: $start, $baseline: 4px)
-  $start: $start * $baseline
-  $end: $end * $baseline
+@mixin padding-horizontal($start, $end: $start)
   @include ltr
     padding-left: $start
     padding-right: $end
@@ -76,12 +58,7 @@
     padding-left: $end
     padding-right: $start
 
-@mixin padding($top, $start: $top, $bottom: $top, $end: $start, $baseline: 4px)
-  $top: $top * $baseline
-  $start: $start * $baseline
-  $bottom: $bottom * $baseline
-  $end: $end * $baseline
-
+@mixin padding($top, $start: $top, $bottom: $top, $end: $start)
   @if $top == $bottom and $start == $end and $top == $start
     padding: $top
   @else if $top == $bottom and $start == $end

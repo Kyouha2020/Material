@@ -22,7 +22,7 @@ $ink-color: theme-prop(surface, $text--high-emphasis)
   @include elevation(6, 8, 10, 12)
   @include corner(prop(fab-corner-radius, $corner-radius))
   @include height(prop(fab-height, 56px))
-  @include padding(3)
+  @include padding(12px)
   @include typography(button)
   @include unselectable
   @include centered-content
@@ -47,10 +47,10 @@ $ink-color: theme-prop(surface, $text--high-emphasis)
     width: initial
 
     .mtrl-fab__icon
-      @include margin-horizontal(3)
+      @include margin-horizontal(12px)
 
     .mtrl-fab__label
-      @include margin-end(5)
+      @include margin-end(20px)
 
   &__icon
     width: 24px

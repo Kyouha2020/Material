@@ -142,6 +142,12 @@ html[dir=rtl] #toggle-container {
   font-size: 1.5rem;
 }
 
+.mtrl-button[test].height {
+  --mtrl-button-height: 48px;
+}
+.mtrl-button[test].horizontal-padding {
+  --mtrl-button-horizontal-padding: 24px;
+}
 .mtrl-button[test].ripple-color {
   --mtrl-button-ripple-color: green;
 }

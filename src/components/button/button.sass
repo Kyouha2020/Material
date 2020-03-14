@@ -12,6 +12,8 @@
 
 $corner-radius: 4px
 $stroke-width: 1px
+$horizontal-padding: 8px
+$contained-horizontal-padding: 16px
 
 $ripple-color: theme-prop(primary)
 $container-color: theme-prop(surface)
@@ -37,7 +39,7 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
   @include touch-target
   @include corner(prop(button-corner-radius, $corner-radius))
   @include height(prop(button-height, 36px))
-  @include padding(0, 2)
+  @include padding(0, prop(button-horizontal-padding, $horizontal-padding))
   @include typography(button)
   @include unselectable
   @include centered-content
@@ -65,7 +67,7 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
       color: prop(button-disabled-icon-color, prop(button-disabled-ink-color, $disabled-icon-color))
 
   &--outlined, &--contained, &--float, &--raised
-    @include padding(0, 4)
+    @include padding(0, prop(button-horizontal-padding, $contained-horizontal-padding))
 
   &--outlined
     @include stroke_
@@ -154,7 +156,7 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
     fill: currentColor
 
     &--leading
-      @include margin-horizontal(-1, 2)
+      @include margin-horizontal(-4px, 8px)
 
     &--trailing
-      @include margin-horizontal(2, -1)
+      @include margin-horizontal(8px, -4px)
