@@ -65,12 +65,6 @@
 .mtrl-icon-button:hover {
   cursor: pointer;
 }
-.mtrl-icon-button:not(:focus-visible) {
-  outline: none;
-}
-.mtrl-icon-button:focus-visible {
-  overflow: hidden;
-}
 .mtrl-icon-button:disabled {
   color: rgba(var(--mtrl-theme-on-surface), 38%);
   background-color: rgba(var(--mtrl-theme-surface), 12%);
