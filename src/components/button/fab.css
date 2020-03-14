@@ -27,7 +27,6 @@
   user-select: none;
   white-space: nowrap;
   border: none;
-  outline: none;
   -webkit-tap-highlight-color: transparent;
 }
 .mtrl-fab::before {
@@ -91,6 +90,12 @@ html[dark] .mtrl-fab {
 }
 .mtrl-fab:hover {
   cursor: pointer;
+}
+.mtrl-fab:not(:focus-visible) {
+  outline: none;
+}
+.mtrl-fab:focus-visible {
+  overflow: hidden;
 }
 .mtrl-fab--mini {
   --mtrl-component-height: var(--mtrl-fab-height, 40px);

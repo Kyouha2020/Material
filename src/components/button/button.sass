@@ -46,11 +46,16 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
   user-select: none
   white-space: nowrap
   border: none
-  outline: none
   -webkit-tap-highlight-color: transparent
 
   &:hover
     cursor: pointer
+
+  &:not(:focus-visible)
+    outline: none
+
+  &:focus-visible
+    overflow: hidden
 
   &:disabled
     @include elevation(0)
@@ -78,6 +83,9 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
 
     &:disabled
       background-color: prop(button-disabled-container-color, $disabled-contained-container-color)
+
+  &--dry
+    @include ripple()
 
   &--split .mtrl-button__icon
     @include height(prop(button-height, 36px))

@@ -25,7 +25,6 @@
   user-select: none;
   white-space: nowrap;
   border: none;
-  outline: none;
   -webkit-tap-highlight-color: transparent;
 }
 .mtrl-button::before {
@@ -67,6 +66,12 @@
 }
 .mtrl-button:hover {
   cursor: pointer;
+}
+.mtrl-button:not(:focus-visible) {
+  outline: none;
+}
+.mtrl-button:focus-visible {
+  overflow: hidden;
 }
 .mtrl-button:disabled {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
@@ -148,6 +153,12 @@ html[dark] .mtrl-button--contained {
 }
 .mtrl-button--contained:disabled {
   background-color: var(--mtrl-button-disabled-container-color, rgba(var(--mtrl-theme-on-surface), 12%));
+}
+.mtrl-button--dry::before {
+  background-color: transparent;
+}
+.mtrl-button--dry:not(:hover):not(:focus):not(:active)::before {
+  background-color: var(--mtrl-elevation-overlay, transparent);
 }
 .mtrl-button--split .mtrl-button__icon {
   --mtrl-component-height: var(--mtrl-button-height, 36px);

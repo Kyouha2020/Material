@@ -16,7 +16,6 @@
   -ms-user-select: none;
   user-select: none;
   border: none;
-  outline: none;
   -webkit-tap-highlight-color: transparent;
 }
 .mtrl-icon-button::before {
@@ -58,6 +57,12 @@
 }
 .mtrl-icon-button:hover {
   cursor: pointer;
+}
+.mtrl-icon-button:not(:focus-visible) {
+  outline: none;
+}
+.mtrl-icon-button:focus-visible {
+  overflow: hidden;
 }
 .mtrl-icon-button:disabled {
   color: rgba(var(--mtrl-theme-on-surface), 38%);

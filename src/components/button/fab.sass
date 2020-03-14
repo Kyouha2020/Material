@@ -35,11 +35,16 @@ $ink-color: theme-prop(surface, $text--high-emphasis)
   user-select: none
   white-space: nowrap
   border: none
-  outline: none
   -webkit-tap-highlight-color: transparent
 
   &:hover
     cursor: pointer
+
+  &:not(:focus-visible)
+    outline: none
+
+  &:focus-visible
+    overflow: hidden
 
   &--mini
     @include height(prop(fab-height, 40px))

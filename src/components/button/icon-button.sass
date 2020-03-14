@@ -25,11 +25,16 @@
   -ms-user-select: none
   user-select: none
   border: none
-  outline: none
   -webkit-tap-highlight-color: transparent
 
   &:hover
     cursor: pointer
+
+  &:not(:focus-visible)
+    outline: none
+
+  &:focus-visible
+    overflow: hidden
 
   &:disabled
     color: theme-prop(on-surface, $text--disabled)
