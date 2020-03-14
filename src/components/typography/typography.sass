@@ -1,0 +1,7 @@
+@use "../../design/typography/typography" as *
+
+$typography-map: (headline1, headline2, headline3, headline4, headline5, headline6, subtitle1, subtitle2, body1, body2, button, caption, overline)
+
+@each $typography in $typography-map
+  .mtrl-typography--#{$typography}
+    @include typography_($typography)
