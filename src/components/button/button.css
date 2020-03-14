@@ -92,6 +92,12 @@ html[dark] .mtrl-button:disabled {
   --mtrl-elevation-overlay: white;
   --mtrl-elevation-overlay-opacity: 0%;
 }
+.mtrl-button:disabled .mtrl-button__label {
+  color: var(--mtrl-button-disabled-label-color, var(--mtrl-button-disabled-ink-color, currentColor));
+}
+.mtrl-button:disabled .mtrl-button__icon {
+  color: var(--mtrl-button-disabled-icon-color, var(--mtrl-button-disabled-ink-color, currentColor));
+}
 .mtrl-button--outlined, .mtrl-button--contained, .mtrl-button--float, .mtrl-button--raised {
   padding: 0px 16px;
 }
@@ -344,6 +350,7 @@ html[dark] .mtrl-button--unelevated {
   align-items: center;
   justify-content: center;
   vertical-align: middle;
+  color: var(--mtrl-button-label-color, var(--mtrl-button-ink-color, currentColor));
 }
 .mtrl-button__label--uppercase {
   text-transform: uppercase;
@@ -363,7 +370,7 @@ html[dark] .mtrl-button--unelevated {
 .mtrl-button__icon {
   width: 18px;
   height: 18px;
-  color: var(--mtrl-button-icon-color, var(--mtrl-button-ink-color));
+  color: var(--mtrl-button-icon-color, var(--mtrl-button-ink-color, currentColor));
   font-size: 18px;
   fill: currentColor;
 }

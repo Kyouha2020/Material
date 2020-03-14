@@ -18,6 +18,11 @@ $container-color: theme-prop(surface)
 $disabled-container-color: theme-prop(surface, $disabled-filled-container)
 $ink-color: theme-prop(primary, $text--high-emphasis)
 $disabled-ink-color: theme-prop(on-surface, $text--disabled)
+$label-color: currentColor
+$disabled-label-color: currentColor
+$icon-color: currentColor
+$disabled-icon-color: currentColor
+
 $stroke-color: theme-prop(on-surface, $stroke)
 $dark-stroke-color: theme-prop(primary)
 
@@ -52,6 +57,12 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
     background-color: prop(button-disabled-container-color, $disabled-container-color)
     cursor: default
     pointer-events: none
+
+    .mtrl-button__label
+      color: prop(button-disabled-label-color, prop(button-disabled-ink-color, $disabled-label-color))
+
+    .mtrl-button__icon
+      color: prop(button-disabled-icon-color, prop(button-disabled-ink-color, $disabled-icon-color))
 
   &--outlined, &--contained, &--float, &--raised
     @include padding(0, 4)
@@ -136,6 +147,7 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
 
   &__label
     @include centered-content
+    color: prop(button-label-color, prop(button-ink-color, $label-color))
 
     &--uppercase
       text-transform: uppercase
@@ -154,7 +166,7 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
   &__icon
     width: 18px
     height: 18px
-    color: prop(button-icon-color, prop(button-ink-color))
+    color: prop(button-icon-color, prop(button-ink-color, $icon-color))
     font-size: 18px
     fill: currentColor
 

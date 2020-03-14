@@ -181,6 +181,12 @@ html[dir=rtl] #toggle-container {
 .mtrl-button[test].disabled-ink-color {
   --mtrl-button-disabled-ink-color: orange;
 }
+.mtrl-button[test].label-color {
+  --mtrl-button-label-color: blue;
+}
+.mtrl-button[test].disabled-label-color {
+  --mtrl-button-disabled-label-color: orange;
+}
 .mtrl-button[test].icon-color {
   --mtrl-button-icon-color: blue;
 }
