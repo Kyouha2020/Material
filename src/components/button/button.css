@@ -284,12 +284,6 @@ html[dark] .mtrl-button--unelevated {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
     z-index: 0;
 }
-.mtrl-button--dry::before {
-    background-color: transparent;
-}
-.mtrl-button--dry:not(:hover):not(:focus):not(:active)::before {
-    background-color: var(--mtrl-elevation-overlay, transparent);
-}
 .mtrl-button--rounded {
     --mtrl-shape--corner-radius: calc(var(--mtrl-button-height, var(--mtrl-component-height)) / 2);
     border-radius: var(--mtrl-shape--corner-radius, calc(var(--mtrl-button-height, var(--mtrl-component-height)) / 2));

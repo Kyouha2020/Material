@@ -9,15 +9,15 @@
 
 .mtrl-icon-button
   @include ripple_
-  @include ripple(theme-prop(primary))
+  @include ripple(theme-prop(on-surface))
   @include touch-target
   @include corner(50%)
-  @include height(12)
-  @include padding(3)
+  @include height(48px)
+  @include padding(0)
   @include unselectable
   @include centered-content
   @include accessible-border
-  color: theme-prop(primary, $icon--active)
+  color: theme-prop(on-surface, $icon--active)
   width: 48px
   background-color: theme-prop(surface)
   position: relative
@@ -44,15 +44,7 @@
       @include stroke(1px, theme-prop(on-surface, $stroke))
     @include dark-theme
       &:focus
-        @include stroke(1px, theme-prop(primary))
-
-  &--contained
-    @include ripple(theme-prop(on-primary))
-    color: theme-prop(on-primary, $text--high-emphasis)
-    background-color: theme-prop(primary)
-
-    &:disabled
-      background-color: theme-prop(on-surface, $disabled-filled-container)
+        @include stroke(1px, theme-prop(on-surface))
 
   &--tile
     @include corner(0)

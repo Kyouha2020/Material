@@ -1,19 +1,12 @@
 @use "../theme/theme" as *
 @use "states" as *
 
-@mixin ripple($color: null)
-  @if $color != null
-    &::before
-      background-color: $color
+@mixin ripple($color)
+  &::before
+    background-color: $color
 
-    &:not(:hover):not(:focus):not(:active)::before
-      background-color: prop(elevation-overlay, $color)
-  @else
-    &::before
-      background-color: transparent
-
-    &:not(:hover):not(:focus):not(:active)::before
-      background-color: prop(elevation-overlay, transparent)
+  &:not(:hover):not(:focus):not(:active)::before
+    background-color: prop(elevation-overlay, $color)
 
 @mixin ripple_
   &::before
