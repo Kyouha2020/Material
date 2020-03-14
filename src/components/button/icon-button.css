@@ -101,14 +101,14 @@ html[dark] .mtrl-icon-button--outlined:focus {
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 1);
 }
 .mtrl-icon-button--contained {
-  color: rgba(var(--mtrl-theme-on-primary), 87%);
-  background-color: rgba(var(--mtrl-theme-primary), 1);
-}
-.mtrl-icon-button--contained::before {
+  color: rgba(var(--mtrl-theme-surface), 87%);
   background-color: rgba(var(--mtrl-theme-on-surface), 1);
 }
+.mtrl-icon-button--contained::before {
+  background-color: rgba(var(--mtrl-theme-surface), 1);
+}
 .mtrl-icon-button--contained:not(:hover):not(:focus):not(:active)::before {
-  background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-on-surface), 1));
+  background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-surface), 1));
 }
 .mtrl-icon-button--contained:disabled {
   background-color: rgba(var(--mtrl-theme-on-surface), 12%);

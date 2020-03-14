@@ -47,9 +47,9 @@
         @include stroke(1px, theme-prop(on-surface))
 
   &--contained
-    @include ripple(theme-prop(on-surface))
-    color: theme-prop(on-primary, $text--high-emphasis)
-    background-color: theme-prop(primary)
+    @include ripple(theme-prop(surface))
+    color: theme-prop(surface, $text--high-emphasis)
+    background-color: theme-prop(on-surface)
 
     &:disabled
       background-color: theme-prop(on-surface, $disabled-filled-container)
