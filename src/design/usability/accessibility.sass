@@ -32,7 +32,7 @@ $stroke: 12%
   @return max($backLum, $foreLum) / min($backLum, $foreLum)
 
 @function tone($color)
-  @if $color == "dark" or $color == "light"
+  @if $color == dark or $color == light
     @return $color
 
   $minimumContrast: 3.1
@@ -45,4 +45,7 @@ $stroke: 12%
     @return "dark"
 
 @function contrast-tone($color)
-  @return if(tone($color) == "dark", "light", "dark")
+  @return if(tone($color) == dark, light, dark)
+
+@function on-color($color)
+  @return if(contrast-tone($color) == dark, #000, #fff)

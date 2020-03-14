@@ -1,16 +1,12 @@
 @use "../src/design/theme/material"
 @import url("https://fonts.googleapis.com/css?family=Roboto|Google+Sans|Material+Icons&display=swap")
 
-html, html[light]
+html
   background-color: #ffffff
+  color: rgba(#000000, 87%)
 
   > h1, h2, h3, h4, h5, h6, #theme-toggle, #dir-toggle
     color: rgba(#000000, 87%)
-
-@media (prefers-color-scheme: light)
-  html
-    color: rgba(#000000, 87%)
-    background-color: #ffffff
 
 @media (prefers-color-scheme: dark)
   html

@@ -11,13 +11,13 @@ $background: #ffffff
 $surface: #ffffff
 $error: #b00020
 
-$on-primary: if(contrast-tone($primary) == "dark", #000, #fff)
-$on-primary-variant: if(contrast-tone($primary-variant) == "dark", #000, #fff)
-$on-secondary: if(contrast-tone($secondary) == "dark", #000, #fff)
-$on-secondary-variant: if(contrast-tone($secondary-variant) == "dark", #000, #fff)
-$on-background: if(contrast-tone($background) == "dark", #000, #fff)
-$on-surface: if(contrast-tone($surface) == "dark", #000, #fff)
-$on-error: if(contrast-tone($error) == "dark", #000, #fff)
+$on-primary: on-color($primary)
+$on-primary-variant: on-color($primary-variant)
+$on-secondary: on-color($secondary)
+$on-secondary-variant: on-color($secondary-variant)
+$on-background: on-color($background)
+$on-surface: on-color($surface)
+$on-error: on-color($error)
 
 // https://material.io/design/color/dark-theme.html
 
@@ -29,11 +29,11 @@ $dark--background: #121212
 $dark--surface: #121212
 $dark--error: #cf6679
 
-$dark--on-primary: if(contrast-tone($dark--primary) == "dark", #000, #fff)
-$dark--on-primary-variant: if(contrast-tone($dark--primary-variant) == "dark", #000, #fff)
-$dark--on-secondary: if(contrast-tone($dark--secondary) == "dark", #000, #fff)
-$dark--on-background: if(contrast-tone($dark--background) == "dark", #000, #fff)
-$dark--on-surface: if(contrast-tone($dark--surface) == "dark", #000, #fff)
-$dark--on-error: if(contrast-tone($dark--error) == "dark", #000, #fff)
+$dark--on-primary: on-color($dark--primary)
+$dark--on-primary-variant: on-color($dark--primary-variant)
+$dark--on-secondary: on-color($dark--secondary)
+$dark--on-background: on-color($dark--background)
+$dark--on-surface: on-color($dark--surface)
+$dark--on-error: on-color($dark--error)
 
 $elevation-overlay: (00: 0%, 01: 5%, 02: 7%, 03: 8%, 04: 9%, 06: 11%, 08: 12%, 12: 14%, 16: 15%, 24: 16%,)
