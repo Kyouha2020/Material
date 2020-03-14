@@ -42,7 +42,7 @@ $ink-color: theme-prop(surface, $text--high-emphasis)
 
   &--extended
     @include height(prop(fab-height, 48px))
-    @include corner(rounded)
+    @include corner(calc(#{prop(fab-height, prop(component-height))} / 2))
     width: initial
 
     .mtrl-fab__icon
