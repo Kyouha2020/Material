@@ -1,27 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Google+Sans|Material+Icons&display=swap");
-:root {
-  --mtrl-theme-primary: 98, 0, 238;
-  --mtrl-theme-primary-variant: 55, 0, 179;
-  --mtrl-theme-secondary: 3, 218, 198;
-  --mtrl-theme-secondary-variant: 1, 135, 134;
-  --mtrl-theme-surface: 255, 255, 255;
-  --mtrl-theme-on-primary: 255, 255, 255;
-  --mtrl-theme-on-primary-variant: 255, 255, 255;
-  --mtrl-theme-on-secondary: 0, 0, 0;
-  --mtrl-theme-on-secondary-variant: 255, 255, 255;
-  --mtrl-theme-on-surface: 0, 0, 0;
-  --mtrl-dark-theme-primary: 187, 134, 252;
-  --mtrl-dark-theme-primary-variant: 55, 0, 179;
-  --mtrl-dark-theme-secondary: 3, 218, 198;
-  --mtrl-dark-theme-surface: 18, 18, 18;
-  --mtrl-dark-theme-on-primary: 0, 0, 0;
-  --mtrl-dark-theme-on-primary-variant: 255, 255, 255;
-  --mtrl-dark-theme-on-secondary: 0, 0, 0;
-  --mtrl-dark-theme-on-surface: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
+:root {
     --mtrl-theme-primary: 98, 0, 238;
     --mtrl-theme-primary-variant: 55, 0, 179;
     --mtrl-theme-secondary: 3, 218, 198;
@@ -32,23 +11,58 @@
     --mtrl-theme-on-secondary: 0, 0, 0;
     --mtrl-theme-on-secondary-variant: 255, 255, 255;
     --mtrl-theme-on-surface: 0, 0, 0;
-  }
+    --mtrl-dark-theme-primary: 187, 134, 252;
+    --mtrl-dark-theme-primary-variant: 55, 0, 179;
+    --mtrl-dark-theme-secondary: 3, 218, 198;
+    --mtrl-dark-theme-surface: 18, 18, 18;
+    --mtrl-dark-theme-on-primary: 0, 0, 0;
+    --mtrl-dark-theme-on-primary-variant: 255, 255, 255;
+    --mtrl-dark-theme-on-secondary: 0, 0, 0;
+    --mtrl-dark-theme-on-surface: 255, 255, 255;
 }
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --mtrl-theme-primary: 98, 0, 238;
+        --mtrl-theme-primary-variant: 55, 0, 179;
+        --mtrl-theme-secondary: 3, 218, 198;
+        --mtrl-theme-secondary-variant: 1, 135, 134;
+        --mtrl-theme-surface: 255, 255, 255;
+        --mtrl-theme-on-primary: 255, 255, 255;
+        --mtrl-theme-on-primary-variant: 255, 255, 255;
+        --mtrl-theme-on-secondary: 0, 0, 0;
+        --mtrl-theme-on-secondary-variant: 255, 255, 255;
+        --mtrl-theme-on-surface: 0, 0, 0;
+    }
+}
+
 html[light] {
-  --mtrl-theme-primary: 98, 0, 238;
-  --mtrl-theme-primary-variant: 55, 0, 179;
-  --mtrl-theme-secondary: 3, 218, 198;
-  --mtrl-theme-secondary-variant: 1, 135, 134;
-  --mtrl-theme-surface: 255, 255, 255;
-  --mtrl-theme-on-primary: 255, 255, 255;
-  --mtrl-theme-on-primary-variant: 255, 255, 255;
-  --mtrl-theme-on-secondary: 0, 0, 0;
-  --mtrl-theme-on-secondary-variant: 255, 255, 255;
-  --mtrl-theme-on-surface: 0, 0, 0;
+    --mtrl-theme-primary: 98, 0, 238;
+    --mtrl-theme-primary-variant: 55, 0, 179;
+    --mtrl-theme-secondary: 3, 218, 198;
+    --mtrl-theme-secondary-variant: 1, 135, 134;
+    --mtrl-theme-surface: 255, 255, 255;
+    --mtrl-theme-on-primary: 255, 255, 255;
+    --mtrl-theme-on-primary-variant: 255, 255, 255;
+    --mtrl-theme-on-secondary: 0, 0, 0;
+    --mtrl-theme-on-secondary-variant: 255, 255, 255;
+    --mtrl-theme-on-surface: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+    :root {
+        --mtrl-theme-primary: var(--mtrl-dark-theme-primary);
+        --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary-variant);
+        --mtrl-theme-secondary: var(--mtrl-dark-theme-secondary);
+        --mtrl-theme-surface: var(--mtrl-dark-theme-surface);
+        --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-primary);
+        --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-primary-variant);
+        --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-secondary-variant);
+        --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface);
+    }
+}
+
+html[dark] {
     --mtrl-theme-primary: var(--mtrl-dark-theme-primary);
     --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary-variant);
     --mtrl-theme-secondary: var(--mtrl-dark-theme-secondary);
@@ -57,153 +71,165 @@ html[light] {
     --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-primary-variant);
     --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-secondary-variant);
     --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface);
-  }
-}
-html[dark] {
-  --mtrl-theme-primary: var(--mtrl-dark-theme-primary);
-  --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary-variant);
-  --mtrl-theme-secondary: var(--mtrl-dark-theme-secondary);
-  --mtrl-theme-surface: var(--mtrl-dark-theme-surface);
-  --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-primary);
-  --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-primary-variant);
-  --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-secondary-variant);
-  --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface);
 }
 
 html, html[light] {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
+
 html > h1, html h2, html h3, html h4, html h5, html h6, html #theme-toggle, html #dir-toggle, html[light] > h1, html[light] h2, html[light] h3, html[light] h4, html[light] h5, html[light] h6, html[light] #theme-toggle, html[light] #dir-toggle {
-  color: rgba(0, 0, 0, 0.87);
+    color: rgba(0, 0, 0, 0.87);
 }
 
 @media (prefers-color-scheme: light) {
-  html {
-    color: rgba(0, 0, 0, 0.87);
-    background-color: #ffffff;
-  }
+    html {
+        color: rgba(0, 0, 0, 0.87);
+        background-color: #ffffff;
+    }
 }
+
 @media (prefers-color-scheme: dark) {
-  html {
+    html {
+        background-color: #121212;
+    }
+
+    html > h1, html h2, html h3, html h4, html h5, html h6, html #theme-toggle, html #dir-toggle {
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 500;
+    }
+}
+
+html[dark] {
     background-color: #121212;
-  }
-  html > h1, html h2, html h3, html h4, html h5, html h6, html #theme-toggle, html #dir-toggle {
+}
+
+html[dark] > h1, html[dark] h2, html[dark] h3, html[dark] h4, html[dark] h5, html[dark] h6, html[dark] #theme-toggle, html[dark] #dir-toggle {
     color: rgba(255, 255, 255, 0.6);
     font-weight: 500;
-  }
-}
-html[dark] {
-  background-color: #121212;
-}
-html[dark] > h1, html[dark] h2, html[dark] h3, html[dark] h4, html[dark] h5, html[dark] h6, html[dark] #theme-toggle, html[dark] #dir-toggle {
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 500;
 }
 
 body {
-  font-family: Google Sans, Roboto, sans-serif;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+    font-family: Google Sans, Roboto, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 h2 {
-  margin-top: 3rem;
+    margin-top: 3rem;
 }
 
 h3, h4 {
-  margin-top: 24px;
+    margin-top: 24px;
 }
 
 span[unsafe], span[against] {
-  margin: 0 0 0 8px;
+    margin: 0 0 0 8px;
 }
+
 span[unsafe]::after, span[against]::after {
-  top: 0;
-  left: 0;
-  padding: 2px 8px;
-  border-radius: 4px;
-  color: #ffffff;
-  font-size: 0.8rem;
-  font-weight: 500;
+    top: 0;
+    left: 0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
+
 span[unsafe][unsafe]::after, span[against][unsafe]::after {
-  content: "Unsafe";
-  background-color: #b00020;
+    content: "Unsafe";
+    background-color: #b00020;
 }
+
 span[unsafe][against]::after, span[against][against]::after {
-  content: "Against MD Spec";
-  background-color: #ff9800;
+    content: "Against MD Spec";
+    background-color: #ff9800;
 }
 
 #toggle-container {
-  display: inline-flex;
-  position: fixed;
-  left: initial;
-  right: 16px;
-  flex-direction: column;
+    display: inline-flex;
+    position: fixed;
+    left: initial;
+    right: 16px;
+    flex-direction: column;
 }
+
 html[dir=rtl] #toggle-container {
-  left: 16px;
-  right: initial;
+    left: 16px;
+    right: initial;
 }
 
 #theme-toggle, #dir-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
-  padding: 8px;
-  border: 1px solid #dddddd;
-  border-radius: 50%;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    padding: 8px;
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
 #theme-toggle:hover, #dir-toggle:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
+
 #theme-toggle i, #dir-toggle i {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .mtrl-button[test].ripple-color {
-  --mtrl-button-ripple-color: green;
+    --mtrl-button-ripple-color: green;
 }
+
 .mtrl-button[test].container-color {
-  --mtrl-button-container-color: pink;
+    --mtrl-button-container-color: pink;
 }
+
 .mtrl-button[test].disabled-container-color {
-  --mtrl-button-disabled-container-color: yellow;
+    --mtrl-button-disabled-container-color: yellow;
 }
+
 .mtrl-button[test].ink-color {
-  --mtrl-button-ink-color: green;
+    --mtrl-button-ink-color: green;
 }
+
 .mtrl-button[test].disabled-ink-color {
-  --mtrl-button-disabled-ink-color: orange;
+    --mtrl-button-disabled-ink-color: orange;
 }
+
 .mtrl-button[test].label-color {
-  --mtrl-button-label-color: blue;
+    --mtrl-button-label-color: blue;
 }
+
 .mtrl-button[test].disabled-label-color {
-  --mtrl-button-disabled-label-color: orange;
+    --mtrl-button-disabled-label-color: orange;
 }
+
 .mtrl-button[test].icon-color {
-  --mtrl-button-icon-color: blue;
+    --mtrl-button-icon-color: blue;
 }
+
 .mtrl-button[test].disabled-icon-color {
-  --mtrl-button-disabled-icon-color: orange;
+    --mtrl-button-disabled-icon-color: orange;
 }
+
 .mtrl-button[test].corner-radius {
-  --mtrl-button-corner-radius: 8px;
+    --mtrl-button-corner-radius: 8px;
 }
+
 .mtrl-button[test].stroke-width {
-  --mtrl-button-stroke-width: 2px;
+    --mtrl-button-stroke-width: 2px;
 }
+
 .mtrl-button[test].stroke-color {
-  --mtrl-button-stroke-color: green;
+    --mtrl-button-stroke-color: green;
 }
+
 .mtrl-button[test].dark-stroke-color {
-  --mtrl-button-dark-stroke-color: green;
+    --mtrl-button-dark-stroke-color: green;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,1 +1,11 @@
-{"version":3,"sourceRoot":"","sources":["aspect-ratio.sass","../../design/layout/spacing.sass"],"names":[],"mappings":"AAGE;EC8FA;EACA;;AACA;EACE;EACA;EACA;;ADhGF;EC2FA;EACA;;AACA;EACE;EACA;EACA;;AD7FF;ECwFA;EACA;;AACA;EACE;EACA;EACA;;AD1FF;ECqFA;EACA;;AACA;EACE;EACA;EACA;;ADvFF;ECkFA;EACA;;AACA;EACE;EACA;EACA;;ADpFF;EC+EA;EACA;;AACA;EACE;EACA;EACA","file":"aspect-ratio.css"}
+{
+  "version": 3,
+  "sourceRoot": "",
+  "sources": [
+    "aspect-ratio.sass",
+    "../../design/layout/spacing.sass"
+  ],
+  "names": [],
+  "mappings": "AAGE;EC8FA;EACA;;AACA;EACE;EACA;EACA;;ADhGF;EC2FA;EACA;;AACA;EACE;EACA;EACA;;AD7FF;ECwFA;EACA;;AACA;EACE;EACA;EACA;;AD1FF;ECqFA;EACA;;AACA;EACE;EACA;EACA;;ADvFF;ECkFA;EACA;;AACA;EACE;EACA;EACA;;ADpFF;EC+EA;EACA;;AACA;EACE;EACA;EACA",
+  "file": "aspect-ratio.css"
+}

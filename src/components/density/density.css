@@ -1,11 +1,13 @@
 .mtrl-density--n1 {
-  height: calc(var(--mtrl-component-height) + -1 * 4px);
+    height: calc(var(--mtrl-component-height) + -1 * 4px);
 }
+
 .mtrl-density--n2 {
-  height: calc(var(--mtrl-component-height) + -2 * 4px);
+    height: calc(var(--mtrl-component-height) + -2 * 4px);
 }
+
 .mtrl-density--n3 {
-  height: calc(var(--mtrl-component-height) + -3 * 4px);
+    height: calc(var(--mtrl-component-height) + -3 * 4px);
 }
 
 /*# sourceMappingURL=density.css.map */
