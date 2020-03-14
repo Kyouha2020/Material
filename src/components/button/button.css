@@ -27,7 +27,6 @@
     position: relative;
     white-space: nowrap;
 }
-
 .mtrl-button::before {
     content: "";
     position: absolute;
@@ -40,27 +39,21 @@
     border-radius: inherit;
     opacity: var(--mtrl-elevation-overlay-opacity, 0%);
 }
-
 .mtrl-button:hover::before {
     opacity: calc(4% + var(--mtrl-elevation-overlay-opacity, 0%));
 }
-
 .mtrl-button:focus::before {
     opacity: calc(12% + var(--mtrl-elevation-overlay-opacity, 0%));
 }
-
 .mtrl-button:active::before {
     opacity: calc(10% + var(--mtrl-elevation-overlay-opacity, 0%));
 }
-
 .mtrl-button::before {
     background-color: var(--mtrl-button-ripple-color, rgba(var(--mtrl-theme-primary), 1));
 }
-
 .mtrl-button:not(:hover):not(:focus):not(:active)::before {
     background-color: var(--mtrl-elevation-overlay, var(--mtrl-button-ripple-color, rgba(var(--mtrl-theme-primary), 1)));
 }
-
 .mtrl-button::after {
     content: "";
     position: absolute;
@@ -71,19 +64,15 @@
     width: 100%;
     height: 48px;
 }
-
 .mtrl-button:not(:focus-visible) {
     outline: none;
 }
-
 .mtrl-button:focus-visible {
     overflow: hidden;
 }
-
 .mtrl-button:hover {
     cursor: pointer;
 }
-
 .mtrl-button:disabled {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
     transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -100,24 +89,19 @@
         --mtrl-elevation-overlay-opacity: 0%;
     }
 }
-
 html[dark] .mtrl-button:disabled {
     --mtrl-elevation-overlay: white;
     --mtrl-elevation-overlay-opacity: 0%;
 }
-
 .mtrl-button:disabled .mtrl-button__label {
     color: var(--mtrl-button-disabled-label-color, var(--mtrl-button-disabled-ink-color, currentColor));
 }
-
 .mtrl-button:disabled .mtrl-button__icon {
     color: var(--mtrl-button-disabled-icon-color, var(--mtrl-button-disabled-ink-color, currentColor));
 }
-
 .mtrl-button--outlined, .mtrl-button--contained, .mtrl-button--float, .mtrl-button--raised {
     padding: 0px 16px;
 }
-
 .mtrl-button--outlined {
     border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
 }
@@ -128,7 +112,6 @@ html[dark] .mtrl-button:disabled {
         --mtrl-shape--stroke-color: var(--mtrl-button-stroke-color, rgba(var(--mtrl-theme-on-surface), 12%));
     }
 }
-
 .mtrl-button--outlined, html[light] .mtrl-button--outlined {
     --mtrl-shape--stroke-width: var(--mtrl-button-stroke-width, 1px);
     --mtrl-shape--stroke-color: var(--mtrl-button-stroke-color, rgba(var(--mtrl-theme-on-surface), 12%));
@@ -139,11 +122,9 @@ html[dark] .mtrl-button:disabled {
         --mtrl-shape--stroke-color: var(--mtrl-button-dark-stroke-color, rgba(var(--mtrl-theme-primary), 1));
     }
 }
-
 html[dark] .mtrl-button--outlined:focus {
     --mtrl-shape--stroke-color: var(--mtrl-button-dark-stroke-color, rgba(var(--mtrl-theme-primary), 1));
 }
-
 .mtrl-button--contained {
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
     transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -151,11 +132,9 @@ html[dark] .mtrl-button--outlined:focus {
     background-color: var(--mtrl-button-container-color, rgba(var(--mtrl-theme-primary), 1));
     color: var(--mtrl-button-ink-color, rgba(var(--mtrl-theme-on-primary), 87%));
 }
-
 .mtrl-button--contained::before {
     background-color: var(--mtrl-button-ripple-color, rgba(var(--mtrl-theme-on-primary), 1));
 }
-
 .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before {
     background-color: var(--mtrl-elevation-overlay, var(--mtrl-button-ripple-color, rgba(var(--mtrl-theme-on-primary), 1)));
 }
@@ -166,69 +145,61 @@ html[dark] .mtrl-button--outlined:focus {
         --mtrl-elevation-overlay-opacity: 7%;
     }
 }
-
 html[dark] .mtrl-button--contained {
     --mtrl-elevation-overlay: white;
     --mtrl-elevation-overlay-opacity: 7%;
 }
-
 .mtrl-button--contained:hover {
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     z-index: 4;
 }
-
 .mtrl-button--contained:focus {
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
     z-index: 6;
 }
-
 .mtrl-button--contained:active {
     box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
     z-index: 8;
 }
-
 .mtrl-button--contained:disabled {
     background-color: var(--mtrl-button-disabled-container-color, rgba(var(--mtrl-theme-on-surface), 12%));
 }
-
 .mtrl-button--vertical {
     --mtrl-component-height: var(--mtrl-button-height, 56px);
     height: var(--mtrl-component-height, var(--mtrl-button-height, 56px));
     flex-direction: column;
 }
-
 html:not([dir=rtl]) .mtrl-button--vertical .mtrl-button__icon {
     margin-left: 0px;
     margin-right: 0px;
 }
-
 html[dir=rtl] .mtrl-button--vertical .mtrl-button__icon {
     margin-left: 0px;
     margin-right: 0px;
 }
-
 .mtrl-button--vertical .mtrl-button__icon--leading {
     margin-bottom: 4px;
 }
-
 .mtrl-button--vertical .mtrl-button__icon--trailing {
     margin-top: 4px;
 }
-
 .mtrl-button--vertical .mtrl-button__label {
+    font-family: Roboto, sans-serif;
     font-size: 0.765625rem;
+    font-weight: 500;
+    letter-spacing: 0.0892857143rem;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
     text-transform: uppercase;
 }
-
 .mtrl-button--two-column {
     --mtrl-component-height: var(--mtrl-button-height, 48px);
     height: var(--mtrl-component-height, var(--mtrl-button-height, 48px));
 }
-
 .mtrl-button--two-column .mtrl-button__label {
     flex-direction: column;
 }
-
 .mtrl-button--float {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
     transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -241,27 +212,22 @@ html[dir=rtl] .mtrl-button--vertical .mtrl-button__icon {
         --mtrl-elevation-overlay-opacity: 0%;
     }
 }
-
 html[dark] .mtrl-button--float {
     --mtrl-elevation-overlay: white;
     --mtrl-elevation-overlay-opacity: 0%;
 }
-
 .mtrl-button--float:hover {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
     z-index: 0;
 }
-
 .mtrl-button--float:focus {
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
     z-index: 2;
 }
-
 .mtrl-button--float:active {
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     z-index: 4;
 }
-
 .mtrl-button--raised {
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
     transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -274,27 +240,22 @@ html[dark] .mtrl-button--float {
         --mtrl-elevation-overlay-opacity: 7%;
     }
 }
-
 html[dark] .mtrl-button--raised {
     --mtrl-elevation-overlay: white;
     --mtrl-elevation-overlay-opacity: 7%;
 }
-
 .mtrl-button--raised:hover {
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     z-index: 4;
 }
-
 .mtrl-button--raised:focus {
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
     z-index: 6;
 }
-
 .mtrl-button--raised:active {
     box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
     z-index: 8;
 }
-
 .mtrl-button--unelevated {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
     transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -307,54 +268,43 @@ html[dark] .mtrl-button--raised {
         --mtrl-elevation-overlay-opacity: 0%;
     }
 }
-
 html[dark] .mtrl-button--unelevated {
     --mtrl-elevation-overlay: white;
     --mtrl-elevation-overlay-opacity: 0%;
 }
-
 .mtrl-button--unelevated:hover {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
     z-index: 0;
 }
-
 .mtrl-button--unelevated:focus {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
     z-index: 0;
 }
-
 .mtrl-button--unelevated:active {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
     z-index: 0;
 }
-
 .mtrl-button--dry::before {
     background-color: transparent;
 }
-
 .mtrl-button--dry:not(:hover):not(:focus):not(:active)::before {
     background-color: var(--mtrl-elevation-overlay, transparent);
 }
-
 .mtrl-button--rounded {
     --mtrl-shape--corner-radius: calc(var(--mtrl-button-height, var(--mtrl-component-height)) / 2);
     border-radius: var(--mtrl-shape--corner-radius, calc(var(--mtrl-button-height, var(--mtrl-component-height)) / 2));
 }
-
 .mtrl-button--tile {
     --mtrl-shape--corner-radius: 0;
     border-radius: var(--mtrl-shape--corner-radius, 0);
 }
-
 .mtrl-button--block {
     display: flex;
     width: 100%;
 }
-
 .mtrl-button--block--between {
     justify-content: space-between;
 }
-
 .mtrl-button__label {
     display: inline-flex;
     align-items: center;
@@ -362,26 +312,27 @@ html[dark] .mtrl-button--unelevated {
     vertical-align: middle;
     color: var(--mtrl-button-label-color, var(--mtrl-button-ink-color, currentColor));
 }
-
 .mtrl-button__label--uppercase {
     text-transform: uppercase;
 }
-
 .mtrl-button__label--sentence-case {
     text-transform: none;
 }
-
 .mtrl-button__label--primary {
     text-transform: none;
 }
-
 .mtrl-button__label--secondary {
+    font-family: Roboto, sans-serif;
     font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.0333333333rem;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: inherit;
     text-transform: inherit;
     color: rgba(var(--mtrl-theme-primary), 60%);
     text-transform: none;
 }
-
 .mtrl-button__icon {
     width: 18px;
     height: 18px;
@@ -389,22 +340,18 @@ html[dark] .mtrl-button--unelevated {
     font-size: 18px;
     fill: currentColor;
 }
-
 html:not([dir=rtl]) .mtrl-button__icon--leading {
     margin-left: -4px;
     margin-right: 8px;
 }
-
 html[dir=rtl] .mtrl-button__icon--leading {
     margin-left: 8px;
     margin-right: -4px;
 }
-
 html:not([dir=rtl]) .mtrl-button__icon--trailing {
     margin-left: 8px;
     margin-right: -4px;
 }
-
 html[dir=rtl] .mtrl-button__icon--trailing {
     margin-left: -4px;
     margin-right: 8px;

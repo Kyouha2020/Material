@@ -1,129 +1,151 @@
 .mtrl-icon-button {
-  --mtrl-shape--corner-radius: 50%;
-  border-radius: var(--mtrl-shape--corner-radius, 50%);
-  --mtrl-component-height: 12;
-  height: var(--mtrl-component-height, 12);
-  padding: 12px;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-  border: none;
-  color: rgba(var(--mtrl-theme-primary), 87%);
-  width: 48px;
-  background-color: rgba(var(--mtrl-theme-surface), 1);
-  position: relative;
-  border: none;
+    --mtrl-shape--corner-radius: 50%;
+    border-radius: var(--mtrl-shape--corner-radius, 50%);
+    --mtrl-component-height: 12;
+    height: var(--mtrl-component-height, 12);
+    padding: 12px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    border: none;
+    color: rgba(var(--mtrl-theme-primary), 87%);
+    width: 48px;
+    background-color: rgba(var(--mtrl-theme-surface), 1);
+    position: relative;
+    border: none;
 }
+
 .mtrl-icon-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  opacity: var(--mtrl-elevation-overlay-opacity, 0%);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    opacity: var(--mtrl-elevation-overlay-opacity, 0%);
 }
+
 .mtrl-icon-button:hover::before {
-  opacity: calc(4% + var(--mtrl-elevation-overlay-opacity, 0%));
+    opacity: calc(4% + var(--mtrl-elevation-overlay-opacity, 0%));
 }
+
 .mtrl-icon-button:focus::before {
-  opacity: calc(12% + var(--mtrl-elevation-overlay-opacity, 0%));
+    opacity: calc(12% + var(--mtrl-elevation-overlay-opacity, 0%));
 }
+
 .mtrl-icon-button:active::before {
-  opacity: calc(10% + var(--mtrl-elevation-overlay-opacity, 0%));
+    opacity: calc(10% + var(--mtrl-elevation-overlay-opacity, 0%));
 }
+
 .mtrl-icon-button::before {
-  background-color: rgba(var(--mtrl-theme-primary), 1);
+    background-color: rgba(var(--mtrl-theme-primary), 1);
 }
+
 .mtrl-icon-button:not(:hover):not(:focus):not(:active)::before {
-  background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-primary), 1));
+    background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-primary), 1));
 }
+
 .mtrl-icon-button::after {
-  content: "";
-  position: absolute;
-  top: calc((var(--mtrl-component-height) - 48px) / 2);
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 48px;
+    content: "";
+    position: absolute;
+    top: calc((var(--mtrl-component-height) - 48px) / 2);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
 }
+
 .mtrl-icon-button:not(:focus-visible) {
-  outline: none;
+    outline: none;
 }
+
 .mtrl-icon-button:focus-visible {
-  overflow: hidden;
+    overflow: hidden;
 }
+
 .mtrl-icon-button:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
+
 .mtrl-icon-button:not(:focus-visible) {
-  outline: none;
+    outline: none;
 }
+
 .mtrl-icon-button:focus-visible {
-  overflow: hidden;
+    overflow: hidden;
 }
+
 .mtrl-icon-button:disabled {
-  color: rgba(var(--mtrl-theme-on-surface), 38%);
-  background-color: rgba(var(--mtrl-theme-surface), 12%);
-  cursor: default;
-  pointer-events: none;
+    color: rgba(var(--mtrl-theme-on-surface), 38%);
+    background-color: rgba(var(--mtrl-theme-surface), 12%);
+    cursor: default;
+    pointer-events: none;
 }
+
 .mtrl-icon-button--outlined {
-  border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
+    border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
 }
 
 @media (prefers-color-scheme: light) {
-  .mtrl-icon-button--outlined {
+    .mtrl-icon-button--outlined {
+        --mtrl-shape--stroke-width: 1px;
+        --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 12%);
+    }
+}
+
+.mtrl-icon-button--outlined, html[light] .mtrl-icon-button--outlined {
     --mtrl-shape--stroke-width: 1px;
     --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 12%);
-  }
-}
-.mtrl-icon-button--outlined, html[light] .mtrl-icon-button--outlined {
-  --mtrl-shape--stroke-width: 1px;
-  --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 12%);
 }
 
 @media (prefers-color-scheme: dark) {
-  .mtrl-icon-button--outlined:focus {
+    .mtrl-icon-button--outlined:focus {
+        --mtrl-shape--stroke-width: 1px;
+        --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
+    }
+}
+
+html[dark] .mtrl-icon-button--outlined:focus {
     --mtrl-shape--stroke-width: 1px;
     --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
-  }
 }
-html[dark] .mtrl-icon-button--outlined:focus {
-  --mtrl-shape--stroke-width: 1px;
-  --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
-}
+
 .mtrl-icon-button--contained {
-  color: rgba(var(--mtrl-theme-on-primary), 87%);
-  background-color: rgba(var(--mtrl-theme-primary), 1);
+    color: rgba(var(--mtrl-theme-on-primary), 87%);
+    background-color: rgba(var(--mtrl-theme-primary), 1);
 }
+
 .mtrl-icon-button--contained::before {
-  background-color: rgba(var(--mtrl-theme-on-primary), 1);
+    background-color: rgba(var(--mtrl-theme-on-primary), 1);
 }
+
 .mtrl-icon-button--contained:not(:hover):not(:focus):not(:active)::before {
-  background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-on-primary), 1));
+    background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-on-primary), 1));
 }
+
 .mtrl-icon-button--contained:disabled {
-  background-color: rgba(var(--mtrl-theme-on-surface), 12%);
+    background-color: rgba(var(--mtrl-theme-on-surface), 12%);
 }
+
 .mtrl-icon-button--tile {
-  --mtrl-shape--corner-radius: 0;
-  border-radius: var(--mtrl-shape--corner-radius, 0);
+    --mtrl-shape--corner-radius: 0;
+    border-radius: var(--mtrl-shape--corner-radius, 0);
 }
+
 .mtrl-icon-button__icon {
-  width: 24px;
-  height: 24px;
-  font-size: 24px;
-  fill: currentColor;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    fill: currentColor;
 }
 
 /*# sourceMappingURL=icon-button.css.map */
