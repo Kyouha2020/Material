@@ -14,20 +14,21 @@
   -webkit-font-smoothing: antialiased;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: var(--mtrl-fab-container-color, rgba(var(--mtrl-theme-on-surface), 1));
-  color: var(--mtrl-fab-ink-color, rgba(var(--mtrl-theme-surface), 87%));
-  width: 56px;
-  position: relative;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  border: none;
+  background-color: var(--mtrl-fab-container-color, rgba(var(--mtrl-theme-on-surface), 1));
+  color: var(--mtrl-fab-ink-color, rgba(var(--mtrl-theme-surface), 87%));
+  width: 56px;
+  position: relative;
   white-space: nowrap;
   border: none;
-  -webkit-tap-highlight-color: transparent;
 }
 .mtrl-fab::before {
   content: "";
@@ -88,14 +89,14 @@ html[dark] .mtrl-fab {
   box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
   z-index: 12;
 }
-.mtrl-fab:hover {
-  cursor: pointer;
-}
 .mtrl-fab:not(:focus-visible) {
   outline: none;
 }
 .mtrl-fab:focus-visible {
   overflow: hidden;
+}
+.mtrl-fab:hover {
+  cursor: pointer;
 }
 .mtrl-fab--mini {
   --mtrl-component-height: var(--mtrl-fab-height, 40px);

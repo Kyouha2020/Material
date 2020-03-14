@@ -7,3 +7,15 @@
 @mixin rtl
   html[dir=rtl] &
     @content
+
+@mixin stroke-start($width, $color)
+  @include ltr
+    border-left: $width solid $color
+  @include rtl
+    border-right: $width solid $color
+
+@mixin stroke-end($width, $color)
+  @include ltr
+    border-right: $width solid $color
+  @include rtl
+    border-left: $width solid $color

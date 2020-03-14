@@ -12,20 +12,20 @@
   -webkit-font-smoothing: antialiased;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: var(--mtrl-button-container-color, rgba(var(--mtrl-theme-surface), 1));
-  color: var(--mtrl-button-ink-color, rgba(var(--mtrl-theme-primary), 87%));
-  min-width: 64px;
-  position: relative;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
   border: none;
-  -webkit-tap-highlight-color: transparent;
+  background-color: var(--mtrl-button-container-color, rgba(var(--mtrl-theme-surface), 1));
+  color: var(--mtrl-button-ink-color, rgba(var(--mtrl-theme-primary), 87%));
+  min-width: 64px;
+  position: relative;
+  white-space: nowrap;
 }
 .mtrl-button::before {
   content: "";
@@ -64,14 +64,14 @@
   width: 100%;
   height: 48px;
 }
-.mtrl-button:hover {
-  cursor: pointer;
-}
 .mtrl-button:not(:focus-visible) {
   outline: none;
 }
 .mtrl-button:focus-visible {
   overflow: hidden;
+}
+.mtrl-button:hover {
+  cursor: pointer;
 }
 .mtrl-button:disabled {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
@@ -154,15 +154,13 @@ html[dark] .mtrl-button--contained {
 .mtrl-button--contained:disabled {
   background-color: var(--mtrl-button-disabled-container-color, rgba(var(--mtrl-theme-on-surface), 12%));
 }
-.mtrl-button--dry::before {
-  background-color: transparent;
-}
-.mtrl-button--dry:not(:hover):not(:focus):not(:active)::before {
-  background-color: var(--mtrl-elevation-overlay, transparent);
-}
 .mtrl-button--split .mtrl-button__icon {
   --mtrl-component-height: var(--mtrl-button-height, 36px);
   height: var(--mtrl-component-height, var(--mtrl-button-height, 36px));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
 }
 html:not([dir=rtl]) .mtrl-button--split .mtrl-button__icon--leading {
   margin-left: -8px;
@@ -319,6 +317,12 @@ html[dark] .mtrl-button--unelevated {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   z-index: 0;
 }
+.mtrl-button--dry::before {
+  background-color: transparent;
+}
+.mtrl-button--dry:not(:hover):not(:focus):not(:active)::before {
+  background-color: var(--mtrl-elevation-overlay, transparent);
+}
 .mtrl-button--rounded {
   --mtrl-shape--corner-radius: rounded;
   border-radius: var(--mtrl-shape--corner-radius, rounded);
@@ -329,6 +333,7 @@ html[dark] .mtrl-button--unelevated {
   border-radius: var(--mtrl-shape--corner-radius, 0);
 }
 .mtrl-button--block {
+  display: flex;
   width: 100%;
 }
 .mtrl-button--block--between {
@@ -358,10 +363,6 @@ html[dark] .mtrl-button--unelevated {
 .mtrl-button__icon {
   width: 18px;
   height: 18px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
   color: var(--mtrl-button-icon-color, var(--mtrl-button-ink-color));
   font-size: 18px;
   fill: currentColor;

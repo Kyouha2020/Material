@@ -7,6 +7,7 @@
 @use "../../design/shape/shape" as *
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
+@use "../components" as *
 
 $corner-radius: 50%
 
@@ -22,29 +23,18 @@ $ink-color: theme-prop(surface, $text--high-emphasis)
   @include corner(prop(fab-corner-radius, $corner-radius))
   @include height(prop(fab-height, 56px))
   @include typography_(button)
+  @include unselectable
+  @include centered-content
+  @include accessible-border
   background-color: prop(fab-container-color, $container-color)
   color: prop(fab-ink-color, $ink-color)
   width: 56px
   position: relative
-  display: inline-flex
-  align-items: center
-  justify-content: center
-  vertical-align: middle
-  -webkit-user-select: none
-  -ms-user-select: none
-  user-select: none
   white-space: nowrap
   border: none
-  -webkit-tap-highlight-color: transparent
 
   &:hover
     cursor: pointer
-
-  &:not(:focus-visible)
-    outline: none
-
-  &:focus-visible
-    overflow: hidden
 
   &--mini
     @include height(prop(fab-height, 40px))

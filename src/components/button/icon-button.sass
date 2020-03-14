@@ -5,6 +5,7 @@
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
 @use "../../design/usability/accessibility" as *
+@use "../components" as *
 
 .mtrl-icon-button
   @include ripple_
@@ -13,19 +14,14 @@
   @include corner(50%)
   @include height(12)
   @include padding(3)
+  @include unselectable
+  @include centered-content
+  @include accessible-border
   color: theme-prop(primary, $icon--active)
   width: 48px
   background-color: theme-prop(surface)
   position: relative
-  display: inline-flex
-  align-items: center
-  justify-content: center
-  vertical-align: middle
-  -webkit-user-select: none
-  -ms-user-select: none
-  user-select: none
   border: none
-  -webkit-tap-highlight-color: transparent
 
   &:hover
     cursor: pointer

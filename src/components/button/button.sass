@@ -8,6 +8,7 @@
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 @use "../../design/usability/bidirectionality" as *
+@use "../components" as *
 
 $corner-radius: 4px
 $stroke-width: 1px
@@ -33,29 +34,17 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
   @include height(prop(button-height, 36px))
   @include padding(0, 2)
   @include typography_(button)
+  @include unselectable
+  @include centered-content
+  @include accessible-border
   background-color: prop(button-container-color, $container-color)
   color: prop(button-ink-color, $ink-color)
   min-width: 64px
   position: relative
-  display: inline-flex
-  align-items: center
-  justify-content: center
-  vertical-align: middle
-  -webkit-user-select: none
-  -ms-user-select: none
-  user-select: none
   white-space: nowrap
-  border: none
-  -webkit-tap-highlight-color: transparent
 
   &:hover
     cursor: pointer
-
-  &:not(:focus-visible)
-    outline: none
-
-  &:focus-visible
-    overflow: hidden
 
   &:disabled
     @include elevation(0)
@@ -84,27 +73,19 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
     &:disabled
       background-color: prop(button-disabled-container-color, $disabled-contained-container-color)
 
-  &--dry
-    @include ripple()
-
   &--split .mtrl-button__icon
     @include height(prop(button-height, 36px))
+    @include centered-content
 
     &--leading
       @include margin-horizontal(-2, 3)
       @include padding-horizontal(0, 2)
-      @include ltr
-        border-right: 1px solid theme-prop(on-surface, $stroke)
-      @include rtl
-        border-left: 1px solid theme-prop(on-surface, $stroke)
+      @include stroke-end(1px, theme-prop(on-surface, $stroke))
 
     &--trailing
       @include margin-horizontal(3, -2)
       @include padding-horizontal(2, 0)
-      @include ltr
-        border-left: 1px solid theme-prop(on-surface, $stroke)
-      @include rtl
-        border-right: 1px solid theme-prop(on-surface, $stroke)
+      @include stroke-start(1px, theme-prop(on-surface, $stroke))
 
   &--vertical
     @include height(prop(button-height, 56px))
@@ -122,7 +103,6 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
     .mtrl-button__label
       @include typography(button, 0.875)
 
-
   &--two-column
     @include height(prop(button-height, 48px))
 
@@ -138,6 +118,9 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
   &--unelevated
     @include elevation(0, 0, 0, 0)
 
+  &--dry
+    @include ripple()
+
   &--rounded
     @include corner(rounded)
 
@@ -145,16 +128,14 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
     @include corner(0)
 
   &--block
+    display: flex
     width: 100%
 
     &--between
       justify-content: space-between
 
   &__label
-    display: inline-flex
-    align-items: center
-    justify-content: center
-    vertical-align: middle
+    @include centered-content
 
     &--uppercase
       text-transform: uppercase
@@ -173,10 +154,6 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
   &__icon
     width: 18px
     height: 18px
-    display: inline-flex
-    align-items: center
-    justify-content: center
-    vertical-align: middle
     color: prop(button-icon-color, prop(button-ink-color))
     font-size: 18px
     fill: currentColor

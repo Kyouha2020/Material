@@ -1,0 +1,18 @@
+@mixin accessible-border
+  border: none
+  &:not(:focus-visible)
+    outline: none
+  &:focus-visible
+    overflow: hidden
+
+@mixin unselectable
+  -webkit-user-select: none
+  -ms-user-select: none
+  user-select: none
+  -webkit-tap-highlight-color: transparent
+
+@mixin centered-content
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  vertical-align: middle

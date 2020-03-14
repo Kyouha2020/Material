@@ -4,19 +4,20 @@
   --mtrl-component-height: 12;
   height: var(--mtrl-component-height, 12);
   padding: 12px;
-  color: rgba(var(--mtrl-theme-primary), 87%);
-  width: 48px;
-  background-color: rgba(var(--mtrl-theme-surface), 1);
-  position: relative;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   border: none;
-  -webkit-tap-highlight-color: transparent;
+  color: rgba(var(--mtrl-theme-primary), 87%);
+  width: 48px;
+  background-color: rgba(var(--mtrl-theme-surface), 1);
+  position: relative;
+  border: none;
 }
 .mtrl-icon-button::before {
   content: "";
@@ -54,6 +55,12 @@
   left: 0;
   width: 100%;
   height: 48px;
+}
+.mtrl-icon-button:not(:focus-visible) {
+  outline: none;
+}
+.mtrl-icon-button:focus-visible {
+  overflow: hidden;
 }
 .mtrl-icon-button:hover {
   cursor: pointer;
