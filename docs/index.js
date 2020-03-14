@@ -6,11 +6,9 @@ const themeToggle = document.querySelector('#theme-toggle')
 themeToggle.addEventListener('click', () => {
     if (!document.documentElement.hasAttribute('dark')) {
         document.documentElement.setAttribute('dark', '')
-        document.documentElement.removeAttribute('light')
         themeToggle.innerHTML = `<i class="material-icons">brightness_7</i>`
         themeToggle.setAttribute('title', 'light mode')
     } else {
-        document.documentElement.setAttribute('light', '')
         document.documentElement.removeAttribute('dark')
         themeToggle.innerHTML = `<i class="material-icons">brightness_4</i>`
         themeToggle.setAttribute('title', 'dark mode')

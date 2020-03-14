@@ -14,14 +14,10 @@
   --mtrl-#{$var}: #{$value}
 
 @mixin light-theme
-  @media (prefers-color-scheme: light)
-    @content
-  &, html[light] &
+  html[light] &
     @content
 
 @mixin dark-theme
-  @media (prefers-color-scheme: dark)
-    @content
   html[dark] &
     @content
 

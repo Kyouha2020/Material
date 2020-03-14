@@ -3,7 +3,7 @@
   border-radius: var(--mtrl-shape--corner-radius, 50%);
   --mtrl-component-height: 48px;
   height: var(--mtrl-component-height, 48px);
-  padding: 0px;
+  padding: 0;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -73,22 +73,8 @@
 }
 .mtrl-icon-button--outlined {
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
-}
-@media (prefers-color-scheme: light) {
-  .mtrl-icon-button--outlined {
-    --mtrl-shape--stroke-width: 1px;
-    --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 12%);
-  }
-}
-.mtrl-icon-button--outlined, html[light] .mtrl-icon-button--outlined {
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 12%);
-}
-@media (prefers-color-scheme: dark) {
-  .mtrl-icon-button--outlined:focus {
-    --mtrl-shape--stroke-width: 1px;
-    --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 1);
-  }
 }
 html[dark] .mtrl-icon-button--outlined:focus {
   --mtrl-shape--stroke-width: 1px;

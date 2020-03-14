@@ -71,8 +71,7 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
 
   &--outlined
     @include stroke_
-    @include light-theme
-      @include stroke(prop(button-stroke-width, $stroke-width), prop(button-stroke-color, $stroke-color))
+    @include stroke(prop(button-stroke-width, $stroke-width), prop(button-stroke-color, $stroke-color))
     @include dark-theme
       &:focus
         @include stroke($color: prop(button-dark-stroke-color, $dark-stroke-color))

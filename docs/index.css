@@ -20,18 +20,6 @@
   --mtrl-dark-theme-on-surface: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --mtrl-theme-primary: var(--mtrl-dark-theme-primary);
-    --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary-variant);
-    --mtrl-theme-secondary: var(--mtrl-dark-theme-secondary);
-    --mtrl-theme-surface: var(--mtrl-dark-theme-surface);
-    --mtrl-theme-on-primary: var(--mtrl-dark-theme-on-primary);
-    --mtrl-theme-on-primary-variant: var(--mtrl-dark-theme-on-primary-variant);
-    --mtrl-theme-on-secondary: var(--mtrl-dark-theme-on-secondary-variant);
-    --mtrl-theme-on-surface: var(--mtrl-dark-theme-on-surface);
-  }
-}
 html[dark] {
   --mtrl-theme-primary: var(--mtrl-dark-theme-primary);
   --mtrl-theme-primary-variant: var(--mtrl-dark-theme-primary-variant);
@@ -51,15 +39,6 @@ html > h1, html h2, html h3, html h4, html h5, html h6, html #theme-toggle, html
   color: rgba(0, 0, 0, 0.87);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    background-color: #121212;
-  }
-  html > h1, html h2, html h3, html h4, html h5, html h6, html #theme-toggle, html #dir-toggle {
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 500;
-  }
-}
 html[dark] {
   background-color: #121212;
 }
