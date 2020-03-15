@@ -1,67 +1,79 @@
+.mtrl-aspect-ratio {
+  position: relative;
+  overflow: hidden;
+}
+.mtrl-aspect-ratio::before {
+  display: flex;
+  content: "";
+  float: left;
+  height: 0;
+  margin-top: calc(var(--mtrl-aspect-ratio-y) / var(--mtrl-aspect-ratio-x) * 100%);
+}
 .mtrl-aspect-ratio--16-9 {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
-
 .mtrl-aspect-ratio--16-9::before {
-    display: block;
-    content: "";
-    margin-top: 56.25%;
+  display: flex;
+  content: "";
+  float: left;
+  height: 0;
+  margin-top: calc(9 / 16 * 100%);
 }
-
 .mtrl-aspect-ratio--3-2 {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
-
 .mtrl-aspect-ratio--3-2::before {
-    display: block;
-    content: "";
-    margin-top: 66.6666666667%;
+  display: flex;
+  content: "";
+  float: left;
+  height: 0;
+  margin-top: calc(2 / 3 * 100%);
 }
-
 .mtrl-aspect-ratio--4-3 {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
-
 .mtrl-aspect-ratio--4-3::before {
-    display: block;
-    content: "";
-    margin-top: 75%;
+  display: flex;
+  content: "";
+  float: left;
+  height: 0;
+  margin-top: calc(3 / 4 * 100%);
 }
-
 .mtrl-aspect-ratio--square {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
-
 .mtrl-aspect-ratio--square::before {
-    display: block;
-    content: "";
-    margin-top: 100%;
+  display: flex;
+  content: "";
+  float: left;
+  height: 0;
+  margin-top: calc(1 / 1 * 100%);
 }
-
 .mtrl-aspect-ratio--3-4 {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
-
 .mtrl-aspect-ratio--3-4::before {
-    display: block;
-    content: "";
-    margin-top: 133.3333333333%;
+  display: flex;
+  content: "";
+  float: left;
+  height: 0;
+  margin-top: calc(4 / 3 * 100%);
 }
-
 .mtrl-aspect-ratio--2-3 {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
-
 .mtrl-aspect-ratio--2-3::before {
-    display: block;
-    content: "";
-    margin-top: 150%;
+  display: flex;
+  content: "";
+  float: left;
+  height: 0;
+  margin-top: calc(3 / 2 * 100%);
 }
 
 /*# sourceMappingURL=aspect-ratio.css.map */

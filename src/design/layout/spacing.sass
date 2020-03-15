@@ -77,9 +77,11 @@
   position: relative
   overflow: hidden
   &::before
-    display: block
+    display: flex
     content: ""
-    margin-top: percentage($y / $x)
+    float: left
+    height: 0
+    margin-top: calc(#{$y} / #{$x} * 100%)
 
 
 // touch targets
