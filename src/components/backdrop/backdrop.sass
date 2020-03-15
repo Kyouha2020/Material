@@ -10,6 +10,7 @@
 
 .mtrl-backdrop
   @include height(720px)
+  display: flex
   width: 360px
 
   &__back-layer
@@ -23,18 +24,22 @@
 
   &__front-layer
     @include elevation(1)
-    @include padding(16px 16px 0 16px)
+    @include padding(0 16px 0 16px)
     @include corner(16px 16px 0 0)
-    @include height(720px - 56px - 16px)
+    @include margin-start(-360px)
+    @include height(720px - 56px)
     width: 360px - 32px
-    margin-top: calc(-1 * #{prop(component-height)} - 16px)
+    margin-top: 56px
     background-color: theme-prop(surface)
     color: theme-prop(on-surface)
 
     &--shrink
       @include height(48px)
-      @include padding(0 16px 0 16px)
-      margin-top: calc(-1 * #{prop(component-height)})
+      @include padding(0 4px 0 16px)
+      display: inline-flex
+      justify-content: space-between
+      width: 360px - 16px
+      margin-top: 720px - 56px + 12px
 
       .mtrl-backdrop__front-layer__subtitle
         margin-bottom: 12px
@@ -45,3 +50,18 @@
       display: inline-flex
       align-items: flex-end
       color: theme-prop(on-surface, $text--high-emphasis)
+
+    &__action-icon
+      @include ripple_
+      @include ripple(theme-prop(on-surface))
+      @include ripple_not_dark
+      @include accessible-border
+      @include corner(50%)
+      @include padding(12px)
+      display: inline-flex
+      position: relative
+      width: 24px
+      height: 24px
+      font-size: 24px
+      cursor: pointer
+      fill: currentColor
