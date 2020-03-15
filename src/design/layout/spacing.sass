@@ -73,7 +73,7 @@
 
 
 // aspect ratios
-@mixin aspect-ratio($x, $y)
+@mixin aspect-ratio($ratio)
   position: relative
   overflow: hidden
   &::before
@@ -81,7 +81,7 @@
     content: ""
     float: left
     height: 0
-    margin-top: calc(#{$y} / #{$x} * 100%)
+    margin-top: calc(100% / #{$ratio})
 
 
 // touch targets

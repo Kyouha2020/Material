@@ -2,22 +2,22 @@
 @use "../../design/theme/theme" as *
 
 .mtrl-aspect-ratio
-  @include aspect-ratio(prop(aspect-ratio-x), prop(aspect-ratio-y))
+  @include aspect-ratio(calc(#{prop(aspect-ratio)}))
 
   &--16-9
-    @include aspect-ratio(16, 9)
+    @include aspect-ratio(16 / 9)
 
   &--3-2
-    @include aspect-ratio(3, 2)
+    @include aspect-ratio(3 / 2)
 
   &--4-3
-    @include aspect-ratio(4, 3)
+    @include aspect-ratio(4 / 3)
 
   &--square
-    @include aspect-ratio(1, 1)
+    @include aspect-ratio(1 / 1)
 
   &--3-4
-    @include aspect-ratio(3, 4)
+    @include aspect-ratio(3 / 4)
 
   &--2-3
-    @include aspect-ratio(2, 3)
+    @include aspect-ratio(2 / 3)

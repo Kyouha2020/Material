@@ -7,7 +7,7 @@
   content: "";
   float: left;
   height: 0;
-  margin-top: calc(var(--mtrl-aspect-ratio-y) / var(--mtrl-aspect-ratio-x) * 100%);
+  margin-top: calc(100% / calc(var(--mtrl-aspect-ratio)));
 }
 .mtrl-aspect-ratio--16-9 {
   position: relative;
@@ -18,7 +18,7 @@
   content: "";
   float: left;
   height: 0;
-  margin-top: calc(9 / 16 * 100%);
+  margin-top: calc(100% / 1.7777777778);
 }
 .mtrl-aspect-ratio--3-2 {
   position: relative;
@@ -29,7 +29,7 @@
   content: "";
   float: left;
   height: 0;
-  margin-top: calc(2 / 3 * 100%);
+  margin-top: calc(100% / 1.5);
 }
 .mtrl-aspect-ratio--4-3 {
   position: relative;
@@ -40,7 +40,7 @@
   content: "";
   float: left;
   height: 0;
-  margin-top: calc(3 / 4 * 100%);
+  margin-top: calc(100% / 1.3333333333);
 }
 .mtrl-aspect-ratio--square {
   position: relative;
@@ -51,7 +51,7 @@
   content: "";
   float: left;
   height: 0;
-  margin-top: calc(1 / 1 * 100%);
+  margin-top: calc(100% / 1);
 }
 .mtrl-aspect-ratio--3-4 {
   position: relative;
@@ -62,7 +62,7 @@
   content: "";
   float: left;
   height: 0;
-  margin-top: calc(4 / 3 * 100%);
+  margin-top: calc(100% / 0.75);
 }
 .mtrl-aspect-ratio--2-3 {
   position: relative;
@@ -73,7 +73,7 @@
   content: "";
   float: left;
   height: 0;
-  margin-top: calc(3 / 2 * 100%);
+  margin-top: calc(100% / 0.6666666667);
 }
 
 /*# sourceMappingURL=aspect-ratio.css.map */
