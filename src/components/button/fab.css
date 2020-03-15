@@ -68,12 +68,6 @@
   width: 100%;
   height: 48px;
 }
-@media (prefers-color-scheme: dark) {
-  .mtrl-fab {
-    --mtrl-elevation-overlay: white;
-    --mtrl-elevation-overlay-opacity: 11%;
-  }
-}
 html[dark] .mtrl-fab {
   --mtrl-elevation-overlay: white;
   --mtrl-elevation-overlay-opacity: 11%;

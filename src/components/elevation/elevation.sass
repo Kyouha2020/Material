@@ -1,0 +1,5 @@
+@use "../../design/environment/elevation" as *
+
+@for $z from 0 through 24
+  .mtrl-elevation-#{$z}
+    @include elevation($z)

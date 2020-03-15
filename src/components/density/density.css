@@ -1,12 +1,15 @@
 .mtrl-density--0 {
   height: calc(var(--mtrl-component-height) + 0 * 4px);
 }
+
 .mtrl-density--1 {
   height: calc(var(--mtrl-component-height) + -1 * 4px);
 }
+
 .mtrl-density--2 {
   height: calc(var(--mtrl-component-height) + -2 * 4px);
 }
+
 .mtrl-density--3 {
   height: calc(var(--mtrl-component-height) + -3 * 4px);
 }

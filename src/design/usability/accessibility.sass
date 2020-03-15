@@ -27,8 +27,8 @@ $stroke: 12%
   @return .2126 * $red + .7152 * $green + .0722 * $blue
 
 @function contrast($back, $front)
-  $backLum: luminance($back) + .05
-  $foreLum: luminance($front) + .05
+  $backLum: luminance($back) + 0.05
+  $foreLum: luminance($front) + 0.05
   @return max($backLum, $foreLum) / min($backLum, $foreLum)
 
 @function tone($color)
@@ -37,7 +37,7 @@ $stroke: 12%
 
   $minimumContrast: 3.1
   $lightContrast: contrast($color, white)
-  $darkContrast: contrast($color, rgba(black, .87))
+  $darkContrast: contrast($color, rgba(black, 0.87))
 
   @if ($lightContrast < $minimumContrast) and ($darkContrast > $lightContrast)
     @return "light"
@@ -48,4 +48,4 @@ $stroke: 12%
   @return if(tone($color) == dark, light, dark)
 
 @function on-color($color)
-  @return if(contrast-tone($color) == dark, #000, #fff)
+  @return if(contrast-tone($color) == dark, black, white)
