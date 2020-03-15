@@ -4,28 +4,51 @@
 @use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
+@use "../../design/typography/typography" as *
 @use "../components" as *
 
-.mtrl-bottom-app-bar
+.mtrl-top-app-bar
   @include elevation(4)
   @include height(56px)
   @include unselectable
   @include centered-content
   display: flex
-  justify-content: space-between
   background-color: theme-prop(primary)
   color: theme-prop(on-primary)
 
-  &--landscape
-    @include height(48px)
+  &--dense
+    @include density(-2)
+
+  &--extended
+    @include height(128px)
+    align-items: flex-start
+    justify-content: start
+
+    &.mtrl-top-app-bar--dense
+      @include density(-4)
+
+      .mtrl-top-app-bar__start-controls, .mtrl-top-app-bar__end-controls
+        margin-top: 0
+
+    .mtrl-top-app-bar__start-controls, .mtrl-top-app-bar__end-controls
+      margin-top: 4px
+
+    .mtrl-top-app-bar__title
+      @include typography(headline5)
+      align-self: flex-end
+      padding-bottom: 24px
 
   &__start-controls
     @include margin-start(4px)
 
   &__end-controls
-    @include margin-end(4px)
+    @include margin-horizontal(auto, 4px)
 
-  &__navigation-drawer-control
+  &__title
+    @include typography(headline6)
+    @include margin-start(32px)
+
+  &__navigation-icon, &__action-icon
     @include ripple_
     @include ripple(theme-prop(on-primary))
     @include ripple_not_dark
@@ -40,27 +63,5 @@
     cursor: pointer
     fill: currentColor
 
-  &__fab
-    @include elevation(12)
-    margin-top: calc(#{prop(component-height)} * -1)
-
-    &__wrapper
-      @include centered-content
-      position: absolute
-      display: flex
-      width: 100%
-
-    &--end
-      @include margin-end(16px)
-
-    &--cut
-      &__wrapper
-        margin-top: calc(#{prop(component-height)} * -1)
-        width: 64px
-        height: 62px
-        border-radius: 50%
-        background-color: theme-prop(surface)
-
-        .mtrl-bottom-app-bar__fab
-          @include margin-start(4px)
-          margin-top: initial
+  &__navigation-icon
+    @include margin-start(4px)
