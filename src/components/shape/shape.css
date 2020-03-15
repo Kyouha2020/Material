@@ -23,9 +23,9 @@
   --mtrl-shape--corner-shape: notch;
 }
 .mtrl-shape--smooth-corners {
+  --mtrl-shape--corner-shape: smooth-rounded;
   --mtrl-shape--corner-radius: var(--mtrl-shape-smooth-corners);
   border-radius: var(--mtrl-shape--corner-radius, var(--mtrl-shape-smooth-corners));
-  --mtrl-shape--corner-shape: smooth-rounded;
 }
 .mtrl-shape--polygon {
   --mtrl-shape--corner-shape: polygon;

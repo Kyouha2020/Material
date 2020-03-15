@@ -9,8 +9,8 @@
       @include shape($shape)
 
   &--smooth-corners
-    @include corner(prop(shape-smooth-corners))
     @include shape(smooth-rounded)
+    @include corner(prop(shape-smooth-corners))
 
   &--polygon
     @include polygon(prop(shape-polygon-sides), prop(shape-polygon-angle))
