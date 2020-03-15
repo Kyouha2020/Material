@@ -242,13 +242,6 @@ html[dark] .mtrl-button--unelevated {
   --mtrl-shape--corner-radius: 0;
   border-radius: var(--mtrl-shape--corner-radius, 0);
 }
-.mtrl-button--block {
-  display: flex;
-  width: 100%;
-}
-.mtrl-button--block--between {
-  justify-content: space-between;
-}
 .mtrl-button__label {
   display: inline-flex;
   align-items: center;

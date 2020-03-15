@@ -122,13 +122,6 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
   &--tile
     @include corner(0)
 
-  &--block
-    display: flex
-    width: 100%
-
-    &--between
-      justify-content: space-between
-
   &__label
     @include centered-content
     color: prop(button-label-color, prop(button-ink-color, $label-color))
