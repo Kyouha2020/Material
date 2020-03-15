@@ -1,6 +1,6 @@
 @use "../../design/layout/density" as *
 
 .mtrl-density
-  @for $i from 1 through 3
-    &--n#{$i}
+  @for $i from 0 through 3
+    &--#{$i}
       @include density(-$i)
