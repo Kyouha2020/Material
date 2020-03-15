@@ -58,10 +58,10 @@
   content: "";
   position: absolute;
   top: calc((var(--mtrl-component-height) - 48px) / 2);
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  right: calc((var(--mtrl-component-height) - 48px) / 2);
+  bottom: calc((var(--mtrl-component-height) - 48px) / 2);
+  left: calc((var(--mtrl-component-height) - 48px) / 2);
+  min-width: 48px;
   height: 48px;
 }
 .mtrl-button:not(:focus-visible) {
