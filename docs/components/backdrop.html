@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Material Components: Backdrop" name="Description">
+  <title>Backdrop</title>
+  <style>
+    .mtrl-backdrop {
+      margin: 8px;
+    }
+  </style>
+  <link href="../index.css" rel="stylesheet">
+  <link href="../../src/components/app-bar/top-app-bar.css" rel="stylesheet">
+  <link href="../../src/components/backdrop/backdrop.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="toggle-container"></div>
+
+<h2>Backdrop</h2>
+<section id="backdrop">
+  <div class="mtrl-backdrop">
+    <div class="mtrl-backdrop__back-layer">
+      <div class="mtrl-top-app-bar">
+        <div class="mtrl-top-app-bar__start-controls">
+          <i class="mtrl-top-app-bar__navigation-icon material-icons" tabindex="0">menu</i>
+        </div>
+        <span class="mtrl-top-app-bar__title">Page title</span>
+        <div class="mtrl-top-app-bar__end-controls">
+          <i class="mtrl-top-app-bar__action-icon material-icons" tabindex="0">more_vert</i>
+        </div>
+      </div>
+    </div>
+    <div class="mtrl-backdrop__front-layer">
+      <div class="mtrl-backdrop__front-layer__subtitle">Subtitle</div>
+    </div>
+  </div>
+
+  <div class="mtrl-backdrop">
+    <div class="mtrl-backdrop__back-layer">
+      <div class="mtrl-top-app-bar">
+        <div class="mtrl-top-app-bar__start-controls">
+          <i class="mtrl-top-app-bar__navigation-icon material-icons" tabindex="0">close</i>
+        </div>
+        <span class="mtrl-top-app-bar__title">Page title</span>
+        <div class="mtrl-top-app-bar__end-controls"></div>
+      </div>
+    </div>
+    <div class="mtrl-backdrop__front-layer mtrl-backdrop__front-layer--shrink">
+      <div class="mtrl-backdrop__front-layer__subtitle">Subtitle</div>
+    </div>
+  </div>
+</section>
+
+<script async src="../index.js" type="module"></script>
+</body>
+</html>

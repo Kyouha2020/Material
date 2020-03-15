@@ -1,0 +1,47 @@
+@use "../../design/theme/theme" as *
+@use "../../design/environment/elevation" as *
+@use "../../design/interaction/ripple" as *
+@use "../../design/layout/density" as *
+@use "../../design/layout/spacing" as *
+@use "../../design/shape/shape" as *
+@use "../../design/typography/typography" as *
+@use "../../design/usability/accessibility" as *
+@use "../components" as *
+
+.mtrl-backdrop
+  @include height(720px)
+  width: 360px
+
+  &__back-layer
+    @include height(720px)
+    width: 360px
+    background-color: theme-prop(primary)
+    color: theme-prop(on-primary)
+
+    .mtrl-top-app-bar
+      @include elevation(0)
+
+  &__front-layer
+    @include elevation(1)
+    @include padding(16px 16px 0 16px)
+    @include corner(16px 16px 0 0)
+    @include height(720px - 56px - 16px)
+    width: 360px - 32px
+    margin-top: calc(-1 * #{prop(component-height)} - 16px)
+    background-color: theme-prop(surface)
+    color: theme-prop(on-surface)
+
+    &--shrink
+      @include height(48px)
+      @include padding(0 16px 0 16px)
+      margin-top: calc(-1 * #{prop(component-height)})
+
+      .mtrl-backdrop__front-layer__subtitle
+        margin-bottom: 12px
+
+    &__subtitle
+      @include height(32px)
+      @include typography(subtitle1)
+      display: inline-flex
+      align-items: flex-end
+      color: theme-prop(on-surface, $text--high-emphasis)
