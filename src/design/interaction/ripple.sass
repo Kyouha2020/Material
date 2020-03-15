@@ -8,6 +8,9 @@
   &:not(:hover):not(:focus):not(:active)::before
     background-color: prop(elevation-overlay, $color)
 
+@mixin ripple_not_dark
+  @include var(elevation-overlay-opacity, 0%)
+
 @mixin ripple_
   &::before
     content: ''

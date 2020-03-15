@@ -1,0 +1,70 @@
+@use "../../design/theme/theme" as *
+@use "../../design/environment/elevation" as *
+@use "../../design/interaction/ripple" as *
+@use "../../design/interaction/states" as *
+@use "../../design/layout/density" as *
+@use "../../design/layout/spacing" as *
+@use "../../design/shape/shape" as *
+@use "../../design/typography/typography" as *
+@use "../../design/usability/accessibility" as *
+@use "../../design/usability/bidirectionality" as *
+@use "../components" as *
+
+.mtrl-bottom-app-bar
+  @include elevation(4)
+  @include height(56px)
+  @include unselectable
+  @include vertical-centered-content
+  display: flex
+  justify-content: space-between
+  background-color: theme-prop(primary)
+  color: theme-prop(on-primary)
+
+  &--landscape
+    @include height(48px)
+
+  &__start-controls
+    @include margin-start(4px)
+
+  &__end-controls
+    @include margin-end(4px)
+
+  &__navigation-drawer-control
+    @include ripple_
+    @include ripple(theme-prop(on-primary))
+    @include ripple_not_dark
+    @include accessible-border
+    @include corner(50%)
+    @include padding(12px)
+    display: inline-flex
+    position: relative
+    width: 24px
+    height: 24px
+    font-size: 24px
+    cursor: pointer
+    fill: currentColor
+
+  &__fab
+    @include elevation(12)
+    margin-top: calc(#{prop(component-height)} * -1)
+
+    &__wrapper
+      @include centered-content
+      position: absolute
+      display: flex
+      width: 100%
+
+    &--end
+      @include margin-end(16px)
+
+    &--cut
+      &__wrapper
+        margin-top: calc(#{prop(component-height)} * -1)
+        width: 64px
+        height: 62px
+        border-radius: 50%
+        background-color: theme-prop(surface)
+
+        .mtrl-bottom-app-bar__fab
+          @include margin-start(4px)
+          margin-top: initial
