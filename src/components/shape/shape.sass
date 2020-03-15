@@ -1,4 +1,5 @@
 @use "../../design/shape/shape" as *
+@use "../../design/theme/theme" as *
 
 .mtrl-shape
   @include shape_
@@ -7,11 +8,9 @@
     &--#{$shape}-corners
       @include shape($shape)
 
-  @for $i from 1 through 6
-    &--smooth-corners-#{$i}
-      @include corner($i)
-      @include shape(smooth-rounded)
+  &--smooth-corners
+    @include corner(prop(shape-smooth-corners))
+    @include shape(smooth-rounded)
 
-  @for $i from 3 through 16
-    &--polygon-#{$i}
-      @include shape(polygon, $i)
+  &--polygon
+    @include shape(polygon, prop(shape-polygon-sides))
