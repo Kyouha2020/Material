@@ -30,6 +30,7 @@
 .mtrl-shape--polygon {
   --mtrl-shape--corner-shape: polygon;
   --mtrl-shape--polygon-sides: var(--mtrl-shape-polygon-sides);
+  --mtrl-shape--polygon-angle: var(--mtrl-shape-polygon-angle);
 }
 
 /*# sourceMappingURL=shape.css.map */

@@ -23,7 +23,7 @@ if (typeof registerPaint !== 'undefined') registerPaint('corner-shape', class {
     }
 
     smoothRounded(ctx, geom, properties) {
-        const n = properties.get('--mtrl-shape--corner-radius').toString(), r = geom.width / 2, w = geom.width / 2,
+        const n = properties.get('--mtrl-shape--corner-radius'), r = geom.width / 2, w = geom.width / 2,
             h = geom.height / 2
         let m = n
         if (n > 100) m = 100
@@ -45,8 +45,8 @@ if (typeof registerPaint !== 'undefined') registerPaint('corner-shape', class {
     }
 
     polygon(ctx, geom, properties) {
-        const numSides = properties.get('--mtrl-shape--polygon-sides').toString(),
-            rotate = properties.get('--mtrl-shape--polygon-angle').toString().replace(/ |deg/g, ''),
+        const numSides = properties.get('--mtrl-shape--polygon-sides'),
+            rotate = parseInt(properties.get('--mtrl-shape--polygon-angle')) || 0,
             center = {x: geom.width / 2, y: geom.height / 2}, radius = Math.min(geom.width, geom.height) / 2
 
         ctx.translate(geom.width / 2, geom.height / 2)

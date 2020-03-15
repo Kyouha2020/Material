@@ -14,9 +14,11 @@
 @mixin stroke_
   border: #{prop(shape--stroke-width)} solid #{prop(shape--stroke-color)}
 
-@mixin shape($shape: null, $sides: null, $angle: null)
-  @if $shape != null
-    @include var(shape--corner-shape, $shape)
+@mixin shape($shape)
+  @include var(shape--corner-shape, $shape)
+
+@mixin polygon($sides: null, $angle: null)
+  @include var(shape--corner-shape, polygon)
   @if $sides != null
     @include var(shape--polygon-sides, $sides)
   @if $angle != null
