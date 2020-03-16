@@ -160,6 +160,9 @@ html[dark] .mtrl-button--contained {
   height: var(--mtrl-component-height, var(--mtrl-button-height, 56px));
   flex-direction: column;
 }
+.mtrl-button--vertical .mtrl-button__icon {
+  margin-bottom: 4px;
+}
 html:not([dir=rtl]) .mtrl-button--vertical .mtrl-button__icon {
   margin-left: 0;
   margin-right: 0;
@@ -168,10 +171,8 @@ html[dir=rtl] .mtrl-button--vertical .mtrl-button__icon {
   margin-left: 0;
   margin-right: 0;
 }
-.mtrl-button--vertical .mtrl-button__icon--leading {
-  margin-bottom: 4px;
-}
 .mtrl-button--vertical .mtrl-button__icon--trailing {
+  margin-bottom: 0;
   margin-top: 4px;
 }
 .mtrl-button--vertical .mtrl-button__label {
@@ -297,11 +298,11 @@ html[dark] .mtrl-button--unelevated {
   font-size: 18px;
   fill: currentColor;
 }
-html:not([dir=rtl]) .mtrl-button__icon--leading {
+html:not([dir=rtl]) .mtrl-button__icon {
   margin-left: -4px;
   margin-right: 8px;
 }
-html[dir=rtl] .mtrl-button__icon--leading {
+html[dir=rtl] .mtrl-button__icon {
   margin-left: 8px;
   margin-right: -4px;
 }

@@ -47,10 +47,13 @@ $ink-color: theme-prop(surface, $text--high-emphasis)
     width: initial
 
     .mtrl-fab__icon
-      @include margin-horizontal(12px)
+      @include margin-horizontal(12px, -8px)
+
+      &--trailing
+        @include margin-horizontal(-8px, 12px)
 
     .mtrl-fab__label
-      @include margin-end(20px)
+      @include margin-horizontal(20px)
 
   &--prototype
     @include ripple(theme-prop(primary))

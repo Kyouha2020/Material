@@ -105,11 +105,10 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
 
     .mtrl-button__icon
       @include margin-horizontal(0)
-
-      &--leading
-        margin-bottom: 4px
+      margin-bottom: 4px
 
       &--trailing
+        margin-bottom: 0
         margin-top: 4px
 
     .mtrl-button__label
@@ -155,14 +154,12 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
       text-transform: none
 
   &__icon
+    @include margin-horizontal(-4px, 8px)
     width: 18px
     height: 18px
     color: prop(button-icon-color, prop(button-ink-color, $icon-color))
     font-size: 18px
     fill: currentColor
-
-    &--leading
-      @include margin-horizontal(-4px, 8px)
 
     &--trailing
       @include margin-horizontal(8px, -4px)
