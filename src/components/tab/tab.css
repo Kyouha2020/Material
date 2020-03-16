@@ -14,7 +14,6 @@
   text-decoration: none;
   text-transform: uppercase;
   display: flex;
-  width: 360px;
 }
 html:not([dir=rtl]) .mtrl-tab--scrollable {
   padding-left: 52px;
