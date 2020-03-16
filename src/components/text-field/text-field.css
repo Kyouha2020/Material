@@ -1,0 +1,137 @@
+.mtrl-text-field {
+  display: inline-flex;
+}
+.mtrl-text-field:focus-within:not(.mtrl-text-field--outlined) .mtrl-text-field__input {
+  --mtrl-component-height: 39px;
+  height: var(--mtrl-component-height, 39px);
+  border-bottom: 2px solid rgba(var(--mtrl-theme-primary), 1);
+}
+.mtrl-text-field:focus-within .mtrl-text-field__label {
+  font-family: Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.0071428571rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: inherit;
+  text-transform: inherit;
+  margin-top: 8px;
+  color: rgba(var(--mtrl-theme-primary), 87%);
+}
+.mtrl-text-field--outlined .mtrl-text-field__input {
+  --mtrl-shape--corner-radius: 4px;
+  border-radius: var(--mtrl-shape--corner-radius, 4px);
+  background-color: rgba(var(--mtrl-theme-surface), 1);
+  border: 1px solid rgba(var(--mtrl-theme-on-surface), 60%);
+}
+html:not([dir=rtl]) .mtrl-text-field--outlined .mtrl-text-field__input {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+html[dir=rtl] .mtrl-text-field--outlined .mtrl-text-field__input {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.mtrl-text-field--outlined:focus-within .mtrl-text-field__input {
+  border-color: rgba(var(--mtrl-theme-primary), 1);
+}
+.mtrl-text-field--outlined:focus-within .mtrl-text-field__label {
+  margin-top: -6px;
+  background-color: rgba(var(--mtrl-theme-surface), 1);
+}
+html:not([dir=rtl]) .mtrl-text-field--outlined:focus-within .mtrl-text-field__label {
+  margin-left: 10px;
+}
+html[dir=rtl] .mtrl-text-field--outlined:focus-within .mtrl-text-field__label {
+  margin-right: 10px;
+}
+html:not([dir=rtl]) .mtrl-text-field--outlined:focus-within .mtrl-text-field__label {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+html[dir=rtl] .mtrl-text-field--outlined:focus-within .mtrl-text-field__label {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.mtrl-text-field__input {
+  --mtrl-shape--corner-radius: 4px 4px 0 0;
+  border-radius: var(--mtrl-shape--corner-radius, 4px 4px 0 0);
+  --mtrl-component-height: 40px;
+  height: var(--mtrl-component-height, 40px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  border: none;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.03125rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: inherit;
+  text-transform: inherit;
+  background-color: rgba(var(--mtrl-theme-on-surface), 12%);
+  color: rgba(var(--mtrl-theme-on-surface), 87%);
+  padding-top: 16px;
+  border-bottom: 1px solid rgba(var(--mtrl-theme-on-surface), 60%);
+}
+html:not([dir=rtl]) .mtrl-text-field__input {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+html[dir=rtl] .mtrl-text-field__input {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.mtrl-text-field__input:not(:focus-visible) {
+  outline: none;
+}
+.mtrl-text-field__input:focus-visible {
+  overflow: hidden;
+}
+.mtrl-text-field__label {
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.009375rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: inherit;
+  text-transform: inherit;
+  position: absolute;
+  color: rgba(var(--mtrl-theme-on-surface), 87%);
+  margin-top: 20px;
+  transition: 150ms;
+}
+html:not([dir=rtl]) .mtrl-text-field__label {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+html[dir=rtl] .mtrl-text-field__label {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.mtrl-text-field__helper-text {
+  font-family: Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.0071428571rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: inherit;
+  text-transform: inherit;
+  position: absolute;
+  color: rgba(var(--mtrl-theme-on-surface), 60%);
+  margin-top: 64px;
+}
+html:not([dir=rtl]) .mtrl-text-field__helper-text {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+html[dir=rtl] .mtrl-text-field__helper-text {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/*# sourceMappingURL=text-field.css.map */
