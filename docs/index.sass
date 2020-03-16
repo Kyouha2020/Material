@@ -20,18 +20,24 @@ body
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
 
-a
-  text-decoration: none
-  color: #6200ee
-
-  &:hover
-    border-bottom: 2px solid #03dac6
-
 h2
   margin-top: 3rem
 
 h3, h4
   margin-top: 24px
+
+.gallery
+  display: flex
+  flex-wrap: wrap
+
+  div
+    display: inline-flex
+    flex-direction: column
+    width: 320px
+    margin: 8px
+
+    img
+      width: 100%
 
 span[unsafe], span[against]
   margin: 0 0 0 8px
