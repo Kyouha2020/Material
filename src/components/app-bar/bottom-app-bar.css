@@ -21,33 +21,33 @@ html[dark] .mtrl-bottom-app-bar {
   --mtrl-elevation-overlay: white;
   --mtrl-elevation-overlay-opacity: 9%;
 }
-.mtrl-bottom-app-bar--stroked {
+.mtrl-bottom-app-bar--prototype {
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
   background-color: rgba(var(--mtrl-theme-surface), 1);
   color: rgba(var(--mtrl-theme-primary), 1);
 }
-.mtrl-bottom-app-bar--stroked .mtrl-bottom-app-bar__navigation-drawer-control::before {
+.mtrl-bottom-app-bar--prototype .mtrl-bottom-app-bar__navigation-drawer-control::before {
   background-color: rgba(var(--mtrl-theme-primary), 1);
 }
-.mtrl-bottom-app-bar--stroked .mtrl-bottom-app-bar__navigation-drawer-control:not(:hover):not(:focus):not(:active)::before {
+.mtrl-bottom-app-bar--prototype .mtrl-bottom-app-bar__navigation-drawer-control:not(:hover):not(:focus):not(:active)::before {
   background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-primary), 1));
 }
-.mtrl-bottom-app-bar--stroked .mtrl-bottom-app-bar__fab {
+.mtrl-bottom-app-bar--prototype .mtrl-bottom-app-bar__fab {
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
   background-color: rgba(var(--mtrl-theme-surface), 1);
   color: rgba(var(--mtrl-theme-primary), 1);
 }
-.mtrl-bottom-app-bar--stroked .mtrl-bottom-app-bar__fab::before {
+.mtrl-bottom-app-bar--prototype .mtrl-bottom-app-bar__fab::before {
   background-color: rgba(var(--mtrl-theme-primary), 1);
 }
-.mtrl-bottom-app-bar--stroked .mtrl-bottom-app-bar__fab:not(:hover):not(:focus):not(:active)::before {
+.mtrl-bottom-app-bar--prototype .mtrl-bottom-app-bar__fab:not(:hover):not(:focus):not(:active)::before {
   background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-primary), 1));
 }
-.mtrl-bottom-app-bar--stroked .mtrl-bottom-app-bar__fab--cut__wrapper {
+.mtrl-bottom-app-bar--prototype .mtrl-bottom-app-bar__fab--cut__wrapper {
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);

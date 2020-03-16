@@ -119,17 +119,17 @@ html:not([dir=rtl]) .mtrl-fab--extended .mtrl-fab__label {
 html[dir=rtl] .mtrl-fab--extended .mtrl-fab__label {
   margin-left: 20px;
 }
-.mtrl-fab--stroked {
+.mtrl-fab--prototype {
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
   background-color: rgba(var(--mtrl-theme-surface), 1);
   color: rgba(var(--mtrl-theme-primary), 1);
 }
-.mtrl-fab--stroked::before {
+.mtrl-fab--prototype::before {
   background-color: rgba(var(--mtrl-theme-primary), 1);
 }
-.mtrl-fab--stroked:not(:hover):not(:focus):not(:active)::before {
+.mtrl-fab--prototype:not(:hover):not(:focus):not(:active)::before {
   background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-primary), 1));
 }
 .mtrl-fab__icon {

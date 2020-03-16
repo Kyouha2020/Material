@@ -50,17 +50,17 @@ html[dark] .mtrl-top-app-bar {
   align-self: flex-end;
   padding-bottom: 24px;
 }
-.mtrl-top-app-bar--stroked {
+.mtrl-top-app-bar--prototype {
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
   background-color: rgba(var(--mtrl-theme-surface), 1);
   color: rgba(var(--mtrl-theme-primary), 1);
 }
-.mtrl-top-app-bar--stroked .mtrl-top-app-bar__navigation-icon::before, .mtrl-top-app-bar--stroked .mtrl-top-app-bar__action-icon::before {
+.mtrl-top-app-bar--prototype .mtrl-top-app-bar__navigation-icon::before, .mtrl-top-app-bar--prototype .mtrl-top-app-bar__action-icon::before {
   background-color: rgba(var(--mtrl-theme-primary), 1);
 }
-.mtrl-top-app-bar--stroked .mtrl-top-app-bar__navigation-icon:not(:hover):not(:focus):not(:active)::before, .mtrl-top-app-bar--stroked .mtrl-top-app-bar__action-icon:not(:hover):not(:focus):not(:active)::before {
+.mtrl-top-app-bar--prototype .mtrl-top-app-bar__navigation-icon:not(:hover):not(:focus):not(:active)::before, .mtrl-top-app-bar--prototype .mtrl-top-app-bar__action-icon:not(:hover):not(:focus):not(:active)::before {
   background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-primary), 1));
 }
 html:not([dir=rtl]) .mtrl-top-app-bar__start-controls {

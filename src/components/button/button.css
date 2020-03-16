@@ -142,17 +142,17 @@ html[dark] .mtrl-button--contained {
 .mtrl-button--contained:disabled {
   background-color: var(--mtrl-button-disabled-container-color, rgba(var(--mtrl-theme-on-surface), 12%));
 }
-.mtrl-button--stroked {
+.mtrl-button--prototype {
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
   background-color: rgba(var(--mtrl-theme-surface), 1);
   color: rgba(var(--mtrl-theme-primary), 1);
 }
-.mtrl-button--stroked::before {
+.mtrl-button--prototype::before {
   background-color: rgba(var(--mtrl-theme-primary), 1);
 }
-.mtrl-button--stroked:not(:hover):not(:focus):not(:active)::before {
+.mtrl-button--prototype:not(:hover):not(:focus):not(:active)::before {
   background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-primary), 1));
 }
 .mtrl-button--vertical {
