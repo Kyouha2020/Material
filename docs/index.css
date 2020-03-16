@@ -54,7 +54,7 @@ html > h1, html h2, html h3, html h4, html h5, html h6, html #theme-toggle, html
 html[dark] {
   background-color: #121212;
 }
-html[dark] > h1, html[dark] h2, html[dark] h3, html[dark] h4, html[dark] h5, html[dark] h6, html[dark] #theme-toggle, html[dark] #dir-toggle {
+html[dark] > h1, html[dark] h2, html[dark] h3, html[dark] h4, html[dark] h5, html[dark] h6, html[dark] table, html[dark] td, html[dark] #theme-toggle, html[dark] #dir-toggle {
   color: rgba(255, 255, 255, 0.6);
   font-weight: 500;
 }
@@ -71,6 +71,16 @@ h2 {
 
 h3, h4 {
   margin-top: 24px;
+}
+
+table, td {
+  border: 1px solid #333;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+th {
+  border-bottom: 1px solid #333;
 }
 
 .gallery {
