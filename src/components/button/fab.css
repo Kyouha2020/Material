@@ -134,7 +134,7 @@ html[dir=rtl] .mtrl-fab--extended .mtrl-fab__label {
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
   background-color: rgba(var(--mtrl-theme-surface), 1);
-  color: rgba(var(--mtrl-theme-primary), 1);
+  color: rgba(var(--mtrl-theme-primary), 87%);
 }
 .mtrl-fab--prototype::before {
   background-color: rgba(var(--mtrl-theme-primary), 1);

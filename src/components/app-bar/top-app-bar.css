@@ -14,7 +14,7 @@
   vertical-align: middle;
   display: flex;
   background-color: rgba(var(--mtrl-theme-primary), 1);
-  color: rgba(var(--mtrl-theme-on-primary), 1);
+  color: rgba(var(--mtrl-theme-on-primary), 87%);
 }
 html[dark] .mtrl-top-app-bar {
   --mtrl-elevation-overlay: white;
@@ -55,7 +55,7 @@ html[dark] .mtrl-top-app-bar {
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
   background-color: rgba(var(--mtrl-theme-surface), 1);
-  color: rgba(var(--mtrl-theme-primary), 1);
+  color: rgba(var(--mtrl-theme-primary), 87%);
 }
 .mtrl-top-app-bar--prototype .mtrl-top-app-bar__navigation-icon::before, .mtrl-top-app-bar--prototype .mtrl-top-app-bar__action-icon::before {
   background-color: rgba(var(--mtrl-theme-primary), 1);

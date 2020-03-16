@@ -90,7 +90,7 @@ html[dir=rtl] .mtrl-tab__item {
   cursor: pointer;
 }
 .mtrl-tab__item--active {
-  color: rgba(var(--mtrl-theme-primary), 1);
+  color: rgba(var(--mtrl-theme-primary), 87%);
   border-bottom: 2px solid rgba(var(--mtrl-theme-primary), 1);
 }
 .mtrl-tab__item--full-width {

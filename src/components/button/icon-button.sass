@@ -29,7 +29,7 @@
 
   &:disabled
     @include stroke($color: theme-prop(on-surface, $stroke))
-    color: theme-prop(on-surface, $text--disabled)
+    color: theme-prop(on-surface, $icon--disabled)
     background-color: theme-prop(surface, $disabled-filled-container)
     cursor: default
     pointer-events: none
@@ -49,7 +49,7 @@
 
   &--contained
     @include ripple(theme-prop(surface))
-    color: theme-prop(surface, $text--high-emphasis)
+    color: theme-prop(surface, $icon--active)
     background-color: theme-prop(on-surface)
 
     &:disabled
@@ -60,7 +60,7 @@
     @include stroke_
     @include stroke(1px, theme-prop(primary))
     background-color: theme-prop(surface)
-    color: theme-prop(primary)
+    color: theme-prop(primary, $icon--active)
 
   &--tile
     @include corner(0)

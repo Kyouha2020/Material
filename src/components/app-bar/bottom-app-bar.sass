@@ -4,6 +4,7 @@
 @use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
+@use "../../design/usability/accessibility" as *
 @use "../components" as *
 
 .mtrl-bottom-app-bar
@@ -14,13 +15,13 @@
   display: flex
   justify-content: space-between
   background-color: theme-prop(primary)
-  color: theme-prop(on-primary)
+  color: theme-prop(on-primary, $text--high-emphasis)
 
   &--prototype
     @include stroke_
     @include stroke(1px, theme-prop(primary))
     background-color: theme-prop(surface)
-    color: theme-prop(primary)
+    color: theme-prop(primary, $text--high-emphasis)
 
     .mtrl-bottom-app-bar__navigation-drawer-control
       @include ripple(theme-prop(primary))
@@ -30,7 +31,7 @@
       @include stroke_
       @include stroke(1px, theme-prop(primary))
       background-color: theme-prop(surface)
-      color: theme-prop(primary)
+      color: theme-prop(primary, $text--high-emphasis)
 
       &--cut__wrapper
         @include stroke_

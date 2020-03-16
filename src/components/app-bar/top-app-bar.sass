@@ -5,6 +5,7 @@
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
 @use "../../design/typography/typography" as *
+@use "../../design/usability/accessibility" as *
 @use "../components" as *
 
 .mtrl-top-app-bar
@@ -14,7 +15,7 @@
   @include centered-content
   display: flex
   background-color: theme-prop(primary)
-  color: theme-prop(on-primary)
+  color: theme-prop(on-primary, $text--high-emphasis)
 
   &--dense
     @include density(-2)
@@ -42,7 +43,7 @@
     @include stroke_
     @include stroke(1px, theme-prop(primary))
     background-color: theme-prop(surface)
-    color: theme-prop(primary)
+    color: theme-prop(primary, $text--high-emphasis)
 
     .mtrl-top-app-bar__navigation-icon, .mtrl-top-app-bar__action-icon
       @include ripple(theme-prop(primary))

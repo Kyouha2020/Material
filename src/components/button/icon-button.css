@@ -105,7 +105,7 @@ html[dark] .mtrl-icon-button--outlined:focus {
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
   background-color: rgba(var(--mtrl-theme-surface), 1);
-  color: rgba(var(--mtrl-theme-primary), 1);
+  color: rgba(var(--mtrl-theme-primary), 87%);
 }
 .mtrl-icon-button--prototype::before {
   background-color: rgba(var(--mtrl-theme-primary), 1);

@@ -17,7 +17,7 @@
     @include height(720px)
     width: 360px
     background-color: theme-prop(primary)
-    color: theme-prop(on-primary)
+    color: theme-prop(on-primary, $text--high-emphasis)
 
     .mtrl-top-app-bar
       @include elevation(0)
@@ -31,7 +31,7 @@
     width: 360px - 32px
     margin-top: 56px
     background-color: theme-prop(surface)
-    color: theme-prop(on-surface)
+    color: theme-prop(on-surface, $text--high-emphasis)
 
     &--shrink
       @include height(48px)
@@ -54,7 +54,7 @@
     &__action-icon
       @include ripple_
       @include ripple(theme-prop(on-surface))
-      @include ripple_not_dark
+      @include no-dark-elevation-overlay
       @include accessible-border
       @include corner(50%)
       @include padding(12px)
