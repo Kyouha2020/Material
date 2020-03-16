@@ -28,6 +28,7 @@
     cursor: pointer
 
   &:disabled
+    @include stroke($color: theme-prop(on-surface, $stroke))
     color: theme-prop(on-surface, $text--disabled)
     background-color: theme-prop(surface, $disabled-filled-container)
     cursor: default
@@ -53,6 +54,13 @@
 
     &:disabled
       background-color: theme-prop(on-surface, $disabled-filled-container)
+
+  &--stroked
+    @include ripple(theme-prop(primary))
+    @include stroke_
+    @include stroke(1px, theme-prop(primary))
+    background-color: theme-prop(surface)
+    color: theme-prop(primary)
 
   &--tile
     @include corner(0)

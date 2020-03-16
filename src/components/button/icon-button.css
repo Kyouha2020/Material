@@ -66,6 +66,7 @@
   cursor: pointer;
 }
 .mtrl-icon-button:disabled {
+  --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 12%);
   color: rgba(var(--mtrl-theme-on-surface), 38%);
   background-color: rgba(var(--mtrl-theme-surface), 12%);
   cursor: default;
@@ -98,6 +99,19 @@ html[dark] .mtrl-icon-button--outlined:focus {
 }
 .mtrl-icon-button--contained:disabled {
   background-color: rgba(var(--mtrl-theme-on-surface), 12%);
+}
+.mtrl-icon-button--stroked {
+  border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
+  --mtrl-shape--stroke-width: 1px;
+  --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
+  background-color: rgba(var(--mtrl-theme-surface), 1);
+  color: rgba(var(--mtrl-theme-primary), 1);
+}
+.mtrl-icon-button--stroked::before {
+  background-color: rgba(var(--mtrl-theme-primary), 1);
+}
+.mtrl-icon-button--stroked:not(:hover):not(:focus):not(:active)::before {
+  background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-primary), 1));
 }
 .mtrl-icon-button--tile {
   --mtrl-shape--corner-radius: 0;

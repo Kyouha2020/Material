@@ -77,6 +77,7 @@
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 0;
+  --mtrl-shape--stroke-color: var(--mtrl-button-disabled-stroke-color, rgba(var(--mtrl-theme-on-surface), 12%));
   color: var(--mtrl-button-disabled-ink-color, rgba(var(--mtrl-theme-on-surface), 38%));
   background-color: var(--mtrl-button-disabled-container-color, rgba(var(--mtrl-theme-surface), 12%));
   cursor: default;
@@ -140,6 +141,19 @@ html[dark] .mtrl-button--contained {
 }
 .mtrl-button--contained:disabled {
   background-color: var(--mtrl-button-disabled-container-color, rgba(var(--mtrl-theme-on-surface), 12%));
+}
+.mtrl-button--stroked {
+  border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
+  --mtrl-shape--stroke-width: 1px;
+  --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
+  background-color: rgba(var(--mtrl-theme-surface), 1);
+  color: rgba(var(--mtrl-theme-primary), 1);
+}
+.mtrl-button--stroked::before {
+  background-color: rgba(var(--mtrl-theme-primary), 1);
+}
+.mtrl-button--stroked:not(:hover):not(:focus):not(:active)::before {
+  background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-primary), 1));
 }
 .mtrl-button--vertical {
   --mtrl-component-height: var(--mtrl-button-height, 56px);

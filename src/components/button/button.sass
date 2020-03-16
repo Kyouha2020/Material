@@ -26,6 +26,7 @@ $disabled-icon-color: currentColor
 
 $stroke-color: theme-prop(on-surface, $stroke)
 $dark-stroke-color: theme-prop(primary)
+$disabled-stroke-color: theme-prop(on-surface, $stroke)
 
 $contained-ripple-color: theme-prop(on-primary)
 $contained-container-color: theme-prop(primary)
@@ -54,6 +55,7 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
 
   &:disabled
     @include elevation(0)
+    @include stroke($color: prop(button-disabled-stroke-color, $disabled-stroke-color))
     color: prop(button-disabled-ink-color, $disabled-ink-color)
     background-color: prop(button-disabled-container-color, $disabled-container-color)
     cursor: default
@@ -89,6 +91,13 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
 
     &:disabled
       background-color: prop(button-disabled-container-color, $disabled-contained-container-color)
+
+  &--stroked
+    @include ripple(theme-prop(primary))
+    @include stroke_
+    @include stroke(1px, theme-prop(primary))
+    background-color: theme-prop(surface)
+    color: theme-prop(primary)
 
   &--vertical
     @include height(prop(button-height, 56px))

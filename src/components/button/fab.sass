@@ -52,6 +52,13 @@ $ink-color: theme-prop(surface, $text--high-emphasis)
     .mtrl-fab__label
       @include margin-end(20px)
 
+  &--stroked
+    @include ripple(theme-prop(primary))
+    @include stroke_
+    @include stroke(1px, theme-prop(primary))
+    background-color: theme-prop(surface)
+    color: theme-prop(primary)
+
   &__icon
     width: 24px
     height: 24px
