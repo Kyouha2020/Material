@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Material Components: Tab" name="Description">
+  <title>Tab</title>
+  <style>
+    .mtrl-tab {
+      margin: 8px;
+    }
+  </style>
+  <link href="../index.css" rel="stylesheet">
+  <link href="../../src/components/tab/tab.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="toggle-container">
+  <div id="theme-toggle" title="dark mode"><i class="material-icons">brightness_4</i></div>
+  <div id="dir-toggle" title="RTL mode"><i class="material-icons">navigate_before</i></div>
+</div>
+
+<h2>Tab</h2>
+<section id="tab">
+  <h3>Fixed Tabs</h3>
+  <div class="mtrl-tab mtrl-tab--fixed">
+    <div class="mtrl-tab__item mtrl-tab__item--active" tabindex="0">Item One</div>
+    <div class="mtrl-tab__item" tabindex="0">Item Two</div>
+  </div>
+
+  <div class="mtrl-tab mtrl-tab--fixed">
+    <div class="mtrl-tab__item mtrl-tab__item--active" tabindex="0">
+      <i class="mtrl-tab__item__icon material-icons">phone</i>
+    </div>
+    <div class="mtrl-tab__item" tabindex="0">
+      <i class="mtrl-tab__item__icon material-icons">favorite</i>
+    </div>
+    <div class="mtrl-tab__item" tabindex="0">
+      <i class="mtrl-tab__item__icon material-icons">bookmark</i>
+    </div>
+  </div>
+
+  <div class="mtrl-tab mtrl-tab--fixed">
+    <div class="mtrl-tab__item mtrl-tab__item--active" tabindex="0">
+      <i class="mtrl-tab__item__icon material-icons">phone</i>
+      <span class="mtrl-tab__item__label">Item One</span>
+    </div>
+    <div class="mtrl-tab__item" tabindex="0">
+      <i class="mtrl-tab__item__icon material-icons">favorite</i>
+      <span class="mtrl-tab__item__label">Item Two</span>
+    </div>
+    <div class="mtrl-tab__item" tabindex="0">
+      <i class="mtrl-tab__item__icon material-icons">bookmark</i>
+      <span class="mtrl-tab__item__label">Item Three</span>
+    </div>
+  </div>
+
+  <div class="mtrl-tab mtrl-tab--fixed">
+    <div class="mtrl-tab__item mtrl-tab__item--active" tabindex="0">
+      <span class="mtrl-tab__item__label">Item One</span>
+      <i class="mtrl-tab__item__icon material-icons">phone</i>
+    </div>
+    <div class="mtrl-tab__item" tabindex="0">
+      <span class="mtrl-tab__item__label">Item Two</span>
+      <i class="mtrl-tab__item__icon material-icons">favorite</i>
+    </div>
+    <div class="mtrl-tab__item" tabindex="0">
+      <span class="mtrl-tab__item__label">Item Three</span>
+      <i class="mtrl-tab__item__icon material-icons">bookmark</i>
+    </div>
+  </div>
+
+  <div class="mtrl-tab mtrl-tab--fixed mtrl-tab--top-icon">
+    <div class="mtrl-tab__item mtrl-tab__item--top-icon mtrl-tab__item--active" tabindex="0">
+      <i class="mtrl-tab__item__icon material-icons">phone</i>
+      <span class="mtrl-tab__item__label">Item One</span>
+    </div>
+    <div class="mtrl-tab__item mtrl-tab__item--top-icon" tabindex="0">
+      <i class="mtrl-tab__item__icon material-icons">favorite</i>
+      <span class="mtrl-tab__item__label">Item Two</span>
+    </div>
+    <div class="mtrl-tab__item mtrl-tab__item--top-icon" tabindex="0">
+      <i class="mtrl-tab__item__icon material-icons">bookmark</i>
+      <span class="mtrl-tab__item__label">Item Three</span>
+    </div>
+  </div>
+
+  <h3>Scrollable Tabs</h3>
+  <div class="mtrl-tab mtrl-tab--scrollable">
+    <div class="mtrl-tab__item mtrl-tab__item--active" tabindex="0">Item One</div>
+    <div class="mtrl-tab__item" tabindex="0">Item Two</div>
+    <div class="mtrl-tab__item" tabindex="0">Item Three</div>
+  </div>
+
+  <h3>Tab Item</h3>
+  <div class="mtrl-tab__item mtrl-tab__item--active" tabindex="0">Item</div>
+  <div class="mtrl-tab__item mtrl-tab__item--active mtrl-tab__item--full-width" tabindex="0">Full Width Item</div>
+</section>
+
+<script async src="../index.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+@use "../../design/theme/theme" as *
+@use "../../design/environment/elevation" as *
+@use "../../design/interaction/ripple" as *
+@use "../../design/interaction/states" as *
+@use "../../design/layout/density" as *
+@use "../../design/layout/spacing" as *
+@use "../../design/shape/shape" as *
+@use "../../design/typography/typography" as *
+@use "../../design/usability/accessibility" as *
+@use "../components" as *
+
+.mtrl-tab
+  @include height(48px)
+  @include centered-content
+  @include typography(button)
+  display: flex
+  width: 360px
+
+  &--scrollable
+    @include padding-start(52px)
+
+  &--top-icon
+    @include height(72px)
+
+  &__item
+    @include ripple_
+    @include ripple(theme-prop(primary))
+    @include height(48px)
+    @include padding-horizontal(16px)
+    @include unselectable
+    @include centered-content
+    @include accessible-border
+    flex: 1
+    background-color: theme-prop(on-primary)
+    color: theme-prop(on-surface, $text--medium-emphasis)
+    min-width: 90px
+    max-width: 360px
+    position: relative
+    white-space: nowrap
+
+    &:hover
+      cursor: pointer
+
+    &--active
+      color: theme-prop(primary)
+      border-bottom: 2px solid theme-prop(primary)
+
+    &--full-width
+      width: 100%
+
+    &--top-icon
+      flex-direction: column
+
+    &__label
+      @include margin-horizontal(8px)
+
+    &__icon
+      width: 24px
+      height: 24px
+      font-size: 24px
+      fill: currentColor
