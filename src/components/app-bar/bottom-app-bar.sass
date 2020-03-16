@@ -16,6 +16,26 @@
   background-color: theme-prop(primary)
   color: theme-prop(on-primary)
 
+  &--stroked
+    @include stroke_
+    @include stroke(1px, theme-prop(primary))
+    background-color: theme-prop(surface)
+    color: theme-prop(primary)
+
+    .mtrl-bottom-app-bar__navigation-drawer-control
+      @include ripple(theme-prop(primary))
+
+    .mtrl-bottom-app-bar__fab
+      @include ripple(theme-prop(primary))
+      @include stroke_
+      @include stroke(1px, theme-prop(primary))
+      background-color: theme-prop(surface)
+      color: theme-prop(primary)
+
+      &--cut__wrapper
+        @include stroke_
+        @include stroke(1px, theme-prop(primary))
+
   &--landscape
     @include height(48px)
 
@@ -44,23 +64,27 @@
     @include elevation(12)
     margin-top: calc(#{prop(component-height)} * -1)
 
+    &--end
+      @include margin-end(16px)
+
+    &--cut
+      margin-top: calc(#{prop(component-height)} / -1 - 4px)
+
+      &__wrapper
+        @include height(62px)
+        @include corner(0 0 62px 62px)
+        margin-top: calc(#{prop(component-height)} * -1 + 4px)
+        width: 64px
+        border-radius: 50%
+        background-color: theme-prop(surface)
+        clip-path: inset(50% 0 0 0)
+
+        .mtrl-bottom-app-bar__fab
+          @include margin-start(4px)
+          margin-top: initial
+
     &__wrapper
       @include centered-content
       position: absolute
       display: flex
       width: 100%
-
-    &--end
-      @include margin-end(16px)
-
-    &--cut
-      &__wrapper
-        margin-top: calc(#{prop(component-height)} * -1)
-        width: 64px
-        height: 62px
-        border-radius: 50%
-        background-color: theme-prop(surface)
-
-        .mtrl-bottom-app-bar__fab
-          @include margin-start(4px)
-          margin-top: initial

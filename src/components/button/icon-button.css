@@ -103,6 +103,14 @@ html[dark] .mtrl-icon-button--outlined:focus {
   --mtrl-shape--corner-radius: 0;
   border-radius: var(--mtrl-shape--corner-radius, 0);
 }
+.mtrl-icon-button--diamond {
+  --mtrl-shape--corner-radius: 0;
+  border-radius: var(--mtrl-shape--corner-radius, 0);
+  transform: rotate(45deg);
+}
+.mtrl-icon-button--diamond .mtrl-icon-button__icon {
+  transform: rotate(-45deg);
+}
 .mtrl-icon-button__icon {
   width: 24px;
   height: 24px;
