@@ -39,6 +39,12 @@
       &:focus
         @include stroke(1px, theme-prop(on-surface))
 
+  &--two-tone
+    background-color: theme-prop(on-surface, 18%)
+
+    &:disabled
+      background-color: theme-prop(on-surface, $disabled-filled-container)
+
   &--contained
     @include ripple(theme-prop(surface))
     color: theme-prop(surface, $text--high-emphasis)

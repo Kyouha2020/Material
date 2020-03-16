@@ -65,7 +65,7 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
     .mtrl-button__icon
       color: prop(button-disabled-icon-color, prop(button-disabled-ink-color, $disabled-icon-color))
 
-  &--outlined, &--contained, &--float, &--raised
+  &--outlined, &--two-tone, &--contained, &--float, &--raised
     @include padding(0, prop(button-horizontal-padding, $contained-horizontal-padding))
 
   &--outlined
@@ -74,6 +74,12 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
     @include dark-theme
       &:focus
         @include stroke($color: prop(button-dark-stroke-color, $dark-stroke-color))
+
+  &--two-tone
+    background-color: theme-prop(primary, 18%)
+
+    &:disabled
+      background-color: prop(button-disabled-container-color, $disabled-contained-container-color)
 
   &--contained
     @include ripple(prop(button-ripple-color, $contained-ripple-color))

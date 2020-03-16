@@ -80,6 +80,12 @@ html[dark] .mtrl-icon-button--outlined:focus {
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 1);
 }
+.mtrl-icon-button--two-tone {
+  background-color: rgba(var(--mtrl-theme-on-surface), 18%);
+}
+.mtrl-icon-button--two-tone:disabled {
+  background-color: rgba(var(--mtrl-theme-on-surface), 12%);
+}
 .mtrl-icon-button--contained {
   color: rgba(var(--mtrl-theme-surface), 87%);
   background-color: rgba(var(--mtrl-theme-on-surface), 1);
