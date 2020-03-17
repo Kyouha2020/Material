@@ -14,24 +14,36 @@ $stroke-width: 1px
 $horizontal-padding: 8px
 $contained-horizontal-padding: 16px
 
+// ripple
 $ripple-color: theme-prop(primary)
+$contained-ripple-color: theme-prop(on-primary)
+
+// container
 $container-color: theme-prop(surface)
+$two-tone-container-color: theme-prop(primary, $stroke)
+$contained-container-color: theme-prop(primary)
 $disabled-container-color: theme-prop(surface, $disabled-filled-container)
+$disabled-two-tone-container-color: theme-prop(on-surface, $disabled-filled-container)
+$disabled-contained-container-color: theme-prop(on-surface, $disabled-filled-container)
+
+// ink
 $ink-color: theme-prop(primary, $text--high-emphasis)
+$contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
 $disabled-ink-color: theme-prop(on-surface, $text--disabled)
+
+// label
 $label-color: currentColor
 $disabled-label-color: currentColor
+
+// icon
 $icon-color: currentColor
 $disabled-icon-color: currentColor
 
+// stroke
 $stroke-color: theme-prop(on-surface, $stroke)
 $dark-stroke-color: theme-prop(primary)
 $disabled-stroke-color: theme-prop(on-surface, $stroke)
 
-$contained-ripple-color: theme-prop(on-primary)
-$contained-container-color: theme-prop(primary)
-$disabled-contained-container-color: theme-prop(on-surface, $disabled-filled-container)
-$contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
 
 .mtrl-button
   @include ripple_
@@ -78,10 +90,10 @@ $contained-ink-color: theme-prop(on-primary, $text--high-emphasis)
         @include stroke($color: prop(button-dark-stroke-color, $dark-stroke-color))
 
   &--two-tone
-    background-color: theme-prop(primary, 18%)
+    background-color: prop(button-container-color, $two-tone-container-color)
 
     &:disabled
-      background-color: prop(button-disabled-container-color, $disabled-contained-container-color)
+      background-color: prop(button-disabled-container-color, $disabled-two-tone-container-color)
 
   &--contained
     @include ripple(prop(button-ripple-color, $contained-ripple-color))

@@ -105,7 +105,7 @@ html[dark] .mtrl-button--outlined:focus {
   --mtrl-shape--stroke-color: var(--mtrl-button-dark-stroke-color, rgba(var(--mtrl-theme-primary), 1));
 }
 .mtrl-button--two-tone {
-  background-color: rgba(var(--mtrl-theme-primary), 18%);
+  background-color: var(--mtrl-button-container-color, rgba(var(--mtrl-theme-primary), 12%));
 }
 .mtrl-button--two-tone:disabled {
   background-color: var(--mtrl-button-disabled-container-color, rgba(var(--mtrl-theme-on-surface), 12%));
