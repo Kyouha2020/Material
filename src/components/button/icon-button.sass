@@ -1,16 +1,17 @@
 @use "sass:math"
-@use "../../design/theme/theme" as *
+@use "../../design/color/theme" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
 @use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
+@use "../../design/theme/theme" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
 
 .mtrl-icon-button
   @include ripple_
-  @include ripple(theme-prop(on-surface))
+  @include ripple($on-surface)
   @include touch-target
   @include corner(50%)
   @include height(48px)
@@ -18,9 +19,9 @@
   @include unselectable
   @include centered-content
   @include accessible-border
-  color: theme-prop(on-surface, $icon--active)
+  color: rgba($on-surface, $icon--active)
   width: 48px
-  background-color: theme-prop(surface)
+  background-color: $surface
   position: relative
   border: none
 
@@ -28,39 +29,39 @@
     cursor: pointer
 
   &:disabled
-    @include stroke($color: theme-prop(on-surface, $stroke))
-    color: theme-prop(on-surface, $icon--disabled)
-    background-color: theme-prop(surface, $disabled-filled-container)
+    @include stroke(1px, rgba($on-surface, $stroke))
+    color: rgba($on-surface, $icon--disabled)
+    background-color: rgba($surface, $disabled-filled-container)
     cursor: default
     pointer-events: none
 
   &--outlined
     @include stroke_
-    @include stroke(1px, theme-prop(on-surface, $stroke))
+    @include stroke(1px, rgba($on-surface, $stroke))
     @include dark-theme
       &:focus
-        @include stroke(1px, theme-prop(on-surface))
+        @include stroke(1px, $on-surface)
 
   &--two-tone
-    background-color: theme-prop(on-surface, 18%)
+    background-color: rgba($on-surface, 18%)
 
     &:disabled
-      background-color: theme-prop(on-surface, $disabled-filled-container)
+      background-color: rgba($on-surface, $disabled-filled-container)
 
   &--contained
-    @include ripple(theme-prop(surface))
-    color: theme-prop(surface, $icon--active)
-    background-color: theme-prop(on-surface)
+    @include ripple($surface)
+    color: rgba($surface, $icon--active)
+    background-color: $on-surface
 
     &:disabled
-      background-color: theme-prop(on-surface, $disabled-filled-container)
+      background-color: rgba($on-surface, $disabled-filled-container)
 
   &--prototype
-    @include ripple(theme-prop(primary))
+    @include ripple($primary)
     @include stroke_
-    @include stroke(1px, theme-prop(primary))
-    background-color: theme-prop(surface)
-    color: theme-prop(primary, $icon--active)
+    @include stroke(1px, $primary)
+    background-color: $surface
+    color: rgba($primary, $icon--active)
 
   &--tile
     @include corner(0)

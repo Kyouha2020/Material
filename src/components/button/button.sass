@@ -1,17 +1,18 @@
-@use "../../design/theme/theme" as *
+@use "../../design/color/theme" as *
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
 @use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
+@use "../../design/theme/theme" as *
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
 
 .mtrl-button
   @include ripple_
-  @include ripple(theme-prop(primary))
+  @include ripple($primary)
   @include touch-target
   @include corner(4px)
   @include height(36px)
@@ -20,8 +21,8 @@
   @include unselectable
   @include centered-content
   @include accessible-border
-  background-color: theme-prop(surface)
-  color: theme-prop(primary, $text--high-emphasis)
+  background-color: $surface
+  color: rgba($primary, $text--high-emphasis)
   min-width: 64px
   position: relative
   white-space: nowrap
@@ -31,9 +32,9 @@
 
   &:disabled
     @include elevation(0)
-    @include stroke($color: theme-prop(on-surface, $stroke))
-    color: theme-prop(on-surface, $text--disabled)
-    background-color: theme-prop(surface, $disabled-filled-container)
+    @include stroke(1px, rgba($on-surface, $stroke))
+    color: rgba($on-surface, $text--disabled)
+    background-color: rgba($surface, $disabled-filled-container)
     cursor: default
     pointer-events: none
 
@@ -42,29 +43,29 @@
 
   &--outlined
     @include stroke_
-    @include stroke(1px, theme-prop(on-surface, $stroke))
+    @include stroke(1px, rgba($on-surface, $stroke))
     @include dark-theme
       &:focus
-        @include stroke($color: theme-prop(primary))
+        @include stroke($color: $primary)
 
   &--stroked
     @include stroke_
-    @include stroke(1px, theme-prop(primary))
+    @include stroke(1px, $primary)
 
   &--two-tone
-    background-color: theme-prop(primary, $stroke)
+    background-color: rgba($primary, $stroke)
 
     &:disabled
-      background-color: theme-prop(on-surface, $disabled-filled-container)
+      background-color: rgba($on-surface, $disabled-filled-container)
 
   &--contained
-    @include ripple(theme-prop(on-primary))
+    @include ripple($on-primary)
     @include elevation(2, 4, 6, 8)
-    background-color: theme-prop(primary)
-    color: theme-prop(on-primary, $text--high-emphasis)
+    background-color: $primary
+    color: rgba($on-primary, $text--high-emphasis)
 
     &:disabled
-      background-color: theme-prop(on-surface, $disabled-filled-container)
+      background-color: rgba($on-surface, $disabled-filled-container)
 
   &--float
     @include elevation(0, 0, 2, 4)
@@ -79,6 +80,7 @@
     @include elevation(0, 0, 0, 0)
 
   &--rounded
+    @include corner(36px / 2)
     @include corner(calc(#{prop(button-height, prop(component-height))} / 2))
 
   &--tile

@@ -2,37 +2,6 @@
 @use "../usability/accessibility" as *
 @use "theme" as *
 
-$primary: $primary !default
-$primary-variant: $primary-variant !default
-$secondary: $secondary !default
-$secondary-variant: $secondary-variant !default
-$background: $background !default
-$surface: $surface !default
-$error: $error !default
-
-$on-primary: on-color($primary)
-$on-primary-variant: on-color($primary-variant)
-$on-secondary: on-color($secondary)
-$on-secondary-variant: on-color($secondary-variant)
-$on-background: on-color($background)
-$on-surface: on-color($surface)
-$on-error: on-color($error)
-
-$dark--primary: $dark--primary !default
-$dark--primary-variant: $dark--primary-variant !default
-$dark--dark-primary: $dark--dark-primary !default
-$dark--secondary: $dark--secondary !default
-$dark--background: $dark--background !default
-$dark--surface: $dark--surface !default
-$dark--error: $dark--error !default
-
-$dark--on-primary: on-color($dark--primary)
-$dark--on-primary-variant: on-color($dark--primary-variant)
-$dark--on-secondary: on-color($dark--secondary)
-$dark--on-background: on-color($dark--background)
-$dark--on-surface: on-color($dark--surface)
-$dark--on-error: on-color($dark--error)
-
 \:root
   --mtrl-theme-primary: #{hex2rgb($primary)}
   --mtrl-theme-primary-variant: #{hex2rgb($primary-variant)}

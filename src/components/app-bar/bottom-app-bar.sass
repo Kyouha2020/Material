@@ -1,9 +1,10 @@
-@use "../../design/theme/theme" as *
+@use "../../design/color/theme" as *
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
+@use "../../design/theme/theme" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
 
@@ -14,8 +15,8 @@
   @include centered-content
   display: flex
   justify-content: space-between
-  background-color: theme-prop(primary)
-  color: theme-prop(on-primary, $text--high-emphasis)
+  background-color: $primary
+  color: rgba($on-primary, $text--high-emphasis)
 
   &--landscape
     @include height(48px)
@@ -28,8 +29,7 @@
 
   &__navigation-drawer-control
     @include ripple_
-    @include ripple(theme-prop(on-primary))
-    @include no-dark-elevation-overlay
+    @include ripple($on-primary)
     @include accessible-border
     @include corner(50%)
     @include padding(12px)
@@ -57,7 +57,7 @@
         margin-top: calc(#{prop(component-height)} * -1 + 4px)
         width: 64px
         border-radius: 50%
-        background-color: theme-prop(surface)
+        background-color: $surface
         clip-path: inset(50% 0 0 0)
 
         .mtrl-bottom-app-bar__fab

@@ -1,9 +1,10 @@
-@use "../../design/theme/theme" as *
+@use "../../design/color/theme" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
 @use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
+@use "../../design/theme/theme" as *
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
@@ -22,15 +23,15 @@
 
   &__item
     @include ripple_
-    @include ripple(theme-prop(primary))
+    @include ripple($primary)
     @include height(48px)
     @include padding-horizontal(16px)
     @include unselectable
     @include centered-content
     @include accessible-border
     flex: 1
-    background-color: theme-prop(on-primary)
-    color: theme-prop(on-surface, $text--medium-emphasis)
+    background-color: $on-primary
+    color: rgba($on-surface, $text--medium-emphasis)
     min-width: 90px
     max-width: 360px
     position: relative
@@ -40,8 +41,8 @@
       cursor: pointer
 
     &--active
-      color: theme-prop(primary, $text--high-emphasis)
-      border-bottom: 2px solid theme-prop(primary)
+      color: rgba($primary, $text--high-emphasis)
+      border-bottom: 2px solid $primary
 
     &--full-width
       width: 100%

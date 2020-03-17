@@ -1,9 +1,10 @@
-@use "../../design/theme/theme" as *
+@use "../../design/color/theme" as *
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
+@use "../../design/theme/theme" as *
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
@@ -16,8 +17,8 @@
   &__back-layer
     @include height(720px)
     width: 360px
-    background-color: theme-prop(primary)
-    color: theme-prop(on-primary, $text--high-emphasis)
+    background-color: $primary
+    color: rgba($on-primary, $text--high-emphasis)
 
     .mtrl-top-app-bar
       @include elevation(0)
@@ -30,8 +31,8 @@
     @include height(720px - 56px)
     width: 360px - 32px
     margin-top: 56px
-    background-color: theme-prop(surface)
-    color: theme-prop(on-surface, $text--high-emphasis)
+    background-color: $surface
+    color: rgba($on-surface, $text--high-emphasis)
 
     &--shrink
       @include height(48px)
@@ -49,12 +50,11 @@
       @include typography(subtitle1)
       display: inline-flex
       align-items: flex-end
-      color: theme-prop(on-surface, $text--high-emphasis)
+      color: rgba($on-surface, $text--high-emphasis)
 
     &__action-icon
       @include ripple_
-      @include ripple(theme-prop(on-surface))
-      @include no-dark-elevation-overlay
+      @include ripple($on-surface)
       @include accessible-border
       @include corner(50%)
       @include padding(12px)

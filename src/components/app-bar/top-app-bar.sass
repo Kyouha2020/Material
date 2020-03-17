@@ -1,9 +1,10 @@
-@use "../../design/theme/theme" as *
+@use "../../design/color/theme" as *
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
+@use "../../design/theme/theme" as *
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
@@ -14,8 +15,8 @@
   @include unselectable
   @include centered-content
   display: flex
-  background-color: theme-prop(primary)
-  color: theme-prop(on-primary, $text--high-emphasis)
+  background-color: $primary
+  color: rgba($on-primary, $text--high-emphasis)
 
   &--dense
     @include density(-2)
@@ -51,8 +52,7 @@
 
   &__navigation-icon, &__action-icon
     @include ripple_
-    @include ripple(theme-prop(on-primary))
-    @include no-dark-elevation-overlay
+    @include ripple($on-primary)
     @include accessible-border
     @include corner(50%)
     @include padding(12px)

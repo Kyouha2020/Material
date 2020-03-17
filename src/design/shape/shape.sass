@@ -10,6 +10,7 @@
     @include var(shape--stroke-width, $width)
   @if $color != null
     @include var(shape--stroke-color, $color)
+  border: $width solid $color
 
 @mixin stroke_
   border: #{prop(shape--stroke-width)} solid #{prop(shape--stroke-color)}

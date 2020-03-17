@@ -1,9 +1,10 @@
-@use "../../design/theme/theme" as *
+@use "../../design/color/theme" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
 @use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
+@use "../../design/theme/theme" as *
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
@@ -15,29 +16,29 @@
     &:not(.mtrl-text-field--outlined)
       .mtrl-text-field__input
         @include height(39px)
-        border-bottom: 2px solid theme-prop(primary)
+        border-bottom: 2px solid $primary
 
     .mtrl-text-field__label
       @include typography(subtitle2)
       margin-top: 8px
-      color: theme-prop(primary, $text--high-emphasis)
+      color: rgba($primary, $text--high-emphasis)
 
   &--outlined
     .mtrl-text-field__input
       @include corner(4px)
       @include padding-horizontal(14px)
-      background-color: theme-prop(surface)
-      border: 1px solid theme-prop(on-surface, $text--medium-emphasis)
+      background-color: $surface
+      border: 1px solid rgba($on-surface, $text--medium-emphasis)
 
     &:focus-within
       .mtrl-text-field__input
-        border-color: theme-prop(primary)
+        border-color: $primary
 
       .mtrl-text-field__label
         @include margin-start(10px)
         @include padding-horizontal(4px)
         margin-top: -6px
-        background-color: theme-prop(surface)
+        background-color: $surface
 
   &__input
     @include corner(4px 4px 0 0)
@@ -46,16 +47,16 @@
     @include centered-content
     @include accessible-border
     @include typography(body1)
-    background-color: theme-prop(on-surface, $stroke)
-    color: theme-prop(on-surface, $text--high-emphasis)
+    background-color: rgba($on-surface, $stroke)
+    color: rgba($on-surface, $text--high-emphasis)
     padding-top: 16px
-    border-bottom: 1px solid theme-prop(on-surface, $text--medium-emphasis)
+    border-bottom: 1px solid rgba($on-surface, $text--medium-emphasis)
 
   &__label
     @include typography(subtitle1)
     @include padding-horizontal(12px)
     position: absolute
-    color: theme-prop(on-surface, $text--high-emphasis)
+    color: rgba($on-surface, $text--high-emphasis)
     margin-top: 20px
     transition: 150ms
 
@@ -63,5 +64,5 @@
     @include typography(subtitle2)
     @include padding-horizontal(12px)
     position: absolute
-    color: theme-prop(on-surface, $text--helper-text)
+    color: rgba($on-surface, $text--helper-text)
     margin-top: 64px

@@ -8,6 +8,7 @@
 
 @mixin prop($prop, $var, $value)
   --mtrl-#{$var}: #{$value}
+  #{$prop}: $value
   #{$prop}: var(--mtrl-#{$var}, $value)
 
 @mixin var($var, $value)
@@ -23,27 +24,3 @@
 
 @function hex2rgb($color)
   @return red($color), green($color), blue($color)
-
-@function theme-prop($theme, $alpha: 1)
-  @if $theme == primary
-    @return rgba(prop(theme-primary), $alpha)
-  @else if $theme == primary-variant
-    @return rgba(prop(theme-primary-variant), $alpha)
-  @else if $theme == secondary
-    @return rgba(prop(theme-secondary), $alpha)
-  @else if $theme == secondary-variant
-    @return rgba(prop(theme-secondary-variant), $alpha)
-  @else if $theme == surface
-    @return rgba(prop(theme-surface), $alpha)
-  @else if $theme == on-primary
-    @return rgba(prop(theme-on-primary), $alpha)
-  @else if $theme == on-primary-variant
-    @return rgba(prop(theme-on-primary), $alpha)
-  @else if $theme == on-secondary
-    @return rgba(prop(theme-on-secondary), $alpha)
-  @else if $theme == on-secondary-variant
-    @return rgba(prop(theme-on-secondary), $alpha)
-  @else if $theme == on-surface
-    @return rgba(prop(theme-on-surface), $alpha)
-  @else
-    @return rgba($theme, $alpha)

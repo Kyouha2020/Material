@@ -1,17 +1,18 @@
-@use "../../design/theme/theme" as *
+@use "../../design/color/theme" as *
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
 @use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/shape/shape" as *
+@use "../../design/theme/theme" as *
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
 
 .mtrl-fab
   @include ripple_
-  @include ripple(theme-prop(surface))
+  @include ripple($surface)
   @include touch-target
   @include elevation(6, 8, 10, 12)
   @include corner(50%)
@@ -21,8 +22,8 @@
   @include unselectable
   @include centered-content
   @include accessible-border
-  background-color: theme-prop(on-surface)
-  color: theme-prop(surface, $text--high-emphasis)
+  background-color: $on-surface
+  color: rgba($surface, $text--high-emphasis)
   width: 56px
   position: relative
   white-space: nowrap
