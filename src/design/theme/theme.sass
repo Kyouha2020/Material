@@ -45,3 +45,5 @@
     @return rgba(prop(theme-on-secondary), $alpha)
   @else if $theme == on-surface
     @return rgba(prop(theme-on-surface), $alpha)
+  @else
+    @return rgba($theme, $alpha)

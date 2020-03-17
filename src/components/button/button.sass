@@ -40,16 +40,16 @@
   &--outlined, &--stroked, &--two-tone, &--contained, &--float, &--raised, &--push
     @include padding(0, 16px)
 
-  &--stroked
-    @include stroke_
-    @include stroke(1px, theme-prop(primary))
-
   &--outlined
     @include stroke_
     @include stroke(1px, theme-prop(on-surface, $stroke))
     @include dark-theme
       &:focus
         @include stroke($color: theme-prop(primary))
+
+  &--stroked
+    @include stroke_
+    @include stroke(1px, theme-prop(primary))
 
   &--two-tone
     background-color: theme-prop(primary, $stroke)
@@ -65,27 +65,6 @@
 
     &:disabled
       background-color: theme-prop(on-surface, $disabled-filled-container)
-
-  &--vertical
-    @include height(56px)
-    flex-direction: column
-
-    .mtrl-button__icon
-      @include margin-horizontal(0)
-      margin-bottom: 4px
-
-      &--trailing
-        margin-bottom: 0
-        margin-top: 4px
-
-    .mtrl-button__label
-      @include typography(button, 0.875)
-
-  &--two-column
-    @include height(48px)
-
-    .mtrl-button__label
-      flex-direction: column
 
   &--float
     @include elevation(0, 0, 2, 4)
@@ -105,21 +84,22 @@
   &--tile
     @include corner(0)
 
+  &--vertical
+    @include height(56px)
+    flex-direction: column
+
+    .mtrl-button__icon
+      @include margin-horizontal(0)
+      margin-bottom: 4px
+
+      &--trailing
+        margin-bottom: 0
+        margin-top: 4px
+
   &__label
     @include centered-content
 
-    &--uppercase
-      text-transform: uppercase
-
     &--sentence-case
-      text-transform: none
-
-    &--primary
-      text-transform: none
-
-    &--secondary
-      @include typography(caption)
-      color: theme-prop(primary, $text--medium-emphasis)
       text-transform: none
 
   &__icon
