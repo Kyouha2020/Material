@@ -11,17 +11,17 @@
 
 .mtrl-button
   @include ripple_
-  @include ripple(prop(button-ripple-color, theme-prop(primary)))
+  @include ripple(theme-prop(primary))
   @include touch-target
-  @include corner(prop(button-corner-radius, 4px))
-  @include height(prop(button-height, 36px))
-  @include padding(0, prop(button-horizontal-padding, 8px))
+  @include corner(4px)
+  @include height(36px)
+  @include padding(0, 8px)
   @include typography(button)
   @include unselectable
   @include centered-content
   @include accessible-border
-  background-color: prop(button-container-color, theme-prop(surface))
-  color: prop(button-ink-color, theme-prop(primary, $text--high-emphasis))
+  background-color: theme-prop(surface)
+  color: theme-prop(primary, $text--high-emphasis)
   min-width: 64px
   position: relative
   white-space: nowrap
@@ -31,49 +31,43 @@
 
   &:disabled
     @include elevation(0)
-    @include stroke($color: prop(button-disabled-stroke-color, theme-prop(on-surface, $stroke)))
-    color: prop(button-disabled-ink-color, theme-prop(on-surface, $text--disabled))
-    background-color: prop(button-disabled-container-color, theme-prop(surface, $disabled-filled-container))
+    @include stroke($color: theme-prop(on-surface, $stroke))
+    color: theme-prop(on-surface, $text--disabled)
+    background-color: theme-prop(surface, $disabled-filled-container)
     cursor: default
     pointer-events: none
 
-    .mtrl-button__label
-      color: prop(button-disabled-label-color, prop(button-disabled-ink-color))
-
-    .mtrl-button__icon
-      color: prop(button-disabled-icon-color, prop(button-disabled-ink-color))
-
   &--outlined, &--stroked, &--two-tone, &--contained, &--float, &--raised, &--push
-    @include padding(0, prop(button-horizontal-padding, 16px))
+    @include padding(0, 16px)
 
   &--stroked
     @include stroke_
-    @include stroke(prop(button-stroke-width, 1px), prop(button-stroke-color, theme-prop(primary)))
+    @include stroke(1px, theme-prop(primary))
 
   &--outlined
     @include stroke_
-    @include stroke(prop(button-stroke-width, 1px), prop(button-stroke-color, theme-prop(on-surface, $stroke)))
+    @include stroke(1px, theme-prop(on-surface, $stroke))
     @include dark-theme
       &:focus
-        @include stroke($color: prop(button-dark-stroke-color, theme-prop(primary)))
+        @include stroke($color: theme-prop(primary))
 
   &--two-tone
-    background-color: prop(button-container-color, theme-prop(primary, $stroke))
+    background-color: theme-prop(primary, $stroke)
 
     &:disabled
-      background-color: prop(button-disabled-container-color, theme-prop(on-surface, $disabled-filled-container))
+      background-color: theme-prop(on-surface, $disabled-filled-container)
 
   &--contained
-    @include ripple(prop(button-ripple-color, theme-prop(on-primary)))
+    @include ripple(theme-prop(on-primary))
     @include elevation(2, 4, 6, 8)
-    background-color: prop(button-container-color, theme-prop(primary))
-    color: prop(button-ink-color, theme-prop(on-primary, $text--high-emphasis))
+    background-color: theme-prop(primary)
+    color: theme-prop(on-primary, $text--high-emphasis)
 
     &:disabled
-      background-color: prop(button-disabled-container-color, theme-prop(on-surface, $disabled-filled-container))
+      background-color: theme-prop(on-surface, $disabled-filled-container)
 
   &--vertical
-    @include height(prop(button-height, 56px))
+    @include height(56px)
     flex-direction: column
 
     .mtrl-button__icon
@@ -88,7 +82,7 @@
       @include typography(button, 0.875)
 
   &--two-column
-    @include height(prop(button-height, 48px))
+    @include height(48px)
 
     .mtrl-button__label
       flex-direction: column
@@ -113,7 +107,6 @@
 
   &__label
     @include centered-content
-    color: prop(button-label-color, prop(button-ink-color))
 
     &--uppercase
       text-transform: uppercase
@@ -133,7 +126,6 @@
     @include margin-horizontal(-4px, 8px)
     width: 18px
     height: 18px
-    color: prop(button-icon-color, prop(button-ink-color))
     font-size: 18px
     fill: currentColor
 

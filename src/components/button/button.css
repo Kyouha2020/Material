@@ -1,9 +1,9 @@
 .mtrl-button {
-  --mtrl-shape--corner-radius: var(--mtrl-button-corner-radius, 4px);
-  border-radius: var(--mtrl-shape--corner-radius, var(--mtrl-button-corner-radius, 4px));
-  --mtrl-component-height: var(--mtrl-button-height, 36px);
-  height: var(--mtrl-component-height, var(--mtrl-button-height, 36px));
-  padding: 0 var(--mtrl-button-horizontal-padding, 8px);
+  --mtrl-shape--corner-radius: 4px;
+  border-radius: var(--mtrl-shape--corner-radius, 4px);
+  --mtrl-component-height: 36px;
+  height: var(--mtrl-component-height, 36px);
+  padding: 0 8px;
   font-family: Roboto, sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
@@ -21,8 +21,8 @@
   justify-content: center;
   vertical-align: middle;
   border: none;
-  background-color: var(--mtrl-button-container-color, rgba(var(--mtrl-theme-surface), 1));
-  color: var(--mtrl-button-ink-color, rgba(var(--mtrl-theme-primary), 87%));
+  background-color: rgba(var(--mtrl-theme-surface), 1);
+  color: rgba(var(--mtrl-theme-primary), 87%);
   min-width: 64px;
   position: relative;
   white-space: nowrap;
@@ -49,10 +49,10 @@
   opacity: calc(10% + var(--mtrl-elevation-overlay-opacity, 0%));
 }
 .mtrl-button::before {
-  background-color: var(--mtrl-button-ripple-color, rgba(var(--mtrl-theme-primary), 1));
+  background-color: rgba(var(--mtrl-theme-primary), 1);
 }
 .mtrl-button:not(:hover):not(:focus):not(:active)::before {
-  background-color: var(--mtrl-elevation-overlay, var(--mtrl-button-ripple-color, rgba(var(--mtrl-theme-primary), 1)));
+  background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-primary), 1));
 }
 .mtrl-button::after {
   content: "";
@@ -77,9 +77,9 @@
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 0;
-  --mtrl-shape--stroke-color: var(--mtrl-button-disabled-stroke-color, rgba(var(--mtrl-theme-on-surface), 12%));
-  color: var(--mtrl-button-disabled-ink-color, rgba(var(--mtrl-theme-on-surface), 38%));
-  background-color: var(--mtrl-button-disabled-container-color, rgba(var(--mtrl-theme-surface), 12%));
+  --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 12%);
+  color: rgba(var(--mtrl-theme-on-surface), 38%);
+  background-color: rgba(var(--mtrl-theme-surface), 12%);
   cursor: default;
   pointer-events: none;
 }
@@ -87,46 +87,40 @@ html[dark] .mtrl-button:disabled {
   --mtrl-elevation-overlay: white;
   --mtrl-elevation-overlay-opacity: 0%;
 }
-.mtrl-button:disabled .mtrl-button__label {
-  color: var(--mtrl-button-disabled-label-color, var(--mtrl-button-disabled-ink-color));
-}
-.mtrl-button:disabled .mtrl-button__icon {
-  color: var(--mtrl-button-disabled-icon-color, var(--mtrl-button-disabled-ink-color));
-}
 .mtrl-button--outlined, .mtrl-button--stroked, .mtrl-button--two-tone, .mtrl-button--contained, .mtrl-button--float, .mtrl-button--raised, .mtrl-button--push {
-  padding: 0 var(--mtrl-button-horizontal-padding, 16px);
+  padding: 0 16px;
 }
 .mtrl-button--stroked {
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
-  --mtrl-shape--stroke-width: var(--mtrl-button-stroke-width, 1px);
-  --mtrl-shape--stroke-color: var(--mtrl-button-stroke-color, rgba(var(--mtrl-theme-primary), 1));
+  --mtrl-shape--stroke-width: 1px;
+  --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
 }
 .mtrl-button--outlined {
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
-  --mtrl-shape--stroke-width: var(--mtrl-button-stroke-width, 1px);
-  --mtrl-shape--stroke-color: var(--mtrl-button-stroke-color, rgba(var(--mtrl-theme-on-surface), 12%));
+  --mtrl-shape--stroke-width: 1px;
+  --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-on-surface), 12%);
 }
 html[dark] .mtrl-button--outlined:focus {
-  --mtrl-shape--stroke-color: var(--mtrl-button-dark-stroke-color, rgba(var(--mtrl-theme-primary), 1));
+  --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
 }
 .mtrl-button--two-tone {
-  background-color: var(--mtrl-button-container-color, rgba(var(--mtrl-theme-primary), 12%));
+  background-color: rgba(var(--mtrl-theme-primary), 12%);
 }
 .mtrl-button--two-tone:disabled {
-  background-color: var(--mtrl-button-disabled-container-color, rgba(var(--mtrl-theme-on-surface), 12%));
+  background-color: rgba(var(--mtrl-theme-on-surface), 12%);
 }
 .mtrl-button--contained {
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
-  background-color: var(--mtrl-button-container-color, rgba(var(--mtrl-theme-primary), 1));
-  color: var(--mtrl-button-ink-color, rgba(var(--mtrl-theme-on-primary), 87%));
+  background-color: rgba(var(--mtrl-theme-primary), 1);
+  color: rgba(var(--mtrl-theme-on-primary), 87%);
 }
 .mtrl-button--contained::before {
-  background-color: var(--mtrl-button-ripple-color, rgba(var(--mtrl-theme-on-primary), 1));
+  background-color: rgba(var(--mtrl-theme-on-primary), 1);
 }
 .mtrl-button--contained:not(:hover):not(:focus):not(:active)::before {
-  background-color: var(--mtrl-elevation-overlay, var(--mtrl-button-ripple-color, rgba(var(--mtrl-theme-on-primary), 1)));
+  background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-on-primary), 1));
 }
 html[dark] .mtrl-button--contained {
   --mtrl-elevation-overlay: white;
@@ -145,11 +139,11 @@ html[dark] .mtrl-button--contained {
   z-index: 8;
 }
 .mtrl-button--contained:disabled {
-  background-color: var(--mtrl-button-disabled-container-color, rgba(var(--mtrl-theme-on-surface), 12%));
+  background-color: rgba(var(--mtrl-theme-on-surface), 12%);
 }
 .mtrl-button--vertical {
-  --mtrl-component-height: var(--mtrl-button-height, 56px);
-  height: var(--mtrl-component-height, var(--mtrl-button-height, 56px));
+  --mtrl-component-height: 56px;
+  height: var(--mtrl-component-height, 56px);
   flex-direction: column;
 }
 .mtrl-button--vertical .mtrl-button__icon {
@@ -178,8 +172,8 @@ html[dir=rtl] .mtrl-button--vertical .mtrl-button__icon {
   text-transform: uppercase;
 }
 .mtrl-button--two-column {
-  --mtrl-component-height: var(--mtrl-button-height, 48px);
-  height: var(--mtrl-component-height, var(--mtrl-button-height, 48px));
+  --mtrl-component-height: 48px;
+  height: var(--mtrl-component-height, 48px);
 }
 .mtrl-button--two-column .mtrl-button__label {
   flex-direction: column;
@@ -281,7 +275,6 @@ html[dark] .mtrl-button--unelevated {
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-  color: var(--mtrl-button-label-color, var(--mtrl-button-ink-color));
 }
 .mtrl-button__label--uppercase {
   text-transform: uppercase;
@@ -307,7 +300,6 @@ html[dark] .mtrl-button--unelevated {
 .mtrl-button__icon {
   width: 18px;
   height: 18px;
-  color: var(--mtrl-button-icon-color, var(--mtrl-button-ink-color));
   font-size: 18px;
   fill: currentColor;
 }

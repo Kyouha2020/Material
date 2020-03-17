@@ -2,10 +2,10 @@
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 6;
-  --mtrl-shape--corner-radius: var(--mtrl-fab-corner-radius, 50%);
-  border-radius: var(--mtrl-shape--corner-radius, var(--mtrl-fab-corner-radius, 50%));
-  --mtrl-component-height: var(--mtrl-fab-height, 56px);
-  height: var(--mtrl-component-height, var(--mtrl-fab-height, 56px));
+  --mtrl-shape--corner-radius: 50%;
+  border-radius: var(--mtrl-shape--corner-radius, 50%);
+  --mtrl-component-height: 56px;
+  height: var(--mtrl-component-height, 56px);
   padding: 0;
   font-family: Roboto, sans-serif;
   font-size: 0.875rem;
@@ -24,8 +24,8 @@
   justify-content: center;
   vertical-align: middle;
   border: none;
-  background-color: var(--mtrl-fab-container-color, rgba(var(--mtrl-theme-on-surface), 1));
-  color: var(--mtrl-fab-ink-color, rgba(var(--mtrl-theme-surface), 87%));
+  background-color: rgba(var(--mtrl-theme-on-surface), 1);
+  color: rgba(var(--mtrl-theme-surface), 87%);
   width: 56px;
   position: relative;
   white-space: nowrap;
@@ -53,10 +53,10 @@
   opacity: calc(10% + var(--mtrl-elevation-overlay-opacity, 0%));
 }
 .mtrl-fab::before {
-  background-color: var(--mtrl-fab-ripple-color, rgba(var(--mtrl-theme-surface), 1));
+  background-color: rgba(var(--mtrl-theme-surface), 1);
 }
 .mtrl-fab:not(:hover):not(:focus):not(:active)::before {
-  background-color: var(--mtrl-elevation-overlay, var(--mtrl-fab-ripple-color, rgba(var(--mtrl-theme-surface), 1)));
+  background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-surface), 1));
 }
 .mtrl-fab::after {
   content: "";
@@ -94,13 +94,13 @@ html[dark] .mtrl-fab {
   cursor: pointer;
 }
 .mtrl-fab--mini {
-  --mtrl-component-height: var(--mtrl-fab-height, 40px);
-  height: var(--mtrl-component-height, var(--mtrl-fab-height, 40px));
+  --mtrl-component-height: 40px;
+  height: var(--mtrl-component-height, 40px);
   width: 40px;
 }
 .mtrl-fab--extended {
-  --mtrl-component-height: var(--mtrl-fab-height, 48px);
-  height: var(--mtrl-component-height, var(--mtrl-fab-height, 48px));
+  --mtrl-component-height: 48px;
+  height: var(--mtrl-component-height, 48px);
   --mtrl-shape--corner-radius: calc(var(--mtrl-fab-height, var(--mtrl-component-height)) / 2);
   border-radius: var(--mtrl-shape--corner-radius, calc(var(--mtrl-fab-height, var(--mtrl-component-height)) / 2));
   width: initial;
@@ -133,7 +133,6 @@ html[dir=rtl] .mtrl-fab--extended .mtrl-fab__label {
   width: 24px;
   height: 24px;
   font-size: 24px;
-  color: var(--mtrl-button-icon-color, var(--mtrl-button-ink-color));
   fill: currentColor;
 }
 

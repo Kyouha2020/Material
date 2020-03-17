@@ -11,18 +11,18 @@
 
 .mtrl-fab
   @include ripple_
-  @include ripple(prop(fab-ripple-color, theme-prop(surface)))
+  @include ripple(theme-prop(surface))
   @include touch-target
   @include elevation(6, 8, 10, 12)
-  @include corner(prop(fab-corner-radius, 50%))
-  @include height(prop(fab-height, 56px))
+  @include corner(50%)
+  @include height(56px)
   @include padding(0)
   @include typography(button)
   @include unselectable
   @include centered-content
   @include accessible-border
-  background-color: prop(fab-container-color, theme-prop(on-surface))
-  color: prop(fab-ink-color, theme-prop(surface, $text--high-emphasis))
+  background-color: theme-prop(on-surface)
+  color: theme-prop(surface, $text--high-emphasis)
   width: 56px
   position: relative
   white-space: nowrap
@@ -32,11 +32,11 @@
     cursor: pointer
 
   &--mini
-    @include height(prop(fab-height, 40px))
+    @include height(40px)
     width: 40px
 
   &--extended
-    @include height(prop(fab-height, 48px))
+    @include height(48px)
     @include corner(calc(#{prop(fab-height, prop(component-height))} / 2))
     width: initial
 
@@ -53,5 +53,4 @@
     width: 24px
     height: 24px
     font-size: 24px
-    color: prop(button-icon-color, prop(button-ink-color))
     fill: currentColor
