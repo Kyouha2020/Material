@@ -9,26 +9,20 @@
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
 
-$corner-radius: 50%
-
-$ripple-color: theme-prop(surface)
-$container-color: theme-prop(on-surface)
-$ink-color: theme-prop(surface, $text--high-emphasis)
-
 .mtrl-fab
   @include ripple_
-  @include ripple(prop(fab-ripple-color, $ripple-color))
+  @include ripple(prop(fab-ripple-color, theme-prop(surface)))
   @include touch-target
   @include elevation(6, 8, 10, 12)
-  @include corner(prop(fab-corner-radius, $corner-radius))
+  @include corner(prop(fab-corner-radius, 50%))
   @include height(prop(fab-height, 56px))
   @include padding(0)
   @include typography(button)
   @include unselectable
   @include centered-content
   @include accessible-border
-  background-color: prop(fab-container-color, $container-color)
-  color: prop(fab-ink-color, $ink-color)
+  background-color: prop(fab-container-color, theme-prop(on-surface))
+  color: prop(fab-ink-color, theme-prop(surface, $text--high-emphasis))
   width: 56px
   position: relative
   white-space: nowrap
