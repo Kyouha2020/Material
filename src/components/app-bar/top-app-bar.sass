@@ -39,15 +39,6 @@
       align-self: flex-end
       padding-bottom: 24px
 
-  &--prototype
-    @include stroke_
-    @include stroke(1px, theme-prop(primary))
-    background-color: theme-prop(surface)
-    color: theme-prop(primary, $text--high-emphasis)
-
-    .mtrl-top-app-bar__navigation-icon, .mtrl-top-app-bar__action-icon
-      @include ripple(theme-prop(primary))
-
   &__start-controls
     @include margin-start(4px)
 

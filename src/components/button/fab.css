@@ -129,19 +129,6 @@ html[dir=rtl] .mtrl-fab--extended .mtrl-fab__label {
   margin-left: 20px;
   margin-right: 20px;
 }
-.mtrl-fab--prototype {
-  border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
-  --mtrl-shape--stroke-width: 1px;
-  --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
-  background-color: rgba(var(--mtrl-theme-surface), 1);
-  color: rgba(var(--mtrl-theme-primary), 87%);
-}
-.mtrl-fab--prototype::before {
-  background-color: rgba(var(--mtrl-theme-primary), 1);
-}
-.mtrl-fab--prototype:not(:hover):not(:focus):not(:active)::before {
-  background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-primary), 1));
-}
 .mtrl-fab__icon {
   width: 24px;
   height: 24px;

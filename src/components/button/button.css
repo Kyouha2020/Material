@@ -93,7 +93,7 @@ html[dark] .mtrl-button:disabled {
 .mtrl-button:disabled .mtrl-button__icon {
   color: var(--mtrl-button-disabled-icon-color, var(--mtrl-button-disabled-ink-color, currentColor));
 }
-.mtrl-button--outlined, .mtrl-button--two-tone, .mtrl-button--contained, .mtrl-button--float, .mtrl-button--raised {
+.mtrl-button--outlined, .mtrl-button--two-tone, .mtrl-button--contained, .mtrl-button--float, .mtrl-button--raised, .mtrl-button--push {
   padding: 0 var(--mtrl-button-horizontal-padding, 16px);
 }
 .mtrl-button--outlined {
@@ -141,19 +141,6 @@ html[dark] .mtrl-button--contained {
 }
 .mtrl-button--contained:disabled {
   background-color: var(--mtrl-button-disabled-container-color, rgba(var(--mtrl-theme-on-surface), 12%));
-}
-.mtrl-button--prototype {
-  border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
-  --mtrl-shape--stroke-width: 1px;
-  --mtrl-shape--stroke-color: rgba(var(--mtrl-theme-primary), 1);
-  background-color: rgba(var(--mtrl-theme-surface), 1);
-  color: rgba(var(--mtrl-theme-primary), 1);
-}
-.mtrl-button--prototype::before {
-  background-color: rgba(var(--mtrl-theme-primary), 1);
-}
-.mtrl-button--prototype:not(:hover):not(:focus):not(:active)::before {
-  background-color: var(--mtrl-elevation-overlay, rgba(var(--mtrl-theme-primary), 1));
 }
 .mtrl-button--vertical {
   --mtrl-component-height: var(--mtrl-button-height, 56px);
@@ -233,6 +220,27 @@ html[dark] .mtrl-button--raised {
 .mtrl-button--raised:active {
   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
   z-index: 8;
+}
+.mtrl-button--push {
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+html[dark] .mtrl-button--push {
+  --mtrl-elevation-overlay: white;
+  --mtrl-elevation-overlay-opacity: 7%;
+}
+.mtrl-button--push:hover {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  z-index: 4;
+}
+.mtrl-button--push:focus {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  z-index: 0;
+}
+.mtrl-button--push:active {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  z-index: 0;
 }
 .mtrl-button--unelevated {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);

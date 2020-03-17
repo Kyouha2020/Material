@@ -17,26 +17,6 @@
   background-color: theme-prop(primary)
   color: theme-prop(on-primary, $text--high-emphasis)
 
-  &--prototype
-    @include stroke_
-    @include stroke(1px, theme-prop(primary))
-    background-color: theme-prop(surface)
-    color: theme-prop(primary, $text--high-emphasis)
-
-    .mtrl-bottom-app-bar__navigation-drawer-control
-      @include ripple(theme-prop(primary))
-
-    .mtrl-bottom-app-bar__fab
-      @include ripple(theme-prop(primary))
-      @include stroke_
-      @include stroke(1px, theme-prop(primary))
-      background-color: theme-prop(surface)
-      color: theme-prop(primary, $text--high-emphasis)
-
-      &--cut__wrapper
-        @include stroke_
-        @include stroke(1px, theme-prop(primary))
-
   &--landscape
     @include height(48px)
 
