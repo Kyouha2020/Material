@@ -2,27 +2,10 @@
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
-@use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
-@use "../../design/shape/shape" as *
-@use "../../design/theme/theme" as *
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
-
-@mixin button-corner-radius($radius)
-  @include prop(border-radius, button--corner-radius, $radius)
-
-@mixin button-height($height)
-  @include prop(height, button--height, $height)
-
-@mixin button-padding($padding)
-  @include prop(padding, button--padding, $padding)
-
-@mixin button-ripple($color)
-  @include ripple($color)
-  @include ripple(prop(button--ripple, $color))
-
 
 .mtrl-button
   @include ripple_
@@ -30,15 +13,14 @@
   @include unselectable
   @include centered-content
   @include accessible-border
-  padding: 0
-  @include button-corner-radius(4px)
-  @include button-height(36px)
-  @include button-padding(0 8px)
-  @include button-ripple($primary)
+  @include ripple($primary)
   @include typography(button)
+  min-width: 64px
+  height: 36px
+  padding: 0 8px
+  border-radius: 4px
   background-color: $surface
   color: rgba($primary, $text--high-emphasis)
-  min-width: 64px
   position: relative
   white-space: nowrap
 
@@ -47,22 +29,20 @@
 
   &:disabled
     @include elevation(0)
-    @include stroke(1px, rgba($on-surface, $stroke))
-    color: rgba($on-surface, $text--disabled)
     background-color: rgba($surface, $disabled-filled-container)
+    color: rgba($on-surface, $text--disabled)
+    border-color: rgba($on-surface, $stroke)
     cursor: default
     pointer-events: none
 
   &--outlined, &--stroked, &--two-tone, &--contained, &--float, &--raised, &--push
-    @include button-padding(0 16px)
+    padding: 0 16px
 
   &--outlined
-    @include stroke_
-    @include stroke(1px, rgba($on-surface, $stroke))
+    border: 1px solid rgba($on-surface, $stroke)
 
   &--stroked
-    @include stroke_
-    @include stroke(1px, $primary)
+    border: 1px solid $primary
 
   &--two-tone
     background-color: rgba($primary, $stroke)
@@ -71,7 +51,7 @@
       background-color: rgba($on-surface, $disabled-filled-container)
 
   &--contained
-    @include button-ripple($on-primary)
+    @include ripple($on-primary)
     @include elevation(2, 4, 6, 8)
     background-color: $primary
     color: rgba($on-primary, $text--high-emphasis)
@@ -92,7 +72,7 @@
     @include elevation(0, 0, 0, 0)
 
   &--vertical
-    @include button-height(56px)
+    height: 56px
     flex-direction: column
 
     .mtrl-button__icon
