@@ -64,15 +64,12 @@
   opacity: 0;
 }
 .mtrl-button:hover::before {
-  background-color: #6200ee;
   opacity: 0.04;
 }
 .mtrl-button:focus::before {
-  background-color: #6200ee;
   opacity: 0.12;
 }
 .mtrl-button:active::before {
-  background-color: #6200ee;
   opacity: 0.1;
 }
 .mtrl-button::before {
@@ -80,15 +77,12 @@
   opacity: 0;
 }
 .mtrl-button:hover::before {
-  background-color: var(--mtrl-button--ripple, #6200ee);
   opacity: 0.04;
 }
 .mtrl-button:focus::before {
-  background-color: var(--mtrl-button--ripple, #6200ee);
   opacity: 0.12;
 }
 .mtrl-button:active::before {
-  background-color: var(--mtrl-button--ripple, #6200ee);
   opacity: 0.1;
 }
 .mtrl-button:hover {
@@ -145,15 +139,12 @@ html[dark] .mtrl-button:disabled {
   opacity: 0;
 }
 .mtrl-button--contained:hover::before {
-  background-color: white;
   opacity: 0.04;
 }
 .mtrl-button--contained:focus::before {
-  background-color: white;
   opacity: 0.12;
 }
 .mtrl-button--contained:active::before {
-  background-color: white;
   opacity: 0.1;
 }
 .mtrl-button--contained::before {
@@ -161,15 +152,12 @@ html[dark] .mtrl-button:disabled {
   opacity: 0;
 }
 .mtrl-button--contained:hover::before {
-  background-color: var(--mtrl-button--ripple, white);
   opacity: 0.04;
 }
 .mtrl-button--contained:focus::before {
-  background-color: var(--mtrl-button--ripple, white);
   opacity: 0.12;
 }
 .mtrl-button--contained:active::before {
-  background-color: var(--mtrl-button--ripple, white);
   opacity: 0.1;
 }
 html[dark] .mtrl-button--contained {
