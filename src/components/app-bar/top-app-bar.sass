@@ -1,33 +1,30 @@
 @use "../../design/color/theme" as *
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
-@use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
-@use "../../design/shape/shape" as *
-@use "../../design/theme/theme" as *
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
 
 .mtrl-top-app-bar
-  @include elevation(4)
-  @include height(56px)
   @include unselectable
-  @include centered-content
+  @include elevation(4)
   display: flex
+  align-items: center
+  height: 56px
   background-color: $primary
   color: rgba($on-primary, $text--high-emphasis)
 
   &--dense
-    @include density(-2)
+    height: 48px
 
   &--extended
-    @include height(128px)
+    height: 128px
     align-items: flex-start
     justify-content: start
 
     &.mtrl-top-app-bar--dense
-      @include density(-4)
+      height: 112px
 
       .mtrl-top-app-bar__start-controls, .mtrl-top-app-bar__end-controls
         margin-top: 0
@@ -52,14 +49,14 @@
 
   &__navigation-icon, &__action-icon
     @include ripple_
-    @include ripple($on-primary)
     @include accessible-border
-    @include corner(50%)
-    @include padding(12px)
+    @include ripple($on-primary)
     display: inline-flex
     position: relative
     width: 24px
     height: 24px
+    padding: 12px
+    border-radius: 50%
     font-size: 24px
     cursor: pointer
     fill: currentColor

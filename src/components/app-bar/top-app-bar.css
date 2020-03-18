@@ -1,19 +1,14 @@
 .mtrl-top-app-bar {
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 4;
-  --mtrl-component-height: 56px;
-  height: 56px;
-  height: var(--mtrl-component-height, 56px);
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 4;
   display: flex;
+  align-items: center;
+  height: 56px;
   background-color: #6200ee;
   color: rgba(255, 255, 255, 0.87);
 }
@@ -22,17 +17,15 @@ html[dark] .mtrl-top-app-bar {
   --mtrl-elevation-overlay-opacity: 9%;
 }
 .mtrl-top-app-bar--dense {
-  height: calc(var(--mtrl-component-height) + -2 * 4px);
+  height: 48px;
 }
 .mtrl-top-app-bar--extended {
-  --mtrl-component-height: 128px;
   height: 128px;
-  height: var(--mtrl-component-height, 128px);
   align-items: flex-start;
   justify-content: start;
 }
 .mtrl-top-app-bar--extended.mtrl-top-app-bar--dense {
-  height: calc(var(--mtrl-component-height) + -4 * 4px);
+  height: 112px;
 }
 .mtrl-top-app-bar--extended.mtrl-top-app-bar--dense .mtrl-top-app-bar__start-controls, .mtrl-top-app-bar--extended.mtrl-top-app-bar--dense .mtrl-top-app-bar__end-controls {
   margin-top: 0;
@@ -84,14 +77,12 @@ html[dir=rtl] .mtrl-top-app-bar__title {
 }
 .mtrl-top-app-bar__navigation-icon, .mtrl-top-app-bar__action-icon {
   border: none;
-  --mtrl-shape--corner-radius: 50%;
-  border-radius: 50%;
-  border-radius: var(--mtrl-shape--corner-radius, 50%);
-  padding: 12px;
   display: inline-flex;
   position: relative;
   width: 24px;
   height: 24px;
+  padding: 12px;
+  border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
   fill: currentColor;
@@ -107,23 +98,24 @@ html[dir=rtl] .mtrl-top-app-bar__title {
   height: 100%;
   border-radius: inherit;
 }
-.mtrl-top-app-bar__navigation-icon::before, .mtrl-top-app-bar__action-icon::before {
-  background-color: rgba(255, 255, 255, 0);
-}
-.mtrl-top-app-bar__navigation-icon:hover::before, .mtrl-top-app-bar__action-icon:hover::before {
-  background-color: rgba(255, 255, 255, 0.04);
-}
-.mtrl-top-app-bar__navigation-icon:focus::before, .mtrl-top-app-bar__action-icon:focus::before {
-  background-color: rgba(255, 255, 255, 0.12);
-}
-.mtrl-top-app-bar__navigation-icon:active::before, .mtrl-top-app-bar__action-icon:active::before {
-  background-color: rgba(255, 255, 255, 0.1);
-}
 .mtrl-top-app-bar__navigation-icon:not(:focus-visible), .mtrl-top-app-bar__action-icon:not(:focus-visible) {
   outline: none;
 }
 .mtrl-top-app-bar__navigation-icon:focus-visible, .mtrl-top-app-bar__action-icon:focus-visible {
   overflow: hidden;
+}
+.mtrl-top-app-bar__navigation-icon::before, .mtrl-top-app-bar__action-icon::before {
+  background-color: white;
+  opacity: 0;
+}
+.mtrl-top-app-bar__navigation-icon:hover::before, .mtrl-top-app-bar__action-icon:hover::before {
+  opacity: 0.04;
+}
+.mtrl-top-app-bar__navigation-icon:focus::before, .mtrl-top-app-bar__action-icon:focus::before {
+  opacity: 0.12;
+}
+.mtrl-top-app-bar__navigation-icon:active::before, .mtrl-top-app-bar__action-icon:active::before {
+  opacity: 0.1;
 }
 html:not([dir=rtl]) .mtrl-top-app-bar__navigation-icon {
   margin-left: 4px;

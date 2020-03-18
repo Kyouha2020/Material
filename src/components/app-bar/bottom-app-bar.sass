@@ -1,25 +1,22 @@
 @use "../../design/color/theme" as *
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
-@use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
-@use "../../design/shape/shape" as *
-@use "../../design/theme/theme" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
 
 .mtrl-bottom-app-bar
-  @include elevation(4)
-  @include height(56px)
   @include unselectable
-  @include centered-content
+  @include elevation(4)
   display: flex
+  align-items: center
   justify-content: space-between
+  height: 56px
   background-color: $primary
   color: rgba($on-primary, $text--high-emphasis)
 
   &--landscape
-    @include height(48px)
+    height: 48px
 
   &__start-controls
     @include margin-start(4px)
@@ -29,43 +26,36 @@
 
   &__navigation-drawer-control
     @include ripple_
-    @include ripple($on-primary)
     @include accessible-border
-    @include corner(50%)
-    @include padding(12px)
+    @include ripple($on-primary)
     display: inline-flex
     position: relative
     width: 24px
     height: 24px
+    padding: 12px
+    border-radius: 50%
     font-size: 24px
     cursor: pointer
     fill: currentColor
 
   &__fab
     @include elevation(12)
-    margin-top: calc(#{prop(component-height)} * -1)
+    margin-top: -56px
 
     &--end
       @include margin-end(16px)
 
-    &--cut
-      margin-top: calc(#{prop(component-height)} / -1 - 4px)
-
-      &__wrapper
-        @include height(62px)
-        @include corner(0 0 62px 62px)
-        margin-top: calc(#{prop(component-height)} * -1 + 4px)
-        width: 64px
-        border-radius: 50%
-        background-color: $surface
-        clip-path: inset(50% 0 0 0)
-
-        .mtrl-bottom-app-bar__fab
-          @include margin-start(4px)
-          margin-top: initial
-
     &__wrapper
-      @include centered-content
-      position: absolute
       display: flex
+      position: absolute
+      align-items: center
+      justify-content: center
       width: 100%
+
+    &--cut__wrapper
+      height: 64px
+      width: 64px
+      margin-top: -56px
+      border-radius: 50%
+      background-color: $surface
+      clip-path: inset(50% 0 0 0)

@@ -1,40 +1,38 @@
 @use "../../design/color/theme" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
-@use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
-@use "../../design/shape/shape" as *
-@use "../../design/theme/theme" as *
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
 
 .mtrl-tab
-  @include height(48px)
   @include centered-content
   @include typography(button)
   display: flex
+  height: 48px
 
   &--scrollable
     @include padding-start(52px)
 
   &--top-icon
-    @include height(72px)
+    height: 72px
 
   &__item
     @include ripple_
-    @include ripple($primary)
-    @include height(48px)
-    @include padding-horizontal(16px)
     @include unselectable
     @include centered-content
     @include accessible-border
+    @include ripple($primary)
+    display: inline-flex
+    position: relative
     flex: 1
-    background-color: $on-primary
-    color: rgba($on-surface, $text--medium-emphasis)
     min-width: 90px
     max-width: 360px
-    position: relative
+    height: 48px
+    background-color: $on-primary
+    color: rgba($on-surface, $text--medium-emphasis)
+    padding: 0 16px
     white-space: nowrap
 
     &:hover
@@ -51,7 +49,7 @@
       flex-direction: column
 
     &__label
-      @include margin-horizontal(8px)
+      padding: 0 8px
 
     &__icon
       width: 24px

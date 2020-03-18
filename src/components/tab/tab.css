@@ -1,8 +1,4 @@
 .mtrl-tab {
-  --mtrl-component-height: 48px;
-  height: 48px;
-  height: var(--mtrl-component-height, 48px);
-  display: inline-flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
@@ -15,6 +11,7 @@
   text-decoration: none;
   text-transform: uppercase;
   display: flex;
+  height: 48px;
 }
 html:not([dir=rtl]) .mtrl-tab--scrollable {
   padding-left: 52px;
@@ -23,29 +20,26 @@ html[dir=rtl] .mtrl-tab--scrollable {
   padding-right: 52px;
 }
 .mtrl-tab--top-icon {
-  --mtrl-component-height: 72px;
   height: 72px;
-  height: var(--mtrl-component-height, 72px);
 }
 .mtrl-tab__item {
-  --mtrl-component-height: 48px;
-  height: 48px;
-  height: var(--mtrl-component-height, 48px);
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  display: inline-flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
   border: none;
+  display: inline-flex;
+  position: relative;
   flex: 1;
-  background-color: white;
-  color: rgba(0, 0, 0, 0.6);
   min-width: 90px;
   max-width: 360px;
-  position: relative;
+  height: 48px;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 0 16px;
   white-space: nowrap;
 }
 .mtrl-tab__item::before {
@@ -59,31 +53,24 @@ html[dir=rtl] .mtrl-tab--scrollable {
   height: 100%;
   border-radius: inherit;
 }
-.mtrl-tab__item::before {
-  background-color: rgba(98, 0, 238, 0);
-}
-.mtrl-tab__item:hover::before {
-  background-color: rgba(98, 0, 238, 0.04);
-}
-.mtrl-tab__item:focus::before {
-  background-color: rgba(98, 0, 238, 0.12);
-}
-.mtrl-tab__item:active::before {
-  background-color: rgba(98, 0, 238, 0.1);
-}
-html:not([dir=rtl]) .mtrl-tab__item {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-html[dir=rtl] .mtrl-tab__item {
-  padding-left: 16px;
-  padding-right: 16px;
-}
 .mtrl-tab__item:not(:focus-visible) {
   outline: none;
 }
 .mtrl-tab__item:focus-visible {
   overflow: hidden;
+}
+.mtrl-tab__item::before {
+  background-color: #6200ee;
+  opacity: 0;
+}
+.mtrl-tab__item:hover::before {
+  opacity: 0.04;
+}
+.mtrl-tab__item:focus::before {
+  opacity: 0.12;
+}
+.mtrl-tab__item:active::before {
+  opacity: 0.1;
 }
 .mtrl-tab__item:hover {
   cursor: pointer;
@@ -98,13 +85,8 @@ html[dir=rtl] .mtrl-tab__item {
 .mtrl-tab__item--top-icon {
   flex-direction: column;
 }
-html:not([dir=rtl]) .mtrl-tab__item__label {
-  margin-left: 8px;
-  margin-right: 8px;
-}
-html[dir=rtl] .mtrl-tab__item__label {
-  margin-left: 8px;
-  margin-right: 8px;
+.mtrl-tab__item__label {
+  padding: 0 8px;
 }
 .mtrl-tab__item__icon {
   width: 24px;

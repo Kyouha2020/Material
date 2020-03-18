@@ -1,10 +1,7 @@
 @use "../../design/color/theme" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
-@use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
-@use "../../design/shape/shape" as *
-@use "../../design/theme/theme" as *
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
@@ -13,10 +10,9 @@
   display: inline-flex
 
   &:focus-within
-    &:not(.mtrl-text-field--outlined)
-      .mtrl-text-field__input
-        @include height(39px)
-        border-bottom: 2px solid $primary
+    &:not(.mtrl-text-field--outlined) .mtrl-text-field__input
+      height: 39px
+      border-bottom: 2px solid $primary
 
     .mtrl-text-field__label
       @include typography(subtitle2)
@@ -25,10 +21,11 @@
 
   &--outlined
     .mtrl-text-field__input
-      @include corner(4px)
-      @include padding-horizontal(14px)
-      background-color: $surface
+      height: 56px
+      padding: 0 14px
+      border-radius: 4px
       border: 1px solid rgba($on-surface, $text--medium-emphasis)
+      background-color: $surface
 
     &:focus-within
       .mtrl-text-field__input
@@ -36,33 +33,33 @@
 
       .mtrl-text-field__label
         @include margin-start(10px)
-        @include padding-horizontal(4px)
         margin-top: -6px
+        padding: 0 4px
         background-color: $surface
 
   &__input
-    @include corner(4px 4px 0 0)
-    @include height(40px)
-    @include padding-horizontal(12px)
     @include centered-content
     @include accessible-border
     @include typography(body1)
+    display: inline-flex
+    height: 40px
+    padding: 16px 12px 0 12px
+    border-radius: 4px 4px 0 0
+    border-bottom: 1px solid rgba($on-surface, $text--medium-emphasis)
     background-color: rgba($on-surface, $stroke)
     color: rgba($on-surface, $text--high-emphasis)
-    padding-top: 16px
-    border-bottom: 1px solid rgba($on-surface, $text--medium-emphasis)
 
   &__label
     @include typography(subtitle1)
-    @include padding-horizontal(12px)
     position: absolute
-    color: rgba($on-surface, $text--high-emphasis)
     margin-top: 20px
+    padding: 0 12px
+    color: rgba($on-surface, $text--high-emphasis)
     transition: 150ms
 
   &__helper-text
     @include typography(subtitle2)
-    @include padding-horizontal(12px)
     position: absolute
-    color: rgba($on-surface, $text--helper-text)
     margin-top: 64px
+    padding: 0 12px
+    color: rgba($on-surface, $text--helper-text)

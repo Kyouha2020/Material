@@ -2,9 +2,7 @@
   display: inline-flex;
 }
 .mtrl-text-field:focus-within:not(.mtrl-text-field--outlined) .mtrl-text-field__input {
-  --mtrl-component-height: 39px;
   height: 39px;
-  height: var(--mtrl-component-height, 39px);
   border-bottom: 2px solid #6200ee;
 }
 .mtrl-text-field:focus-within .mtrl-text-field__label {
@@ -20,25 +18,18 @@
   color: rgba(98, 0, 238, 0.87);
 }
 .mtrl-text-field--outlined .mtrl-text-field__input {
-  --mtrl-shape--corner-radius: 4px;
+  height: 56px;
+  padding: 0 14px;
   border-radius: 4px;
-  border-radius: var(--mtrl-shape--corner-radius, 4px);
-  background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.6);
-}
-html:not([dir=rtl]) .mtrl-text-field--outlined .mtrl-text-field__input {
-  padding-left: 14px;
-  padding-right: 14px;
-}
-html[dir=rtl] .mtrl-text-field--outlined .mtrl-text-field__input {
-  padding-left: 14px;
-  padding-right: 14px;
+  background-color: #ffffff;
 }
 .mtrl-text-field--outlined:focus-within .mtrl-text-field__input {
   border-color: #6200ee;
 }
 .mtrl-text-field--outlined:focus-within .mtrl-text-field__label {
   margin-top: -6px;
+  padding: 0 4px;
   background-color: #ffffff;
 }
 html:not([dir=rtl]) .mtrl-text-field--outlined:focus-within .mtrl-text-field__label {
@@ -47,22 +38,7 @@ html:not([dir=rtl]) .mtrl-text-field--outlined:focus-within .mtrl-text-field__la
 html[dir=rtl] .mtrl-text-field--outlined:focus-within .mtrl-text-field__label {
   margin-right: 10px;
 }
-html:not([dir=rtl]) .mtrl-text-field--outlined:focus-within .mtrl-text-field__label {
-  padding-left: 4px;
-  padding-right: 4px;
-}
-html[dir=rtl] .mtrl-text-field--outlined:focus-within .mtrl-text-field__label {
-  padding-left: 4px;
-  padding-right: 4px;
-}
 .mtrl-text-field__input {
-  --mtrl-shape--corner-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
-  border-radius: var(--mtrl-shape--corner-radius, 4px 4px 0 0);
-  --mtrl-component-height: 40px;
-  height: 40px;
-  height: var(--mtrl-component-height, 40px);
-  display: inline-flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
@@ -75,18 +51,13 @@ html[dir=rtl] .mtrl-text-field--outlined:focus-within .mtrl-text-field__label {
   -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
+  display: inline-flex;
+  height: 40px;
+  padding: 16px 12px 0 12px;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
   background-color: rgba(0, 0, 0, 0.12);
   color: rgba(0, 0, 0, 0.87);
-  padding-top: 16px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-}
-html:not([dir=rtl]) .mtrl-text-field__input {
-  padding-left: 12px;
-  padding-right: 12px;
-}
-html[dir=rtl] .mtrl-text-field__input {
-  padding-left: 12px;
-  padding-right: 12px;
 }
 .mtrl-text-field__input:not(:focus-visible) {
   outline: none;
@@ -104,17 +75,10 @@ html[dir=rtl] .mtrl-text-field__input {
   text-decoration: inherit;
   text-transform: inherit;
   position: absolute;
-  color: rgba(0, 0, 0, 0.87);
   margin-top: 20px;
+  padding: 0 12px;
+  color: rgba(0, 0, 0, 0.87);
   transition: 150ms;
-}
-html:not([dir=rtl]) .mtrl-text-field__label {
-  padding-left: 12px;
-  padding-right: 12px;
-}
-html[dir=rtl] .mtrl-text-field__label {
-  padding-left: 12px;
-  padding-right: 12px;
 }
 .mtrl-text-field__helper-text {
   font-family: Roboto, sans-serif;
@@ -126,16 +90,9 @@ html[dir=rtl] .mtrl-text-field__label {
   text-decoration: inherit;
   text-transform: inherit;
   position: absolute;
-  color: rgba(0, 0, 0, 0.6);
   margin-top: 64px;
-}
-html:not([dir=rtl]) .mtrl-text-field__helper-text {
-  padding-left: 12px;
-  padding-right: 12px;
-}
-html[dir=rtl] .mtrl-text-field__helper-text {
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: 0 12px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 /*# sourceMappingURL=text-field.css.map */
