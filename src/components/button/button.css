@@ -78,24 +78,24 @@
   background-color: white;
 }
 
-.mtrl-button--surface.mtrl-button {
+.mtrl-button--error.mtrl-button {
+  color: rgba(176, 0, 32, 0.87);
+}
+.mtrl-button--error.mtrl-button::before {
+  background-color: #b00020;
+}
+.mtrl-button--error.mtrl-button--stroked {
+  border-color: #b00020;
+}
+.mtrl-button--error.mtrl-button--two-tone {
+  background-color: rgba(176, 0, 32, 0.12);
+}
+.mtrl-button--error.mtrl-button--contained {
+  background-color: #b00020;
   color: rgba(255, 255, 255, 0.87);
 }
-.mtrl-button--surface.mtrl-button::before {
-  background-color: #ffffff;
-}
-.mtrl-button--surface.mtrl-button--stroked {
-  border-color: #ffffff;
-}
-.mtrl-button--surface.mtrl-button--two-tone {
-  background-color: rgba(255, 255, 255, 0.12);
-}
-.mtrl-button--surface.mtrl-button--contained {
-  background-color: #ffffff;
-  color: rgba(0, 0, 0, 0.87);
-}
-.mtrl-button--surface.mtrl-button--contained::before {
-  background-color: black;
+.mtrl-button--error.mtrl-button--contained::before {
+  background-color: white;
 }
 
 .mtrl-button {
