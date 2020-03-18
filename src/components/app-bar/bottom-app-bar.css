@@ -83,25 +83,12 @@ html[dir=rtl] .mtrl-bottom-app-bar__end-controls {
   margin-top: -56px;
 }
 html:not([dir=rtl]) .mtrl-bottom-app-bar__fab--end {
+  margin-left: auto;
   margin-right: 16px;
 }
 html[dir=rtl] .mtrl-bottom-app-bar__fab--end {
   margin-left: 16px;
-}
-.mtrl-bottom-app-bar__fab__wrapper {
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.mtrl-bottom-app-bar__fab--cut__wrapper {
-  height: 64px;
-  width: 64px;
-  margin-top: -56px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  clip-path: inset(50% 0 0 0);
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=bottom-app-bar.css.map */

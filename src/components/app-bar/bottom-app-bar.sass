@@ -44,19 +44,4 @@
     margin-top: -56px
 
     &--end
-      @include margin-end(16px)
-
-    &__wrapper
-      display: flex
-      position: absolute
-      align-items: center
-      justify-content: center
-      width: 100%
-
-    &--cut__wrapper
-      height: 64px
-      width: 64px
-      margin-top: -56px
-      border-radius: 50%
-      background-color: $surface
-      clip-path: inset(50% 0 0 0)
+      @include margin-horizontal(auto, 16px)
