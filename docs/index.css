@@ -97,11 +97,6 @@ html[dark] .mtrl-button:disabled {
   --mtrl-shape--stroke-color: rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
-html[dark] .mtrl-button--outlined:focus {
-  --mtrl-shape--stroke-width: 1px;
-  --mtrl-shape--stroke-color: #6200ee;
-  border: 1px solid #6200ee;
-}
 .mtrl-button--stroked {
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
   --mtrl-shape--stroke-width: 1px;
@@ -520,11 +515,6 @@ html[dir=rtl] .mtrl-fab--extended .mtrl-fab__label {
   --mtrl-shape--stroke-width: 1px;
   --mtrl-shape--stroke-color: rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(0, 0, 0, 0.12);
-}
-html[dark] .mtrl-icon-button--outlined:focus {
-  --mtrl-shape--stroke-width: 1px;
-  --mtrl-shape--stroke-color: black;
-  border: 1px solid black;
 }
 .mtrl-icon-button--two-tone {
   background-color: rgba(0, 0, 0, 0.18);
