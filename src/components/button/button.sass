@@ -10,17 +10,27 @@
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
 
+@mixin button-height($height)
+  @include prop(height, button--height, $height)
+
+@mixin button-padding($padding)
+  @include prop(padding, button--padding, $padding)
+
+@mixin button-corner-radius($radius)
+  @include prop(border-radius, button--corner-radius, $radius)
+
 .mtrl-button
   @include ripple_
   @include ripple($primary)
   @include touch-target
-  @include corner(4px)
-  @include height(36px)
-  @include padding(0, 8px)
-  @include typography(button)
   @include unselectable
   @include centered-content
   @include accessible-border
+  padding: 0
+  @include button-corner-radius(4px)
+  @include button-height(36px)
+  @include button-padding(0 8px)
+  @include typography(button)
   background-color: $surface
   color: rgba($primary, $text--high-emphasis)
   min-width: 64px
@@ -39,7 +49,7 @@
     pointer-events: none
 
   &--outlined, &--stroked, &--two-tone, &--contained, &--float, &--raised, &--push
-    @include padding(0, 16px)
+    @include button-padding(0 16px)
 
   &--outlined
     @include stroke_
@@ -78,13 +88,13 @@
 
   &--rounded
     @include corner(36px / 2)
-    @include corner(calc(#{prop(button-height, prop(component-height))} / 2))
+    @include corner(calc(#{prop(button--height)} / 2))
 
   &--tile
     @include corner(0)
 
   &--vertical
-    @include height(56px)
+    @include button-height(56px)
     flex-direction: column
 
     .mtrl-button__icon

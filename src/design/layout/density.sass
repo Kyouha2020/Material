@@ -1,9 +1,1 @@
-@use "../theme/theme" as *
-
 // https://material.io/design/layout/applying-density.html
-
-@mixin height($height)
-  @include prop(height, component-height, $height)
-
-@mixin density($value: 0, $scale: 4px)
-  height: calc(#{prop(component-height)} + #{$value} * #{$scale})

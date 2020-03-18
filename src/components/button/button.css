@@ -1,19 +1,4 @@
 .mtrl-button {
-  --mtrl-shape--corner-radius: 4px;
-  border-radius: 4px;
-  border-radius: var(--mtrl-shape--corner-radius, 4px);
-  --mtrl-component-height: 36px;
-  height: 36px;
-  height: var(--mtrl-component-height, 36px);
-  padding: 0 8px;
-  font-family: Roboto, sans-serif;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.0892857143rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-decoration: none;
-  text-transform: uppercase;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -23,6 +8,24 @@
   justify-content: center;
   vertical-align: middle;
   border: none;
+  padding: 0;
+  --mtrl-button--corner-radius: 4px;
+  border-radius: 4px;
+  border-radius: var(--mtrl-button--corner-radius, 4px);
+  --mtrl-button--height: 36px;
+  height: 36px;
+  height: var(--mtrl-button--height, 36px);
+  --mtrl-button--padding: 0 8px;
+  padding: 0 8px;
+  padding: var(--mtrl-button--padding, 0 8px);
+  font-family: Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.0892857143rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  text-transform: uppercase;
   background-color: #ffffff;
   color: rgba(98, 0, 238, 0.87);
   min-width: 64px;
@@ -88,7 +91,9 @@ html[dark] .mtrl-button:disabled {
   --mtrl-elevation-overlay-opacity: 0%;
 }
 .mtrl-button--outlined, .mtrl-button--stroked, .mtrl-button--two-tone, .mtrl-button--contained, .mtrl-button--float, .mtrl-button--raised, .mtrl-button--push {
+  --mtrl-button--padding: 0 16px;
   padding: 0 16px;
+  padding: var(--mtrl-button--padding, 0 16px);
 }
 .mtrl-button--outlined {
   border: var(--mtrl-shape--stroke-width) solid var(--mtrl-shape--stroke-color);
@@ -234,9 +239,9 @@ html[dark] .mtrl-button--unelevated {
   --mtrl-shape--corner-radius: 18px;
   border-radius: 18px;
   border-radius: var(--mtrl-shape--corner-radius, 18px);
-  --mtrl-shape--corner-radius: calc(var(--mtrl-button-height, var(--mtrl-component-height)) / 2);
-  border-radius: calc(var(--mtrl-button-height, var(--mtrl-component-height)) / 2);
-  border-radius: var(--mtrl-shape--corner-radius, calc(var(--mtrl-button-height, var(--mtrl-component-height)) / 2));
+  --mtrl-shape--corner-radius: calc(var(--mtrl-button--height) / 2);
+  border-radius: calc(var(--mtrl-button--height) / 2);
+  border-radius: var(--mtrl-shape--corner-radius, calc(var(--mtrl-button--height) / 2));
 }
 .mtrl-button--tile {
   --mtrl-shape--corner-radius: 0;
@@ -244,9 +249,9 @@ html[dark] .mtrl-button--unelevated {
   border-radius: var(--mtrl-shape--corner-radius, 0);
 }
 .mtrl-button--vertical {
-  --mtrl-component-height: 56px;
+  --mtrl-button--height: 56px;
   height: 56px;
-  height: var(--mtrl-component-height, 56px);
+  height: var(--mtrl-button--height, 56px);
   flex-direction: column;
 }
 .mtrl-button--vertical .mtrl-button__icon {
