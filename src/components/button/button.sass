@@ -7,6 +7,27 @@
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
 
+@mixin button-theme($color, $on-color)
+  &.mtrl-button
+    @include ripple($color)
+    color: rgba($color, $text--high-emphasis)
+
+    &--stroked
+      border-color: $color
+
+    &--two-tone
+      background-color: rgba($color, $stroke)
+
+    &--contained
+      @include ripple($on-color)
+      background-color: $color
+      color: rgba($on-color, $text--high-emphasis)
+
+@each $theme, $on-theme in $theme-map
+  .mtrl-button--#{map_get($theme-name-map, $theme)}
+    @include button-theme($theme, $on-theme)
+
+
 .mtrl-button
   @include ripple_
   @include touch-target
