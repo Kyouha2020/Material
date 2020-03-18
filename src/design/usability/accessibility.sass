@@ -5,19 +5,19 @@ $linear-channel-values: 0 .0003035269835488375 .000607053967097675 .000910580950
 
 // Color and contrast
 
-$text--high-emphasis: 87%
-$text--medium-emphasis: 60%
-$text--disabled: 38%
+$text--high-emphasis: .87
+$text--medium-emphasis: .60
+$text--disabled: .38
 
-$text--high-emphasis-helper-text: 87%
-$text--helper-text: 60%
-$text--error-text: 100%
+$text--high-emphasis-helper-text: .87
+$text--helper-text: .60
+$text--error-text: 1
 
-$icon--active: 87%
-$icon--inactive: 60%
-$icon--disabled: 38%
+$icon--active: .87%
+$icon--inactive: .60
+$icon--disabled: .38
 
-$stroke: 12%
+$stroke: .12
 
 
 @function luminance($color)
@@ -27,8 +27,8 @@ $stroke: 12%
   @return .2126 * $red + .7152 * $green + .0722 * $blue
 
 @function contrast($back, $front)
-  $backLum: luminance($back) + 0.05
-  $foreLum: luminance($front) + 0.05
+  $backLum: luminance($back) + .05
+  $foreLum: luminance($front) + .05
   @return max($backLum, $foreLum) / min($backLum, $foreLum)
 
 @function tone($color)
@@ -37,7 +37,7 @@ $stroke: 12%
 
   $minimumContrast: 3.1
   $lightContrast: contrast($color, white)
-  $darkContrast: contrast($color, rgba(black, 0.87))
+  $darkContrast: contrast($color, rgba(black, .87))
 
   @if ($lightContrast < $minimumContrast) and ($darkContrast > $lightContrast)
     @return "light"

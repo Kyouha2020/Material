@@ -43,27 +43,6 @@ h3, h4 {
   width: 100%;
 }
 
-span[unsafe], span[against] {
-  margin: 0 0 0 8px;
-}
-span[unsafe]::after, span[against]::after {
-  top: 0;
-  left: 0;
-  padding: 2px 8px;
-  border-radius: 4px;
-  color: #ffffff;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-span[unsafe][unsafe]::after, span[against][unsafe]::after {
-  content: "Unsafe";
-  background-color: #b00020;
-}
-span[unsafe][against]::after, span[against][against]::after {
-  content: "Against Spec";
-  background-color: #ff9800;
-}
-
 #toggle-container {
   display: inline-flex;
   position: fixed;
@@ -76,7 +55,7 @@ html[dir=rtl] #toggle-container {
   right: initial;
 }
 
-#theme-toggle, #dir-toggle {
+#dir-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -88,10 +67,10 @@ html[dir=rtl] #toggle-container {
   -ms-user-select: none;
   user-select: none;
 }
-#theme-toggle:hover, #dir-toggle:hover {
+#dir-toggle:hover {
   cursor: pointer;
 }
-#theme-toggle i, #dir-toggle i {
+#dir-toggle i {
   font-size: 1.5rem;
 }
 

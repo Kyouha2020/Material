@@ -7,7 +7,6 @@
 @use "../components" as *
 
 .mtrl-top-app-bar
-  @include unselectable
   @include elevation(4)
   display: flex
   align-items: center
@@ -49,6 +48,8 @@
 
   &__navigation-icon, &__action-icon
     @include ripple_
+    @include touch-target
+    @include unselectable
     @include accessible-border
     @include ripple($on-primary)
     display: inline-flex

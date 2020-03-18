@@ -1,12 +1,8 @@
 .mtrl-touch-target::after {
   content: "";
   position: absolute;
-  top: calc((var(--mtrl-component-height) - 48px) / 2);
-  right: calc((var(--mtrl-component-height) - 48px) / 2);
-  bottom: calc((var(--mtrl-component-height) - 48px) / 2);
-  left: calc((var(--mtrl-component-height) - 48px) / 2);
   min-width: 48px;
-  height: 48px;
+  min-height: 48px;
 }
 
 /*# sourceMappingURL=touch-target.css.map */

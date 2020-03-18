@@ -15,7 +15,7 @@
   border-radius: 50%;
   border: none;
   background-color: #ffffff;
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.0087);
 }
 .mtrl-icon-button::before {
   content: "";
@@ -31,12 +31,8 @@
 .mtrl-icon-button::after {
   content: "";
   position: absolute;
-  top: calc((var(--mtrl-component-height) - 48px) / 2);
-  right: calc((var(--mtrl-component-height) - 48px) / 2);
-  bottom: calc((var(--mtrl-component-height) - 48px) / 2);
-  left: calc((var(--mtrl-component-height) - 48px) / 2);
   min-width: 48px;
-  height: 48px;
+  min-height: 48px;
 }
 .mtrl-icon-button:not(:focus-visible) {
   outline: none;
@@ -77,7 +73,7 @@
   background-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-icon-button--contained {
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.0087);
   background-color: black;
 }
 .mtrl-icon-button--contained::before {

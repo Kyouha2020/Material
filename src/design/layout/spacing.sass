@@ -1,4 +1,3 @@
-@use "../theme/theme" as *
 @use "../usability/bidirectionality" as *
 
 // https://material.io/design/layout/spacing-methods.html
@@ -24,19 +23,6 @@
     margin-left: $end
     margin-right: $start
 
-@mixin margin($top, $start: $top, $bottom: $top, $end: $start)
-  @if $top == $bottom and $start == $end and $top == $start
-    margin: $top
-  @else if $top == $bottom and $start == $end
-    margin: $top $start
-  @else if $start == $end
-    margin: $top $start $bottom
-  @else
-    @include ltr
-      margin: $top $end $bottom $start
-    @include rtl
-      margin: $top $start $bottom $end
-
 
 @mixin padding-start($start)
   @include ltr
@@ -58,20 +44,6 @@
     padding-left: $end
     padding-right: $start
 
-@mixin padding($top, $start: $top, $bottom: $top, $end: $start)
-  @if $top == $bottom and $start == $end and $top == $start
-    padding: $top
-  @else if $top == $bottom and $start == $end
-    padding: $top $start
-  @else if $start == $end
-    padding: $top $start $bottom
-  @else
-    @include ltr
-      padding: $top $end $bottom $start
-    @include rtl
-      padding: $top $start $bottom $end
-
-
 // aspect ratios
 @mixin aspect-ratio($ratio)
   position: relative
@@ -90,9 +62,5 @@
   &::after
     content: ''
     position: absolute
-    top: calc((#{prop(component-height)} - #{$touch-target}) / 2)
-    right: calc((#{prop(component-height)} - #{$touch-target}) / 2)
-    bottom: calc((#{prop(component-height)} - #{$touch-target}) / 2)
-    left: calc((#{prop(component-height)} - #{$touch-target}) / 2)
     min-width: $touch-target
-    height: $touch-target
+    min-height: $touch-target

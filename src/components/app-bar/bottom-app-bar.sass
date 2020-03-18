@@ -6,7 +6,6 @@
 @use "../components" as *
 
 .mtrl-bottom-app-bar
-  @include unselectable
   @include elevation(4)
   display: flex
   align-items: center
@@ -26,6 +25,8 @@
 
   &__navigation-drawer-control
     @include ripple_
+    @include touch-target
+    @include unselectable
     @include accessible-border
     @include ripple($on-primary)
     display: inline-flex
