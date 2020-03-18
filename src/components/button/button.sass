@@ -91,13 +91,6 @@
   &--unelevated
     @include elevation(0, 0, 0, 0)
 
-  &--rounded
-    @include corner(36px / 2)
-    @include corner(calc(#{prop(button--height)} / 2))
-
-  &--tile
-    @include corner(0)
-
   &--vertical
     @include button-height(56px)
     flex-direction: column
