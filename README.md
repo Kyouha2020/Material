@@ -5,6 +5,6 @@ Docs: https://kyouha2020.github.io/Material/docs/
 * RTL support.
 
 ## Browser compatibility ##
-Support IE 11 except CSS Custom Properties.
+Support IE 10+ except CSS Custom Properties.
 
 **Paint API & Typed OM:** Chrome 66+, Edge 79+, Opera 53+
