@@ -1,43 +1,39 @@
-@use "sass:math"
 @use "../../design/color/theme" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
 @use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
-@use "../../design/shape/shape" as *
-@use "../../design/theme/theme" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
 
 .mtrl-icon-button
   @include ripple_
-  @include ripple($on-surface)
   @include touch-target
-  @include corner(50%)
-  @include height(48px)
-  @include padding(0)
   @include unselectable
   @include centered-content
   @include accessible-border
-  color: rgba($on-surface, $icon--active)
-  width: 48px
-  background-color: $surface
+  @include ripple($on-surface)
   position: relative
+  width: 48px
+  height: 48px
+  padding: 0
+  border-radius: 50%
   border: none
+  background-color: $surface
+  color: rgba($on-surface, $icon--active)
 
   &:hover
     cursor: pointer
 
   &:disabled
-    @include stroke(1px, rgba($on-surface, $stroke))
     color: rgba($on-surface, $icon--disabled)
     background-color: rgba($surface, $disabled-filled-container)
+    border-color: rgba($on-surface, $stroke)
     cursor: default
     pointer-events: none
 
   &--outlined
-    @include stroke_
-    @include stroke(1px, rgba($on-surface, $stroke))
+    border: 1px solid rgba($on-surface, $stroke)
 
   &--two-tone
     background-color: rgba($on-surface, 18%)
@@ -52,23 +48,6 @@
 
     &:disabled
       background-color: rgba($on-surface, $disabled-filled-container)
-
-  &--prototype
-    @include ripple($primary)
-    @include stroke_
-    @include stroke(1px, $primary)
-    background-color: $surface
-    color: rgba($primary, $icon--active)
-
-  &--tile
-    @include corner(0)
-
-  &--diamond
-    @include corner(0)
-    transform: rotate(45deg)
-
-    .mtrl-icon-button__icon
-      transform: rotate(-45deg)
 
   &__icon
     width: 24px

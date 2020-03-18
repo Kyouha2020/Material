@@ -2,44 +2,43 @@
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
-@use "../../design/layout/density" as *
 @use "../../design/layout/spacing" as *
-@use "../../design/shape/shape" as *
-@use "../../design/theme/theme" as *
 @use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
 
 .mtrl-fab
   @include ripple_
-  @include ripple($surface)
   @include touch-target
-  @include elevation(6, 8, 10, 12)
-  @include corner(50%)
-  @include height(56px)
-  @include padding(0)
-  @include typography(button)
   @include unselectable
   @include centered-content
   @include accessible-border
+  @include ripple($surface)
+  @include elevation(6, 8, 10, 12)
+  @include typography(button)
+  display: inline-flex
+  position: relative
+  height: 56px
+  padding: 0
+  border-radius: 50%
   background-color: $on-surface
   color: rgba($surface, $text--high-emphasis)
-  width: 56px
-  position: relative
   white-space: nowrap
   border: none
 
   &:hover
     cursor: pointer
 
+  &:not(&--extended):not(&--mini)
+    width: 56px
+
   &--mini
-    @include height(40px)
+    height: 40px
     width: 40px
 
   &--extended
-    @include height(48px)
-    @include corner(calc(#{prop(fab-height, prop(component-height))} / 2))
-    width: initial
+    height: 48px
+    border-radius: 24px
 
     .mtrl-fab__icon
       @include margin-horizontal(12px, -8px)
