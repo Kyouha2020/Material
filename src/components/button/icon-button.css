@@ -27,15 +27,6 @@
   width: 100%;
   height: 100%;
   border-radius: inherit;
-}
-.mtrl-icon-button:not(:focus-visible) {
-  outline: none;
-}
-.mtrl-icon-button:focus-visible {
-  overflow: hidden;
-}
-.mtrl-icon-button::before {
-  background-color: black;
   opacity: 0;
 }
 .mtrl-icon-button:hover::before {
@@ -46,6 +37,15 @@
 }
 .mtrl-icon-button:active::before {
   opacity: 0.1;
+}
+.mtrl-icon-button:not(:focus-visible) {
+  outline: none;
+}
+.mtrl-icon-button:focus-visible {
+  overflow: hidden;
+}
+.mtrl-icon-button::before {
+  background-color: black;
 }
 .mtrl-icon-button:hover {
   cursor: pointer;
@@ -72,16 +72,6 @@
 }
 .mtrl-icon-button--contained::before {
   background-color: #ffffff;
-  opacity: 0;
-}
-.mtrl-icon-button--contained:hover::before {
-  opacity: 0.04;
-}
-.mtrl-icon-button--contained:focus::before {
-  opacity: 0.12;
-}
-.mtrl-icon-button--contained:active::before {
-  opacity: 0.1;
 }
 .mtrl-icon-button--contained:disabled {
   background-color: rgba(0, 0, 0, 0.12);
