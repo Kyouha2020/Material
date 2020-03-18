@@ -7,4 +7,6 @@ Docs: https://kyouha2020.github.io/Material/docs/
 ## Browser compatibility ##
 Support IE 10+ except CSS Custom Properties.
 
+Test on Google Chrome 83, Internet Explorer 11.
+
 **Paint API & Typed OM:** Chrome 66+, Edge 79+, Opera 53+
