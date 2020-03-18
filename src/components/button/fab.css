@@ -88,31 +88,24 @@
 }
 .mtrl-fab--extended {
   height: 48px;
+  padding: 0 20px;
   border-radius: 24px;
 }
 html:not([dir=rtl]) .mtrl-fab--extended .mtrl-fab__icon {
-  margin-left: 12px;
-  margin-right: -8px;
+  margin-left: -8px;
+  margin-right: 12px;
 }
 html[dir=rtl] .mtrl-fab--extended .mtrl-fab__icon {
-  margin-left: -8px;
-  margin-right: 12px;
-}
-html:not([dir=rtl]) .mtrl-fab--extended .mtrl-fab__icon--trailing {
-  margin-left: -8px;
-  margin-right: 12px;
-}
-html[dir=rtl] .mtrl-fab--extended .mtrl-fab__icon--trailing {
   margin-left: 12px;
   margin-right: -8px;
 }
-html:not([dir=rtl]) .mtrl-fab--extended .mtrl-fab__label {
-  margin-left: 20px;
-  margin-right: 20px;
+html:not([dir=rtl]) .mtrl-fab--extended .mtrl-fab__icon--trailing {
+  margin-left: 12px;
+  margin-right: -8px;
 }
-html[dir=rtl] .mtrl-fab--extended .mtrl-fab__label {
-  margin-left: 20px;
-  margin-right: 20px;
+html[dir=rtl] .mtrl-fab--extended .mtrl-fab__icon--trailing {
+  margin-left: -8px;
+  margin-right: 12px;
 }
 .mtrl-fab__icon {
   width: 24px;

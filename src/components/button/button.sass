@@ -78,17 +78,12 @@
 
     .mtrl-button__icon
       @include margin-horizontal(0)
-      margin-bottom: 4px
+
+      &:not(.mtrl-button__icon--trailing)
+        margin-bottom: 4px
 
       &--trailing
-        margin-bottom: 0
         margin-top: 4px
-
-  &__label
-    @include centered-content
-
-    &--sentence-case
-      text-transform: none
 
   &__icon
     @include margin-horizontal(-4px, 8px)
