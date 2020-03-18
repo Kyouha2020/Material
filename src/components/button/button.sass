@@ -10,18 +10,22 @@
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
 
+@mixin button-corner-radius($radius)
+  @include prop(border-radius, button--corner-radius, $radius)
+
 @mixin button-height($height)
   @include prop(height, button--height, $height)
 
 @mixin button-padding($padding)
   @include prop(padding, button--padding, $padding)
 
-@mixin button-corner-radius($radius)
-  @include prop(border-radius, button--corner-radius, $radius)
+@mixin button-ripple($color)
+  @include ripple($color)
+  @include ripple(prop(button--ripple, $color))
+
 
 .mtrl-button
   @include ripple_
-  @include ripple($primary)
   @include touch-target
   @include unselectable
   @include centered-content
@@ -30,6 +34,7 @@
   @include button-corner-radius(4px)
   @include button-height(36px)
   @include button-padding(0 8px)
+  @include button-ripple($primary)
   @include typography(button)
   background-color: $surface
   color: rgba($primary, $text--high-emphasis)
@@ -66,7 +71,7 @@
       background-color: rgba($on-surface, $disabled-filled-container)
 
   &--contained
-    @include ripple($on-primary)
+    @include button-ripple($on-primary)
     @include elevation(2, 4, 6, 8)
     background-color: $primary
     color: rgba($on-primary, $text--high-emphasis)

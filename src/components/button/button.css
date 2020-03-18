@@ -43,18 +43,6 @@
   height: 100%;
   border-radius: inherit;
 }
-.mtrl-button::before {
-  background-color: rgba(98, 0, 238, 0);
-}
-.mtrl-button:hover::before {
-  background-color: rgba(98, 0, 238, 0.04);
-}
-.mtrl-button:focus::before {
-  background-color: rgba(98, 0, 238, 0.12);
-}
-.mtrl-button:active::before {
-  background-color: rgba(98, 0, 238, 0.1);
-}
 .mtrl-button::after {
   content: "";
   position: absolute;
@@ -70,6 +58,38 @@
 }
 .mtrl-button:focus-visible {
   overflow: hidden;
+}
+.mtrl-button::before {
+  background-color: #6200ee;
+  opacity: 0;
+}
+.mtrl-button:hover::before {
+  background-color: #6200ee;
+  opacity: 0.04;
+}
+.mtrl-button:focus::before {
+  background-color: #6200ee;
+  opacity: 0.12;
+}
+.mtrl-button:active::before {
+  background-color: #6200ee;
+  opacity: 0.1;
+}
+.mtrl-button::before {
+  background-color: var(--mtrl-button--ripple, #6200ee);
+  opacity: 0;
+}
+.mtrl-button:hover::before {
+  background-color: var(--mtrl-button--ripple, #6200ee);
+  opacity: 0.04;
+}
+.mtrl-button:focus::before {
+  background-color: var(--mtrl-button--ripple, #6200ee);
+  opacity: 0.12;
+}
+.mtrl-button:active::before {
+  background-color: var(--mtrl-button--ripple, #6200ee);
+  opacity: 0.1;
 }
 .mtrl-button:hover {
   cursor: pointer;
@@ -121,16 +141,36 @@ html[dark] .mtrl-button:disabled {
   color: rgba(255, 255, 255, 0.87);
 }
 .mtrl-button--contained::before {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: white;
+  opacity: 0;
 }
 .mtrl-button--contained:hover::before {
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: white;
+  opacity: 0.04;
 }
 .mtrl-button--contained:focus::before {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: white;
+  opacity: 0.12;
 }
 .mtrl-button--contained:active::before {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: white;
+  opacity: 0.1;
+}
+.mtrl-button--contained::before {
+  background-color: var(--mtrl-button--ripple, white);
+  opacity: 0;
+}
+.mtrl-button--contained:hover::before {
+  background-color: var(--mtrl-button--ripple, white);
+  opacity: 0.04;
+}
+.mtrl-button--contained:focus::before {
+  background-color: var(--mtrl-button--ripple, white);
+  opacity: 0.12;
+}
+.mtrl-button--contained:active::before {
+  background-color: var(--mtrl-button--ripple, white);
+  opacity: 0.1;
 }
 html[dark] .mtrl-button--contained {
   --mtrl-elevation-overlay: white;

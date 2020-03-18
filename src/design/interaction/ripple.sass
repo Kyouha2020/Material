@@ -3,16 +3,20 @@
 
 @mixin ripple($color)
   &::before
-    background-color: rgba($color, 0%)
+    background-color: $color
+    opacity: 0
 
   &:hover::before
-    background-color: rgba($color, $container-overlay--hovered)
+    background-color: $color
+    opacity: $container-overlay--hovered
 
   &:focus::before
-    background-color: rgba($color, $container-overlay--focused)
+    background-color: $color
+    opacity: $container-overlay--focused
 
   &:active::before
-    background-color: rgba($color, $container-overlay--pressed)
+    background-color: $color
+    opacity: $container-overlay--pressed
 
 @mixin ripple_
   &::before
