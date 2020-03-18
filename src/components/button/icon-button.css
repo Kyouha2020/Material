@@ -1,3 +1,88 @@
+.mtrl-icon-button--primary.mtrl-icon-button {
+  color: rgba(98, 0, 238, 0.87);
+}
+.mtrl-icon-button--primary.mtrl-icon-button::before {
+  background-color: #6200ee;
+}
+.mtrl-icon-button--primary.mtrl-icon-button--two-tone {
+  background-color: rgba(98, 0, 238, 0.12);
+}
+.mtrl-icon-button--primary.mtrl-icon-button--contained {
+  background-color: #6200ee;
+  color: rgba(255, 255, 255, 0.87);
+}
+.mtrl-icon-button--primary.mtrl-icon-button--contained::before {
+  background-color: white;
+}
+
+.mtrl-icon-button--primary-variant.mtrl-icon-button {
+  color: rgba(55, 0, 179, 0.87);
+}
+.mtrl-icon-button--primary-variant.mtrl-icon-button::before {
+  background-color: #3700b3;
+}
+.mtrl-icon-button--primary-variant.mtrl-icon-button--two-tone {
+  background-color: rgba(55, 0, 179, 0.12);
+}
+.mtrl-icon-button--primary-variant.mtrl-icon-button--contained {
+  background-color: #3700b3;
+  color: rgba(255, 255, 255, 0.87);
+}
+.mtrl-icon-button--primary-variant.mtrl-icon-button--contained::before {
+  background-color: white;
+}
+
+.mtrl-icon-button--secondary.mtrl-icon-button {
+  color: rgba(3, 218, 198, 0.87);
+}
+.mtrl-icon-button--secondary.mtrl-icon-button::before {
+  background-color: #03dac6;
+}
+.mtrl-icon-button--secondary.mtrl-icon-button--two-tone {
+  background-color: rgba(3, 218, 198, 0.12);
+}
+.mtrl-icon-button--secondary.mtrl-icon-button--contained {
+  background-color: #03dac6;
+  color: rgba(0, 0, 0, 0.87);
+}
+.mtrl-icon-button--secondary.mtrl-icon-button--contained::before {
+  background-color: black;
+}
+
+.mtrl-icon-button--secondary-variant.mtrl-icon-button {
+  color: rgba(1, 135, 134, 0.87);
+}
+.mtrl-icon-button--secondary-variant.mtrl-icon-button::before {
+  background-color: #018786;
+}
+.mtrl-icon-button--secondary-variant.mtrl-icon-button--two-tone {
+  background-color: rgba(1, 135, 134, 0.12);
+}
+.mtrl-icon-button--secondary-variant.mtrl-icon-button--contained {
+  background-color: #018786;
+  color: rgba(255, 255, 255, 0.87);
+}
+.mtrl-icon-button--secondary-variant.mtrl-icon-button--contained::before {
+  background-color: white;
+}
+
+.mtrl-icon-button--surface.mtrl-icon-button {
+  color: rgba(255, 255, 255, 0.87);
+}
+.mtrl-icon-button--surface.mtrl-icon-button::before {
+  background-color: #ffffff;
+}
+.mtrl-icon-button--surface.mtrl-icon-button--two-tone {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+.mtrl-icon-button--surface.mtrl-icon-button--contained {
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.87);
+}
+.mtrl-icon-button--surface.mtrl-icon-button--contained::before {
+  background-color: black;
+}
+
 .mtrl-icon-button {
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -61,14 +146,14 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 .mtrl-icon-button--two-tone {
-  background-color: rgba(0, 0, 0, 0.18);
+  background-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-icon-button--two-tone:disabled {
   background-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-icon-button--contained {
-  color: rgba(255, 255, 255, 0.87);
   background-color: black;
+  color: rgba(255, 255, 255, 0.87);
 }
 .mtrl-icon-button--contained::before {
   background-color: #ffffff;

@@ -6,6 +6,24 @@
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
 
+@mixin icon-button-theme($color, $on-color)
+  &.mtrl-icon-button
+    @include ripple($color)
+    color: rgba($color, $icon--active)
+
+    &--two-tone
+      background-color: rgba($color, $stroke)
+
+    &--contained
+      @include ripple($on-color)
+      background-color: $color
+      color: rgba($on-color, $icon--active)
+
+@each $theme, $on-theme in $theme-map
+  .mtrl-icon-button--#{map_get($theme-name-map, $theme)}
+    @include icon-button-theme($theme, $on-theme)
+
+
 .mtrl-icon-button
   @include ripple_
   @include touch-target
@@ -37,15 +55,15 @@
     border: 1px solid rgba($on-surface, $stroke)
 
   &--two-tone
-    background-color: rgba($on-surface, 18%)
+    background-color: rgba($on-surface, $stroke)
 
     &:disabled
       background-color: rgba($on-surface, $disabled-filled-container)
 
   &--contained
     @include ripple($surface)
-    color: rgba($surface, $icon--active)
     background-color: $on-surface
+    color: rgba($surface, $icon--active)
 
     &:disabled
       background-color: rgba($on-surface, $disabled-filled-container)
