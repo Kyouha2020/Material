@@ -29,6 +29,9 @@ html[dir=rtl] .mtrl-bottom-app-bar__end-controls {
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
   border: none;
   display: inline-flex;
   position: relative;
@@ -50,12 +53,6 @@ html[dir=rtl] .mtrl-bottom-app-bar__end-controls {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-}
-.mtrl-bottom-app-bar__navigation-drawer-control::after {
-  content: "";
-  position: absolute;
-  min-width: 48px;
-  min-height: 48px;
 }
 .mtrl-bottom-app-bar__navigation-drawer-control:not(:focus-visible) {
   outline: none;

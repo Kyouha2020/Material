@@ -39,12 +39,6 @@
   height: 100%;
   border-radius: inherit;
 }
-.mtrl-fab::after {
-  content: "";
-  position: absolute;
-  min-width: 48px;
-  min-height: 48px;
-}
 .mtrl-fab:not(:focus-visible) {
   outline: none;
 }

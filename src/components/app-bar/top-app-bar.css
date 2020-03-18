@@ -94,12 +94,6 @@ html[dir=rtl] .mtrl-top-app-bar__title {
   height: 100%;
   border-radius: inherit;
 }
-.mtrl-top-app-bar__navigation-icon::after, .mtrl-top-app-bar__action-icon::after {
-  content: "";
-  position: absolute;
-  min-width: 48px;
-  min-height: 48px;
-}
 .mtrl-top-app-bar__navigation-icon:not(:focus-visible), .mtrl-top-app-bar__action-icon:not(:focus-visible) {
   outline: none;
 }
