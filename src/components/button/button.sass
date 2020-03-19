@@ -10,13 +10,11 @@
 
 html[dark]
   .mtrl-button
-    @include button-theme($dark--primary, $dark--on-primary)
     @include button-dark-theme($dark--primary, $dark--on-primary)
     @include disabled-button-theme($dark--surface, $dark--on-surface)
-    background-color: $dark--surface
 
 .mtrl-button
-  @include button-theme($primary, $on-primary)
+  @include button-light-theme($primary, $on-primary)
   @include disabled-button-theme($surface, $on-surface)
   @include ripple_
   @include touch-target
@@ -31,7 +29,7 @@ html[dark]
   height: 36px
   padding: 0 8px
   border-radius: 4px
-  background-color: $surface
+  //background-color: $surface
   //color: rgba($primary, $text--high-emphasis)
   white-space: nowrap
 

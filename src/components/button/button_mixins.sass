@@ -3,10 +3,11 @@
 @use "../../design/interaction/states" as *
 @use "../../design/usability/accessibility" as *
 
-@mixin button-theme($color, $on-color)
+@mixin button-theme_($color, $on-color)
   &.mtrl-button
     @include ripple($color)
     color: rgba($color, $text--high-emphasis)
+    @content
 
     &--stroked
       border-color: $color
@@ -15,12 +16,21 @@
       background-color: rgba($color, $stroke)
 
     &--contained
-      @include ripple($on-color)
       background-color: $color
       color: rgba($on-color, $text--high-emphasis)
 
+
+@mixin button-light-theme($color, $on-color)
+  @include button-theme_($color, $on-color)
+    background-color: $surface
+
+    &--contained
+      @include ripple($on-color)
+
 @mixin button-dark-theme($color, $on-color)
-  &.mtrl-button
+  @include button-theme_($color, $on-color)
+    background-color: $dark--surface
+
     &--outlined
       border-color: rgba($dark--on-surface, $stroke)
 
@@ -28,7 +38,7 @@
         border-color: $color
 
     &--contained
-      @include ripple($dark--on-surface)
+      @include ripple(white)
 
 @mixin disabled-button-theme($color, $on-color)
   &.mtrl-button

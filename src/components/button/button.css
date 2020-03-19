@@ -1,11 +1,18 @@
-html[dark] .mtrl-button {
-  background-color: #121212;
-}
 html[dark] .mtrl-button.mtrl-button {
   color: rgba(187, 134, 252, 0.87);
+  background-color: #121212;
 }
 html[dark] .mtrl-button.mtrl-button::before {
   background-color: #bb86fc;
+}
+html[dark] .mtrl-button.mtrl-button--outlined {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+html[dark] .mtrl-button.mtrl-button--outlined:focus {
+  border-color: #bb86fc;
+}
+html[dark] .mtrl-button.mtrl-button--contained::before {
+  background-color: white;
 }
 html[dark] .mtrl-button.mtrl-button--stroked {
   border-color: #bb86fc;
@@ -16,18 +23,6 @@ html[dark] .mtrl-button.mtrl-button--two-tone {
 html[dark] .mtrl-button.mtrl-button--contained {
   background-color: #bb86fc;
   color: rgba(0, 0, 0, 0.87);
-}
-html[dark] .mtrl-button.mtrl-button--contained::before {
-  background-color: black;
-}
-html[dark] .mtrl-button.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
-}
-html[dark] .mtrl-button.mtrl-button--outlined:focus {
-  border-color: #bb86fc;
-}
-html[dark] .mtrl-button.mtrl-button--contained::before {
-  background-color: white;
 }
 html[dark] .mtrl-button.mtrl-button:disabled {
   background-color: rgba(18, 18, 18, 0.12);
@@ -64,14 +59,17 @@ html[dark] .mtrl-button.mtrl-button--contained:disabled {
   height: 36px;
   padding: 0 8px;
   border-radius: 4px;
-  background-color: #ffffff;
   white-space: nowrap;
 }
 .mtrl-button.mtrl-button {
   color: rgba(98, 0, 238, 0.87);
+  background-color: #ffffff;
 }
 .mtrl-button.mtrl-button::before {
   background-color: #6200ee;
+}
+.mtrl-button.mtrl-button--contained::before {
+  background-color: white;
 }
 .mtrl-button.mtrl-button--stroked {
   border-color: #6200ee;
@@ -82,9 +80,6 @@ html[dark] .mtrl-button.mtrl-button--contained:disabled {
 .mtrl-button.mtrl-button--contained {
   background-color: #6200ee;
   color: rgba(255, 255, 255, 0.87);
-}
-.mtrl-button.mtrl-button--contained::before {
-  background-color: white;
 }
 .mtrl-button.mtrl-button:disabled {
   background-color: rgba(255, 255, 255, 0.12);
