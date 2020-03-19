@@ -6,7 +6,7 @@
     @include button-light-theme($theme, $on-theme)
     @include disabled-button-light-theme($surface, $on-surface)
 
-@each $theme, $on-theme in $dark-theme-map
-  .mtrl-button--#{map_get($dark-theme-name-map, $theme)}
-    @include button-dark-theme($theme, $on-theme)
-    @include disabled-button-dark-theme($theme, $on-theme)
+@each $dark-theme, $dark-on-theme in $dark-theme-map
+  .mtrl-button--#{map_get($dark-theme-name-map, $dark-theme)}
+    @include button-dark-theme($dark-theme, $dark-on-theme)
+    @include disabled-button-dark-theme($dark-theme, $dark-on-theme)
