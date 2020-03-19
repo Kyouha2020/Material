@@ -1,3 +1,6 @@
+@use "../color/theme" as *
+@use "../interaction/ripple" as *
+
 // https://material.io/design/environment/elevation.html
 
 $umbra-map: (0: 0px 0px 0px 0px, 1: 0px 2px 1px -1px, 2: 0px 3px 1px -2px, 3: 0px 3px 3px -2px, 4: 0px 2px 4px -1px, 5: 0px 3px 5px -1px, 6: 0px 3px 5px -1px, 7: 0px 4px 5px -2px, 8: 0px 5px 5px -3px, 9: 0px 5px 6px -3px, 10: 0px 6px 6px -3px, 11: 0px 6px 7px -4px, 12: 0px 7px 8px -4px, 13: 0px 7px 8px -4px, 14: 0px 7px 9px -4px, 15: 0px 8px 9px -5px, 16: 0px 8px 10px -5px, 17: 0px 8px 11px -5px, 18: 0px 9px 11px -5px, 19: 0px 9px 12px -6px, 20: 0px 10px 13px -6px, 21: 0px 10px 13px -6px, 22: 0px 10px 14px -6px, 23: 0px 11px 14px -7px, 24: 0px 11px 15px -7px)
@@ -8,6 +11,9 @@ $ambient-map: (0: 0px 0px 0px 0px, 1: 0px 1px 3px 0px, 2: 0px 1px 5px 0px, 3: 0p
   $umbra-color: rgba($color, 0.2 + $opacity-boost)
   $penumbra-color: rgba($color, 0.14 + $opacity-boost)
   $ambient-color: rgba($color, 0.12 + $opacity-boost)
+
+  html[dark] &
+    @include ripple-boost(map-get($elevation-overlay, $z-value))
 
   box-shadow: (map-get($umbra-map, $z-value) $umbra-color, map-get($penumbra-map, $z-value) $penumbra-color, map-get($ambient-map, $z-value) $ambient-color)
   transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1)

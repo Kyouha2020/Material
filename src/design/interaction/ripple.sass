@@ -5,7 +5,21 @@
   &::before
     background-color: $color
 
+@mixin ripple-boost($opacity-boost: 0)
+  &::before
+    opacity: $opacity-boost
+
+  &:hover::before
+    opacity: $opacity-boost + $container-overlay--hovered
+
+  &:focus::before
+    opacity: $opacity-boost + $container-overlay--focused
+
+  &:active::before
+    opacity: $opacity-boost + $container-overlay--pressed
+
 @mixin ripple_
+  @include ripple-boost()
   &::before
     content: ''
     position: absolute
@@ -16,13 +30,3 @@
     width: 100%
     height: 100%
     border-radius: inherit
-    opacity: 0
-
-  &:hover::before
-    opacity: $container-overlay--hovered
-
-  &:focus::before
-    opacity: $container-overlay--focused
-
-  &:active::before
-    opacity: $container-overlay--pressed
