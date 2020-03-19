@@ -1,12 +1,7 @@
 @use "../../design/color/theme" as *
 @use "button_mixins" as *
 
-@each $theme, $on-theme in $theme-map
-  .mtrl-button--#{map_get($theme-name-map, $theme)}
-    @include button-light-theme($theme, $on-theme)
-    @include disabled-button-light-theme($surface, $on-surface)
-
-@each $dark-theme, $dark-on-theme in $dark-theme-map
-  .mtrl-button--#{map_get($dark-theme-name-map, $dark-theme)}
-    @include button-dark-theme($dark-theme, $dark-on-theme)
-    @include disabled-button-dark-theme($dark-theme, $dark-on-theme)
+@each $theme in $theme-name-map
+  .mtrl-button--#{$theme}
+    @include button-light-theme(get-theme(color, $theme), get-theme(on-color, $theme))
+    @include button-dark-theme(get-theme(color, $theme, true), get-theme(on-color, $theme, true))

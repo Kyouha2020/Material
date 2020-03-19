@@ -19,15 +19,12 @@ $on-background: on-color($background) !default
 $on-surface: on-color($surface) !default
 $on-error: on-color($error) !default
 
-$theme-map: ($primary: $on-primary, $primary-variant: $on-primary-variant, $secondary: $on-secondary, $secondary-variant: $on-secondary-variant, $error: $on-error)
-$theme-name-map: ($primary: primary, $primary-variant: primary-variant, $secondary: secondary, $secondary-variant: secondary-variant, $error: error)
-
 // https://material.io/design/color/dark-theme.html
 
 $dark--primary: $primary-200 !default
 $dark--primary-variant: $primary-700 !default
-$dark--dark-primary: #1f1b24 !default
 $dark--secondary: $secondary-200 !default
+$dark--secondary-variant: $secondary-200 !default
 $dark--background: #121212 !default
 $dark--surface: #121212 !default
 $dark--error: #cf6679 !default
@@ -35,11 +32,63 @@ $dark--error: #cf6679 !default
 $dark--on-primary: on-color($dark--primary) !default
 $dark--on-primary-variant: on-color($dark--primary-variant) !default
 $dark--on-secondary: on-color($dark--secondary) !default
+$dark--on-secondary-variant: on-color($dark--secondary-variant) !default
 $dark--on-background: on-color($dark--background) !default
 $dark--on-surface: on-color($dark--surface) !default
 $dark--on-error: on-color($dark--error) !default
 
-$dark-theme-map: ($dark--primary: $dark--on-primary, $dark--primary-variant: $dark--on-primary-variant, $dark--secondary: $dark--on-secondary, $dark--error: $dark--on-error)
-$dark-theme-name-map: ($dark--primary: primary, $dark--primary-variant: primary-variant, $dark--secondary: secondary, $dark--error: error)
-
 $elevation-overlay: (00: 0, 01: .05, 02: .07, 03: .08, 04: .09, 05: .1, 06: .11, 07: .11, 08: .12, 09: .12, 10: .13, 11: .13, 12: .14, 13: .14, 14: .14, 15: .14, 16: .15, 17: .15, 18: .15, 19: .15, 20: .15, 21: .15, 22: .15, 23: .15, 24: .16)
+
+
+$theme-name-map: (primary, primary-variant, secondary, secondary-variant, error)
+
+@function get-theme($type, $theme, $is-dark: false)
+  @if $is-dark == false
+    @if $type == color
+      @if $theme == primary
+        @return $primary
+      @else if $theme == primary-variant
+        @return $primary-variant
+      @if $theme == secondary
+        @return $secondary
+      @else if $theme == secondary-variant
+        @return $secondary-variant
+      @else if $theme == error
+        @return $error
+
+    @else if $type == on-color
+      @if $theme == primary
+        @return $on-primary
+      @else if $theme == primary-variant
+        @return $on-primary-variant
+      @if $theme == secondary
+        @return $on-secondary
+      @else if $theme == secondary-variant
+        @return $on-secondary-variant
+      @else if $theme == error
+        @return $on-error
+
+  @else
+    @if $type == color
+      @if $theme == primary
+        @return $dark--primary
+      @else if $theme == primary-variant
+        @return $dark--primary-variant
+      @if $theme == secondary
+        @return $dark--secondary
+      @else if $theme == secondary-variant
+        @return $dark--secondary-variant
+      @else if $theme == error
+        @return $dark--error
+
+    @else if $type == on-color
+      @if $theme == primary
+        @return $dark--on-primary
+      @else if $theme == primary-variant
+        @return $dark--on-primary-variant
+      @if $theme == secondary
+        @return $on-secondary
+      @else if $theme == secondary-variant
+        @return $dark--on-secondary-variant
+      @else if $theme == error
+        @return $dark--on-error
