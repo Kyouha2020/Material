@@ -58,8 +58,7 @@
   <button class="mtrl-button mtrl-button--contained mtrl-button--secondary-variant">Secondary Variant</button>
   <button class="mtrl-button mtrl-button--contained mtrl-button--error">Error</button>
 
-  <h3>Usage</h3>
-  <h4>With Icon</h4>
+  <h3>With Icon</h3>
   <button class="mtrl-button mtrl-button--outlined">
     <i class="mtrl-button__icon material-icons">favorite</i>
     Leading
@@ -86,13 +85,16 @@
     Vertical
     <i class="mtrl-button__icon mtrl-button__icon--trailing material-icons">favorite</i>
   </button>
-</section>
 
-
-<h2>Toggle Button</h2>
-<section id="toggle-button">
+  <h3>Toggle Button</h3>
   <button class="mtrl-button mtrl-button--toggle">Toggle</button>
   <button class="mtrl-button mtrl-button--toggle mtrl-button--toggle--active">Active</button>
+
+  <script type="module">
+      import {initToggleButtons} from "../../src/components/button/Button.js"
+
+      initToggleButtons()
+  </script>
 </section>
 
 
@@ -136,8 +138,7 @@
     <i class="mtrl-icon-button__icon material-icons">favorite</i>
   </button>
 
-  <h3>Usage</h3>
-  <h4>Text</h4>
+  <h3>Text as Icon</h3>
   <button class="mtrl-icon-button">1</button>
   <button class="mtrl-icon-button">A</button>
   <button class="mtrl-icon-button">好</button>
