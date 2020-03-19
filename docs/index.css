@@ -55,7 +55,7 @@ html[dir=rtl] #toggle-container {
   right: initial;
 }
 
-#dir-toggle {
+#theme-toggle, #dir-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -67,10 +67,10 @@ html[dir=rtl] #toggle-container {
   -ms-user-select: none;
   user-select: none;
 }
-#dir-toggle:hover {
+#theme-toggle:hover, #dir-toggle:hover {
   cursor: pointer;
 }
-#dir-toggle i {
+#theme-toggle i, #dir-toggle i {
   font-size: 1.5rem;
 }
 

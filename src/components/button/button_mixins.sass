@@ -1,0 +1,32 @@
+@use "../../design/interaction/ripple" as *
+@use "../../design/interaction/states" as *
+@use "../../design/usability/accessibility" as *
+
+@mixin button-theme($color, $on-color)
+  &.mtrl-button
+    @include ripple($color)
+    color: rgba($color, $text--high-emphasis)
+
+    &--stroked
+      border-color: $color
+
+    &--two-tone
+      background-color: rgba($color, $stroke)
+
+    &--contained
+      @include ripple($on-color)
+      background-color: $color
+      color: rgba($on-color, $text--high-emphasis)
+
+@mixin disabled-button-theme($color, $on-color)
+  &.mtrl-button
+    &:disabled
+      background-color: rgba($color, $disabled-filled-container)
+      color: rgba($on-color, $text--disabled)
+      border-color: rgba($on-color, $stroke)
+
+    &--two-tone:disabled
+      background-color: rgba($on-color, $disabled-filled-container)
+
+    &--contained:disabled
+      background-color: rgba($on-color, $disabled-filled-container)
