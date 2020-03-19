@@ -1,5 +1,7 @@
+@use "../../design/color/theme" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
+@use "../../design/theme/theme" as *
 @use "../../design/usability/accessibility" as *
 
 @mixin button-theme($color, $on-color)
@@ -17,6 +19,14 @@
       @include ripple($on-color)
       background-color: $color
       color: rgba($on-color, $text--high-emphasis)
+
+@mixin button-dark-theme($color, $on-color)
+  &.mtrl-button
+    &--outlined
+      border-color: rgba($dark--on-surface, $stroke)
+
+      &:focus
+        border-color: $color
 
 @mixin disabled-button-theme($color, $on-color)
   &.mtrl-button

@@ -10,3 +10,4 @@ html[dark]
   @each $theme, $on-theme in $dark-theme-map
     .mtrl-button--#{map_get($dark-theme-name-map, $theme)}
       @include button-theme($theme, $on-theme)
+      @include button-dark-theme($theme, $on-theme)
