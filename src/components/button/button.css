@@ -46,17 +46,6 @@
   background-color: #6200ee;
   color: rgba(255, 255, 255, 0.87);
 }
-.mtrl-button.mtrl-button:disabled {
-  background-color: rgba(255, 255, 255, 0.12);
-  color: rgba(0, 0, 0, 0.38);
-  border-color: rgba(0, 0, 0, 0.12);
-}
-.mtrl-button.mtrl-button--two-tone:disabled {
-  background-color: rgba(0, 0, 0, 0.12);
-}
-.mtrl-button.mtrl-button--contained:disabled {
-  background-color: rgba(0, 0, 0, 0.12);
-}
 html[dark] .mtrl-button.mtrl-button {
   color: rgba(187, 134, 252, 0.87);
   background-color: #121212;
@@ -82,6 +71,17 @@ html[dark] .mtrl-button.mtrl-button--two-tone {
 html[dark] .mtrl-button.mtrl-button--contained {
   background-color: #bb86fc;
   color: rgba(0, 0, 0, 0.87);
+}
+.mtrl-button.mtrl-button:disabled {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: rgba(0, 0, 0, 0.38);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+.mtrl-button.mtrl-button--two-tone:disabled {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.mtrl-button.mtrl-button--contained:disabled {
+  background-color: rgba(0, 0, 0, 0.12);
 }
 html[dark] .mtrl-button.mtrl-button:disabled {
   background-color: rgba(18, 18, 18, 0.12);

@@ -19,6 +19,21 @@
       background-color: $color
       color: rgba($on-color, $text--high-emphasis)
 
+@mixin disabled-button-theme_($color, $on-color)
+  &.mtrl-button
+    @content
+
+    &:disabled
+      background-color: rgba($color, $disabled-filled-container)
+      color: rgba($on-color, $text--disabled)
+      border-color: rgba($on-color, $stroke)
+
+    &--two-tone:disabled
+      background-color: rgba($on-color, $disabled-filled-container)
+
+    &--contained:disabled
+      background-color: rgba($on-color, $disabled-filled-container)
+
 
 @mixin button-light-theme($color, $on-color)
   @include button-theme_($color, $on-color)
@@ -31,27 +46,22 @@
       @include ripple($on-color)
 
 @mixin button-dark-theme($color, $on-color)
-  @include button-theme_($color, $on-color)
-    background-color: $dark--surface
+  html[dark] &
+    @include button-theme_($color, $on-color)
+      background-color: $dark--surface
 
-    &--outlined
-      border-color: rgba($dark--on-surface, $stroke)
+      &--outlined
+        border-color: rgba($dark--on-surface, $stroke)
 
-      &:focus
-        border-color: $color
+        &:focus
+          border-color: $color
 
-    &--contained
-      @include ripple(white)
+      &--contained
+        @include ripple(white)
 
-@mixin disabled-button-theme($color, $on-color)
-  &.mtrl-button
-    &:disabled
-      background-color: rgba($color, $disabled-filled-container)
-      color: rgba($on-color, $text--disabled)
-      border-color: rgba($on-color, $stroke)
+@mixin disabled-button-light-theme($color, $on-color)
+  @include disabled-button-theme_($color, $on-color)
 
-    &--two-tone:disabled
-      background-color: rgba($on-color, $disabled-filled-container)
-
-    &--contained:disabled
-      background-color: rgba($on-color, $disabled-filled-container)
+@mixin disabled-button-dark-theme($color, $on-color)
+  html[dark] &
+    @include disabled-button-theme_($color, $on-color)

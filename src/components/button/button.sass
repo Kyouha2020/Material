@@ -10,11 +10,9 @@
 
 .mtrl-button
   @include button-light-theme($primary, $on-primary)
-  @include disabled-button-theme($surface, $on-surface)
-
-  html[dark] &
-    @include button-dark-theme($dark--primary, $dark--on-primary)
-    @include disabled-button-theme($dark--surface, $dark--on-surface)
+  @include button-dark-theme($dark--primary, $dark--on-primary)
+  @include disabled-button-light-theme($surface, $on-surface)
+  @include disabled-button-dark-theme($dark--surface, $dark--on-surface)
 
   @include ripple_
   @include touch-target

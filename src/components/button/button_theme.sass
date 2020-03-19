@@ -4,10 +4,9 @@
 @each $theme, $on-theme in $theme-map
   .mtrl-button--#{map_get($theme-name-map, $theme)}
     @include button-light-theme($theme, $on-theme)
-    @include disabled-button-theme($surface, $on-surface)
+    @include disabled-button-light-theme($surface, $on-surface)
 
-html[dark]
-  @each $theme, $on-theme in $dark-theme-map
-    .mtrl-button--#{map_get($dark-theme-name-map, $theme)}
-      @include button-dark-theme($theme, $on-theme)
-      @include button-dark-theme($theme, $on-theme)
+@each $theme, $on-theme in $dark-theme-map
+  .mtrl-button--#{map_get($dark-theme-name-map, $theme)}
+    @include button-dark-theme($theme, $on-theme)
+    @include disabled-button-dark-theme($theme, $on-theme)
