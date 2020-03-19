@@ -1,0 +1,33 @@
+@use "../../design/color/theme" as *
+@use "../../design/interaction/ripple" as *
+@use "../../design/usability/accessibility" as *
+
+@mixin card-theme_($color, $on-color)
+  .mtrl-card
+    background-color: $color
+    @content
+
+    &__primary
+      @include ripple($on-color)
+
+    &__title
+      color: rgba($on-color, $text--high-emphasis)
+
+    &__subtitle, &__supporting-text
+      color: rgba($on-color, $text--medium-emphasis)
+
+  &.mtrl-card
+    &--outlined
+      border-color: rgba($on-color, $stroke)
+
+@mixin card-light-theme($color, $on-color)
+  @include card-theme_($color, $on-color)
+
+@mixin card-dark-theme($color, $on-color)
+  html[dark] &
+    @include card-theme_($color, $on-color)
+
+    &.mtrl-card
+      &--outlined
+        &:focus
+          border-color: $dark-on-surface
