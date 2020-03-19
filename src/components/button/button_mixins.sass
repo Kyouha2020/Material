@@ -24,6 +24,9 @@
   @include button-theme_($color, $on-color)
     background-color: $surface
 
+    &--outlined
+      border-color: rgba($on-surface, $stroke)
+
     &--contained
       @include ripple($on-color)
 

@@ -21,7 +21,6 @@ html[dark]
   @include unselectable
   @include centered-content
   @include accessible-border
-  //@include ripple($primary)
   @include typography(button)
   display: inline-flex
   position: relative
@@ -29,8 +28,6 @@ html[dark]
   height: 36px
   padding: 0 8px
   border-radius: 4px
-  //background-color: $surface
-  //color: rgba($primary, $text--high-emphasis)
   white-space: nowrap
 
   &:hover
@@ -38,9 +35,6 @@ html[dark]
 
   &:disabled
     @include elevation(0)
-    //background-color: rgba($surface, $disabled-filled-container)
-    //color: rgba($on-surface, $text--disabled)
-    //border-color: rgba($on-surface, $stroke)
     cursor: default
     pointer-events: none
 
@@ -48,25 +42,13 @@ html[dark]
     padding: 0 16px
 
   &--outlined
-    border: 1px solid rgba($on-surface, $stroke)
+    border: 1px solid
 
   &--stroked
-    border: 1px solid $primary
-
-  &--two-tone
-    //background-color: rgba($primary, $stroke)
-
-    &:disabled
-  //background-color: rgba($on-surface, $disabled-filled-container)
+    border: 1px solid
 
   &--contained
-    //@include ripple($on-primary)
     @include elevation(2, 4, 6, 8)
-    //background-color: $primary
-    //color: rgba($on-primary, $text--high-emphasis)
-
-    &:disabled
-  //background-color: rgba($on-surface, $disabled-filled-container)
 
   &--float
     @include elevation(0, 0, 2, 4)

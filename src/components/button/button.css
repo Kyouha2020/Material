@@ -68,6 +68,9 @@ html[dark] .mtrl-button.mtrl-button--contained:disabled {
 .mtrl-button.mtrl-button::before {
   background-color: #6200ee;
 }
+.mtrl-button.mtrl-button--outlined {
+  border-color: rgba(0, 0, 0, 0.12);
+}
 .mtrl-button.mtrl-button--contained::before {
   background-color: white;
 }
@@ -147,10 +150,10 @@ html[dark] .mtrl-button:disabled:active::before {
   padding: 0 16px;
 }
 .mtrl-button--outlined {
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid;
 }
 .mtrl-button--stroked {
-  border: 1px solid #6200ee;
+  border: 1px solid;
 }
 .mtrl-button--contained {
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
