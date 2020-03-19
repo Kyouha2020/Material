@@ -19,7 +19,6 @@
   @include accessible-border
   @include typography(button)
   display: inline-flex
-  position: relative
   min-width: 64px
   height: 36px
   padding: 0 8px
@@ -37,10 +36,7 @@
   &--outlined, &--stroked, &--two-tone, &--contained, &--toggle
     padding: 0 16px
 
-  &--outlined
-    border: 1px solid
-
-  &--stroked
+  &--outlined, &--stroked
     border: 1px solid
 
   &--contained
@@ -57,6 +53,21 @@
 
   &--unelevated
     @include elevation(0, 0, 0, 0)
+
+  &--rounded
+    border-radius: 18px
+
+  &--sharp
+    border-radius: 0
+
+  &--dense-1
+    height: 32px
+
+  &--dense-2
+    height: 28px
+
+  &--dense-3
+    height: 24px
 
   &--toggle
     @extend .mtrl-button--outlined
