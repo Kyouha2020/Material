@@ -1,5 +1,5 @@
 .mtrl-button--primary.mtrl-button {
-  color: rgba(98, 0, 238, 0.87);
+  color: #6200ee;
   background-color: #ffffff;
 }
 .mtrl-button--primary.mtrl-button::before {
@@ -19,10 +19,10 @@
 }
 .mtrl-button--primary.mtrl-button--contained {
   background-color: #6200ee;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 html[dark] .mtrl-button--primary.mtrl-button {
-  color: rgba(187, 134, 252, 0.87);
+  color: #bb86fc;
   background-color: #121212;
 }
 html[dark] .mtrl-button--primary.mtrl-button::before {
@@ -45,11 +45,11 @@ html[dark] .mtrl-button--primary.mtrl-button--two-tone {
 }
 html[dark] .mtrl-button--primary.mtrl-button--contained {
   background-color: #bb86fc;
-  color: rgba(0, 0, 0, 0.87);
+  color: black;
 }
 
 .mtrl-button--primary-variant.mtrl-button {
-  color: rgba(55, 0, 179, 0.87);
+  color: #3700b3;
   background-color: #ffffff;
 }
 .mtrl-button--primary-variant.mtrl-button::before {
@@ -69,10 +69,10 @@ html[dark] .mtrl-button--primary.mtrl-button--contained {
 }
 .mtrl-button--primary-variant.mtrl-button--contained {
   background-color: #3700b3;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 html[dark] .mtrl-button--primary-variant.mtrl-button {
-  color: rgba(55, 0, 179, 0.87);
+  color: #3700b3;
   background-color: #121212;
 }
 html[dark] .mtrl-button--primary-variant.mtrl-button::before {
@@ -95,11 +95,11 @@ html[dark] .mtrl-button--primary-variant.mtrl-button--two-tone {
 }
 html[dark] .mtrl-button--primary-variant.mtrl-button--contained {
   background-color: #3700b3;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 
 .mtrl-button--secondary.mtrl-button {
-  color: rgba(3, 218, 198, 0.87);
+  color: #03dac6;
   background-color: #ffffff;
 }
 .mtrl-button--secondary.mtrl-button::before {
@@ -119,10 +119,10 @@ html[dark] .mtrl-button--primary-variant.mtrl-button--contained {
 }
 .mtrl-button--secondary.mtrl-button--contained {
   background-color: #03dac6;
-  color: rgba(0, 0, 0, 0.87);
+  color: black;
 }
 html[dark] .mtrl-button--secondary.mtrl-button {
-  color: rgba(3, 218, 198, 0.87);
+  color: #03dac6;
   background-color: #121212;
 }
 html[dark] .mtrl-button--secondary.mtrl-button::before {
@@ -145,11 +145,11 @@ html[dark] .mtrl-button--secondary.mtrl-button--two-tone {
 }
 html[dark] .mtrl-button--secondary.mtrl-button--contained {
   background-color: #03dac6;
-  color: rgba(0, 0, 0, 0.87);
+  color: black;
 }
 
 .mtrl-button--secondary-variant.mtrl-button {
-  color: rgba(1, 135, 134, 0.87);
+  color: #018786;
   background-color: #ffffff;
 }
 .mtrl-button--secondary-variant.mtrl-button::before {
@@ -169,10 +169,10 @@ html[dark] .mtrl-button--secondary.mtrl-button--contained {
 }
 .mtrl-button--secondary-variant.mtrl-button--contained {
   background-color: #018786;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 html[dark] .mtrl-button--secondary-variant.mtrl-button {
-  color: rgba(3, 218, 198, 0.87);
+  color: #03dac6;
   background-color: #121212;
 }
 html[dark] .mtrl-button--secondary-variant.mtrl-button::before {
@@ -195,11 +195,11 @@ html[dark] .mtrl-button--secondary-variant.mtrl-button--two-tone {
 }
 html[dark] .mtrl-button--secondary-variant.mtrl-button--contained {
   background-color: #03dac6;
-  color: rgba(0, 0, 0, 0.87);
+  color: black;
 }
 
 .mtrl-button--error.mtrl-button {
-  color: rgba(176, 0, 32, 0.87);
+  color: #b00020;
   background-color: #ffffff;
 }
 .mtrl-button--error.mtrl-button::before {
@@ -219,10 +219,10 @@ html[dark] .mtrl-button--secondary-variant.mtrl-button--contained {
 }
 .mtrl-button--error.mtrl-button--contained {
   background-color: #b00020;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 html[dark] .mtrl-button--error.mtrl-button {
-  color: rgba(207, 102, 121, 0.87);
+  color: #cf6679;
   background-color: #121212;
 }
 html[dark] .mtrl-button--error.mtrl-button::before {
@@ -245,7 +245,7 @@ html[dark] .mtrl-button--error.mtrl-button--two-tone {
 }
 html[dark] .mtrl-button--error.mtrl-button--contained {
   background-color: #cf6679;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 
 /*# sourceMappingURL=button_theme.css.map */

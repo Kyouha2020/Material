@@ -45,7 +45,10 @@
   &--stroked
     border: 1px solid
 
-  &--contained, &--raised
+  &--contained
+    @include elevation(2, 4, 6, 8, $ripple-boost: false)
+
+  &--raised
     @include elevation(2, 4, 6, 8)
 
   &--float

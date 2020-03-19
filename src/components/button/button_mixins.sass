@@ -6,7 +6,7 @@
 @mixin button-theme_($color, $on-color)
   &.mtrl-button
     @include ripple($color)
-    color: rgba($color, $text--high-emphasis)
+    color: $color
     @content
 
     &--stroked
@@ -17,7 +17,7 @@
 
     &--contained
       background-color: $color
-      color: rgba($on-color, $text--high-emphasis)
+      color: $on-color
 
 @mixin disabled-button-theme_($color, $on-color)
   &.mtrl-button
