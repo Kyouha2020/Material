@@ -26,6 +26,9 @@ html[dark] .mtrl-button.mtrl-button--outlined {
 html[dark] .mtrl-button.mtrl-button--outlined:focus {
   border-color: #bb86fc;
 }
+html[dark] .mtrl-button.mtrl-button--contained::before {
+  background-color: white;
+}
 html[dark] .mtrl-button.mtrl-button:disabled {
   background-color: rgba(18, 18, 18, 0.12);
   color: rgba(255, 255, 255, 0.38);
