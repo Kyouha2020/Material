@@ -146,6 +146,18 @@ html[dark] .mtrl-button:disabled:focus::before {
 html[dark] .mtrl-button:disabled:active::before {
   opacity: 0.1;
 }
+.mtrl-button:disabled:hover {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  z-index: 0;
+}
+.mtrl-button:disabled:focus {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  z-index: 0;
+}
+.mtrl-button:disabled:active {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  z-index: 0;
+}
 .mtrl-button--outlined, .mtrl-button--stroked, .mtrl-button--two-tone, .mtrl-button--contained, .mtrl-button--float, .mtrl-button--raised, .mtrl-button--push {
   padding: 0 16px;
 }
