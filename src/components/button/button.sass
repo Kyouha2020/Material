@@ -11,7 +11,6 @@
   @include button-dark-theme($dark-primary, $dark-on-primary)
   @include disabled-button-light-theme($surface, $on-surface)
   @include disabled-button-dark-theme($dark-surface, $dark-on-surface)
-
   @include ripple_
   @include touch-target
   @include unselectable
@@ -42,33 +41,6 @@
   &--contained
     @include elevation(2, 4, 6, 8, $ripple-boost: false)
 
-  &--raised
-    @include elevation(2, 4, 6, 8)
-
-  &--float
-    @include elevation(0, 0, 2, 4)
-
-  &--push
-    @include elevation(2, 4, 0, 0)
-
-  &--unelevated
-    @include elevation(0, 0, 0, 0)
-
-  &--rounded
-    border-radius: 18px
-
-  &--sharp
-    border-radius: 0
-
-  &--dense-1
-    height: 32px
-
-  &--dense-2
-    height: 28px
-
-  &--dense-3
-    height: 24px
-
   &--toggle
     @extend .mtrl-button--outlined
 
@@ -84,3 +56,38 @@
 
     &--trailing
       @include margin-horizontal(8px, -4px)
+
+
+  &--raised
+    @include elevation(2, 4, 6, 8)
+
+  &--float
+    @include elevation(0, 0, 2, 4)
+
+  &--push
+    @include elevation(2, 4, 0, 0)
+
+  &--unelevated
+    @include elevation(0, 0, 0, 0)
+
+  &--dense-1
+    height: 32px
+
+  &--dense-2
+    height: 28px
+
+  &--dense-3
+    height: 24px
+
+  &--rounded
+    border-radius: 18px
+
+  &--sharp
+    border-radius: 0
+
+  &--block
+    display: flex
+    width: 100%
+
+    &--between
+      justify-content: space-between
