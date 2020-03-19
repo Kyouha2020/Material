@@ -3,21 +3,9 @@
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
 @use "../../design/layout/spacing" as *
+@use "../../design/typography/typography" as *
 @use "../../design/usability/accessibility" as *
 @use "../components" as *
-
-@mixin icon-button-theme($color, $on-color)
-  &.mtrl-icon-button
-    @include ripple($color)
-    color: rgba($color, $icon--active)
-
-    &--two-tone
-      background-color: rgba($color, $stroke)
-
-    &--contained
-      @include ripple($on-color)
-      background-color: $color
-      color: rgba($on-color, $icon--active)
 
 .mtrl-icon-button
   @include ripple_
@@ -26,6 +14,7 @@
   @include centered-content
   @include accessible-border
   @include ripple($on-surface)
+  @include typography(headline5)
   display: inline-flex
   position: relative
   width: 48px

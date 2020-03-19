@@ -7,6 +7,14 @@
   justify-content: center;
   vertical-align: middle;
   border: none;
+  font-family: Roboto, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: inherit;
+  text-transform: inherit;
   display: inline-flex;
   position: relative;
   width: 48px;
