@@ -30,10 +30,10 @@
 .mtrl-button.mtrl-button::before {
   background-color: #6200ee;
 }
-.mtrl-button.mtrl-button--outlined {
+.mtrl-button.mtrl-button--outlined, .mtrl-button.mtrl-button--toggle {
   border-color: rgba(0, 0, 0, 0.12);
 }
-.mtrl-button.mtrl-button--contained::before {
+.mtrl-button.mtrl-button--contained::before, .mtrl-button.mtrl-button--toggle--active::before {
   background-color: white;
 }
 .mtrl-button.mtrl-button--stroked {
@@ -42,7 +42,7 @@
 .mtrl-button.mtrl-button--two-tone {
   background-color: rgba(98, 0, 238, 0.12);
 }
-.mtrl-button.mtrl-button--contained {
+.mtrl-button.mtrl-button--contained, .mtrl-button.mtrl-button--toggle--active {
   background-color: #6200ee;
   color: white;
 }
@@ -53,13 +53,13 @@ html[dark] .mtrl-button.mtrl-button {
 html[dark] .mtrl-button.mtrl-button::before {
   background-color: #bb86fc;
 }
-html[dark] .mtrl-button.mtrl-button--outlined {
+html[dark] .mtrl-button.mtrl-button--outlined, html[dark] .mtrl-button.mtrl-button--toggle {
   border-color: rgba(255, 255, 255, 0.12);
 }
-html[dark] .mtrl-button.mtrl-button--outlined:focus {
+html[dark] .mtrl-button.mtrl-button--outlined:focus, html[dark] .mtrl-button.mtrl-button--toggle:focus {
   border-color: #bb86fc;
 }
-html[dark] .mtrl-button.mtrl-button--contained::before {
+html[dark] .mtrl-button.mtrl-button--contained::before, html[dark] .mtrl-button.mtrl-button--toggle--active::before {
   background-color: white;
 }
 html[dark] .mtrl-button.mtrl-button--stroked {
@@ -68,7 +68,7 @@ html[dark] .mtrl-button.mtrl-button--stroked {
 html[dark] .mtrl-button.mtrl-button--two-tone {
   background-color: rgba(187, 134, 252, 0.12);
 }
-html[dark] .mtrl-button.mtrl-button--contained {
+html[dark] .mtrl-button.mtrl-button--contained, html[dark] .mtrl-button.mtrl-button--toggle--active {
   background-color: #bb86fc;
   color: black;
 }
@@ -80,7 +80,7 @@ html[dark] .mtrl-button.mtrl-button--contained {
 .mtrl-button.mtrl-button--two-tone:disabled {
   background-color: rgba(0, 0, 0, 0.12);
 }
-.mtrl-button.mtrl-button--contained:disabled {
+.mtrl-button.mtrl-button--contained:disabled, .mtrl-button.mtrl-button--toggle--active:disabled {
   background-color: rgba(0, 0, 0, 0.12);
 }
 html[dark] .mtrl-button.mtrl-button:disabled {
@@ -91,7 +91,7 @@ html[dark] .mtrl-button.mtrl-button:disabled {
 html[dark] .mtrl-button.mtrl-button--two-tone:disabled {
   background-color: rgba(255, 255, 255, 0.12);
 }
-html[dark] .mtrl-button.mtrl-button--contained:disabled {
+html[dark] .mtrl-button.mtrl-button--contained:disabled, html[dark] .mtrl-button.mtrl-button--toggle--active:disabled {
   background-color: rgba(255, 255, 255, 0.12);
 }
 .mtrl-button::before {
@@ -157,29 +157,29 @@ html[dark] .mtrl-button:disabled:active::before {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   z-index: 0;
 }
-.mtrl-button--outlined, .mtrl-button--stroked, .mtrl-button--two-tone, .mtrl-button--contained {
+.mtrl-button--outlined, .mtrl-button--stroked, .mtrl-button--two-tone, .mtrl-button--contained, .mtrl-button--toggle--active, .mtrl-button--toggle {
   padding: 0 16px;
 }
-.mtrl-button--outlined {
+.mtrl-button--outlined, .mtrl-button--toggle {
   border: 1px solid;
 }
 .mtrl-button--stroked {
   border: 1px solid;
 }
-.mtrl-button--contained {
+.mtrl-button--contained, .mtrl-button--toggle--active {
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
 }
-.mtrl-button--contained:hover {
+.mtrl-button--contained:hover, .mtrl-button--toggle--active:hover {
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   z-index: 4;
 }
-.mtrl-button--contained:focus {
+.mtrl-button--contained:focus, .mtrl-button--toggle--active:focus {
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   z-index: 6;
 }
-.mtrl-button--contained:active {
+.mtrl-button--contained:active, .mtrl-button--toggle--active:active {
   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
   z-index: 8;
 }
@@ -270,32 +270,32 @@ html[dark] .mtrl-button--push:active::before {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   z-index: 0;
 }
-.mtrl-button--unelevated {
+.mtrl-button--unelevated, .mtrl-button--toggle--active {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 0;
 }
-html[dark] .mtrl-button--unelevated::before {
+html[dark] .mtrl-button--unelevated::before, html[dark] .mtrl-button--toggle--active::before {
   opacity: 0;
 }
-html[dark] .mtrl-button--unelevated:hover::before {
+html[dark] .mtrl-button--unelevated:hover::before, html[dark] .mtrl-button--toggle--active:hover::before {
   opacity: 0.04;
 }
-html[dark] .mtrl-button--unelevated:focus::before {
+html[dark] .mtrl-button--unelevated:focus::before, html[dark] .mtrl-button--toggle--active:focus::before {
   opacity: 0.12;
 }
-html[dark] .mtrl-button--unelevated:active::before {
+html[dark] .mtrl-button--unelevated:active::before, html[dark] .mtrl-button--toggle--active:active::before {
   opacity: 0.1;
 }
-.mtrl-button--unelevated:hover {
+.mtrl-button--unelevated:hover, .mtrl-button--toggle--active:hover {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   z-index: 0;
 }
-.mtrl-button--unelevated:focus {
+.mtrl-button--unelevated:focus, .mtrl-button--toggle--active:focus {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   z-index: 0;
 }
-.mtrl-button--unelevated:active {
+.mtrl-button--unelevated:active, .mtrl-button--toggle--active:active {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   z-index: 0;
 }

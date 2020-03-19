@@ -34,7 +34,7 @@
     cursor: default
     pointer-events: none
 
-  &--outlined, &--stroked, &--two-tone, &--contained
+  &--outlined, &--stroked, &--two-tone, &--contained, &--toggle
     padding: 0 16px
 
   &--outlined
@@ -57,6 +57,12 @@
 
   &--unelevated
     @include elevation(0, 0, 0, 0)
+
+  &--toggle
+    @extend .mtrl-button--outlined
+
+    &--active
+      @extend .mtrl-button--contained, .mtrl-button--unelevated
 
   &--vertical
     height: 56px
