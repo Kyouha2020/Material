@@ -7,9 +7,6 @@
   flex-direction: column;
   border-radius: 4px;
 }
-.mtrl-card .mtrl-card {
-  background-color: #ffffff;
-}
 .mtrl-card .mtrl-card__primary::before {
   background-color: black;
 }
@@ -19,11 +16,11 @@
 .mtrl-card .mtrl-card__subtitle, .mtrl-card .mtrl-card__supporting-text {
   color: rgba(0, 0, 0, 0.6);
 }
+.mtrl-card.mtrl-card {
+  background-color: #ffffff;
+}
 .mtrl-card.mtrl-card--outlined {
   border-color: rgba(0, 0, 0, 0.12);
-}
-html[dark] .mtrl-card .mtrl-card {
-  background-color: #121212;
 }
 html[dark] .mtrl-card .mtrl-card__primary::before {
   background-color: white;
@@ -33,6 +30,9 @@ html[dark] .mtrl-card .mtrl-card__title {
 }
 html[dark] .mtrl-card .mtrl-card__subtitle, html[dark] .mtrl-card .mtrl-card__supporting-text {
   color: rgba(255, 255, 255, 0.6);
+}
+html[dark] .mtrl-card.mtrl-card {
+  background-color: #121212;
 }
 html[dark] .mtrl-card.mtrl-card--outlined {
   border-color: rgba(255, 255, 255, 0.12);

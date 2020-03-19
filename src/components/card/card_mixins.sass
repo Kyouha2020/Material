@@ -4,9 +4,6 @@
 
 @mixin card-theme_($color, $on-color)
   .mtrl-card
-    background-color: $color
-    @content
-
     &__primary
       @include ripple($on-color)
 
@@ -17,17 +14,21 @@
       color: rgba($on-color, $text--medium-emphasis)
 
   &.mtrl-card
-    &--outlined
-      border-color: rgba($on-color, $stroke)
+    background-color: $color
+    @content
 
 @mixin card-light-theme($color, $on-color)
   @include card-theme_($color, $on-color)
+
+    &--outlined
+      border-color: rgba($on-surface, $stroke)
 
 @mixin card-dark-theme($color, $on-color)
   html[dark] &
     @include card-theme_($color, $on-color)
 
-    &.mtrl-card
       &--outlined
+        border-color: rgba($dark-on-surface, $stroke)
+
         &:focus
           border-color: $dark-on-surface
