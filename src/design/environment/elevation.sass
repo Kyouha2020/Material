@@ -13,7 +13,7 @@ $ambient-map: (0: 0px 0px 0px 0px, 1: 0px 1px 3px 0px, 2: 0px 1px 5px 0px, 3: 0p
   $ambient-color: rgba($color, 0.12 + $opacity-boost)
 
   html[dark] &
-    @include ripple-boost(map-get($elevation-overlay, $z-value))
+    @include ripple-boost(map-get($elevation-overlay, $z-value), map-get($elevation-overlay, $hover), map-get($elevation-overlay, $focus), map-get($elevation-overlay, $pressed))
 
   box-shadow: (map-get($umbra-map, $z-value) $umbra-color, map-get($penumbra-map, $z-value) $penumbra-color, map-get($ambient-map, $z-value) $ambient-color)
   transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1)

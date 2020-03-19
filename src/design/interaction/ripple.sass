@@ -5,18 +5,18 @@
   &::before
     background-color: $color
 
-@mixin ripple-boost($opacity-boost: 0)
+@mixin ripple-boost($opacity-boost: 0, $hover: $opacity-boost, $focus: $opacity-boost, $pressed: $opacity-boost)
   &::before
     opacity: $opacity-boost
 
   &:hover::before
-    opacity: $opacity-boost + $container-overlay--hovered
+    opacity: $hover + $container-overlay--hovered
 
   &:focus::before
-    opacity: $opacity-boost + $container-overlay--focused
+    opacity: $focus + $container-overlay--focused
 
   &:active::before
-    opacity: $opacity-boost + $container-overlay--pressed
+    opacity: $pressed + $container-overlay--pressed
 
 @mixin ripple_
   @include ripple-boost()
