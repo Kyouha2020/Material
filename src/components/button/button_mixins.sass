@@ -48,10 +48,10 @@
 @mixin button-dark-theme($color, $on-color)
   html[dark] &
     @include button-theme_($color, $on-color)
-      background-color: $dark--surface
+      background-color: $dark-surface
 
       &--outlined
-        border-color: rgba($dark--on-surface, $stroke)
+        border-color: rgba($dark-on-surface, $stroke)
 
         &:focus
           border-color: $color

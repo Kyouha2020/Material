@@ -21,21 +21,21 @@ $on-error: on-color($error) !default
 
 // https://material.io/design/color/dark-theme.html
 
-$dark--primary: $primary-200 !default
-$dark--primary-variant: $primary-700 !default
-$dark--secondary: $secondary-200 !default
-$dark--secondary-variant: $secondary-200 !default
-$dark--background: #121212 !default
-$dark--surface: #121212 !default
-$dark--error: #cf6679 !default
+$dark-primary: $primary-200 !default
+$dark-primary-variant: $primary-700 !default
+$dark-secondary: $secondary-200 !default
+$dark-secondary-variant: $secondary-200 !default
+$dark-background: #121212 !default
+$dark-surface: #121212 !default
+$dark-error: #cf6679 !default
 
-$dark--on-primary: on-color($dark--primary) !default
-$dark--on-primary-variant: on-color($dark--primary-variant) !default
-$dark--on-secondary: on-color($dark--secondary) !default
-$dark--on-secondary-variant: on-color($dark--secondary-variant) !default
-$dark--on-background: on-color($dark--background) !default
-$dark--on-surface: on-color($dark--surface) !default
-$dark--on-error: on-color($dark--error) !default
+$dark-on-primary: on-color($dark-primary) !default
+$dark-on-primary-variant: on-color($dark-primary-variant) !default
+$dark-on-secondary: on-color($dark-secondary) !default
+$dark-on-secondary-variant: on-color($dark-secondary-variant) !default
+$dark-on-background: on-color($dark-background) !default
+$dark-on-surface: on-color($dark-surface) !default
+$dark-on-error: on-color($dark-error) !default
 
 $elevation-overlay: (00: 0, 01: .05, 02: .07, 03: .08, 04: .09, 05: .1, 06: .11, 07: .11, 08: .12, 09: .12, 10: .13, 11: .13, 12: .14, 13: .14, 14: .14, 15: .14, 16: .15, 17: .15, 18: .15, 19: .15, 20: .15, 21: .15, 22: .15, 23: .15, 24: .16)
 
@@ -71,24 +71,24 @@ $theme-name-map: (primary, primary-variant, secondary, secondary-variant, error)
   @else
     @if $type == color
       @if $theme == primary
-        @return $dark--primary
+        @return $dark-primary
       @else if $theme == primary-variant
-        @return $dark--primary-variant
+        @return $dark-primary-variant
       @if $theme == secondary
-        @return $dark--secondary
+        @return $dark-secondary
       @else if $theme == secondary-variant
-        @return $dark--secondary-variant
+        @return $dark-secondary-variant
       @else if $theme == error
-        @return $dark--error
+        @return $dark-error
 
     @else if $type == on-color
       @if $theme == primary
-        @return $dark--on-primary
+        @return $dark-on-primary
       @else if $theme == primary-variant
-        @return $dark--on-primary-variant
+        @return $dark-on-primary-variant
       @if $theme == secondary
         @return $on-secondary
       @else if $theme == secondary-variant
-        @return $dark--on-secondary-variant
+        @return $dark-on-secondary-variant
       @else if $theme == error
-        @return $dark--on-error
+        @return $dark-on-error

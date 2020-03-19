@@ -18,11 +18,6 @@
       background-color: $color
       color: rgba($on-color, $icon--active)
 
-@each $theme, $on-theme in $theme-map
-  .mtrl-icon-button--#{map_get($theme-name-map, $theme)}
-    @include icon-button-theme($theme, $on-theme)
-
-
 .mtrl-icon-button
   @include ripple_
   @include touch-target
