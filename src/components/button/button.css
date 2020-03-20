@@ -184,10 +184,10 @@ html[dark] .mtrl-button:disabled:active::before {
   height: 36px;
   border-radius: 50%;
 }
-html:not([dir=rtl]) .mtrl-button--two-tone-icon .mtrl-button__icon:not(.mtrl-button--two-tone-icon .mtrl-button__icon--trailing) {
+html:not([dir=rtl]) .mtrl-button--two-tone-icon .mtrl-button__icon--leading {
   margin-left: -16px;
 }
-html[dir=rtl] .mtrl-button--two-tone-icon .mtrl-button__icon:not(.mtrl-button--two-tone-icon .mtrl-button__icon--trailing) {
+html[dir=rtl] .mtrl-button--two-tone-icon .mtrl-button__icon--leading {
   margin-right: -16px;
 }
 html:not([dir=rtl]) .mtrl-button--two-tone-icon .mtrl-button__icon--trailing {
@@ -200,10 +200,10 @@ html[dir=rtl] .mtrl-button--two-tone-icon .mtrl-button__icon--trailing {
   width: 28px;
   height: 28px;
 }
-html:not([dir=rtl]) .mtrl-button--two-tone-icon.mtrl-button--large .mtrl-button__icon:not(.mtrl-button--two-tone-icon.mtrl-button--large .mtrl-button__icon--trailing) {
+html:not([dir=rtl]) .mtrl-button--two-tone-icon.mtrl-button--large .mtrl-button__icon--leading {
   margin-left: -8px;
 }
-html[dir=rtl] .mtrl-button--two-tone-icon.mtrl-button--large .mtrl-button__icon:not(.mtrl-button--two-tone-icon.mtrl-button--large .mtrl-button__icon--trailing) {
+html[dir=rtl] .mtrl-button--two-tone-icon.mtrl-button--large .mtrl-button__icon--leading {
   margin-right: -8px;
 }
 html:not([dir=rtl]) .mtrl-button--two-tone-icon.mtrl-button--large .mtrl-button__icon--trailing {

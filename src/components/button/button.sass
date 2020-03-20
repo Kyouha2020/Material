@@ -55,11 +55,12 @@
     @extend .mtrl-button--rounded
 
     .mtrl-button__icon
-      &:not(&--trailing)
-        @include margin-start(-16px)
       width: 36px
       height: 36px
       border-radius: 50%
+
+      &--leading
+        @include margin-start(-16px)
 
       &--trailing
         @include margin-end(-16px)
@@ -69,7 +70,7 @@
       height: 28px
 
     &.mtrl-button--large .mtrl-button__icon
-      &:not(&--trailing)
+      &--leading
         @include margin-start(-8px)
 
       &--trailing
