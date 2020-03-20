@@ -3,6 +3,7 @@
 @use "../../design/interaction/ripple" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/typography/typography" as *
+@use "../../design/usability/accessibility" as *
 @use "../components" as *
 @use "button_mixins" as *
 
@@ -57,7 +58,9 @@
       @extend .mtrl-button--contained, .mtrl-button--unelevated
 
   &__icon
+    @include centered-content
     @include margin-horizontal(-4px, 8px)
+    display: inline-flex
     width: 18px
     height: 18px
     font-size: 18px
@@ -92,6 +95,15 @@
 
   &--sharp
     border-radius: 0
+
+  &--two-tone-icon
+    @extend .mtrl-button--rounded
+
+    .mtrl-button__icon
+      @include margin-horizontal(-16px, 8px)
+      width: 32px
+      height: 32px
+      border-radius: 50%
 
   &--animated-icon
     & .mtrl-button__icon

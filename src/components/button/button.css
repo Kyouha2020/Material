@@ -44,6 +44,9 @@
   background-color: #6200ee;
   color: white;
 }
+.mtrl-button.mtrl-button--two-tone-icon .mtrl-button__icon {
+  background-color: rgba(98, 0, 238, 0.12);
+}
 html[dark] .mtrl-button.mtrl-button {
   color: #bb86fc;
   background-color: #121212;
@@ -67,15 +70,15 @@ html[dark] .mtrl-button.mtrl-button--contained, html[dark] .mtrl-button.mtrl-but
   background-color: #bb86fc;
   color: black;
 }
+html[dark] .mtrl-button.mtrl-button--two-tone-icon .mtrl-button__icon {
+  background-color: rgba(187, 134, 252, 0.12);
+}
 .mtrl-button.mtrl-button:disabled {
   background-color: rgba(255, 255, 255, 0.12);
   color: rgba(0, 0, 0, 0.38);
   border-color: rgba(0, 0, 0, 0.12);
 }
-.mtrl-button.mtrl-button--two-tone:disabled {
-  background-color: rgba(0, 0, 0, 0.12);
-}
-.mtrl-button.mtrl-button--contained:disabled, .mtrl-button.mtrl-button--toggle--active:disabled {
+.mtrl-button.mtrl-button--two-tone:disabled, .mtrl-button.mtrl-button--contained:disabled, .mtrl-button.mtrl-button--toggle--active:disabled, .mtrl-button.mtrl-button--two-tone-icon:disabled .mtrl-button__icon {
   background-color: rgba(0, 0, 0, 0.12);
 }
 html[dark] .mtrl-button.mtrl-button:disabled {
@@ -83,10 +86,7 @@ html[dark] .mtrl-button.mtrl-button:disabled {
   color: rgba(255, 255, 255, 0.38);
   border-color: rgba(255, 255, 255, 0.12);
 }
-html[dark] .mtrl-button.mtrl-button--two-tone:disabled {
-  background-color: rgba(255, 255, 255, 0.12);
-}
-html[dark] .mtrl-button.mtrl-button--contained:disabled, html[dark] .mtrl-button.mtrl-button--toggle--active:disabled {
+html[dark] .mtrl-button.mtrl-button--two-tone:disabled, html[dark] .mtrl-button.mtrl-button--contained:disabled, html[dark] .mtrl-button.mtrl-button--toggle--active:disabled, html[dark] .mtrl-button.mtrl-button--two-tone-icon:disabled .mtrl-button__icon {
   background-color: rgba(255, 255, 255, 0.12);
 }
 .mtrl-button::before {
@@ -185,6 +185,10 @@ html[dark] .mtrl-button:disabled:active::before {
   z-index: 8;
 }
 .mtrl-button__icon {
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  display: inline-flex;
   width: 18px;
   height: 18px;
   font-size: 18px;
@@ -331,11 +335,24 @@ html[dark] .mtrl-button--unelevated:active::before, html[dark] .mtrl-button--tog
 .mtrl-button--dense-3 {
   height: 24px;
 }
-.mtrl-button--rounded, .mtrl-button--shrink:hover, .mtrl-button--shrink:focus {
+.mtrl-button--rounded, .mtrl-button--shrink:hover, .mtrl-button--shrink:focus, .mtrl-button--two-tone-icon {
   border-radius: 18px;
 }
 .mtrl-button--sharp {
   border-radius: 0;
+}
+.mtrl-button--two-tone-icon .mtrl-button__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+html:not([dir=rtl]) .mtrl-button--two-tone-icon .mtrl-button__icon {
+  margin-left: -16px;
+  margin-right: 8px;
+}
+html[dir=rtl] .mtrl-button--two-tone-icon .mtrl-button__icon {
+  margin-left: 8px;
+  margin-right: -16px;
 }
 .mtrl-button--animated-icon .mtrl-button__icon {
   opacity: 0;

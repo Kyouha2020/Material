@@ -18,6 +18,9 @@
   background-color: #6200ee;
   color: white;
 }
+.mtrl-button--primary.mtrl-button--two-tone-icon .mtrl-button__icon {
+  background-color: rgba(98, 0, 238, 0.12);
+}
 html[dark] .mtrl-button--primary.mtrl-button {
   color: #bb86fc;
   background-color: #121212;
@@ -41,6 +44,9 @@ html[dark] .mtrl-button--primary.mtrl-button--contained {
   background-color: #bb86fc;
   color: black;
 }
+html[dark] .mtrl-button--primary.mtrl-button--two-tone-icon .mtrl-button__icon {
+  background-color: rgba(187, 134, 252, 0.12);
+}
 
 .mtrl-button--primary-variant.mtrl-button {
   color: #3700b3;
@@ -61,6 +67,9 @@ html[dark] .mtrl-button--primary.mtrl-button--contained {
 .mtrl-button--primary-variant.mtrl-button--contained {
   background-color: #3700b3;
   color: white;
+}
+.mtrl-button--primary-variant.mtrl-button--two-tone-icon .mtrl-button__icon {
+  background-color: rgba(55, 0, 179, 0.12);
 }
 html[dark] .mtrl-button--primary-variant.mtrl-button {
   color: #3700b3;
@@ -85,6 +94,9 @@ html[dark] .mtrl-button--primary-variant.mtrl-button--contained {
   background-color: #3700b3;
   color: white;
 }
+html[dark] .mtrl-button--primary-variant.mtrl-button--two-tone-icon .mtrl-button__icon {
+  background-color: rgba(55, 0, 179, 0.12);
+}
 
 .mtrl-button--secondary.mtrl-button {
   color: #03dac6;
@@ -105,6 +117,9 @@ html[dark] .mtrl-button--primary-variant.mtrl-button--contained {
 .mtrl-button--secondary.mtrl-button--contained {
   background-color: #03dac6;
   color: black;
+}
+.mtrl-button--secondary.mtrl-button--two-tone-icon .mtrl-button__icon {
+  background-color: rgba(3, 218, 198, 0.12);
 }
 html[dark] .mtrl-button--secondary.mtrl-button {
   color: #03dac6;
@@ -129,6 +144,9 @@ html[dark] .mtrl-button--secondary.mtrl-button--contained {
   background-color: #03dac6;
   color: black;
 }
+html[dark] .mtrl-button--secondary.mtrl-button--two-tone-icon .mtrl-button__icon {
+  background-color: rgba(3, 218, 198, 0.12);
+}
 
 .mtrl-button--secondary-variant.mtrl-button {
   color: #018786;
@@ -149,6 +167,9 @@ html[dark] .mtrl-button--secondary.mtrl-button--contained {
 .mtrl-button--secondary-variant.mtrl-button--contained {
   background-color: #018786;
   color: white;
+}
+.mtrl-button--secondary-variant.mtrl-button--two-tone-icon .mtrl-button__icon {
+  background-color: rgba(1, 135, 134, 0.12);
 }
 html[dark] .mtrl-button--secondary-variant.mtrl-button {
   color: #03dac6;
@@ -173,6 +194,9 @@ html[dark] .mtrl-button--secondary-variant.mtrl-button--contained {
   background-color: #03dac6;
   color: black;
 }
+html[dark] .mtrl-button--secondary-variant.mtrl-button--two-tone-icon .mtrl-button__icon {
+  background-color: rgba(3, 218, 198, 0.12);
+}
 
 .mtrl-button--error.mtrl-button {
   color: #b00020;
@@ -193,6 +217,9 @@ html[dark] .mtrl-button--secondary-variant.mtrl-button--contained {
 .mtrl-button--error.mtrl-button--contained {
   background-color: #b00020;
   color: white;
+}
+.mtrl-button--error.mtrl-button--two-tone-icon .mtrl-button__icon {
+  background-color: rgba(176, 0, 32, 0.12);
 }
 html[dark] .mtrl-button--error.mtrl-button {
   color: #cf6679;
@@ -216,6 +243,9 @@ html[dark] .mtrl-button--error.mtrl-button--two-tone {
 html[dark] .mtrl-button--error.mtrl-button--contained {
   background-color: #cf6679;
   color: white;
+}
+html[dark] .mtrl-button--error.mtrl-button--two-tone-icon .mtrl-button__icon {
+  background-color: rgba(207, 102, 121, 0.12);
 }
 
 /*# sourceMappingURL=button_theme.css.map */

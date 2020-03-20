@@ -16,6 +16,9 @@
       background-color: $color
       color: $on-color
 
+    &--two-tone-icon .mtrl-button__icon
+      background-color: rgba($color, $stroke)
+
 @mixin disabled-button-theme_($color, $on-color)
   &.mtrl-button
     @content
@@ -25,10 +28,7 @@
       color: rgba($on-color, $text--disabled)
       border-color: rgba($on-color, $stroke)
 
-    &--two-tone:disabled
-      background-color: rgba($on-color, $disabled-filled-container)
-
-    &--contained:disabled
+    &--two-tone:disabled, &--contained:disabled, &--two-tone-icon:disabled .mtrl-button__icon
       background-color: rgba($on-color, $disabled-filled-container)
 
 
