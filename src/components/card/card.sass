@@ -19,34 +19,26 @@
     @include elevation(0)
     border: 1px solid
 
-  &__primary
-    @include ripple_
-
-    &:hover
-      cursor: pointer
-
   &__header
+    display: flex
+    flex-direction: column
+    justify-content: center
     height: 72px
     padding: 0 16px
 
   &__title
     @include typography(headline6)
-    display: flex
-    align-items: flex-end
-    height: 34px
 
   &__subtitle
     @include typography(subtitle2)
-    display: flex
-    align-items: flex-end
-    height: 22px
+    padding-top: 4px
 
   &__supporting-text
     @include typography(body2)
     padding: 0 16px 16px 16px
 
   &__actions
-    padding: 8px 16px 8px 16px
+    padding: 8px
 
-    button
+    button:not(:last-of-type)
       @include margin-end(8px)

@@ -100,36 +100,10 @@ html[dark] .mtrl-card--outlined:active::before {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   z-index: 0;
 }
-.mtrl-card__primary {
-  position: relative;
-}
-.mtrl-card__primary::before {
-  opacity: 0;
-}
-.mtrl-card__primary:hover::before {
-  opacity: 0.04;
-}
-.mtrl-card__primary:focus::before {
-  opacity: 0.12;
-}
-.mtrl-card__primary:active::before {
-  opacity: 0.1;
-}
-.mtrl-card__primary::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-}
-.mtrl-card__primary:hover {
-  cursor: pointer;
-}
 .mtrl-card__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 72px;
   padding: 0 16px;
 }
@@ -142,9 +116,6 @@ html[dark] .mtrl-card--outlined:active::before {
   -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
-  display: flex;
-  align-items: flex-end;
-  height: 34px;
 }
 .mtrl-card__subtitle {
   font-family: Roboto, sans-serif;
@@ -155,9 +126,7 @@ html[dark] .mtrl-card--outlined:active::before {
   -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
-  display: flex;
-  align-items: flex-end;
-  height: 22px;
+  padding-top: 4px;
 }
 .mtrl-card__supporting-text {
   font-family: Roboto, sans-serif;
@@ -171,12 +140,12 @@ html[dark] .mtrl-card--outlined:active::before {
   padding: 0 16px 16px 16px;
 }
 .mtrl-card__actions {
-  padding: 8px 16px 8px 16px;
+  padding: 8px;
 }
-html:not([dir=rtl]) .mtrl-card__actions button {
+html:not([dir=rtl]) .mtrl-card__actions button:not(:last-of-type) {
   margin-right: 8px;
 }
-html[dir=rtl] .mtrl-card__actions button {
+html[dir=rtl] .mtrl-card__actions button:not(:last-of-type) {
   margin-left: 8px;
 }
 
