@@ -1,6 +1,8 @@
 @use "../../design/color/theme" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/interaction/states" as *
+@use "../../design/layout/density" as *
+@use "../../design/layout/spacing" as *
 @use "../../design/usability/accessibility" as *
 
 @mixin button-theme_($color, $on-color)
@@ -62,3 +64,20 @@
 @mixin disabled-button-dark-theme($color, $on-color)
   html[dark] &
     @include disabled-button-theme_($color, $on-color)
+
+
+@mixin button-density($baseline)
+  height: $baseline
+
+  &.mtrl-button--rounded
+    border-radius: $baseline / 2
+
+  &.mtrl-button--two-tone-icon
+    & .mtrl-button__icon
+      width: $baseline
+      height: $baseline
+
+$button-density-baseline: 36px !default
+
+@function get-button-density($density)
+  @return get-density($button-density-baseline, $density)

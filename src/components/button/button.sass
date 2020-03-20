@@ -14,10 +14,10 @@
   @include ripple_
   @include unselectable
   @include centered-content
+  @include button-density($button-density-baseline)
   @include typography(button)
   display: inline-flex
   min-width: 64px
-  height: 36px
   padding: 0 8px
   border-radius: 4px
   border: none
@@ -55,8 +55,6 @@
     @extend .mtrl-button--rounded
 
     .mtrl-button__icon
-      width: 36px
-      height: 36px
       border-radius: 50%
 
       &--leading
@@ -64,17 +62,6 @@
 
       &--trailing
         @include margin-end(-16px)
-
-    &.mtrl-button--dense .mtrl-button__icon
-      width: 28px
-      height: 28px
-
-    &.mtrl-button--large .mtrl-button__icon
-      &--leading
-        @include margin-start(-8px)
-
-      &--trailing
-        @include margin-end(-8px)
 
   &--toggle
     @extend .mtrl-button--outlined
@@ -106,23 +93,12 @@
   &--unelevated
     @include elevation(0, 0, 0, 0)
 
-  &--dense
-    height: 28px
-
-  &--large
-    height: 48px
-
-  &--rounded
-    border-radius: 18px
-
-    &.mtrl-button--dense
-      border-radius: 14px
-
-    &.mtrl-button--large
-      border-radius: 24px
-
   &--sharp
     border-radius: 0
+
+  @for $i from 0 through -3
+    &--density-#{$i}
+      @include button-density(get-button-density($i))
 
   &--block
     display: flex
