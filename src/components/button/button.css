@@ -55,7 +55,7 @@ html[dark] .mtrl-button.mtrl-button--outlined, html[dark] .mtrl-button.mtrl-butt
   border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button.mtrl-button--outlined:focus, html[dark] .mtrl-button.mtrl-button--toggle:focus {
-  border-color: #bb86fc;
+  border-color: inherit;
 }
 html[dark] .mtrl-button.mtrl-button--contained::before, html[dark] .mtrl-button.mtrl-button--toggle--active::before {
   background-color: white;
@@ -161,6 +161,7 @@ html[dark] .mtrl-button:disabled:active::before {
 }
 .mtrl-button--outlined, .mtrl-button--toggle, .mtrl-button--stroked {
   border: 1px solid;
+  border-spacing: 2px;
 }
 .mtrl-button--outlined:not(.mtrl-button--contained):not(.mtrl-button--toggle--active):focus-visible, .mtrl-button--toggle:not(.mtrl-button--contained):not(.mtrl-button--toggle--active):focus-visible, .mtrl-button--stroked:not(.mtrl-button--contained):not(.mtrl-button--toggle--active):focus-visible {
   outline: none;
