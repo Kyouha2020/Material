@@ -113,7 +113,6 @@ html[dark] .mtrl-card--outlined:active::before {
 .mtrl-card__header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 0 16px 16px 16px;
 }
 .mtrl-card__header + .mtrl-card__supporting-text {

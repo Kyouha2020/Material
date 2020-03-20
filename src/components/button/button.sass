@@ -12,7 +12,6 @@
   @include disabled-button-light-theme($surface, $on-surface)
   @include disabled-button-dark-theme($dark-surface, $dark-on-surface)
   @include ripple_
-  @include touch-target
   @include unselectable
   @include centered-content
   @include accessible-border
@@ -23,20 +22,29 @@
   padding: 0 8px
   border-radius: 4px
   white-space: nowrap
+  overflow: hidden
 
   &:hover
     cursor: pointer
+
+  &:focus-visible
+    outline: 1px solid
+    outline-offset: -4px
 
   &:disabled
     @include elevation(0)
     cursor: default
     pointer-events: none
 
-  &--outlined, &--stroked, &--two-tone, &--contained, &--toggle
+  &--outlined, &--stroked, &--two-tone, &--contained, &--toggle, &--raised, &--push
     padding: 0 16px
 
   &--outlined, &--stroked
     border: 1px solid
+
+    &:not(.mtrl-button--contained):focus-visible
+      outline: none
+      border-color: inherit
 
   &--contained
     @include elevation(2, 4, 6, 8, $ripple-boost: false)
@@ -56,7 +64,6 @@
 
     &--trailing
       @include margin-horizontal(8px, -4px)
-
 
   &--raised
     @include elevation(2, 4, 6, 8)
@@ -84,6 +91,28 @@
 
   &--sharp
     border-radius: 0
+
+  &--animated-icon
+    & .mtrl-button__icon
+      @include margin-start(-24px !important)
+      opacity: 0
+      transition: margin 150ms, opacity 250ms
+
+    &:hover, &:focus
+      .mtrl-button__icon
+        @include margin-start(-4px !important)
+        opacity: 1
+
+  &--shrink
+    transition: border-radius 250ms
+
+    &:hover, &:focus
+      @extend .mtrl-button--rounded
+
+  &--notched
+    &:focus
+      outline: 1px solid
+      outline-offset: -4px
 
   &--block
     display: flex
