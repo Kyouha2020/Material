@@ -342,8 +342,8 @@ html[dark] .mtrl-button--unelevated:active::before, html[dark] .mtrl-button--tog
   border-radius: 0;
 }
 .mtrl-button--two-tone-icon .mtrl-button__icon {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
 }
 html:not([dir=rtl]) .mtrl-button--two-tone-icon .mtrl-button__icon {
