@@ -11,6 +11,9 @@
 .mtrl-button--primary.mtrl-button--contained::before {
   background-color: white;
 }
+.mtrl-button--primary.mtrl-button:focus-visible {
+  border-color: inherit;
+}
 .mtrl-button--primary.mtrl-button--two-tone {
   background-color: rgba(98, 0, 238, 0.12);
 }
@@ -37,6 +40,9 @@ html[dark] .mtrl-button--primary.mtrl-button--outlined:focus {
 html[dark] .mtrl-button--primary.mtrl-button--contained::before {
   background-color: white;
 }
+html[dark] .mtrl-button--primary.mtrl-button:focus-visible {
+  border-color: inherit;
+}
 html[dark] .mtrl-button--primary.mtrl-button--two-tone {
   background-color: rgba(187, 134, 252, 0.12);
 }
@@ -60,6 +66,9 @@ html[dark] .mtrl-button--primary.mtrl-button--two-tone-icon .mtrl-button__icon {
 }
 .mtrl-button--primary-variant.mtrl-button--contained::before {
   background-color: white;
+}
+.mtrl-button--primary-variant.mtrl-button:focus-visible {
+  border-color: inherit;
 }
 .mtrl-button--primary-variant.mtrl-button--two-tone {
   background-color: rgba(55, 0, 179, 0.12);
@@ -87,6 +96,9 @@ html[dark] .mtrl-button--primary-variant.mtrl-button--outlined:focus {
 html[dark] .mtrl-button--primary-variant.mtrl-button--contained::before {
   background-color: white;
 }
+html[dark] .mtrl-button--primary-variant.mtrl-button:focus-visible {
+  border-color: inherit;
+}
 html[dark] .mtrl-button--primary-variant.mtrl-button--two-tone {
   background-color: rgba(55, 0, 179, 0.12);
 }
@@ -110,6 +122,9 @@ html[dark] .mtrl-button--primary-variant.mtrl-button--two-tone-icon .mtrl-button
 }
 .mtrl-button--secondary.mtrl-button--contained::before {
   background-color: black;
+}
+.mtrl-button--secondary.mtrl-button:focus-visible {
+  border-color: inherit;
 }
 .mtrl-button--secondary.mtrl-button--two-tone {
   background-color: rgba(3, 218, 198, 0.12);
@@ -137,6 +152,9 @@ html[dark] .mtrl-button--secondary.mtrl-button--outlined:focus {
 html[dark] .mtrl-button--secondary.mtrl-button--contained::before {
   background-color: white;
 }
+html[dark] .mtrl-button--secondary.mtrl-button:focus-visible {
+  border-color: inherit;
+}
 html[dark] .mtrl-button--secondary.mtrl-button--two-tone {
   background-color: rgba(3, 218, 198, 0.12);
 }
@@ -160,6 +178,9 @@ html[dark] .mtrl-button--secondary.mtrl-button--two-tone-icon .mtrl-button__icon
 }
 .mtrl-button--secondary-variant.mtrl-button--contained::before {
   background-color: white;
+}
+.mtrl-button--secondary-variant.mtrl-button:focus-visible {
+  border-color: inherit;
 }
 .mtrl-button--secondary-variant.mtrl-button--two-tone {
   background-color: rgba(1, 135, 134, 0.12);
@@ -187,6 +208,9 @@ html[dark] .mtrl-button--secondary-variant.mtrl-button--outlined:focus {
 html[dark] .mtrl-button--secondary-variant.mtrl-button--contained::before {
   background-color: white;
 }
+html[dark] .mtrl-button--secondary-variant.mtrl-button:focus-visible {
+  border-color: inherit;
+}
 html[dark] .mtrl-button--secondary-variant.mtrl-button--two-tone {
   background-color: rgba(3, 218, 198, 0.12);
 }
@@ -210,6 +234,9 @@ html[dark] .mtrl-button--secondary-variant.mtrl-button--two-tone-icon .mtrl-butt
 }
 .mtrl-button--error.mtrl-button--contained::before {
   background-color: white;
+}
+.mtrl-button--error.mtrl-button:focus-visible {
+  border-color: inherit;
 }
 .mtrl-button--error.mtrl-button--two-tone {
   background-color: rgba(176, 0, 32, 0.12);
@@ -236,6 +263,9 @@ html[dark] .mtrl-button--error.mtrl-button--outlined:focus {
 }
 html[dark] .mtrl-button--error.mtrl-button--contained::before {
   background-color: white;
+}
+html[dark] .mtrl-button--error.mtrl-button:focus-visible {
+  border-color: inherit;
 }
 html[dark] .mtrl-button--error.mtrl-button--two-tone {
   background-color: rgba(207, 102, 121, 0.12);

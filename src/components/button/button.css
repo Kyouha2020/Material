@@ -38,6 +38,9 @@
 .mtrl-button.mtrl-button--contained::before, .mtrl-button.mtrl-button--toggle--active::before {
   background-color: white;
 }
+.mtrl-button.mtrl-button:focus-visible {
+  border-color: inherit;
+}
 .mtrl-button.mtrl-button--two-tone {
   background-color: rgba(98, 0, 238, 0.12);
 }
@@ -63,6 +66,9 @@ html[dark] .mtrl-button.mtrl-button--outlined:focus, html[dark] .mtrl-button.mtr
 }
 html[dark] .mtrl-button.mtrl-button--contained::before, html[dark] .mtrl-button.mtrl-button--toggle--active::before {
   background-color: white;
+}
+html[dark] .mtrl-button.mtrl-button:focus-visible {
+  border-color: inherit;
 }
 html[dark] .mtrl-button.mtrl-button--two-tone {
   background-color: rgba(187, 134, 252, 0.12);
@@ -124,7 +130,6 @@ html[dark] .mtrl-button.mtrl-button--two-tone:disabled, html[dark] .mtrl-button.
   cursor: pointer;
 }
 .mtrl-button:focus-visible {
-  border-color: inherit;
   outline: 1px solid;
   outline-offset: -4px;
 }
