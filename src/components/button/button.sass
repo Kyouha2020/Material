@@ -3,7 +3,6 @@
 @use "../../design/interaction/ripple" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/typography/typography" as *
-@use "../../design/usability/accessibility" as *
 @use "../components" as *
 @use "button_mixins" as *
 
@@ -15,13 +14,14 @@
   @include ripple_
   @include unselectable
   @include centered-content
-  @include accessible-border
   @include typography(button)
   display: inline-flex
   min-width: 64px
   height: 36px
   padding: 0 8px
   border-radius: 4px
+  border: none
+  outline: none
   white-space: nowrap
   overflow: hidden
 
@@ -29,6 +29,7 @@
     cursor: pointer
 
   &:focus-visible
+    border-color: inherit
     outline: 1px solid
     outline-offset: -4px
 
@@ -44,9 +45,8 @@
     border: 1px solid
     border-spacing: 2px
 
-    &:not(.mtrl-button--contained):focus-visible
+    &:focus-visible
       outline: none
-      border-color: inherit
 
   &--contained
     @include elevation(2, 4, 6, 8, $ripple-boost: false)
