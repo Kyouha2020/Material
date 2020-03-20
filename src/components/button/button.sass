@@ -51,6 +51,22 @@
   &--contained
     @include elevation(2, 4, 6, 8, $ripple-boost: false)
 
+  &--two-tone-icon
+    @extend .mtrl-button--rounded
+
+    .mtrl-button__icon
+      @include margin-start(-16px)
+      width: 36px
+      height: 36px
+      border-radius: 50%
+
+    &.mtrl-button--dense .mtrl-button__icon
+      width: 28px
+      height: 28px
+
+    &.mtrl-button--large .mtrl-button__icon
+      @include margin-start(-8px)
+
   &--toggle
     @extend .mtrl-button--outlined
 
@@ -81,51 +97,23 @@
   &--unelevated
     @include elevation(0, 0, 0, 0)
 
-  &--dense-1
-    height: 32px
-
-  &--dense-2
+  &--dense
     height: 28px
 
-  &--dense-3
-    height: 24px
+  &--large
+    height: 48px
 
   &--rounded
     border-radius: 18px
 
+    &.mtrl-button--dense
+      border-radius: 14px
+
+    &.mtrl-button--large
+      border-radius: 24px
+
   &--sharp
     border-radius: 0
-
-  &--two-tone-icon
-    @extend .mtrl-button--rounded
-
-    .mtrl-button__icon
-      @include margin-horizontal(-16px, 8px)
-      width: 36px
-      height: 36px
-      border-radius: 50%
-
-  &--animated-icon
-    & .mtrl-button__icon
-      @include margin-start(-24px !important)
-      opacity: 0
-      transition: margin 150ms, opacity 250ms
-
-    &:hover, &:focus
-      .mtrl-button__icon
-        @include margin-start(-4px !important)
-        opacity: 1
-
-  &--shrink
-    transition: border-radius 250ms
-
-    &:hover, &:focus
-      @extend .mtrl-button--rounded
-
-  &--notched
-    &:focus
-      outline: 1px solid
-      outline-offset: -4px
 
   &--block
     display: flex

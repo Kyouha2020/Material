@@ -184,6 +184,27 @@ html[dark] .mtrl-button:disabled:active::before {
   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
   z-index: 8;
 }
+.mtrl-button--two-tone-icon .mtrl-button__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+html:not([dir=rtl]) .mtrl-button--two-tone-icon .mtrl-button__icon {
+  margin-left: -16px;
+}
+html[dir=rtl] .mtrl-button--two-tone-icon .mtrl-button__icon {
+  margin-right: -16px;
+}
+.mtrl-button--two-tone-icon.mtrl-button--dense .mtrl-button__icon {
+  width: 28px;
+  height: 28px;
+}
+html:not([dir=rtl]) .mtrl-button--two-tone-icon.mtrl-button--large .mtrl-button__icon {
+  margin-left: -8px;
+}
+html[dir=rtl] .mtrl-button--two-tone-icon.mtrl-button--large .mtrl-button__icon {
+  margin-right: -8px;
+}
 .mtrl-button__icon {
   align-items: center;
   justify-content: center;
@@ -326,59 +347,23 @@ html[dark] .mtrl-button--unelevated:active::before, html[dark] .mtrl-button--tog
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   z-index: 0;
 }
-.mtrl-button--dense-1 {
-  height: 32px;
-}
-.mtrl-button--dense-2 {
+.mtrl-button--dense {
   height: 28px;
 }
-.mtrl-button--dense-3 {
-  height: 24px;
+.mtrl-button--large {
+  height: 48px;
 }
-.mtrl-button--rounded, .mtrl-button--shrink:hover, .mtrl-button--shrink:focus, .mtrl-button--two-tone-icon {
+.mtrl-button--rounded, .mtrl-button--two-tone-icon {
   border-radius: 18px;
+}
+.mtrl-button--rounded.mtrl-button--dense, .mtrl-button--dense.mtrl-button--two-tone-icon {
+  border-radius: 14px;
+}
+.mtrl-button--rounded.mtrl-button--large, .mtrl-button--large.mtrl-button--two-tone-icon {
+  border-radius: 24px;
 }
 .mtrl-button--sharp {
   border-radius: 0;
-}
-.mtrl-button--two-tone-icon .mtrl-button__icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-}
-html:not([dir=rtl]) .mtrl-button--two-tone-icon .mtrl-button__icon {
-  margin-left: -16px;
-  margin-right: 8px;
-}
-html[dir=rtl] .mtrl-button--two-tone-icon .mtrl-button__icon {
-  margin-left: 8px;
-  margin-right: -16px;
-}
-.mtrl-button--animated-icon .mtrl-button__icon {
-  opacity: 0;
-  transition: margin 150ms, opacity 250ms;
-}
-html:not([dir=rtl]) .mtrl-button--animated-icon .mtrl-button__icon {
-  margin-left: -24px !important;
-}
-html[dir=rtl] .mtrl-button--animated-icon .mtrl-button__icon {
-  margin-right: -24px !important;
-}
-.mtrl-button--animated-icon:hover .mtrl-button__icon, .mtrl-button--animated-icon:focus .mtrl-button__icon {
-  opacity: 1;
-}
-html:not([dir=rtl]) .mtrl-button--animated-icon:hover .mtrl-button__icon, html:not([dir=rtl]) .mtrl-button--animated-icon:focus .mtrl-button__icon {
-  margin-left: -4px !important;
-}
-html[dir=rtl] .mtrl-button--animated-icon:hover .mtrl-button__icon, html[dir=rtl] .mtrl-button--animated-icon:focus .mtrl-button__icon {
-  margin-right: -4px !important;
-}
-.mtrl-button--shrink {
-  transition: border-radius 250ms;
-}
-.mtrl-button--notched:focus {
-  outline: 1px solid;
-  outline-offset: -4px;
 }
 .mtrl-button--block {
   display: flex;
