@@ -166,7 +166,7 @@ html[dark] .mtrl-button:disabled:active::before {
   border: 1px solid;
   border-spacing: 2px;
 }
-.mtrl-button--outlined:focus-visible, .mtrl-button--toggle:focus-visible, .mtrl-button--stroked:focus-visible {
+.mtrl-button--outlined:not(.mtrl-button--toggle--active):focus-visible, .mtrl-button--toggle:not(.mtrl-button--toggle--active):focus-visible, .mtrl-button--stroked:not(.mtrl-button--toggle--active):focus-visible {
   outline: none;
 }
 .mtrl-button--contained, .mtrl-button--toggle--active {
