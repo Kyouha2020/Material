@@ -1,8 +1,7 @@
 @use "../../design/layout/spacing" as *
-@use "../../design/theme/theme" as *
 
 .mtrl-aspect-ratio
-  @include aspect-ratio(calc(#{prop(aspect-ratio)}))
+  @include aspect-ratio(calc(var(--mtrl-aspect-ratio)))
 
   &--16-9
     @include aspect-ratio(16 / 9)

@@ -13,18 +13,29 @@
   @include elevation(1)
   display: inline-flex
   flex-direction: column
+  vertical-align: top
   border-radius: 4px
 
   &--outlined
     @include elevation(0)
     border: 1px solid
 
+  &__media
+    &:first-child
+      border-top-left-radius: inherit
+      border-top-right-radius: inherit
+
+    &--16-9
+      @include aspect-ratio(16 / 9)
+
   &__header
     display: flex
     flex-direction: column
     justify-content: center
-    height: 72px
-    padding: 0 16px
+    padding: 16px
+
+    & + .mtrl-card__supporting-text
+      margin-top: -16px
 
   &__title
     @include typography(headline6)
@@ -35,7 +46,7 @@
 
   &__supporting-text
     @include typography(body2)
-    padding: 0 16px 16px 16px
+    padding: 16px
 
   &__actions
     padding: 8px
