@@ -102,7 +102,7 @@ html[dark] .mtrl-button.mtrl-button--two-tone:disabled, html[dark] .mtrl-button.
   cursor: pointer;
 }
 .mtrl-button:focus-visible {
-  border-color: inherit;
+  border-color: currentColor !important;
   outline: 1px solid;
   outline-offset: -4px;
 }
