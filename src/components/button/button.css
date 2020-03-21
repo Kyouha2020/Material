@@ -27,7 +27,7 @@
 }
 .mtrl-button.mtrl-button {
   background-color: #ffffff;
-  color: rgba(98, 0, 238, 0.87);
+  color: #6200ee;
 }
 .mtrl-button.mtrl-button--outlined, .mtrl-button.mtrl-button--toggle {
   border-color: rgba(0, 0, 0, 0.12);
@@ -37,11 +37,11 @@
 }
 .mtrl-button.mtrl-button--contained, .mtrl-button.mtrl-button--toggle--active {
   background-color: #6200ee;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 html[dark] .mtrl-button.mtrl-button {
   background-color: #121212;
-  color: rgba(187, 134, 252, 0.87);
+  color: #bb86fc;
 }
 html[dark] .mtrl-button.mtrl-button--outlined, html[dark] .mtrl-button.mtrl-button--toggle {
   border-color: rgba(255, 255, 255, 0.12);
@@ -51,7 +51,7 @@ html[dark] .mtrl-button.mtrl-button--two-tone {
 }
 html[dark] .mtrl-button.mtrl-button--contained, html[dark] .mtrl-button.mtrl-button--toggle--active {
   background-color: #bb86fc;
-  color: rgba(0, 0, 0, 0.87);
+  color: black;
 }
 .mtrl-button.mtrl-button:disabled {
   background-color: rgba(255, 255, 255, 0.12);

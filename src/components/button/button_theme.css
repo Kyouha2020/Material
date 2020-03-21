@@ -1,6 +1,6 @@
 .mtrl-button--primary.mtrl-button {
   background-color: #ffffff;
-  color: rgba(98, 0, 238, 0.87);
+  color: #6200ee;
 }
 .mtrl-button--primary.mtrl-button--outlined {
   border-color: rgba(0, 0, 0, 0.12);
@@ -10,11 +10,11 @@
 }
 .mtrl-button--primary.mtrl-button--contained {
   background-color: #6200ee;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 html[dark] .mtrl-button--primary.mtrl-button {
   background-color: #121212;
-  color: rgba(187, 134, 252, 0.87);
+  color: #bb86fc;
 }
 html[dark] .mtrl-button--primary.mtrl-button--outlined {
   border-color: rgba(255, 255, 255, 0.12);
@@ -24,12 +24,12 @@ html[dark] .mtrl-button--primary.mtrl-button--two-tone {
 }
 html[dark] .mtrl-button--primary.mtrl-button--contained {
   background-color: #bb86fc;
-  color: rgba(0, 0, 0, 0.87);
+  color: black;
 }
 
 .mtrl-button--primary-variant.mtrl-button {
   background-color: #ffffff;
-  color: rgba(55, 0, 179, 0.87);
+  color: #3700b3;
 }
 .mtrl-button--primary-variant.mtrl-button--outlined {
   border-color: rgba(0, 0, 0, 0.12);
@@ -39,11 +39,11 @@ html[dark] .mtrl-button--primary.mtrl-button--contained {
 }
 .mtrl-button--primary-variant.mtrl-button--contained {
   background-color: #3700b3;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 html[dark] .mtrl-button--primary-variant.mtrl-button {
   background-color: #121212;
-  color: rgba(55, 0, 179, 0.87);
+  color: #3700b3;
 }
 html[dark] .mtrl-button--primary-variant.mtrl-button--outlined {
   border-color: rgba(255, 255, 255, 0.12);
@@ -53,12 +53,12 @@ html[dark] .mtrl-button--primary-variant.mtrl-button--two-tone {
 }
 html[dark] .mtrl-button--primary-variant.mtrl-button--contained {
   background-color: #3700b3;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 
 .mtrl-button--secondary.mtrl-button {
   background-color: #ffffff;
-  color: rgba(3, 218, 198, 0.87);
+  color: #03dac6;
 }
 .mtrl-button--secondary.mtrl-button--outlined {
   border-color: rgba(0, 0, 0, 0.12);
@@ -68,11 +68,11 @@ html[dark] .mtrl-button--primary-variant.mtrl-button--contained {
 }
 .mtrl-button--secondary.mtrl-button--contained {
   background-color: #03dac6;
-  color: rgba(0, 0, 0, 0.87);
+  color: black;
 }
 html[dark] .mtrl-button--secondary.mtrl-button {
   background-color: #121212;
-  color: rgba(3, 218, 198, 0.87);
+  color: #03dac6;
 }
 html[dark] .mtrl-button--secondary.mtrl-button--outlined {
   border-color: rgba(255, 255, 255, 0.12);
@@ -82,12 +82,12 @@ html[dark] .mtrl-button--secondary.mtrl-button--two-tone {
 }
 html[dark] .mtrl-button--secondary.mtrl-button--contained {
   background-color: #03dac6;
-  color: rgba(0, 0, 0, 0.87);
+  color: black;
 }
 
 .mtrl-button--secondary-variant.mtrl-button {
   background-color: #ffffff;
-  color: rgba(1, 135, 134, 0.87);
+  color: #018786;
 }
 .mtrl-button--secondary-variant.mtrl-button--outlined {
   border-color: rgba(0, 0, 0, 0.12);
@@ -97,11 +97,11 @@ html[dark] .mtrl-button--secondary.mtrl-button--contained {
 }
 .mtrl-button--secondary-variant.mtrl-button--contained {
   background-color: #018786;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 html[dark] .mtrl-button--secondary-variant.mtrl-button {
   background-color: #121212;
-  color: rgba(3, 218, 198, 0.87);
+  color: #03dac6;
 }
 html[dark] .mtrl-button--secondary-variant.mtrl-button--outlined {
   border-color: rgba(255, 255, 255, 0.12);
@@ -111,12 +111,12 @@ html[dark] .mtrl-button--secondary-variant.mtrl-button--two-tone {
 }
 html[dark] .mtrl-button--secondary-variant.mtrl-button--contained {
   background-color: #03dac6;
-  color: rgba(0, 0, 0, 0.87);
+  color: black;
 }
 
 .mtrl-button--on-surface.mtrl-button {
   background-color: #ffffff;
-  color: rgba(0, 0, 0, 0.87);
+  color: black;
 }
 .mtrl-button--on-surface.mtrl-button--outlined {
   border-color: rgba(0, 0, 0, 0.12);
@@ -126,11 +126,11 @@ html[dark] .mtrl-button--secondary-variant.mtrl-button--contained {
 }
 .mtrl-button--on-surface.mtrl-button--contained {
   background-color: black;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 html[dark] .mtrl-button--on-surface.mtrl-button {
   background-color: #121212;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 html[dark] .mtrl-button--on-surface.mtrl-button--outlined {
   border-color: rgba(255, 255, 255, 0.12);
@@ -140,12 +140,12 @@ html[dark] .mtrl-button--on-surface.mtrl-button--two-tone {
 }
 html[dark] .mtrl-button--on-surface.mtrl-button--contained {
   background-color: white;
-  color: rgba(0, 0, 0, 0.87);
+  color: black;
 }
 
 .mtrl-button--error.mtrl-button {
   background-color: #ffffff;
-  color: rgba(176, 0, 32, 0.87);
+  color: #b00020;
 }
 .mtrl-button--error.mtrl-button--outlined {
   border-color: rgba(0, 0, 0, 0.12);
@@ -155,11 +155,11 @@ html[dark] .mtrl-button--on-surface.mtrl-button--contained {
 }
 .mtrl-button--error.mtrl-button--contained {
   background-color: #b00020;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 html[dark] .mtrl-button--error.mtrl-button {
   background-color: #121212;
-  color: rgba(207, 102, 121, 0.87);
+  color: #cf6679;
 }
 html[dark] .mtrl-button--error.mtrl-button--outlined {
   border-color: rgba(255, 255, 255, 0.12);
@@ -169,7 +169,7 @@ html[dark] .mtrl-button--error.mtrl-button--two-tone {
 }
 html[dark] .mtrl-button--error.mtrl-button--contained {
   background-color: #cf6679;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
 }
 
 /*# sourceMappingURL=button_theme.css.map */

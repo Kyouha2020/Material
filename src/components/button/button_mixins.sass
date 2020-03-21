@@ -11,7 +11,7 @@
 
   &.mtrl-button
     background-color: $surface
-    color: rgba($color, $text--high-emphasis)
+    color: $color
     @content
 
     &--outlined
@@ -22,7 +22,7 @@
 
     &--contained
       background-color: $color
-      color: rgba($on-color, $text--high-emphasis)
+      color: $on-color
 
 @mixin button-theme($color)
   @include button-theme_(get-theme(color, $color))
