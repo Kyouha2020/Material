@@ -91,7 +91,7 @@ html[dark] .mtrl-button--two-tone:disabled, html[dark] .mtrl-button--contained:d
 .mtrl-button::before {
   background-color: currentColor;
 }
-.mtrl-button--rounded {
+.mtrl-button.mtrl-button--rounded {
   border-radius: 18px;
 }
 .mtrl-button:hover {
@@ -322,25 +322,25 @@ html[dark] .mtrl-button--unelevated:active::before, html[dark] .mtrl-button--tog
 .mtrl-button--density-0 {
   height: 36px;
 }
-.mtrl-button--density-0--rounded {
+.mtrl-button--density-0.mtrl-button--rounded {
   border-radius: 18px;
 }
 .mtrl-button--density--1 {
   height: 32px;
 }
-.mtrl-button--density--1--rounded {
+.mtrl-button--density--1.mtrl-button--rounded {
   border-radius: 16px;
 }
 .mtrl-button--density--2 {
   height: 28px;
 }
-.mtrl-button--density--2--rounded {
+.mtrl-button--density--2.mtrl-button--rounded {
   border-radius: 14px;
 }
 .mtrl-button--density--3 {
   height: 24px;
 }
-.mtrl-button--density--3--rounded {
+.mtrl-button--density--3.mtrl-button--rounded {
   border-radius: 12px;
 }
 

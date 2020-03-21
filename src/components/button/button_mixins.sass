@@ -5,17 +5,13 @@
 @use "../../design/layout/spacing" as *
 @use "../../design/usability/accessibility" as *
 
-@mixin button-theme__($surface: $surface)
-  $on-surface: on-color($surface)
-
+@mixin button-theme__($surface: $surface, $on-surface: on-color($surface))
   background-color: $surface
 
   &--outlined
     border-color: rgba($on-surface, $stroke)
 
-@mixin button-theme_($color)
-  $on-color: on-color($color)
-
+@mixin button-theme_($color, $on-color: on-color($color))
   color: $color
 
   &--two-tone
@@ -36,9 +32,7 @@
     @include button-theme_(get-theme(color, $color, true))
 
 
-@mixin disabled-button-theme_($color)
-  $on-color: on-color($color)
-
+@mixin disabled-button-theme_($color, $on-color: on-color($color))
   &:disabled
     background-color: rgba($color, $disabled-filled-container)
     color: rgba($on-color, $text--disabled)
@@ -54,13 +48,13 @@
     @include disabled-button-theme_(get-theme(color, $color, true))
 
 
-@mixin button-density_($baseline)
+$button-height: 36px !default
+
+@mixin button-density_($baseline: $button-height)
   height: $baseline
 
-  &--rounded
+  &.mtrl-button--rounded
     border-radius: $baseline / 2
 
-$button-density-baseline: 36px !default
-
 @function button-density($density)
-  @return get-density($button-density-baseline, $density)
+  @return get-density($button-height, $density)
