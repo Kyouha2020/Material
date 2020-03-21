@@ -52,7 +52,7 @@
     @include disabled-button-theme_(get-theme(color, $color, true))
 
 
-@mixin button-density($baseline)
+@mixin button-density_($baseline)
   height: $baseline
 
   &.mtrl-button--rounded
@@ -60,5 +60,5 @@
 
 $button-density-baseline: 36px !default
 
-@function get-button-density($density)
+@function button-density($density)
   @return get-density($button-density-baseline, $density)

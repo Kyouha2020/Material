@@ -1,4 +1,3 @@
-@use "../../design/color/theme" as *
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/layout/spacing" as *
@@ -13,7 +12,7 @@
   @include ripple()
   @include unselectable
   @include centered-content
-  @include button-density($button-density-baseline)
+  @include button-density_($button-density-baseline)
   @include typography(button)
   display: inline-flex
   min-width: 64px
@@ -98,4 +97,4 @@
 
   @for $i from 0 through -3
     &--density-#{$i}
-      @include button-density(get-button-density($i))
+      @include button-density_(button-density($i))
