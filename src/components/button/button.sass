@@ -7,11 +7,10 @@
 @use "button_mixins" as *
 
 .mtrl-button
-  @include button-light-theme($primary, $on-primary)
-  @include button-dark-theme($dark-primary, $dark-on-primary)
-  @include disabled-button-light-theme($surface, $on-surface)
-  @include disabled-button-dark-theme($dark-surface, $dark-on-surface)
+  @include button-theme(primary)
+  @include disabled-button-theme(surface)
   @include ripple_
+  @include ripple()
   @include unselectable
   @include centered-content
   @include button-density($button-density-baseline)
@@ -29,6 +28,7 @@
     cursor: pointer
 
   &:focus-visible
+    border-color: inherit
     outline: 1px solid
     outline-offset: -4px
 
@@ -46,6 +46,12 @@
 
     &:not(.mtrl-button--toggle--active):focus-visible
       outline: none
+
+  html[dark] &--outlined:focus
+    border-color: inherit
+
+  html[dark] &--contained
+    @include ripple(white)
 
   &--contained
     @include elevation(2, 4, 6, 8, $ripple-boost: false)
@@ -68,11 +74,11 @@
     &--trailing
       @include margin-horizontal(8px, -4px)
 
-  &--raised
-    @include elevation(2, 4, 6, 8)
-
   &--float
     @include elevation(0, 0, 2, 4)
+
+  &--raised
+    @include elevation(2, 4, 6, 8)
 
   &--push
     @include elevation(2, 4, 0, 0)
@@ -83,13 +89,13 @@
   &--sharp
     border-radius: 0
 
-  @for $i from 0 through -3
-    &--density-#{$i}
-      @include button-density(get-button-density($i))
-
   &--block
     display: flex
     width: 100%
 
     &--between
       justify-content: space-between
+
+  @for $i from 0 through -3
+    &--density-#{$i}
+      @include button-density(get-button-density($i))

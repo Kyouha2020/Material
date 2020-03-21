@@ -40,7 +40,7 @@ $dark-on-error: on-color($dark-error) !default
 $elevation-overlay: (00: 0, 01: .05, 02: .07, 03: .08, 04: .09, 05: .1, 06: .11, 07: .11, 08: .12, 09: .12, 10: .13, 11: .13, 12: .14, 13: .14, 14: .14, 15: .14, 16: .15, 17: .15, 18: .15, 19: .15, 20: .15, 21: .15, 22: .15, 23: .15, 24: .16)
 
 
-$theme-name-map: (primary, primary-variant, secondary, secondary-variant, error)
+$theme-name-map: (primary, primary-variant, secondary, secondary-variant, on-surface, error)
 
 @function get-theme($type, $theme, $is-dark: false)
   @if $is-dark == false
@@ -53,8 +53,14 @@ $theme-name-map: (primary, primary-variant, secondary, secondary-variant, error)
         @return $secondary
       @else if $theme == secondary-variant
         @return $secondary-variant
+      @if $theme == surface
+        @return $surface
+      @if $theme == on-surface
+        @return $on-surface
       @else if $theme == error
         @return $error
+      @else
+        @return $theme
 
     @else if $type == on-color
       @if $theme == primary
@@ -65,8 +71,12 @@ $theme-name-map: (primary, primary-variant, secondary, secondary-variant, error)
         @return $on-secondary
       @else if $theme == secondary-variant
         @return $on-secondary-variant
+      @if $theme == surface
+        @return $on-surface
       @else if $theme == error
         @return $on-error
+      @else
+        @return $theme
 
   @else
     @if $type == color
@@ -78,8 +88,14 @@ $theme-name-map: (primary, primary-variant, secondary, secondary-variant, error)
         @return $dark-secondary
       @else if $theme == secondary-variant
         @return $dark-secondary-variant
+      @if $theme == surface
+        @return $dark-surface
+      @if $theme == on-surface
+        @return $dark-on-surface
       @else if $theme == error
         @return $dark-error
+      @else
+        @return $theme
 
     @else if $type == on-color
       @if $theme == primary
@@ -90,5 +106,9 @@ $theme-name-map: (primary, primary-variant, secondary, secondary-variant, error)
         @return $on-secondary
       @else if $theme == secondary-variant
         @return $dark-on-secondary-variant
+      @if $theme == surface
+        @return $dark-on-surface
       @else if $theme == error
         @return $dark-on-error
+      @else
+        @return $theme

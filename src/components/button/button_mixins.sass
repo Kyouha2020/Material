@@ -5,23 +5,35 @@
 @use "../../design/layout/spacing" as *
 @use "../../design/usability/accessibility" as *
 
-@mixin button-theme_($color, $on-color)
+@mixin button-theme_($color, $surface: $surface)
+  $on-color: on-color($color)
+  $on-surface: on-color($surface)
+
   &.mtrl-button
-    @include ripple($color)
-    color: $color
+    background-color: $surface
+    color: rgba($color, $text--high-emphasis)
     @content
 
-    &:focus-visible
-      border-color: inherit
+    &--outlined
+      border-color: rgba($on-surface, $stroke)
 
     &--two-tone
       background-color: rgba($color, $stroke)
 
     &--contained
       background-color: $color
-      color: $on-color
+      color: rgba($on-color, $text--high-emphasis)
 
-@mixin disabled-button-theme_($color, $on-color)
+@mixin button-theme($color)
+  @include button-theme_(get-theme(color, $color))
+
+  html[dark] &
+    @include button-theme_(get-theme(color, $color, true), $dark-surface)
+
+
+@mixin disabled-button-theme_($color)
+  $on-color: on-color($color)
+
   &.mtrl-button
     @content
 
@@ -33,37 +45,11 @@
     &--two-tone:disabled, &--contained:disabled, &--two-tone-icon:disabled .mtrl-button__icon
       background-color: rgba($on-color, $disabled-filled-container)
 
+@mixin disabled-button-theme($color)
+  @include disabled-button-theme_(get-theme(color, $color))
 
-@mixin button-light-theme($color, $on-color)
-  @include button-theme_($color, $on-color)
-    background-color: $surface
-
-    &--outlined
-      border-color: rgba($on-surface, $stroke)
-
-    &--contained
-      @include ripple($on-color)
-
-@mixin button-dark-theme($color, $on-color)
   html[dark] &
-    @include button-theme_($color, $on-color)
-      background-color: $dark-surface
-
-      &--outlined
-        border-color: rgba($dark-on-surface, $stroke)
-
-        &:focus
-          border-color: inherit
-
-      &--contained
-        @include ripple(white)
-
-@mixin disabled-button-light-theme($color, $on-color)
-  @include disabled-button-theme_($color, $on-color)
-
-@mixin disabled-button-dark-theme($color, $on-color)
-  html[dark] &
-    @include disabled-button-theme_($color, $on-color)
+    @include disabled-button-theme_(get-theme(color, $color, true))
 
 
 @mixin button-density($baseline)
