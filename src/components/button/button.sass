@@ -9,9 +9,9 @@
   @include button-theme(primary)
   @include disabled-button-theme(surface)
   @include ripple_
-  @include ripple()
   @include unselectable
   @include centered-content
+  @include ripple()
   @include button-density_($button-density-baseline)
   @include typography(button)
   display: inline-flex
@@ -27,7 +27,7 @@
     cursor: pointer
 
   &:focus-visible
-    border-color: inherit !important
+    border-color: inherit
     outline: 1px solid
     outline-offset: -4px
 
