@@ -21,9 +21,6 @@
       background-color: $color
       color: $on-color
 
-    &--two-tone-icon .mtrl-button__icon
-      background-color: rgba($color, $stroke)
-
 @mixin disabled-button-theme_($color, $on-color)
   &.mtrl-button
     @content
@@ -74,11 +71,6 @@
 
   &.mtrl-button--rounded
     border-radius: $baseline / 2
-
-  &.mtrl-button--two-tone-icon
-    & .mtrl-button__icon
-      width: $baseline
-      height: $baseline
 
 $button-density-baseline: 36px !default
 
