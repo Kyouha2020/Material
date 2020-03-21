@@ -58,7 +58,7 @@ html[dark] .mtrl-button.mtrl-button--contained, html[dark] .mtrl-button.mtrl-but
   color: rgba(0, 0, 0, 0.38);
   border-color: rgba(0, 0, 0, 0.12);
 }
-.mtrl-button.mtrl-button--two-tone:disabled, .mtrl-button.mtrl-button--contained:disabled, .mtrl-button.mtrl-button--toggle--active:disabled, .mtrl-button.mtrl-button--two-tone-icon:disabled .mtrl-button__icon {
+.mtrl-button.mtrl-button--two-tone:disabled, .mtrl-button.mtrl-button--contained:disabled, .mtrl-button.mtrl-button--toggle--active:disabled {
   background-color: rgba(0, 0, 0, 0.12);
 }
 html[dark] .mtrl-button.mtrl-button:disabled {
@@ -66,7 +66,7 @@ html[dark] .mtrl-button.mtrl-button:disabled {
   color: rgba(255, 255, 255, 0.38);
   border-color: rgba(255, 255, 255, 0.12);
 }
-html[dark] .mtrl-button.mtrl-button--two-tone:disabled, html[dark] .mtrl-button.mtrl-button--contained:disabled, html[dark] .mtrl-button.mtrl-button--toggle--active:disabled, html[dark] .mtrl-button.mtrl-button--two-tone-icon:disabled .mtrl-button__icon {
+html[dark] .mtrl-button.mtrl-button--two-tone:disabled, html[dark] .mtrl-button.mtrl-button--contained:disabled, html[dark] .mtrl-button.mtrl-button--toggle--active:disabled {
   background-color: rgba(255, 255, 255, 0.12);
 }
 .mtrl-button::before {
