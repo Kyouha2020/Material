@@ -1,9 +1,5 @@
 .mtrl-button--primary.mtrl-button {
-  background-color: #ffffff;
   color: #6200ee;
-}
-.mtrl-button--primary.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--primary.mtrl-button--two-tone {
   background-color: rgba(98, 0, 238, 0.12);
@@ -13,11 +9,7 @@
   color: white;
 }
 html[dark] .mtrl-button--primary.mtrl-button {
-  background-color: #121212;
   color: #bb86fc;
-}
-html[dark] .mtrl-button--primary.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--primary.mtrl-button--two-tone {
   background-color: rgba(187, 134, 252, 0.12);
@@ -28,11 +20,7 @@ html[dark] .mtrl-button--primary.mtrl-button--contained {
 }
 
 .mtrl-button--primary-variant.mtrl-button {
-  background-color: #ffffff;
   color: #3700b3;
-}
-.mtrl-button--primary-variant.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--primary-variant.mtrl-button--two-tone {
   background-color: rgba(55, 0, 179, 0.12);
@@ -42,11 +30,7 @@ html[dark] .mtrl-button--primary.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--primary-variant.mtrl-button {
-  background-color: #121212;
   color: #3700b3;
-}
-html[dark] .mtrl-button--primary-variant.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--primary-variant.mtrl-button--two-tone {
   background-color: rgba(55, 0, 179, 0.12);
@@ -57,11 +41,7 @@ html[dark] .mtrl-button--primary-variant.mtrl-button--contained {
 }
 
 .mtrl-button--secondary.mtrl-button {
-  background-color: #ffffff;
   color: #03dac6;
-}
-.mtrl-button--secondary.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--secondary.mtrl-button--two-tone {
   background-color: rgba(3, 218, 198, 0.12);
@@ -71,11 +51,7 @@ html[dark] .mtrl-button--primary-variant.mtrl-button--contained {
   color: black;
 }
 html[dark] .mtrl-button--secondary.mtrl-button {
-  background-color: #121212;
   color: #03dac6;
-}
-html[dark] .mtrl-button--secondary.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--secondary.mtrl-button--two-tone {
   background-color: rgba(3, 218, 198, 0.12);
@@ -86,11 +62,7 @@ html[dark] .mtrl-button--secondary.mtrl-button--contained {
 }
 
 .mtrl-button--secondary-variant.mtrl-button {
-  background-color: #ffffff;
   color: #018786;
-}
-.mtrl-button--secondary-variant.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--secondary-variant.mtrl-button--two-tone {
   background-color: rgba(1, 135, 134, 0.12);
@@ -100,11 +72,7 @@ html[dark] .mtrl-button--secondary.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--secondary-variant.mtrl-button {
-  background-color: #121212;
   color: #03dac6;
-}
-html[dark] .mtrl-button--secondary-variant.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--secondary-variant.mtrl-button--two-tone {
   background-color: rgba(3, 218, 198, 0.12);
@@ -115,11 +83,7 @@ html[dark] .mtrl-button--secondary-variant.mtrl-button--contained {
 }
 
 .mtrl-button--on-surface.mtrl-button {
-  background-color: #ffffff;
   color: black;
-}
-.mtrl-button--on-surface.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--on-surface.mtrl-button--two-tone {
   background-color: rgba(0, 0, 0, 0.12);
@@ -129,11 +93,7 @@ html[dark] .mtrl-button--secondary-variant.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--on-surface.mtrl-button {
-  background-color: #121212;
   color: white;
-}
-html[dark] .mtrl-button--on-surface.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--on-surface.mtrl-button--two-tone {
   background-color: rgba(255, 255, 255, 0.12);
@@ -144,11 +104,7 @@ html[dark] .mtrl-button--on-surface.mtrl-button--contained {
 }
 
 .mtrl-button--error.mtrl-button {
-  background-color: #ffffff;
   color: #b00020;
-}
-.mtrl-button--error.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--error.mtrl-button--two-tone {
   background-color: rgba(176, 0, 32, 0.12);
@@ -158,11 +114,7 @@ html[dark] .mtrl-button--on-surface.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--error.mtrl-button {
-  background-color: #121212;
   color: #cf6679;
-}
-html[dark] .mtrl-button--error.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--error.mtrl-button--two-tone {
   background-color: rgba(207, 102, 121, 0.12);
@@ -173,11 +125,7 @@ html[dark] .mtrl-button--error.mtrl-button--contained {
 }
 
 .mtrl-button--red.mtrl-button {
-  background-color: #ffffff;
   color: #f44336;
-}
-.mtrl-button--red.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--red.mtrl-button--two-tone {
   background-color: rgba(244, 67, 54, 0.12);
@@ -187,11 +135,7 @@ html[dark] .mtrl-button--error.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--red.mtrl-button {
-  background-color: #121212;
   color: #f44336;
-}
-html[dark] .mtrl-button--red.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--red.mtrl-button--two-tone {
   background-color: rgba(244, 67, 54, 0.12);
@@ -202,11 +146,7 @@ html[dark] .mtrl-button--red.mtrl-button--contained {
 }
 
 .mtrl-button--pink.mtrl-button {
-  background-color: #ffffff;
   color: #e91e63;
-}
-.mtrl-button--pink.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--pink.mtrl-button--two-tone {
   background-color: rgba(233, 30, 99, 0.12);
@@ -216,11 +156,7 @@ html[dark] .mtrl-button--red.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--pink.mtrl-button {
-  background-color: #121212;
   color: #e91e63;
-}
-html[dark] .mtrl-button--pink.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--pink.mtrl-button--two-tone {
   background-color: rgba(233, 30, 99, 0.12);
@@ -231,11 +167,7 @@ html[dark] .mtrl-button--pink.mtrl-button--contained {
 }
 
 .mtrl-button--purple.mtrl-button {
-  background-color: #ffffff;
   color: #9c27b0;
-}
-.mtrl-button--purple.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--purple.mtrl-button--two-tone {
   background-color: rgba(156, 39, 176, 0.12);
@@ -245,11 +177,7 @@ html[dark] .mtrl-button--pink.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--purple.mtrl-button {
-  background-color: #121212;
   color: #9c27b0;
-}
-html[dark] .mtrl-button--purple.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--purple.mtrl-button--two-tone {
   background-color: rgba(156, 39, 176, 0.12);
@@ -260,11 +188,7 @@ html[dark] .mtrl-button--purple.mtrl-button--contained {
 }
 
 .mtrl-button--deep-purple.mtrl-button {
-  background-color: #ffffff;
   color: #673ab7;
-}
-.mtrl-button--deep-purple.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--deep-purple.mtrl-button--two-tone {
   background-color: rgba(103, 58, 183, 0.12);
@@ -274,11 +198,7 @@ html[dark] .mtrl-button--purple.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--deep-purple.mtrl-button {
-  background-color: #121212;
   color: #673ab7;
-}
-html[dark] .mtrl-button--deep-purple.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--deep-purple.mtrl-button--two-tone {
   background-color: rgba(103, 58, 183, 0.12);
@@ -289,11 +209,7 @@ html[dark] .mtrl-button--deep-purple.mtrl-button--contained {
 }
 
 .mtrl-button--indigo.mtrl-button {
-  background-color: #ffffff;
   color: #3f51b5;
-}
-.mtrl-button--indigo.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--indigo.mtrl-button--two-tone {
   background-color: rgba(63, 81, 181, 0.12);
@@ -303,11 +219,7 @@ html[dark] .mtrl-button--deep-purple.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--indigo.mtrl-button {
-  background-color: #121212;
   color: #3f51b5;
-}
-html[dark] .mtrl-button--indigo.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--indigo.mtrl-button--two-tone {
   background-color: rgba(63, 81, 181, 0.12);
@@ -318,11 +230,7 @@ html[dark] .mtrl-button--indigo.mtrl-button--contained {
 }
 
 .mtrl-button--blue.mtrl-button {
-  background-color: #ffffff;
   color: #2196f3;
-}
-.mtrl-button--blue.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--blue.mtrl-button--two-tone {
   background-color: rgba(33, 150, 243, 0.12);
@@ -332,11 +240,7 @@ html[dark] .mtrl-button--indigo.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--blue.mtrl-button {
-  background-color: #121212;
   color: #2196f3;
-}
-html[dark] .mtrl-button--blue.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--blue.mtrl-button--two-tone {
   background-color: rgba(33, 150, 243, 0.12);
@@ -347,11 +251,7 @@ html[dark] .mtrl-button--blue.mtrl-button--contained {
 }
 
 .mtrl-button--light-blue.mtrl-button {
-  background-color: #ffffff;
   color: #03a9f4;
-}
-.mtrl-button--light-blue.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--light-blue.mtrl-button--two-tone {
   background-color: rgba(3, 169, 244, 0.12);
@@ -361,11 +261,7 @@ html[dark] .mtrl-button--blue.mtrl-button--contained {
   color: black;
 }
 html[dark] .mtrl-button--light-blue.mtrl-button {
-  background-color: #121212;
   color: #03a9f4;
-}
-html[dark] .mtrl-button--light-blue.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--light-blue.mtrl-button--two-tone {
   background-color: rgba(3, 169, 244, 0.12);
@@ -376,11 +272,7 @@ html[dark] .mtrl-button--light-blue.mtrl-button--contained {
 }
 
 .mtrl-button--cyan.mtrl-button {
-  background-color: #ffffff;
   color: #00bcd4;
-}
-.mtrl-button--cyan.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--cyan.mtrl-button--two-tone {
   background-color: rgba(0, 188, 212, 0.12);
@@ -390,11 +282,7 @@ html[dark] .mtrl-button--light-blue.mtrl-button--contained {
   color: black;
 }
 html[dark] .mtrl-button--cyan.mtrl-button {
-  background-color: #121212;
   color: #00bcd4;
-}
-html[dark] .mtrl-button--cyan.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--cyan.mtrl-button--two-tone {
   background-color: rgba(0, 188, 212, 0.12);
@@ -405,11 +293,7 @@ html[dark] .mtrl-button--cyan.mtrl-button--contained {
 }
 
 .mtrl-button--teal.mtrl-button {
-  background-color: #ffffff;
   color: #009688;
-}
-.mtrl-button--teal.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--teal.mtrl-button--two-tone {
   background-color: rgba(0, 150, 136, 0.12);
@@ -419,11 +303,7 @@ html[dark] .mtrl-button--cyan.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--teal.mtrl-button {
-  background-color: #121212;
   color: #009688;
-}
-html[dark] .mtrl-button--teal.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--teal.mtrl-button--two-tone {
   background-color: rgba(0, 150, 136, 0.12);
@@ -434,11 +314,7 @@ html[dark] .mtrl-button--teal.mtrl-button--contained {
 }
 
 .mtrl-button--green.mtrl-button {
-  background-color: #ffffff;
   color: #4caf50;
-}
-.mtrl-button--green.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--green.mtrl-button--two-tone {
   background-color: rgba(76, 175, 80, 0.12);
@@ -448,11 +324,7 @@ html[dark] .mtrl-button--teal.mtrl-button--contained {
   color: black;
 }
 html[dark] .mtrl-button--green.mtrl-button {
-  background-color: #121212;
   color: #4caf50;
-}
-html[dark] .mtrl-button--green.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--green.mtrl-button--two-tone {
   background-color: rgba(76, 175, 80, 0.12);
@@ -463,11 +335,7 @@ html[dark] .mtrl-button--green.mtrl-button--contained {
 }
 
 .mtrl-button--light-green.mtrl-button {
-  background-color: #ffffff;
   color: #8bc34a;
-}
-.mtrl-button--light-green.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--light-green.mtrl-button--two-tone {
   background-color: rgba(139, 195, 74, 0.12);
@@ -477,11 +345,7 @@ html[dark] .mtrl-button--green.mtrl-button--contained {
   color: black;
 }
 html[dark] .mtrl-button--light-green.mtrl-button {
-  background-color: #121212;
   color: #8bc34a;
-}
-html[dark] .mtrl-button--light-green.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--light-green.mtrl-button--two-tone {
   background-color: rgba(139, 195, 74, 0.12);
@@ -492,11 +356,7 @@ html[dark] .mtrl-button--light-green.mtrl-button--contained {
 }
 
 .mtrl-button--lime.mtrl-button {
-  background-color: #ffffff;
   color: #cddc39;
-}
-.mtrl-button--lime.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--lime.mtrl-button--two-tone {
   background-color: rgba(205, 220, 57, 0.12);
@@ -506,11 +366,7 @@ html[dark] .mtrl-button--light-green.mtrl-button--contained {
   color: black;
 }
 html[dark] .mtrl-button--lime.mtrl-button {
-  background-color: #121212;
   color: #cddc39;
-}
-html[dark] .mtrl-button--lime.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--lime.mtrl-button--two-tone {
   background-color: rgba(205, 220, 57, 0.12);
@@ -521,11 +377,7 @@ html[dark] .mtrl-button--lime.mtrl-button--contained {
 }
 
 .mtrl-button--yellow.mtrl-button {
-  background-color: #ffffff;
   color: #ffeb3b;
-}
-.mtrl-button--yellow.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--yellow.mtrl-button--two-tone {
   background-color: rgba(255, 235, 59, 0.12);
@@ -535,11 +387,7 @@ html[dark] .mtrl-button--lime.mtrl-button--contained {
   color: black;
 }
 html[dark] .mtrl-button--yellow.mtrl-button {
-  background-color: #121212;
   color: #ffeb3b;
-}
-html[dark] .mtrl-button--yellow.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--yellow.mtrl-button--two-tone {
   background-color: rgba(255, 235, 59, 0.12);
@@ -550,11 +398,7 @@ html[dark] .mtrl-button--yellow.mtrl-button--contained {
 }
 
 .mtrl-button--amber.mtrl-button {
-  background-color: #ffffff;
   color: #ffc107;
-}
-.mtrl-button--amber.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--amber.mtrl-button--two-tone {
   background-color: rgba(255, 193, 7, 0.12);
@@ -564,11 +408,7 @@ html[dark] .mtrl-button--yellow.mtrl-button--contained {
   color: black;
 }
 html[dark] .mtrl-button--amber.mtrl-button {
-  background-color: #121212;
   color: #ffc107;
-}
-html[dark] .mtrl-button--amber.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--amber.mtrl-button--two-tone {
   background-color: rgba(255, 193, 7, 0.12);
@@ -579,11 +419,7 @@ html[dark] .mtrl-button--amber.mtrl-button--contained {
 }
 
 .mtrl-button--orange.mtrl-button {
-  background-color: #ffffff;
   color: #ff9800;
-}
-.mtrl-button--orange.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--orange.mtrl-button--two-tone {
   background-color: rgba(255, 152, 0, 0.12);
@@ -593,11 +429,7 @@ html[dark] .mtrl-button--amber.mtrl-button--contained {
   color: black;
 }
 html[dark] .mtrl-button--orange.mtrl-button {
-  background-color: #121212;
   color: #ff9800;
-}
-html[dark] .mtrl-button--orange.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--orange.mtrl-button--two-tone {
   background-color: rgba(255, 152, 0, 0.12);
@@ -608,11 +440,7 @@ html[dark] .mtrl-button--orange.mtrl-button--contained {
 }
 
 .mtrl-button--deep-orange.mtrl-button {
-  background-color: #ffffff;
   color: #ff5722;
-}
-.mtrl-button--deep-orange.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--deep-orange.mtrl-button--two-tone {
   background-color: rgba(255, 87, 34, 0.12);
@@ -622,11 +450,7 @@ html[dark] .mtrl-button--orange.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--deep-orange.mtrl-button {
-  background-color: #121212;
   color: #ff5722;
-}
-html[dark] .mtrl-button--deep-orange.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--deep-orange.mtrl-button--two-tone {
   background-color: rgba(255, 87, 34, 0.12);
@@ -637,11 +461,7 @@ html[dark] .mtrl-button--deep-orange.mtrl-button--contained {
 }
 
 .mtrl-button--brown.mtrl-button {
-  background-color: #ffffff;
   color: #795548;
-}
-.mtrl-button--brown.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--brown.mtrl-button--two-tone {
   background-color: rgba(121, 85, 72, 0.12);
@@ -651,11 +471,7 @@ html[dark] .mtrl-button--deep-orange.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--brown.mtrl-button {
-  background-color: #121212;
   color: #795548;
-}
-html[dark] .mtrl-button--brown.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--brown.mtrl-button--two-tone {
   background-color: rgba(121, 85, 72, 0.12);
@@ -666,11 +482,7 @@ html[dark] .mtrl-button--brown.mtrl-button--contained {
 }
 
 .mtrl-button--grey.mtrl-button {
-  background-color: #ffffff;
   color: #9e9e9e;
-}
-.mtrl-button--grey.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--grey.mtrl-button--two-tone {
   background-color: rgba(158, 158, 158, 0.12);
@@ -680,11 +492,7 @@ html[dark] .mtrl-button--brown.mtrl-button--contained {
   color: black;
 }
 html[dark] .mtrl-button--grey.mtrl-button {
-  background-color: #121212;
   color: #9e9e9e;
-}
-html[dark] .mtrl-button--grey.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--grey.mtrl-button--two-tone {
   background-color: rgba(158, 158, 158, 0.12);
@@ -695,11 +503,7 @@ html[dark] .mtrl-button--grey.mtrl-button--contained {
 }
 
 .mtrl-button--blue-grey.mtrl-button {
-  background-color: #ffffff;
   color: #607d8b;
-}
-.mtrl-button--blue-grey.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--blue-grey.mtrl-button--two-tone {
   background-color: rgba(96, 125, 139, 0.12);
@@ -709,11 +513,7 @@ html[dark] .mtrl-button--grey.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--blue-grey.mtrl-button {
-  background-color: #121212;
   color: #607d8b;
-}
-html[dark] .mtrl-button--blue-grey.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--blue-grey.mtrl-button--two-tone {
   background-color: rgba(96, 125, 139, 0.12);
@@ -724,11 +524,7 @@ html[dark] .mtrl-button--blue-grey.mtrl-button--contained {
 }
 
 .mtrl-button--black.mtrl-button {
-  background-color: #ffffff;
   color: black;
-}
-.mtrl-button--black.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--black.mtrl-button--two-tone {
   background-color: rgba(0, 0, 0, 0.12);
@@ -738,11 +534,7 @@ html[dark] .mtrl-button--blue-grey.mtrl-button--contained {
   color: white;
 }
 html[dark] .mtrl-button--black.mtrl-button {
-  background-color: #121212;
   color: black;
-}
-html[dark] .mtrl-button--black.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--black.mtrl-button--two-tone {
   background-color: rgba(0, 0, 0, 0.12);
@@ -753,11 +545,7 @@ html[dark] .mtrl-button--black.mtrl-button--contained {
 }
 
 .mtrl-button--white.mtrl-button {
-  background-color: #ffffff;
   color: white;
-}
-.mtrl-button--white.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button--white.mtrl-button--two-tone {
   background-color: rgba(255, 255, 255, 0.12);
@@ -767,11 +555,7 @@ html[dark] .mtrl-button--black.mtrl-button--contained {
   color: black;
 }
 html[dark] .mtrl-button--white.mtrl-button {
-  background-color: #121212;
   color: white;
-}
-html[dark] .mtrl-button--white.mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
 }
 html[dark] .mtrl-button--white.mtrl-button--two-tone {
   background-color: rgba(255, 255, 255, 0.12);

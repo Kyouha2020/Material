@@ -1,4 +1,6 @@
 .mtrl-button {
+  background-color: #ffffff;
+  color: #6200ee;
   position: relative;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -25,48 +27,44 @@
   white-space: nowrap;
   overflow: hidden;
 }
-.mtrl-button.mtrl-button {
-  background-color: #ffffff;
-  color: #6200ee;
-}
-.mtrl-button.mtrl-button--outlined, .mtrl-button.mtrl-button--toggle {
+.mtrl-button--outlined, .mtrl-button--toggle {
   border-color: rgba(0, 0, 0, 0.12);
 }
-.mtrl-button.mtrl-button--two-tone {
+.mtrl-button--two-tone {
   background-color: rgba(98, 0, 238, 0.12);
 }
-.mtrl-button.mtrl-button--contained, .mtrl-button.mtrl-button--toggle--active {
+.mtrl-button--contained, .mtrl-button--toggle--active {
   background-color: #6200ee;
   color: white;
 }
-html[dark] .mtrl-button.mtrl-button {
+html[dark] .mtrl-button {
   background-color: #121212;
   color: #bb86fc;
 }
-html[dark] .mtrl-button.mtrl-button--outlined, html[dark] .mtrl-button.mtrl-button--toggle {
+html[dark] .mtrl-button--outlined, html[dark] .mtrl-button--toggle {
   border-color: rgba(255, 255, 255, 0.12);
 }
-html[dark] .mtrl-button.mtrl-button--two-tone {
+html[dark] .mtrl-button--two-tone {
   background-color: rgba(187, 134, 252, 0.12);
 }
-html[dark] .mtrl-button.mtrl-button--contained, html[dark] .mtrl-button.mtrl-button--toggle--active {
+html[dark] .mtrl-button--contained, html[dark] .mtrl-button--toggle--active {
   background-color: #bb86fc;
   color: black;
 }
-.mtrl-button.mtrl-button:disabled {
+.mtrl-button:disabled {
   background-color: rgba(255, 255, 255, 0.12);
   color: rgba(0, 0, 0, 0.38);
   border-color: rgba(0, 0, 0, 0.12);
 }
-.mtrl-button.mtrl-button--two-tone:disabled, .mtrl-button.mtrl-button--contained:disabled, .mtrl-button.mtrl-button--toggle--active:disabled {
+.mtrl-button--two-tone:disabled, .mtrl-button--contained:disabled, .mtrl-button--toggle--active:disabled {
   background-color: rgba(0, 0, 0, 0.12);
 }
-html[dark] .mtrl-button.mtrl-button:disabled {
+html[dark] .mtrl-button:disabled {
   background-color: rgba(18, 18, 18, 0.12);
   color: rgba(255, 255, 255, 0.38);
   border-color: rgba(255, 255, 255, 0.12);
 }
-html[dark] .mtrl-button.mtrl-button--two-tone:disabled, html[dark] .mtrl-button.mtrl-button--contained:disabled, html[dark] .mtrl-button.mtrl-button--toggle--active:disabled {
+html[dark] .mtrl-button--two-tone:disabled, html[dark] .mtrl-button--contained:disabled, html[dark] .mtrl-button--toggle--active:disabled {
   background-color: rgba(255, 255, 255, 0.12);
 }
 .mtrl-button::before {
@@ -95,7 +93,7 @@ html[dark] .mtrl-button.mtrl-button--two-tone:disabled, html[dark] .mtrl-button.
 .mtrl-button::before {
   background-color: currentColor;
 }
-.mtrl-button.mtrl-button--rounded {
+.mtrl-button--rounded {
   border-radius: 18px;
 }
 .mtrl-button:hover {
@@ -141,7 +139,8 @@ html[dark] .mtrl-button:disabled:active::before {
   padding: 0 16px;
 }
 .mtrl-button--outlined, .mtrl-button--toggle, .mtrl-button--stroked {
-  border: 1px solid;
+  border-width: 1px;
+  border-style: solid;
   border-spacing: 2px;
 }
 .mtrl-button--outlined:not(.mtrl-button--toggle--active):focus-visible, .mtrl-button--toggle:not(.mtrl-button--toggle--active):focus-visible, .mtrl-button--stroked:not(.mtrl-button--toggle--active):focus-visible {
@@ -325,25 +324,25 @@ html[dark] .mtrl-button--unelevated:active::before, html[dark] .mtrl-button--tog
 .mtrl-button--density-0 {
   height: 36px;
 }
-.mtrl-button--density-0.mtrl-button--rounded {
+.mtrl-button--density-0--rounded {
   border-radius: 18px;
 }
 .mtrl-button--density--1 {
   height: 32px;
 }
-.mtrl-button--density--1.mtrl-button--rounded {
+.mtrl-button--density--1--rounded {
   border-radius: 16px;
 }
 .mtrl-button--density--2 {
   height: 28px;
 }
-.mtrl-button--density--2.mtrl-button--rounded {
+.mtrl-button--density--2--rounded {
   border-radius: 14px;
 }
 .mtrl-button--density--3 {
   height: 24px;
 }
-.mtrl-button--density--3.mtrl-button--rounded {
+.mtrl-button--density--3--rounded {
   border-radius: 12px;
 }
 

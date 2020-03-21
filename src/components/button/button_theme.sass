@@ -2,9 +2,9 @@
 @use "button_mixins" as *
 
 @each $theme in $theme-name-map
-  .mtrl-button--#{$theme}
-    @include button-theme($theme)
+  .mtrl-button--#{$theme}.mtrl-button
+    @include button-theme($theme, true)
 
 @each $color-name, $color in $color-name-map
-  .mtrl-button--#{$color-name}
-    @include button-theme($color)
+  .mtrl-button--#{$color-name}.mtrl-button
+    @include button-theme($color, true)
