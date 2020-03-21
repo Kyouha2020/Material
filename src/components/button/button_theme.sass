@@ -4,3 +4,7 @@
 @each $theme in $theme-name-map
   .mtrl-button--#{$theme}
     @include button-theme($theme)
+
+@each $color-name, $color in $color-name-map
+  .mtrl-button--#{$color-name}
+    @include button-theme($color)
