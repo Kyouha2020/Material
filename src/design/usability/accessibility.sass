@@ -40,9 +40,9 @@ $stroke: .12
   $darkContrast: contrast($color, rgba(black, .87))
 
   @if ($lightContrast < $minimumContrast) and ($darkContrast > $lightContrast)
-    @return "light"
+    @return light
   @else
-    @return "dark"
+    @return dark
 
 @function contrast-tone($color)
   @return if(tone($color) == dark, light, dark)
