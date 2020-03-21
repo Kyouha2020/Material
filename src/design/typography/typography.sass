@@ -22,8 +22,6 @@ $letter-spacing: (headline1: -1.5, headline2: -0.5, headline3: 0, headline4: 0.2
   font-size: font-size($font-size) * $scale
   font-weight: map-get($weight, map-get($font, $scale-category))
   letter-spacing: letter-spacing(map-get($letter-spacing, $scale-category), $font-size)
-  -moz-osx-font-smoothing: grayscale
-  -webkit-font-smoothing: antialiased
   @if map-get($case, $scale-category) == sentence
     text-decoration: inherit
     text-transform: inherit
