@@ -28,9 +28,6 @@
 .mtrl-button--outlined, .mtrl-button--toggle {
   border-color: rgba(0, 0, 0, 0.12);
 }
-.mtrl-button--two-tone {
-  background-color: rgba(98, 0, 238, 0.12);
-}
 .mtrl-button--contained, .mtrl-button--toggle--active {
   background-color: #6200ee;
   color: white;
@@ -42,9 +39,6 @@ html[dark] .mtrl-button {
 html[dark] .mtrl-button--outlined, html[dark] .mtrl-button--toggle {
   border-color: rgba(255, 255, 255, 0.12);
 }
-html[dark] .mtrl-button--two-tone {
-  background-color: rgba(187, 134, 252, 0.12);
-}
 html[dark] .mtrl-button--contained, html[dark] .mtrl-button--toggle--active {
   background-color: #bb86fc;
   color: black;
@@ -54,7 +48,7 @@ html[dark] .mtrl-button--contained, html[dark] .mtrl-button--toggle--active {
   color: rgba(0, 0, 0, 0.38);
   border-color: rgba(0, 0, 0, 0.12);
 }
-.mtrl-button--two-tone:disabled, .mtrl-button--contained:disabled, .mtrl-button--toggle--active:disabled {
+.mtrl-button--contained:disabled, .mtrl-button--toggle--active:disabled {
   background-color: rgba(0, 0, 0, 0.12);
 }
 html[dark] .mtrl-button:disabled {
@@ -62,7 +56,7 @@ html[dark] .mtrl-button:disabled {
   color: rgba(255, 255, 255, 0.38);
   border-color: rgba(255, 255, 255, 0.12);
 }
-html[dark] .mtrl-button--two-tone:disabled, html[dark] .mtrl-button--contained:disabled, html[dark] .mtrl-button--toggle--active:disabled {
+html[dark] .mtrl-button--contained:disabled, html[dark] .mtrl-button--toggle--active:disabled {
   background-color: rgba(255, 255, 255, 0.12);
 }
 .mtrl-button::before {
@@ -133,7 +127,7 @@ html[dark] .mtrl-button:disabled:active::before {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   z-index: 0;
 }
-.mtrl-button--outlined, .mtrl-button--stroked, .mtrl-button--two-tone, .mtrl-button--contained, .mtrl-button--toggle--active, .mtrl-button--toggle, .mtrl-button--raised, .mtrl-button--push {
+.mtrl-button--outlined, .mtrl-button--stroked, .mtrl-button--contained, .mtrl-button--toggle--active, .mtrl-button--toggle, .mtrl-button--raised, .mtrl-button--push {
   padding: 0 16px;
 }
 .mtrl-button--outlined, .mtrl-button--toggle, .mtrl-button--stroked {

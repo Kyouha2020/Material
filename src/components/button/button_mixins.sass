@@ -14,9 +14,6 @@
 @mixin button-theme_($color, $on-color: on-color($color))
   color: $color
 
-  &--two-tone
-    background-color: rgba($color, $stroke)
-
   &--contained
     background-color: $color
     color: $on-color
@@ -38,7 +35,7 @@
     color: rgba($on-color, $text--disabled)
     border-color: rgba($on-color, $stroke)
 
-  &--two-tone:disabled, &--contained:disabled
+  &--contained:disabled
     background-color: rgba($on-color, $disabled-filled-container)
 
 @mixin disabled-button-theme($color)
