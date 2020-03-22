@@ -127,7 +127,7 @@ html[dark] .mtrl-button:disabled:active::before {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   z-index: 0;
 }
-.mtrl-button--outlined, .mtrl-button--contained, .mtrl-button--toggle, .mtrl-button--raised, .mtrl-button--push {
+.mtrl-button--outlined, .mtrl-button--contained, .mtrl-button--raised, .mtrl-button--push {
   padding: 0 16px;
 }
 .mtrl-button--outlined {
@@ -135,7 +135,7 @@ html[dark] .mtrl-button:disabled:active::before {
   border-style: solid;
   border-spacing: 2px;
 }
-.mtrl-button--outlined:not(.mtrl-button--toggle--active):focus-visible {
+.mtrl-button--outlined:focus-visible {
   outline: none;
 }
 html[dark] .mtrl-button--outlined:focus {
