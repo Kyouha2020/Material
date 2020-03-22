@@ -1,3 +1,7 @@
+.mtrl-button[test1] {
+  background-color: #03dac6 !important;
+}
+
 .mtrl-button {
   background-color: #ffffff;
   color: #6200ee;
@@ -52,12 +56,12 @@ html[dark] .mtrl-button--contained {
   background-color: rgba(0, 0, 0, 0.12);
 }
 html[dark] .mtrl-button:disabled {
-  background-color: rgba(18, 18, 18, 0.12);
-  color: rgba(255, 255, 255, 0.38);
-  border-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.12);
+  color: rgba(0, 0, 0, 0.38);
+  border-color: rgba(0, 0, 0, 0.12);
 }
 html[dark] .mtrl-button--contained:disabled {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(0, 0, 0, 0.12);
 }
 .mtrl-button::before {
   opacity: 0;

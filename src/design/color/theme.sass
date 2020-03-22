@@ -40,76 +40,17 @@ $dark-on-error: on-color($dark-error) !default
 $elevation-overlay: (00: 0, 01: .05, 02: .07, 03: .08, 04: .09, 05: .1, 06: .11, 07: .11, 08: .12, 09: .12, 10: .13, 11: .13, 12: .14, 13: .14, 14: .14, 15: .14, 16: .15, 17: .15, 18: .15, 19: .15, 20: .15, 21: .15, 22: .15, 23: .15, 24: .16)
 
 
-$theme-name-map: (primary, primary-variant, secondary, secondary-variant, on-surface, error)
+$theme-map: ($primary, $primary-variant, $secondary, $secondary-variant, $background, $surface, $error)
+$dark-theme-map: ($dark-primary, $dark-primary-variant, $dark-secondary, $dark-secondary-variant, $dark-surface, $dark-on-surface, $dark-error)
+
+$theme-name-map: (primary, primary-variant, secondary, secondary-variant, background, surface, error)
 $color-name-map: (red: $red-500, pink: $pink-500, purple: $purple-500, deep-purple: $deep-purple-500, indigo: $indigo-500, blue: $blue-500, light-blue: $light-blue-500, cyan: $cyan-500, teal: $teal-500, green: $green-500, light-green: $light-green-500, lime: $lime-500, yellow: $yellow-500, amber: $amber-500, orange: $orange-500, deep-orange: $deep-orange-500, brown: $brown-500, grey: $grey-500, blue-grey: $blue-grey-500, black: black, white: white)
 
-@function get-theme($type, $theme, $is-dark: false)
-  @if $is-dark == false
-    @if $type == color
-      @if $theme == primary
-        @return $primary
-      @else if $theme == primary-variant
-        @return $primary-variant
-      @if $theme == secondary
-        @return $secondary
-      @else if $theme == secondary-variant
-        @return $secondary-variant
-      @if $theme == surface
-        @return $surface
-      @if $theme == on-surface
-        @return $on-surface
-      @else if $theme == error
-        @return $error
-      @else
-        @return $theme
-
-    @else if $type == on-color
-      @if $theme == primary
-        @return $on-primary
-      @else if $theme == primary-variant
-        @return $on-primary-variant
-      @if $theme == secondary
-        @return $on-secondary
-      @else if $theme == secondary-variant
-        @return $on-secondary-variant
-      @if $theme == surface
-        @return $on-surface
-      @else if $theme == error
-        @return $on-error
-      @else
-        @return $theme
-
+@function get-color($color, $dark: false)
+  @if index($theme-name-map, $color) != null
+    @if $dark == false
+        @return nth($theme-map, index($theme-name-map, $color))
+    @else
+        @return nth($dark-theme-map, index($theme-name-map, $color))
   @else
-    @if $type == color
-      @if $theme == primary
-        @return $dark-primary
-      @else if $theme == primary-variant
-        @return $dark-primary-variant
-      @if $theme == secondary
-        @return $dark-secondary
-      @else if $theme == secondary-variant
-        @return $dark-secondary-variant
-      @if $theme == surface
-        @return $dark-surface
-      @if $theme == on-surface
-        @return $dark-on-surface
-      @else if $theme == error
-        @return $dark-error
-      @else
-        @return $theme
-
-    @else if $type == on-color
-      @if $theme == primary
-        @return $dark-on-primary
-      @else if $theme == primary-variant
-        @return $dark-on-primary-variant
-      @if $theme == secondary
-        @return $on-secondary
-      @else if $theme == secondary-variant
-        @return $dark-on-secondary-variant
-      @if $theme == surface
-        @return $dark-on-surface
-      @else if $theme == error
-        @return $dark-on-error
-      @else
-        @return $theme
+    @return $color

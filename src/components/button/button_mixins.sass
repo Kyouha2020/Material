@@ -21,12 +21,12 @@
 @mixin button-theme($color, $custom: false)
   @if $custom == false
     @include button-theme__()
-  @include button-theme_(get-theme(color, $color))
+  @include button-theme_(get-color($color))
 
   html[dark] &
     @if $custom == false
       @include button-theme__($dark-surface)
-    @include button-theme_(get-theme(color, $color, true))
+    @include button-theme_(get-color($color, true))
 
 
 @mixin disabled-button-theme_($color, $on-color: on-color($color))
@@ -39,10 +39,10 @@
     background-color: rgba($on-color, $disabled-filled-container)
 
 @mixin disabled-button-theme($color)
-  @include disabled-button-theme_(get-theme(color, $color))
+  @include disabled-button-theme_(get-color($color))
 
   html[dark] &
-    @include disabled-button-theme_(get-theme(color, $color, true))
+    @include disabled-button-theme_(get-color($color, true))
 
 
 $button-height: 36px !default
