@@ -1,18 +1,9 @@
-@use "../../design/color/theme" as *
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/typography/typography" as *
 @use "../components" as *
 @use "button_mixins" as *
-
-
-@mixin button-background-color($color)
-  background-color: get-color($color) !important
-
-.mtrl-button[test1]
-  @include button-background-color(secondary)
-
 
 .mtrl-button
   @include button-theme(primary)
