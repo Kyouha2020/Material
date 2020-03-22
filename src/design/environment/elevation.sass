@@ -13,7 +13,7 @@ $ambient-map: (0: 0px 0px 0px 0px, 1: 0px 1px 3px 0px, 2: 0px 1px 5px 0px, 3: 0p
   $penumbra-color: rgba($color, 0.14 + $opacity-boost)
   $ambient-color: rgba($color, 0.12 + $opacity-boost)
 
-  @if $ripple-boost == true
+  @if $ripple-boost
     html[dark] &
       @include ripple-boost(map-get($elevation-overlay, $z-value), map-get($elevation-overlay, $hover), map-get($elevation-overlay, $focus), map-get($elevation-overlay, $pressed))
 
@@ -21,7 +21,7 @@ $ambient-map: (0: 0px 0px 0px 0px, 1: 0px 1px 3px 0px, 2: 0px 1px 5px 0px, 3: 0p
   transition: box-shadow 280ms standard-easing()
   z-index: $z-value
 
-  @if $active == true
+  @if $active
     &:hover
       $z-value: $hover
       box-shadow: (map-get($umbra-map, $z-value) $umbra-color, map-get($penumbra-map, $z-value) $penumbra-color, map-get($ambient-map, $z-value) $ambient-color)

@@ -81,11 +81,11 @@ html[dark] .mtrl-button--background.mtrl-button--contained {
   color: black;
 }
 html[dark] .mtrl-button--surface.mtrl-button {
-  color: white;
+  color: #121212;
 }
 html[dark] .mtrl-button--surface.mtrl-button--contained {
-  background-color: white;
-  color: black;
+  background-color: #121212;
+  color: white;
 }
 
 .mtrl-button--error.mtrl-button {
