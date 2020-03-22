@@ -36,10 +36,10 @@
     cursor: default
     pointer-events: none
 
-  &--outlined, &--stroked, &--contained, &--toggle, &--raised, &--push
+  &--outlined, &--contained, &--toggle, &--raised, &--push
     padding: 0 16px
 
-  &--outlined, &--stroked
+  &--outlined
     border-width: 1px
     border-style: solid
     border-spacing: 2px
@@ -55,12 +55,6 @@
 
   &--contained
     @include elevation(2, 4, 6, 8, $ripple-boost: false)
-
-  &--toggle
-    @extend .mtrl-button--outlined
-
-    &--active
-      @extend .mtrl-button--contained, .mtrl-button--unelevated
 
   &__icon
     @include centered-content
