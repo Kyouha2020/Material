@@ -110,25 +110,11 @@ html[dark] .mtrl-button--error.mtrl-button--contained {
   background-color: #f44336;
   color: white;
 }
-html[dark] .mtrl-button--red.mtrl-button {
-  color: #f44336;
-}
-html[dark] .mtrl-button--red.mtrl-button--contained {
-  background-color: #f44336;
-  color: white;
-}
 
 .mtrl-button--pink.mtrl-button {
   color: #e91e63;
 }
 .mtrl-button--pink.mtrl-button--contained {
-  background-color: #e91e63;
-  color: white;
-}
-html[dark] .mtrl-button--pink.mtrl-button {
-  color: #e91e63;
-}
-html[dark] .mtrl-button--pink.mtrl-button--contained {
   background-color: #e91e63;
   color: white;
 }
@@ -140,25 +126,11 @@ html[dark] .mtrl-button--pink.mtrl-button--contained {
   background-color: #9c27b0;
   color: white;
 }
-html[dark] .mtrl-button--purple.mtrl-button {
-  color: #9c27b0;
-}
-html[dark] .mtrl-button--purple.mtrl-button--contained {
-  background-color: #9c27b0;
-  color: white;
-}
 
 .mtrl-button--deep-purple.mtrl-button {
   color: #673ab7;
 }
 .mtrl-button--deep-purple.mtrl-button--contained {
-  background-color: #673ab7;
-  color: white;
-}
-html[dark] .mtrl-button--deep-purple.mtrl-button {
-  color: #673ab7;
-}
-html[dark] .mtrl-button--deep-purple.mtrl-button--contained {
   background-color: #673ab7;
   color: white;
 }
@@ -170,25 +142,11 @@ html[dark] .mtrl-button--deep-purple.mtrl-button--contained {
   background-color: #3f51b5;
   color: white;
 }
-html[dark] .mtrl-button--indigo.mtrl-button {
-  color: #3f51b5;
-}
-html[dark] .mtrl-button--indigo.mtrl-button--contained {
-  background-color: #3f51b5;
-  color: white;
-}
 
 .mtrl-button--blue.mtrl-button {
   color: #2196f3;
 }
 .mtrl-button--blue.mtrl-button--contained {
-  background-color: #2196f3;
-  color: white;
-}
-html[dark] .mtrl-button--blue.mtrl-button {
-  color: #2196f3;
-}
-html[dark] .mtrl-button--blue.mtrl-button--contained {
   background-color: #2196f3;
   color: white;
 }
@@ -200,25 +158,11 @@ html[dark] .mtrl-button--blue.mtrl-button--contained {
   background-color: #03a9f4;
   color: black;
 }
-html[dark] .mtrl-button--light-blue.mtrl-button {
-  color: #03a9f4;
-}
-html[dark] .mtrl-button--light-blue.mtrl-button--contained {
-  background-color: #03a9f4;
-  color: black;
-}
 
 .mtrl-button--cyan.mtrl-button {
   color: #00bcd4;
 }
 .mtrl-button--cyan.mtrl-button--contained {
-  background-color: #00bcd4;
-  color: black;
-}
-html[dark] .mtrl-button--cyan.mtrl-button {
-  color: #00bcd4;
-}
-html[dark] .mtrl-button--cyan.mtrl-button--contained {
   background-color: #00bcd4;
   color: black;
 }
@@ -230,25 +174,11 @@ html[dark] .mtrl-button--cyan.mtrl-button--contained {
   background-color: #009688;
   color: white;
 }
-html[dark] .mtrl-button--teal.mtrl-button {
-  color: #009688;
-}
-html[dark] .mtrl-button--teal.mtrl-button--contained {
-  background-color: #009688;
-  color: white;
-}
 
 .mtrl-button--green.mtrl-button {
   color: #4caf50;
 }
 .mtrl-button--green.mtrl-button--contained {
-  background-color: #4caf50;
-  color: black;
-}
-html[dark] .mtrl-button--green.mtrl-button {
-  color: #4caf50;
-}
-html[dark] .mtrl-button--green.mtrl-button--contained {
   background-color: #4caf50;
   color: black;
 }
@@ -260,25 +190,11 @@ html[dark] .mtrl-button--green.mtrl-button--contained {
   background-color: #8bc34a;
   color: black;
 }
-html[dark] .mtrl-button--light-green.mtrl-button {
-  color: #8bc34a;
-}
-html[dark] .mtrl-button--light-green.mtrl-button--contained {
-  background-color: #8bc34a;
-  color: black;
-}
 
 .mtrl-button--lime.mtrl-button {
   color: #cddc39;
 }
 .mtrl-button--lime.mtrl-button--contained {
-  background-color: #cddc39;
-  color: black;
-}
-html[dark] .mtrl-button--lime.mtrl-button {
-  color: #cddc39;
-}
-html[dark] .mtrl-button--lime.mtrl-button--contained {
   background-color: #cddc39;
   color: black;
 }
@@ -290,25 +206,11 @@ html[dark] .mtrl-button--lime.mtrl-button--contained {
   background-color: #ffeb3b;
   color: black;
 }
-html[dark] .mtrl-button--yellow.mtrl-button {
-  color: #ffeb3b;
-}
-html[dark] .mtrl-button--yellow.mtrl-button--contained {
-  background-color: #ffeb3b;
-  color: black;
-}
 
 .mtrl-button--amber.mtrl-button {
   color: #ffc107;
 }
 .mtrl-button--amber.mtrl-button--contained {
-  background-color: #ffc107;
-  color: black;
-}
-html[dark] .mtrl-button--amber.mtrl-button {
-  color: #ffc107;
-}
-html[dark] .mtrl-button--amber.mtrl-button--contained {
   background-color: #ffc107;
   color: black;
 }
@@ -320,25 +222,11 @@ html[dark] .mtrl-button--amber.mtrl-button--contained {
   background-color: #ff9800;
   color: black;
 }
-html[dark] .mtrl-button--orange.mtrl-button {
-  color: #ff9800;
-}
-html[dark] .mtrl-button--orange.mtrl-button--contained {
-  background-color: #ff9800;
-  color: black;
-}
 
 .mtrl-button--deep-orange.mtrl-button {
   color: #ff5722;
 }
 .mtrl-button--deep-orange.mtrl-button--contained {
-  background-color: #ff5722;
-  color: white;
-}
-html[dark] .mtrl-button--deep-orange.mtrl-button {
-  color: #ff5722;
-}
-html[dark] .mtrl-button--deep-orange.mtrl-button--contained {
   background-color: #ff5722;
   color: white;
 }
@@ -350,25 +238,11 @@ html[dark] .mtrl-button--deep-orange.mtrl-button--contained {
   background-color: #795548;
   color: white;
 }
-html[dark] .mtrl-button--brown.mtrl-button {
-  color: #795548;
-}
-html[dark] .mtrl-button--brown.mtrl-button--contained {
-  background-color: #795548;
-  color: white;
-}
 
 .mtrl-button--grey.mtrl-button {
   color: #9e9e9e;
 }
 .mtrl-button--grey.mtrl-button--contained {
-  background-color: #9e9e9e;
-  color: black;
-}
-html[dark] .mtrl-button--grey.mtrl-button {
-  color: #9e9e9e;
-}
-html[dark] .mtrl-button--grey.mtrl-button--contained {
   background-color: #9e9e9e;
   color: black;
 }
@@ -380,13 +254,6 @@ html[dark] .mtrl-button--grey.mtrl-button--contained {
   background-color: #607d8b;
   color: white;
 }
-html[dark] .mtrl-button--blue-grey.mtrl-button {
-  color: #607d8b;
-}
-html[dark] .mtrl-button--blue-grey.mtrl-button--contained {
-  background-color: #607d8b;
-  color: white;
-}
 
 .mtrl-button--black.mtrl-button {
   color: black;
@@ -395,25 +262,11 @@ html[dark] .mtrl-button--blue-grey.mtrl-button--contained {
   background-color: black;
   color: white;
 }
-html[dark] .mtrl-button--black.mtrl-button {
-  color: black;
-}
-html[dark] .mtrl-button--black.mtrl-button--contained {
-  background-color: black;
-  color: white;
-}
 
 .mtrl-button--white.mtrl-button {
   color: white;
 }
 .mtrl-button--white.mtrl-button--contained {
-  background-color: white;
-  color: black;
-}
-html[dark] .mtrl-button--white.mtrl-button {
-  color: white;
-}
-html[dark] .mtrl-button--white.mtrl-button--contained {
   background-color: white;
   color: black;
 }
