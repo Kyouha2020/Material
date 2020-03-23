@@ -6,9 +6,6 @@
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
   height: 36px;
   font-family: Roboto, sans-serif;
   font-size: 0.875rem;
@@ -17,6 +14,9 @@
   text-decoration: none;
   text-transform: uppercase;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
   min-width: 64px;
   padding: 0 8px;
   border-radius: 4px;
@@ -162,10 +162,6 @@ html[dark] .mtrl-button--contained::before {
   z-index: 8;
 }
 .mtrl-button__icon {
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-  display: inline-flex;
   width: 18px;
   height: 18px;
   font-size: 18px;

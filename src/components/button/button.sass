@@ -10,11 +10,13 @@
   @include disabled-button-theme(surface)
   @include ripple_
   @include unselectable
-  @include centered-content
   @include ripple()
   @include button-density_()
   @include typography(button)
   display: inline-flex
+  align-items: center
+  justify-content: center
+  vertical-align: middle
   min-width: 64px
   padding: 0 8px
   border-radius: 4px
@@ -57,9 +59,7 @@
     @include elevation(2, 4, 6, 8, $ripple-boost: false)
 
   &__icon
-    @include centered-content
     @include margin-horizontal(-4px, 8px)
-    display: inline-flex
     width: 18px
     height: 18px
     font-size: 18px

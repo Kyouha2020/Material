@@ -11,13 +11,15 @@
   @include ripple_
   @include touch-target
   @include unselectable
-  @include centered-content
   @include accessible-border
   @include ripple($surface)
   @include elevation(6, 8, 10, 12)
   @include typography(button)
   display: inline-flex
   position: relative
+  align-items: center
+  justify-content: center
+  vertical-align: middle
   height: 56px
   padding: 0
   border-radius: 50%
