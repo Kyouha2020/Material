@@ -1,3 +1,4 @@
+@use "../../design/color/theme" as *
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
 @use "../../design/layout/spacing" as *
@@ -93,3 +94,53 @@
   @for $i from 0 through -3
     &--density-#{$i}
       @include button-density_(button-density($i))
+
+
+.mtrl-icon-button
+  @include elevation(0, 0, 0, 0)
+  min-width: initial
+  width: 48px
+  height: 48px
+  padding: 0
+  border-radius: 50%
+
+  &__icon
+    width: 24px
+    height: 24px
+    font-size: 24px
+    fill: currentColor
+
+
+.mtrl-fab
+  @extend .mtrl-button, .mtrl-button--contained
+  @include button-theme(surface)
+  @include button-theme__(get-color(on-surface))
+  @include elevation(6, 8, 10, 12)
+  min-width: initial
+  height: 56px
+  padding: 0
+  border-radius: 50%
+
+  &:not(&--extended):not(&--mini)
+    width: 56px
+
+  &--mini
+    height: 40px
+    width: 40px
+
+  &--extended
+    height: 48px
+    padding: 0 20px
+    border-radius: 24px
+
+    .mtrl-fab__icon
+      @include margin-horizontal(-8px, 12px)
+
+      &--trailing
+        @include margin-horizontal(12px, -8px)
+
+  &__icon
+    width: 24px
+    height: 24px
+    font-size: 24px
+    fill: currentColor
