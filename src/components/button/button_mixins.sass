@@ -56,8 +56,15 @@ $button-height: 36px !default
   @return get-density($button-height, $density)
 
 
+@mixin fab-theme__($surface: $surface, $on-surface: on-color($surface))
+  background-color: $surface
+
+@mixin fab-theme_($color, $on-color: on-color($color))
+  background-color: $color
+  color: $on-color
+
 @mixin fab-theme($color)
-  @include button-theme__(get-color($color))
+  @include fab-theme__(get-color($color))
 
   html[dark] &
-    @include button-theme__(get-color($color, true))
+    @include fab-theme__(get-color($color, true))

@@ -379,8 +379,6 @@ html[dark] .mtrl-icon-button:active::before {
 }
 
 .mtrl-fab {
-  background-color: #ffffff;
-  color: #ffffff;
   background-color: black;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   z-index: 6;
@@ -391,32 +389,8 @@ html[dark] .mtrl-icon-button:active::before {
   padding: 0;
   border-radius: 50%;
 }
-.mtrl-fab--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
-}
-.mtrl-fab--contained {
-  background-color: #ffffff;
-  color: black;
-}
-html[dark] .mtrl-fab {
-  background-color: #121212;
-  color: #121212;
-}
-html[dark] .mtrl-fab--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
-}
-html[dark] .mtrl-fab--contained {
-  background-color: #121212;
-  color: white;
-}
-.mtrl-fab--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
-}
 html[dark] .mtrl-fab {
   background-color: white;
-}
-html[dark] .mtrl-fab--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
 }
 html[dark] .mtrl-fab::before {
   opacity: 0.11;
