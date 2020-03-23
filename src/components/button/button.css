@@ -369,7 +369,7 @@ html[dark] .mtrl-icon-button:active::before {
   z-index: 0;
 }
 .mtrl-icon-button:focus-visible {
-  outline: none;
+  outline-offset: -8px;
 }
 .mtrl-icon-button__icon {
   width: 24px;
@@ -443,7 +443,7 @@ html[dark] .mtrl-fab:active::before {
   z-index: 12;
 }
 .mtrl-fab:focus-visible {
-  outline: none;
+  outline-offset: -8px;
 }
 .mtrl-fab--mini {
   height: 40px;
