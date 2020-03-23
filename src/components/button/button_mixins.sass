@@ -54,3 +54,10 @@ $button-height: 36px !default
 
 @function button-density($density)
   @return get-density($button-height, $density)
+
+
+@mixin fab-theme($color)
+  @include button-theme__(get-color($color))
+
+  html[dark] &
+    @include button-theme__(get-color($color, true))
