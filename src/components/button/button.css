@@ -368,6 +368,9 @@ html[dark] .mtrl-icon-button:active::before {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   z-index: 0;
 }
+.mtrl-icon-button:focus-visible {
+  outline: none;
+}
 .mtrl-icon-button__icon {
   width: 24px;
   height: 24px;
@@ -438,6 +441,9 @@ html[dark] .mtrl-fab:active::before {
 .mtrl-fab:active {
   box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
   z-index: 12;
+}
+.mtrl-fab:focus-visible {
+  outline: none;
 }
 .mtrl-fab--mini {
   height: 40px;
