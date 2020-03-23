@@ -17,16 +17,15 @@
     background-color: $color
     color: $on-color
 
-@mixin button-theme($color, $custom: false, $dark: true)
+@mixin button-theme($color, $custom: false)
   @if $custom == false
     @include button-theme__()
   @include button-theme_(get-color($color))
 
-  @if $dark
-    html[dark] &
-      @if $custom == false
-        @include button-theme__($dark-surface)
-      @include button-theme_(get-color($color, true))
+  html[dark] &
+    @if $custom == false
+      @include button-theme__($dark-surface)
+    @include button-theme_(get-color($color, true))
 
 
 @mixin disabled-button-theme_($color, $on-color: on-color($color))
