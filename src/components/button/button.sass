@@ -29,7 +29,7 @@
     cursor: pointer
 
   &:focus-visible
-    border-color: inherit
+    border-color: currentColor
     outline: 1px solid
     outline-offset: -4px
 
@@ -50,7 +50,7 @@
       outline: none
 
   html[dark] &--outlined:focus
-    border-color: inherit
+    border-color: currentColor !important
 
   html[dark] &--contained
     @include ripple(white)

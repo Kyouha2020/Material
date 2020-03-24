@@ -92,7 +92,7 @@ html[dark] .mtrl-button--contained:disabled, html[dark] .mtrl-fab:disabled {
   cursor: pointer;
 }
 .mtrl-button:focus-visible, .mtrl-fab:focus-visible {
-  border-color: inherit;
+  border-color: currentColor;
   outline: 1px solid;
   outline-offset: -4px;
 }
@@ -139,7 +139,7 @@ html[dark] .mtrl-button:disabled:active::before, html[dark] .mtrl-fab:disabled:a
   outline: none;
 }
 html[dark] .mtrl-button--outlined:focus {
-  border-color: inherit;
+  border-color: currentColor !important;
 }
 html[dark] .mtrl-button--contained::before, html[dark] .mtrl-fab::before {
   background-color: white;

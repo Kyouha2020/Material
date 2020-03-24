@@ -136,6 +136,29 @@ html[dark] .mtrl-button--surface.mtrl-button--contained {
   color: white;
 }
 
+.mtrl-button--on-surface.mtrl-button {
+  background-color: #ffffff;
+  color: black;
+}
+.mtrl-button--on-surface.mtrl-button--outlined {
+  border-color: rgba(0, 0, 0, 0.12);
+}
+.mtrl-button--on-surface.mtrl-button--contained {
+  background-color: black;
+  color: white;
+}
+html[dark] .mtrl-button--on-surface.mtrl-button {
+  background-color: #121212;
+  color: white;
+}
+html[dark] .mtrl-button--on-surface.mtrl-button--outlined {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+html[dark] .mtrl-button--on-surface.mtrl-button--contained {
+  background-color: white;
+  color: black;
+}
+
 .mtrl-button--error.mtrl-button {
   background-color: #ffffff;
   color: #b00020;
