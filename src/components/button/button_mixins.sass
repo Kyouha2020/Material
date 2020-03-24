@@ -7,7 +7,7 @@
 @mixin button-theme__($surface: $surface, $on-surface: on-color($surface))
   background-color: $surface
 
-  &--outlined
+  &--outlined:not(:focus-visible)
     border-color: rgba($on-surface, $stroke)
 
 @mixin button-theme_($color, $on-color: on-color($color))
