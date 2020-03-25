@@ -25,3 +25,7 @@ if (dirToggle !== null)
             dirToggle.setAttribute('title', 'RTL mode')
         }
     })
+
+document.querySelectorAll('.mtrl-button, .mtrl-fab').forEach(button => {
+    button.setAttribute('data-ripplet', `color: ${getComputedStyle(button).color}; opacity: .10; spreading-duration: 350ms;`)
+})
