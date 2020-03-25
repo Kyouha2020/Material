@@ -27,5 +27,5 @@ if (dirToggle !== null)
     })
 
 document.querySelectorAll('.mtrl-button, .mtrl-fab').forEach(button => {
-    button.setAttribute('data-ripple', '')
+    button.setAttribute('data-mtrl-ripple', '')
 })

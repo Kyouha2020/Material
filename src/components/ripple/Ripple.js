@@ -145,7 +145,7 @@
                 currentTarget: currentTarget,
                 clientX: event.clientX,
                 clientY: event.clientY
-            }, parseOptions(currentTarget.getAttribute('data-ripple')));
+            }, parseOptions(currentTarget.getAttribute('data-mtrl-ripple')));
         }
     }, eventListenerOptions);
 
@@ -167,7 +167,7 @@
     // Element.prototype.closest is not implemented in IE
     // https://caniuse.com/#feat=element-closest
     function findrippleTarget(element) {
-        while (element && !element.hasAttribute('data-ripple')) {
+        while (element && !element.hasAttribute('data-mtrl-ripple')) {
             element = element.parentElement;
         }
         return element;
