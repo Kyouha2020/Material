@@ -5,7 +5,7 @@ Docs: https://kyouha2020.github.io/Material/docs/
 * RTL support.
 
 ## Browser compatibility
-Support IE 10+ except CSS Custom Properties.
+Support IE 10+ and major browsers.
 
 ## News
 * **March 25, 2020:** 加入 ripple 特性。
