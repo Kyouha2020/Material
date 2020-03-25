@@ -17,7 +17,6 @@
   align-items: center
   justify-content: center
   vertical-align: middle
-  min-width: 64px
   padding: 0 8px
   border-radius: 4px
   border: none
@@ -25,13 +24,11 @@
   white-space: nowrap
   overflow: hidden
 
+  &:not(.mtrl-icon-button):not(.mtrl-fab)
+    min-width: 64px
+
   &:hover
     cursor: pointer
-
-  &:focus-visible
-    border-color: currentColor
-    outline: 1px solid
-    outline-offset: -4px
 
   &:disabled
     @include elevation(0)
@@ -45,9 +42,6 @@
     border-width: 1px
     border-style: solid
     border-spacing: 2px
-
-    &:focus-visible
-      outline: none
 
   &--contained
     @include elevation(2, 4, 6, 8, $ripple-boost: false)
@@ -88,14 +82,10 @@
 
 .mtrl-icon-button
   @include elevation(0, 0, 0, 0)
-  min-width: initial
   width: 48px
   height: 48px
   padding: 0
   border-radius: 50%
-
-  &:focus-visible
-    outline-offset: -8px
 
   &__icon
     width: 24px
@@ -108,21 +98,18 @@
   @extend .mtrl-button, .mtrl-button--contained
   @include fab-theme(on-surface)
   @include elevation(6, 8, 10, 12)
-  min-width: initial
-  width: 56px
   height: 56px
   padding: 0
   border-radius: 50%
 
-  &:focus-visible
-    outline-offset: -8px
+  &:not(&--mini):not(&--extended)
+    width: 56px
 
   &--mini
     height: 40px
     width: 40px
 
   &--extended
-    width: initial
     height: 48px
     padding: 0 20px
     border-radius: 24px
