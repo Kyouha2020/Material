@@ -8,7 +8,7 @@ Docs: https://kyouha2020.github.io/Material/docs/
 Support IE 10+ except CSS Custom Properties.
 
 ## News
-* **March 19 - now, 2020:** 正在加入暗黑主题及其他主题。
+* **March 25, 2020:** 加入 ripple 特性。
 
 * **March 17 - 18, 2020:** 适配了 IE11。
 
