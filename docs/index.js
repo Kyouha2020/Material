@@ -27,5 +27,5 @@ if (dirToggle !== null)
     })
 
 document.querySelectorAll('.mtrl-button, .mtrl-fab').forEach(button => {
-    button.setAttribute('data-ripplet', `color: ${getComputedStyle(button).color}; opacity: .10; spreading-duration: 350ms;`)
+    button.setAttribute('data-ripple', '')
 })
