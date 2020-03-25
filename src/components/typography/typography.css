@@ -2,8 +2,6 @@
   font-family: Roboto, sans-serif;
   font-size: 6rem;
   letter-spacing: -0.015625rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
 }
@@ -12,8 +10,6 @@
   font-family: Roboto, sans-serif;
   font-size: 3.75rem;
   letter-spacing: -0.0083333333rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
 }
@@ -23,8 +19,6 @@
   font-size: 3rem;
   font-weight: 400;
   letter-spacing: 0rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
 }
@@ -34,8 +28,6 @@
   font-size: 2.125rem;
   font-weight: 400;
   letter-spacing: 0.0073529412rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
 }
@@ -45,8 +37,6 @@
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
 }
@@ -56,8 +46,6 @@
   font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: 0.0075rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
 }
@@ -67,8 +55,6 @@
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.009375rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
 }
@@ -78,8 +64,6 @@
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.0071428571rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
 }
@@ -89,8 +73,6 @@
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.03125rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
 }
@@ -100,8 +82,6 @@
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 0.0178571429rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
 }
@@ -111,8 +91,6 @@
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.0892857143rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -122,8 +100,6 @@
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.0333333333rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
 }
@@ -133,8 +109,6 @@
   font-size: 0.625rem;
   font-weight: 400;
   letter-spacing: 0.15rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: none;
   text-transform: uppercase;
 }

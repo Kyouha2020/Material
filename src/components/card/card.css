@@ -45,25 +45,13 @@ html[dark] .mtrl-card::before {
   opacity: 0.05;
 }
 html[dark] .mtrl-card:hover::before {
-  opacity: 0.09;
+  opacity: 0.04;
 }
 html[dark] .mtrl-card:focus::before {
-  opacity: 0.17;
+  opacity: 0.12;
 }
 html[dark] .mtrl-card:active::before {
-  opacity: 0.15;
-}
-.mtrl-card:hover {
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  z-index: 1;
-}
-.mtrl-card:focus {
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  z-index: 1;
-}
-.mtrl-card:active {
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  z-index: 1;
+  opacity: 0.1;
 }
 .mtrl-card--outlined {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
@@ -82,18 +70,6 @@ html[dark] .mtrl-card--outlined:focus::before {
 }
 html[dark] .mtrl-card--outlined:active::before {
   opacity: 0.1;
-}
-.mtrl-card--outlined:hover {
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
-  z-index: 0;
-}
-.mtrl-card--outlined:focus {
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
-  z-index: 0;
-}
-.mtrl-card--outlined:active {
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
-  z-index: 0;
 }
 .mtrl-card__media:first-child {
   border-top-left-radius: inherit;
@@ -123,8 +99,6 @@ html[dark] .mtrl-card--outlined:active::before {
   font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: 0.0075rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
   padding-top: 10px;
@@ -134,8 +108,6 @@ html[dark] .mtrl-card--outlined:active::before {
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.0071428571rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
   padding-top: 5px;
@@ -145,8 +117,6 @@ html[dark] .mtrl-card--outlined:active::before {
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 0.0178571429rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
   padding: 11px 16px 16px;

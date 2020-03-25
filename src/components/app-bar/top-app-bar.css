@@ -8,6 +8,18 @@
   background-color: #6200ee;
   color: rgba(255, 255, 255, 0.87);
 }
+html[dark] .mtrl-top-app-bar::before {
+  opacity: 0.09;
+}
+html[dark] .mtrl-top-app-bar:hover::before {
+  opacity: 0.04;
+}
+html[dark] .mtrl-top-app-bar:focus::before {
+  opacity: 0.12;
+}
+html[dark] .mtrl-top-app-bar:active::before {
+  opacity: 0.1;
+}
 .mtrl-top-app-bar--dense {
   height: 48px;
 }
@@ -30,8 +42,6 @@
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
   align-self: flex-end;
@@ -56,8 +66,6 @@ html[dir=rtl] .mtrl-top-app-bar__end-controls {
   font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: 0.0075rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
   text-transform: inherit;
 }
@@ -68,6 +76,7 @@ html[dir=rtl] .mtrl-top-app-bar__title {
   margin-right: 32px;
 }
 .mtrl-top-app-bar__navigation-icon, .mtrl-top-app-bar__action-icon {
+  position: relative;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -82,6 +91,18 @@ html[dir=rtl] .mtrl-top-app-bar__title {
   font-size: 24px;
   cursor: pointer;
   fill: currentColor;
+}
+.mtrl-top-app-bar__navigation-icon::before, .mtrl-top-app-bar__action-icon::before {
+  opacity: 0;
+}
+.mtrl-top-app-bar__navigation-icon:hover::before, .mtrl-top-app-bar__action-icon:hover::before {
+  opacity: 0.04;
+}
+.mtrl-top-app-bar__navigation-icon:focus::before, .mtrl-top-app-bar__action-icon:focus::before {
+  opacity: 0.12;
+}
+.mtrl-top-app-bar__navigation-icon:active::before, .mtrl-top-app-bar__action-icon:active::before {
+  opacity: 0.1;
 }
 .mtrl-top-app-bar__navigation-icon::before, .mtrl-top-app-bar__action-icon::before {
   content: "";
@@ -102,16 +123,6 @@ html[dir=rtl] .mtrl-top-app-bar__title {
 }
 .mtrl-top-app-bar__navigation-icon::before, .mtrl-top-app-bar__action-icon::before {
   background-color: white;
-  opacity: 0;
-}
-.mtrl-top-app-bar__navigation-icon:hover::before, .mtrl-top-app-bar__action-icon:hover::before {
-  opacity: 0.04;
-}
-.mtrl-top-app-bar__navigation-icon:focus::before, .mtrl-top-app-bar__action-icon:focus::before {
-  opacity: 0.12;
-}
-.mtrl-top-app-bar__navigation-icon:active::before, .mtrl-top-app-bar__action-icon:active::before {
-  opacity: 0.1;
 }
 html:not([dir=rtl]) .mtrl-top-app-bar__navigation-icon {
   margin-left: 4px;

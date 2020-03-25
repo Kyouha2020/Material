@@ -35,7 +35,7 @@
     cursor: default
     pointer-events: none
 
-  &--outlined, &--contained, &--raised, &--push
+  &--outlined, &--contained, &--raised
     padding: 0 16px
 
   &--outlined
@@ -43,8 +43,8 @@
     border-style: solid
     border-spacing: 2px
 
-  &--contained
-    @include elevation(2, 4, 6, 8, $ripple-boost: false)
+  &--contained, &--raised
+    @include elevation(2, 4, 6, 8)
 
   &__icon
     @include margin-horizontal(-4px, 8px)
@@ -58,9 +58,6 @@
 
   &--float
     @include elevation(0, 0, 2, 4)
-
-  &--raised
-    @include elevation(2, 4, 6, 8)
 
   &--unelevated
     @include elevation(0, 0, 0, 0)

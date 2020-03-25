@@ -1,16 +1,13 @@
 .mtrl-tab {
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
   font-family: Roboto, sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.0892857143rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-decoration: none;
   text-transform: uppercase;
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 48px;
 }
 html:not([dir=rtl]) .mtrl-tab--scrollable {
@@ -23,16 +20,17 @@ html[dir=rtl] .mtrl-tab--scrollable {
   height: 72px;
 }
 .mtrl-tab__item {
+  position: relative;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
   border: none;
   display: inline-flex;
   position: relative;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
   flex: 1;
   min-width: 90px;
   max-width: 360px;
@@ -41,6 +39,18 @@ html[dir=rtl] .mtrl-tab--scrollable {
   color: rgba(0, 0, 0, 0.6);
   padding: 0 16px;
   white-space: nowrap;
+}
+.mtrl-tab__item::before {
+  opacity: 0;
+}
+.mtrl-tab__item:hover::before {
+  opacity: 0.04;
+}
+.mtrl-tab__item:focus::before {
+  opacity: 0.12;
+}
+.mtrl-tab__item:active::before {
+  opacity: 0.1;
 }
 .mtrl-tab__item::before {
   content: "";
@@ -61,16 +71,6 @@ html[dir=rtl] .mtrl-tab--scrollable {
 }
 .mtrl-tab__item::before {
   background-color: #6200ee;
-  opacity: 0;
-}
-.mtrl-tab__item:hover::before {
-  opacity: 0.04;
-}
-.mtrl-tab__item:focus::before {
-  opacity: 0.12;
-}
-.mtrl-tab__item:active::before {
-  opacity: 0.1;
 }
 .mtrl-tab__item:hover {
   cursor: pointer;

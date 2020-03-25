@@ -9,6 +9,18 @@
   background-color: #6200ee;
   color: rgba(255, 255, 255, 0.87);
 }
+html[dark] .mtrl-bottom-app-bar::before {
+  opacity: 0.09;
+}
+html[dark] .mtrl-bottom-app-bar:hover::before {
+  opacity: 0.04;
+}
+html[dark] .mtrl-bottom-app-bar:focus::before {
+  opacity: 0.12;
+}
+html[dark] .mtrl-bottom-app-bar:active::before {
+  opacity: 0.1;
+}
 .mtrl-bottom-app-bar--landscape {
   height: 48px;
 }
@@ -25,6 +37,7 @@ html[dir=rtl] .mtrl-bottom-app-bar__end-controls {
   margin-left: 4px;
 }
 .mtrl-bottom-app-bar__navigation-drawer-control {
+  position: relative;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -42,6 +55,18 @@ html[dir=rtl] .mtrl-bottom-app-bar__end-controls {
   font-size: 24px;
   cursor: pointer;
   fill: currentColor;
+}
+.mtrl-bottom-app-bar__navigation-drawer-control::before {
+  opacity: 0;
+}
+.mtrl-bottom-app-bar__navigation-drawer-control:hover::before {
+  opacity: 0.04;
+}
+.mtrl-bottom-app-bar__navigation-drawer-control:focus::before {
+  opacity: 0.12;
+}
+.mtrl-bottom-app-bar__navigation-drawer-control:active::before {
+  opacity: 0.1;
 }
 .mtrl-bottom-app-bar__navigation-drawer-control::before {
   content: "";
@@ -62,22 +87,24 @@ html[dir=rtl] .mtrl-bottom-app-bar__end-controls {
 }
 .mtrl-bottom-app-bar__navigation-drawer-control::before {
   background-color: white;
-  opacity: 0;
-}
-.mtrl-bottom-app-bar__navigation-drawer-control:hover::before {
-  opacity: 0.04;
-}
-.mtrl-bottom-app-bar__navigation-drawer-control:focus::before {
-  opacity: 0.12;
-}
-.mtrl-bottom-app-bar__navigation-drawer-control:active::before {
-  opacity: 0.1;
 }
 .mtrl-bottom-app-bar__fab {
   box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 12;
   margin-top: -56px;
+}
+html[dark] .mtrl-bottom-app-bar__fab::before {
+  opacity: 0.14;
+}
+html[dark] .mtrl-bottom-app-bar__fab:hover::before {
+  opacity: 0.04;
+}
+html[dark] .mtrl-bottom-app-bar__fab:focus::before {
+  opacity: 0.12;
+}
+html[dark] .mtrl-bottom-app-bar__fab:active::before {
+  opacity: 0.1;
 }
 html:not([dir=rtl]) .mtrl-bottom-app-bar__fab--end {
   margin-left: auto;

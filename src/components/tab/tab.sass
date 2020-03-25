@@ -7,9 +7,10 @@
 @use "../components" as *
 
 .mtrl-tab
-  @include centered-content
   @include typography(button)
   display: flex
+  align-items: center
+  justify-content: center
   height: 48px
 
   &--scrollable
@@ -21,11 +22,13 @@
   &__item
     @include ripple_
     @include unselectable
-    @include centered-content
     @include accessible-border
     @include ripple($primary)
     display: inline-flex
     position: relative
+    align-items: center
+    justify-content: center
+    vertical-align: middle
     flex: 1
     min-width: 90px
     max-width: 360px
