@@ -24,7 +24,6 @@
   border: none
   outline: none
   white-space: nowrap
-  overflow: hidden
 
   &:not(.mtrl-icon-button):not(.mtrl-fab)
     min-width: 64px
@@ -91,6 +90,19 @@
     font-size: 24px
     fill: currentColor
 
+  &--square
+    border-radius: 4px
+
+  &--tile
+    border-radius: 0
+
+  &--diamond
+    @extend .mtrl-icon-button--square
+    transform: rotate(45deg)
+
+    .mtrl-icon-button__icon
+      transform: rotate(-45deg)
+
 
 .mtrl-fab
   @extend .mtrl-button, .mtrl-button--contained
@@ -123,3 +135,9 @@
     height: 24px
     font-size: 24px
     fill: currentColor
+
+  &--regular
+    border-radius: 4px
+
+  &--tile
+    border-radius: 0

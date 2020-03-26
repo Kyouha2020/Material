@@ -25,7 +25,6 @@
   border: none;
   outline: none;
   white-space: nowrap;
-  overflow: hidden;
 }
 .mtrl-button--outlined {
   border-color: rgba(0, 0, 0, 0.12);
@@ -287,6 +286,18 @@ html[dark] .mtrl-button--unelevated:active::before {
   font-size: 24px;
   fill: currentColor;
 }
+.mtrl-icon-button--square, .mtrl-icon-button--diamond {
+  border-radius: 4px;
+}
+.mtrl-icon-button--tile {
+  border-radius: 0;
+}
+.mtrl-icon-button--diamond {
+  transform: rotate(45deg);
+}
+.mtrl-icon-button--diamond .mtrl-icon-button__icon {
+  transform: rotate(-45deg);
+}
 
 .mtrl-fab {
   background-color: black;
@@ -358,6 +369,12 @@ html[dir=rtl] .mtrl-fab--extended .mtrl-fab__icon--trailing {
   height: 24px;
   font-size: 24px;
   fill: currentColor;
+}
+.mtrl-fab--regular {
+  border-radius: 4px;
+}
+.mtrl-fab--tile {
+  border-radius: 0;
 }
 
 /*# sourceMappingURL=button.css.map */
