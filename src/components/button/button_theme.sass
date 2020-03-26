@@ -4,7 +4,11 @@
 @each $theme in $theme-name-map
   .mtrl-button--#{$theme}.mtrl-button
     @include button-theme($theme)
+  .mtrl-fab--#{$theme}.mtrl-fab
+    @include fab-theme($theme)
 
-@each $name, $color in $color-name-map
-  .mtrl-button--#{$name}.mtrl-button
-    @include button-theme($name)
+@each $theme, $color in $color-name-map
+  .mtrl-button--#{$theme}.mtrl-button
+    @include button-theme($theme)
+  .mtrl-fab--#{$theme}.mtrl-fab
+    @include fab-theme($theme)
