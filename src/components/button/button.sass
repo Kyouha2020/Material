@@ -108,21 +108,17 @@
   @extend .mtrl-button, .mtrl-button--contained
   @include fab-theme(on-surface)
   @include elevation(6, 8, 10, 12)
-  height: 56px
+  @include fab-density()
   padding: 0
-  border-radius: 50%
-
-  &:not(&--mini):not(&--extended)
-    width: 56px
 
   &--mini
     height: 40px
     width: 40px
 
   &--extended
+    min-width: 64px
     height: 48px
     padding: 0 20px
-    border-radius: 24px
 
     .mtrl-fab__icon
       @include margin-horizontal(-8px, 12px)
@@ -141,3 +137,7 @@
 
   &--tile
     border-radius: 0
+
+  @for $i from 0 through -3
+    &--density-#{$i}
+      @include fab-density($i)

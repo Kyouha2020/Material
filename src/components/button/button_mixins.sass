@@ -63,3 +63,14 @@ $button-height: 36px !default
 
   html[dark] &
     @include fab-theme_(get-color($color, true))
+
+
+$fab-height: 56px !default
+
+@mixin fab-density($density: 0)
+  $height: get-density($fab-height, $density)
+  height: $height
+  border-radius: $height / 2
+
+  &:not(&--mini):not(&--extended)
+    width: $height

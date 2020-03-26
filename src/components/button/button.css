@@ -305,8 +305,8 @@ html[dark] .mtrl-button--unelevated:active::before {
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   z-index: 6;
   height: 56px;
+  border-radius: 28px;
   padding: 0;
-  border-radius: 50%;
 }
 html[dark] .mtrl-fab {
   background-color: white;
@@ -344,9 +344,9 @@ html[dark] .mtrl-fab:active::before {
   width: 40px;
 }
 .mtrl-fab--extended {
+  min-width: 64px;
   height: 48px;
   padding: 0 20px;
-  border-radius: 24px;
 }
 html:not([dir=rtl]) .mtrl-fab--extended .mtrl-fab__icon {
   margin-left: -8px;
@@ -375,6 +375,34 @@ html[dir=rtl] .mtrl-fab--extended .mtrl-fab__icon--trailing {
 }
 .mtrl-fab--tile {
   border-radius: 0;
+}
+.mtrl-fab--density-0 {
+  height: 56px;
+  border-radius: 28px;
+}
+.mtrl-fab--density-0:not(.mtrl-fab--density-0--mini):not(.mtrl-fab--density-0--extended) {
+  width: 56px;
+}
+.mtrl-fab--density--1 {
+  height: 52px;
+  border-radius: 26px;
+}
+.mtrl-fab--density--1:not(.mtrl-fab--density--1--mini):not(.mtrl-fab--density--1--extended) {
+  width: 52px;
+}
+.mtrl-fab--density--2 {
+  height: 48px;
+  border-radius: 24px;
+}
+.mtrl-fab--density--2:not(.mtrl-fab--density--2--mini):not(.mtrl-fab--density--2--extended) {
+  width: 48px;
+}
+.mtrl-fab--density--3 {
+  height: 44px;
+  border-radius: 22px;
+}
+.mtrl-fab--density--3:not(.mtrl-fab--density--3--mini):not(.mtrl-fab--density--3--extended) {
+  width: 44px;
 }
 
 /*# sourceMappingURL=button.css.map */
