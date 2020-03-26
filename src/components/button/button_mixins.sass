@@ -5,11 +5,11 @@
 @use "../../design/usability/accessibility" as *
 
 @mixin button-theme($theme: primary)
-  color: get-theme($theme)
+  color: get-color($theme)
 
   &--contained
-    background-color: get-theme($theme)
-    color: get-theme(on-#{$theme})
+    background-color: get-color($theme)
+    color: get-color(on-#{$theme})
 
 $button-height: 36px !default
 
@@ -21,16 +21,9 @@ $button-height: 36px !default
     border-radius: $height / 2
 
 
-@mixin fab-theme_($color, $on-color: on-color($color))
-  background-color: $color
-  color: $on-color
-
-@mixin fab-theme($color)
-  @include fab-theme_(get-color($color))
-
-  html[dark] &
-    @include fab-theme_(get-color($color, true))
-
+@mixin fab-theme($theme: surface)
+  background-color: get-color($theme)
+  color: get-color(on-#{$theme})
 
 $fab-height: 56px !default
 

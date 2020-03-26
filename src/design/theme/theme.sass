@@ -1,11 +1,7 @@
 @use "../color/theme" as *
 
-@include create-theme(primary, $primary, $dark-primary)
-@include create-theme(on-primary, $on-primary, $dark-on-primary)
-@include create-theme(secondary, $secondary, $dark-secondary)
-@include create-theme(on-secondary, $on-secondary, $dark-on-secondary)
-@include create-theme(surface, $surface, $dark-surface)
-@include create-theme(on-surface, $on-surface, $dark-on-surface)
+@each $name in $theme-name-map
+  @include create-mtrl-theme($name)
 
 @each $name, $color in $color-name-map
   @include create-color-theme($name)

@@ -274,17 +274,13 @@ html[dark] .mtrl-button--unelevated:active::before {
 }
 
 .mtrl-fab {
-  background-color: black;
-  color: white;
+  background-color: var(--mtrl-theme-surface);
+  color: var(--mtrl-theme-on-surface);
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   z-index: 6;
   height: 56px;
   border-radius: 28px;
   padding: 0;
-}
-html[dark] .mtrl-fab {
-  background-color: white;
-  color: black;
 }
 html[dark] .mtrl-fab::before {
   opacity: 0.11;

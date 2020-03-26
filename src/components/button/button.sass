@@ -24,8 +24,7 @@
   padding: 0 8px
   border-radius: 4px
   border: none
-  background-color: get-theme(surface)
-  //color: get-theme(primary)
+  background-color: get-color(surface)
   outline: none
   white-space: nowrap
 
@@ -39,25 +38,21 @@
     @include elevation(0)
     cursor: default
     pointer-events: none
-    background-color: get-theme(surface, $disabled-filled-container)
-    color: get-theme(on-surface, $text--disabled)
+    background-color: get-color(surface, $disabled-filled-container)
+    color: get-color(on-surface, $text--disabled)
 
   &--outlined, &--contained, &--raised
     padding: 0 16px
 
   &--outlined
-    border: 1px solid get-theme(on-surface, $stroke)
+    border: 1px solid get-color(on-surface, $stroke)
     border-spacing: 2px
 
   &--contained, &--raised
     @include elevation(2, 4, 6, 8)
 
-  &--contained
-    //background-color: get-theme(primary)
-    //color: get-theme(on-primary)
-
-    &:disabled
-      background-color: get-theme(on-surface, $disabled-filled-container)
+  &--contained:disabled
+    background-color: get-color(on-surface, $disabled-filled-container)
 
   &__icon
     @include margin-horizontal(-4px, 8px)
@@ -118,7 +113,7 @@
 
 .mtrl-fab
   @extend .mtrl-button, .mtrl-button--contained
-  @include fab-theme(on-surface)
+  @include fab-theme()
   @include elevation(6, 8, 10, 12)
   @include fab-density()
   padding: 0
