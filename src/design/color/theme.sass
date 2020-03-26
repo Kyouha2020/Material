@@ -49,8 +49,31 @@ $color-name-map: (red: $red-500, pink: $pink-500, purple: $purple-500, deep-purp
 @function get-color($color, $dark: false)
   @if index($theme-name-map, $color) != null
     @if $dark == false
-        @return nth($theme-map, index($theme-name-map, $color))
+      @return nth($theme-map, index($theme-name-map, $color))
     @else
-        @return nth($dark-theme-map, index($theme-name-map, $color))
+      @return nth($dark-theme-map, index($theme-name-map, $color))
   @else
     @return $color
+
+
+@function hex2rgb($color)
+  @return red($color), green($color), blue($color)
+
+@mixin create-theme($name, $color, $dark-color: $color)
+  html
+    --mtrl-theme-#{$name}-rgb: #{hex2rgb($color)}
+    --mtrl-theme-#{$name}: rgb(var(--mtrl-theme-#{$name}-rgb))
+
+    @if $dark-color != $color
+      &[dark]
+        --mtrl-theme-#{$name}-rgb: #{hex2rgb($dark-color)}
+
+@mixin create-color-theme($color)
+  @include create-theme($color, map_get($color-name-map, $color))
+  @include create-theme(on-#{$color}, on-color(map_get($color-name-map, $color)))
+
+@function get-theme($theme, $alpha: 1)
+  @if $alpha == 1
+    @return var(--mtrl-theme-#{$theme})
+  @else
+    @return rgba(var(--mtrl-theme-#{$theme}-rgb), $alpha)

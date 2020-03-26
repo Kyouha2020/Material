@@ -1,5 +1,257 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Google+Sans|Material+Icons&display=swap");
 html {
+  --mtrl-theme-primary-rgb: 98, 0, 238;
+  --mtrl-theme-primary: rgb(var(--mtrl-theme-primary-rgb));
+}
+html[dark] {
+  --mtrl-theme-primary-rgb: 187, 134, 252;
+}
+
+html {
+  --mtrl-theme-on-primary-rgb: 255, 255, 255;
+  --mtrl-theme-on-primary: rgb(var(--mtrl-theme-on-primary-rgb));
+}
+html[dark] {
+  --mtrl-theme-on-primary-rgb: 0, 0, 0;
+}
+
+html {
+  --mtrl-theme-secondary-rgb: 3, 218, 198;
+  --mtrl-theme-secondary: rgb(var(--mtrl-theme-secondary-rgb));
+}
+
+html {
+  --mtrl-theme-on-secondary-rgb: 0, 0, 0;
+  --mtrl-theme-on-secondary: rgb(var(--mtrl-theme-on-secondary-rgb));
+}
+
+html {
+  --mtrl-theme-surface-rgb: 255, 255, 255;
+  --mtrl-theme-surface: rgb(var(--mtrl-theme-surface-rgb));
+}
+html[dark] {
+  --mtrl-theme-surface-rgb: 18, 18, 18;
+}
+
+html {
+  --mtrl-theme-on-surface-rgb: 0, 0, 0;
+  --mtrl-theme-on-surface: rgb(var(--mtrl-theme-on-surface-rgb));
+}
+html[dark] {
+  --mtrl-theme-on-surface-rgb: 255, 255, 255;
+}
+
+html {
+  --mtrl-theme-red-rgb: 244, 67, 54;
+  --mtrl-theme-red: rgb(var(--mtrl-theme-red-rgb));
+}
+
+html {
+  --mtrl-theme-on-red-rgb: 255, 255, 255;
+  --mtrl-theme-on-red: rgb(var(--mtrl-theme-on-red-rgb));
+}
+
+html {
+  --mtrl-theme-pink-rgb: 233, 30, 99;
+  --mtrl-theme-pink: rgb(var(--mtrl-theme-pink-rgb));
+}
+
+html {
+  --mtrl-theme-on-pink-rgb: 255, 255, 255;
+  --mtrl-theme-on-pink: rgb(var(--mtrl-theme-on-pink-rgb));
+}
+
+html {
+  --mtrl-theme-purple-rgb: 156, 39, 176;
+  --mtrl-theme-purple: rgb(var(--mtrl-theme-purple-rgb));
+}
+
+html {
+  --mtrl-theme-on-purple-rgb: 255, 255, 255;
+  --mtrl-theme-on-purple: rgb(var(--mtrl-theme-on-purple-rgb));
+}
+
+html {
+  --mtrl-theme-deep-purple-rgb: 103, 58, 183;
+  --mtrl-theme-deep-purple: rgb(var(--mtrl-theme-deep-purple-rgb));
+}
+
+html {
+  --mtrl-theme-on-deep-purple-rgb: 255, 255, 255;
+  --mtrl-theme-on-deep-purple: rgb(var(--mtrl-theme-on-deep-purple-rgb));
+}
+
+html {
+  --mtrl-theme-indigo-rgb: 63, 81, 181;
+  --mtrl-theme-indigo: rgb(var(--mtrl-theme-indigo-rgb));
+}
+
+html {
+  --mtrl-theme-on-indigo-rgb: 255, 255, 255;
+  --mtrl-theme-on-indigo: rgb(var(--mtrl-theme-on-indigo-rgb));
+}
+
+html {
+  --mtrl-theme-blue-rgb: 33, 150, 243;
+  --mtrl-theme-blue: rgb(var(--mtrl-theme-blue-rgb));
+}
+
+html {
+  --mtrl-theme-on-blue-rgb: 255, 255, 255;
+  --mtrl-theme-on-blue: rgb(var(--mtrl-theme-on-blue-rgb));
+}
+
+html {
+  --mtrl-theme-light-blue-rgb: 3, 169, 244;
+  --mtrl-theme-light-blue: rgb(var(--mtrl-theme-light-blue-rgb));
+}
+
+html {
+  --mtrl-theme-on-light-blue-rgb: 0, 0, 0;
+  --mtrl-theme-on-light-blue: rgb(var(--mtrl-theme-on-light-blue-rgb));
+}
+
+html {
+  --mtrl-theme-cyan-rgb: 0, 188, 212;
+  --mtrl-theme-cyan: rgb(var(--mtrl-theme-cyan-rgb));
+}
+
+html {
+  --mtrl-theme-on-cyan-rgb: 0, 0, 0;
+  --mtrl-theme-on-cyan: rgb(var(--mtrl-theme-on-cyan-rgb));
+}
+
+html {
+  --mtrl-theme-teal-rgb: 0, 150, 136;
+  --mtrl-theme-teal: rgb(var(--mtrl-theme-teal-rgb));
+}
+
+html {
+  --mtrl-theme-on-teal-rgb: 255, 255, 255;
+  --mtrl-theme-on-teal: rgb(var(--mtrl-theme-on-teal-rgb));
+}
+
+html {
+  --mtrl-theme-green-rgb: 76, 175, 80;
+  --mtrl-theme-green: rgb(var(--mtrl-theme-green-rgb));
+}
+
+html {
+  --mtrl-theme-on-green-rgb: 0, 0, 0;
+  --mtrl-theme-on-green: rgb(var(--mtrl-theme-on-green-rgb));
+}
+
+html {
+  --mtrl-theme-light-green-rgb: 139, 195, 74;
+  --mtrl-theme-light-green: rgb(var(--mtrl-theme-light-green-rgb));
+}
+
+html {
+  --mtrl-theme-on-light-green-rgb: 0, 0, 0;
+  --mtrl-theme-on-light-green: rgb(var(--mtrl-theme-on-light-green-rgb));
+}
+
+html {
+  --mtrl-theme-lime-rgb: 205, 220, 57;
+  --mtrl-theme-lime: rgb(var(--mtrl-theme-lime-rgb));
+}
+
+html {
+  --mtrl-theme-on-lime-rgb: 0, 0, 0;
+  --mtrl-theme-on-lime: rgb(var(--mtrl-theme-on-lime-rgb));
+}
+
+html {
+  --mtrl-theme-yellow-rgb: 255, 235, 59;
+  --mtrl-theme-yellow: rgb(var(--mtrl-theme-yellow-rgb));
+}
+
+html {
+  --mtrl-theme-on-yellow-rgb: 0, 0, 0;
+  --mtrl-theme-on-yellow: rgb(var(--mtrl-theme-on-yellow-rgb));
+}
+
+html {
+  --mtrl-theme-amber-rgb: 255, 193, 7;
+  --mtrl-theme-amber: rgb(var(--mtrl-theme-amber-rgb));
+}
+
+html {
+  --mtrl-theme-on-amber-rgb: 0, 0, 0;
+  --mtrl-theme-on-amber: rgb(var(--mtrl-theme-on-amber-rgb));
+}
+
+html {
+  --mtrl-theme-orange-rgb: 255, 152, 0;
+  --mtrl-theme-orange: rgb(var(--mtrl-theme-orange-rgb));
+}
+
+html {
+  --mtrl-theme-on-orange-rgb: 0, 0, 0;
+  --mtrl-theme-on-orange: rgb(var(--mtrl-theme-on-orange-rgb));
+}
+
+html {
+  --mtrl-theme-deep-orange-rgb: 255, 87, 34;
+  --mtrl-theme-deep-orange: rgb(var(--mtrl-theme-deep-orange-rgb));
+}
+
+html {
+  --mtrl-theme-on-deep-orange-rgb: 255, 255, 255;
+  --mtrl-theme-on-deep-orange: rgb(var(--mtrl-theme-on-deep-orange-rgb));
+}
+
+html {
+  --mtrl-theme-brown-rgb: 121, 85, 72;
+  --mtrl-theme-brown: rgb(var(--mtrl-theme-brown-rgb));
+}
+
+html {
+  --mtrl-theme-on-brown-rgb: 255, 255, 255;
+  --mtrl-theme-on-brown: rgb(var(--mtrl-theme-on-brown-rgb));
+}
+
+html {
+  --mtrl-theme-grey-rgb: 158, 158, 158;
+  --mtrl-theme-grey: rgb(var(--mtrl-theme-grey-rgb));
+}
+
+html {
+  --mtrl-theme-on-grey-rgb: 0, 0, 0;
+  --mtrl-theme-on-grey: rgb(var(--mtrl-theme-on-grey-rgb));
+}
+
+html {
+  --mtrl-theme-blue-grey-rgb: 96, 125, 139;
+  --mtrl-theme-blue-grey: rgb(var(--mtrl-theme-blue-grey-rgb));
+}
+
+html {
+  --mtrl-theme-on-blue-grey-rgb: 255, 255, 255;
+  --mtrl-theme-on-blue-grey: rgb(var(--mtrl-theme-on-blue-grey-rgb));
+}
+
+html {
+  --mtrl-theme-black-rgb: 0, 0, 0;
+  --mtrl-theme-black: rgb(var(--mtrl-theme-black-rgb));
+}
+
+html {
+  --mtrl-theme-on-black-rgb: 255, 255, 255;
+  --mtrl-theme-on-black: rgb(var(--mtrl-theme-on-black-rgb));
+}
+
+html {
+  --mtrl-theme-white-rgb: 255, 255, 255;
+  --mtrl-theme-white: rgb(var(--mtrl-theme-white-rgb));
+}
+
+html {
+  --mtrl-theme-on-white-rgb: 0, 0, 0;
+  --mtrl-theme-on-white: rgb(var(--mtrl-theme-on-white-rgb));
+}
+
+html {
   background-color: #ffffff;
   color: rgba(0, 0, 0, 0.87);
 }

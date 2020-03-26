@@ -4,45 +4,12 @@
 @use "../../design/layout/spacing" as *
 @use "../../design/usability/accessibility" as *
 
-@mixin button-theme__($surface: $surface, $on-surface: on-color($surface))
-  background-color: $surface
-
-  &--outlined
-    border-color: rgba($on-surface, $stroke)
-
-@mixin button-theme_($color, $on-color: on-color($color))
-  color: $color
+@mixin button-theme($theme: primary)
+  color: get-theme($theme)
 
   &--contained
-    background-color: $color
-    color: $on-color
-
-@mixin button-theme($color, $custom: false)
-  @if $custom == false
-    @include button-theme__()
-  @include button-theme_(get-color($color))
-
-  html[dark] &
-    @if $custom == false
-      @include button-theme__($dark-surface)
-    @include button-theme_(get-color($color, true))
-
-
-@mixin disabled-button-theme_($color, $on-color: on-color($color))
-  &:disabled
-    background-color: rgba($color, $disabled-filled-container)
-    color: rgba($on-color, $text--disabled)
-    border-color: rgba($on-color, $stroke)
-
-  &--contained:disabled
-    background-color: rgba($on-color, $disabled-filled-container)
-
-@mixin disabled-button-theme($color)
-  @include disabled-button-theme_(get-color($color))
-
-  html[dark] &
-    @include disabled-button-theme_(get-color($color, true))
-
+    background-color: get-theme($theme)
+    color: get-theme(on-#{$theme})
 
 $button-height: 36px !default
 

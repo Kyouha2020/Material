@@ -1,13 +1,15 @@
+@use "../../design/color/theme" as *
 @use "../../design/environment/elevation" as *
 @use "../../design/interaction/ripple" as *
+@use "../../design/interaction/states" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/typography/typography" as *
+@use "../../design/usability/accessibility" as *
 @use "../components" as *
 @use "button_mixins" as *
 
 .mtrl-button
-  @include button-theme(primary)
-  @include disabled-button-theme(surface)
+  @include button-theme()
   @include elevation_
   @include ripple_
   @include unselectable
@@ -22,6 +24,8 @@
   padding: 0 8px
   border-radius: 4px
   border: none
+  background-color: get-theme(surface)
+  //color: get-theme(primary)
   outline: none
   white-space: nowrap
 
@@ -35,17 +39,25 @@
     @include elevation(0)
     cursor: default
     pointer-events: none
+    background-color: get-theme(surface, $disabled-filled-container)
+    color: get-theme(on-surface, $text--disabled)
 
   &--outlined, &--contained, &--raised
     padding: 0 16px
 
   &--outlined
-    border-width: 1px
-    border-style: solid
+    border: 1px solid get-theme(on-surface, $stroke)
     border-spacing: 2px
 
   &--contained, &--raised
     @include elevation(2, 4, 6, 8)
+
+  &--contained
+    //background-color: get-theme(primary)
+    //color: get-theme(on-primary)
+
+    &:disabled
+      background-color: get-theme(on-surface, $disabled-filled-container)
 
   &__icon
     @include margin-horizontal(-4px, 8px)

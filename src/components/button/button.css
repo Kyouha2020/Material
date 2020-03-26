@@ -1,6 +1,5 @@
 .mtrl-button, .mtrl-fab {
-  background-color: #ffffff;
-  color: #6200ee;
+  color: var(--mtrl-theme-primary);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   -webkit-user-select: none;
@@ -23,42 +22,13 @@
   padding: 0 8px;
   border-radius: 4px;
   border: none;
+  background-color: var(--mtrl-theme-surface);
   outline: none;
   white-space: nowrap;
 }
-.mtrl-button--outlined {
-  border-color: rgba(0, 0, 0, 0.12);
-}
 .mtrl-button--contained, .mtrl-fab {
-  background-color: #6200ee;
-  color: white;
-}
-html[dark] .mtrl-button, html[dark] .mtrl-fab {
-  background-color: #121212;
-  color: #bb86fc;
-}
-html[dark] .mtrl-button--outlined {
-  border-color: rgba(255, 255, 255, 0.12);
-}
-html[dark] .mtrl-button--contained, html[dark] .mtrl-fab {
-  background-color: #bb86fc;
-  color: black;
-}
-.mtrl-button:disabled, .mtrl-fab:disabled {
-  background-color: rgba(255, 255, 255, 0.12);
-  color: rgba(0, 0, 0, 0.38);
-  border-color: rgba(0, 0, 0, 0.12);
-}
-.mtrl-button--contained:disabled, .mtrl-fab:disabled {
-  background-color: rgba(0, 0, 0, 0.12);
-}
-html[dark] .mtrl-button:disabled, html[dark] .mtrl-fab:disabled {
-  background-color: rgba(18, 18, 18, 0.12);
-  color: rgba(255, 255, 255, 0.38);
-  border-color: rgba(255, 255, 255, 0.12);
-}
-html[dark] .mtrl-button--contained:disabled, html[dark] .mtrl-fab:disabled {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: var(--mtrl-theme-primary);
+  color: var(--mtrl-theme-on-primary);
 }
 .mtrl-button::before, .mtrl-fab::before {
   opacity: 0;
@@ -112,6 +82,8 @@ html[dark] .mtrl-button:active::before, html[dark] .mtrl-fab:active::before {
   z-index: 0;
   cursor: default;
   pointer-events: none;
+  background-color: rgba(var(--mtrl-theme-surface-rgb), 0.12);
+  color: rgba(var(--mtrl-theme-on-surface-rgb), 0.38);
 }
 html[dark] .mtrl-button:disabled::before, html[dark] .mtrl-fab:disabled::before {
   opacity: 0;
@@ -129,8 +101,7 @@ html[dark] .mtrl-button:disabled:active::before, html[dark] .mtrl-fab:disabled:a
   padding: 0 16px;
 }
 .mtrl-button--outlined {
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid rgba(var(--mtrl-theme-on-surface-rgb), 0.12);
   border-spacing: 2px;
 }
 .mtrl-button--contained, .mtrl-fab, .mtrl-button--raised {
@@ -160,6 +131,9 @@ html[dark] .mtrl-button--contained:active::before, html[dark] .mtrl-fab:active::
 .mtrl-button--contained:active, .mtrl-fab:active, .mtrl-button--raised:active {
   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
   z-index: 8;
+}
+.mtrl-button--contained:disabled, .mtrl-fab:disabled {
+  background-color: rgba(var(--mtrl-theme-on-surface-rgb), 0.12);
 }
 .mtrl-button__icon {
   width: 18px;
