@@ -46,14 +46,12 @@
 
 $button-height: 36px !default
 
-@mixin button-density_($baseline: $button-height)
-  height: $baseline
+@mixin button-density($density: 0)
+  $height: get-density($button-height, $density)
+  height: $height
 
   &.mtrl-button--rounded
-    border-radius: $baseline / 2
-
-@function button-density($density)
-  @return get-density($button-height, $density)
+    border-radius: $height / 2
 
 
 @mixin fab-theme__($surface: $surface, $on-surface: on-color($surface))
