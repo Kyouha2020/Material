@@ -25,6 +25,7 @@
   border-radius: 4px
   border: none
   background-color: get-color(surface)
+  color: button-theme()
   outline: none
   white-space: nowrap
 
@@ -51,8 +52,12 @@
   &--contained, &--raised
     @include elevation(2, 4, 6, 8)
 
-  &--contained:disabled
-    background-color: get-color(on-surface, $disabled-filled-container)
+  &--contained
+    background-color: button-theme()
+    color: button-on-theme()
+
+    &:disabled
+      background-color: get-color(on-surface, $disabled-filled-container)
 
   &__icon
     @include margin-horizontal(-4px, 8px)
@@ -116,6 +121,8 @@
   @include fab-theme()
   @include elevation(6, 8, 10, 12)
   @include fab-density()
+  background-color: fab-theme()
+  color: fab-on-theme()
   padding: 0
 
   &--mini

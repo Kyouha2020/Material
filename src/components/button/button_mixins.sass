@@ -4,12 +4,18 @@
 @use "../../design/layout/spacing" as *
 @use "../../design/usability/accessibility" as *
 
-@mixin button-theme($theme: primary)
-  color: get-color($theme)
+$button-theme: --mtrl-button-theme-color
+$button-on-theme: --mtrl-button-theme-on-color
 
-  &--contained
-    background-color: get-color($theme)
-    color: get-color(on-#{$theme})
+@mixin button-theme($theme: primary)
+  #{$button-theme}: #{get-color($theme)}
+  #{$button-on-theme}: #{get-color(on-#{$theme})}
+
+@function button-theme()
+  @return var(#{$button-theme})
+
+@function button-on-theme()
+  @return var(#{$button-on-theme})
 
 $button-height: 36px !default
 
@@ -21,9 +27,18 @@ $button-height: 36px !default
     border-radius: $height / 2
 
 
+$fab-theme: --mtrl-fab-theme-color
+$fab-on-theme: --mtrl-fab-theme-on-color
+
 @mixin fab-theme($theme: black)
-  background-color: get-color($theme)
-  color: get-color(on-#{$theme})
+  #{$fab-theme}: #{get-color($theme)}
+  #{$fab-on-theme}: #{get-color(on-#{$theme})}
+
+@function fab-theme()
+  @return var(#{$fab-theme})
+
+@function fab-on-theme()
+  @return var(#{$fab-on-theme})
 
 $fab-height: 56px !default
 
