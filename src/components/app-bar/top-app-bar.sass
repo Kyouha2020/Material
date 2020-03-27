@@ -1,9 +1,7 @@
 @use "../../design/color/theme" as *
 @use "../../design/environment/elevation" as *
-@use "../../design/interaction/ripple" as *
 @use "../../design/layout/spacing" as *
 @use "../../design/typography/typography" as *
-@use "../../design/usability/accessibility" as *
 @use "../components" as *
 
 .mtrl-top-app-bar
@@ -12,21 +10,12 @@
   align-items: center
   height: 56px
   background-color: $primary
-  color: rgba($on-primary, $text--high-emphasis)
-
-  &--dense
-    height: 48px
+  color: $on-primary
 
   &--extended
     height: 128px
     align-items: flex-start
     justify-content: start
-
-    &.mtrl-top-app-bar--dense
-      height: 112px
-
-      .mtrl-top-app-bar__start-controls, .mtrl-top-app-bar__end-controls
-        margin-top: 0
 
     .mtrl-top-app-bar__start-controls, .mtrl-top-app-bar__end-controls
       margin-top: 4px
@@ -46,21 +35,9 @@
     @include typography(headline6)
     @include margin-start(32px)
 
-  &__navigation-icon, &__action-icon
-    @include ripple_
-    @include touch-target
-    @include unselectable
-    @include accessible-border
-    @include ripple($on-primary)
-    display: inline-flex
-    position: relative
-    width: 24px
-    height: 24px
-    padding: 12px
-    border-radius: 50%
-    font-size: 24px
-    cursor: pointer
-    fill: currentColor
+  .mtrl-icon-button
+    background-color: inherit !important
+    color: inherit !important
 
   &__navigation-icon
     @include margin-start(4px)
