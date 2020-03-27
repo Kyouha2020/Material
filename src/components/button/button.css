@@ -7,7 +7,7 @@
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-0);
   z-index: 0;
   font-family: Roboto, sans-serif;
   font-size: 0.875rem;
@@ -76,7 +76,7 @@ html[dark] .mtrl-button:active::before, html[dark] .mtrl-fab:active::before {
   cursor: pointer;
 }
 .mtrl-button:disabled, .mtrl-fab:disabled {
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-0);
   z-index: 0;
   cursor: default;
   pointer-events: none;
@@ -103,7 +103,7 @@ html[dark] .mtrl-button:disabled:active::before, html[dark] .mtrl-fab:disabled:a
   border-spacing: 2px;
 }
 .mtrl-button--contained, .mtrl-fab, .mtrl-button--raised {
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-2);
   z-index: 2;
 }
 html[dark] .mtrl-button--contained::before, html[dark] .mtrl-fab::before, html[dark] .mtrl-button--raised::before {
@@ -119,15 +119,15 @@ html[dark] .mtrl-button--contained:active::before, html[dark] .mtrl-fab:active::
   opacity: 0.22;
 }
 .mtrl-button--contained:hover, .mtrl-fab:hover, .mtrl-button--raised:hover {
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-4);
   z-index: 4;
 }
 .mtrl-button--contained:focus, .mtrl-fab:focus, .mtrl-button--raised:focus {
-  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-6);
   z-index: 6;
 }
 .mtrl-button--contained:active, .mtrl-fab:active, .mtrl-button--raised:active {
-  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-8);
   z-index: 8;
 }
 .mtrl-button--contained, .mtrl-fab {
@@ -160,7 +160,7 @@ html[dir=rtl] .mtrl-button__icon--trailing {
   margin-right: 8px;
 }
 .mtrl-button--float {
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-0);
   z-index: 0;
 }
 html[dark] .mtrl-button--float::before {
@@ -176,19 +176,19 @@ html[dark] .mtrl-button--float:active::before {
   opacity: 0.19;
 }
 .mtrl-button--float:hover {
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-0);
   z-index: 0;
 }
 .mtrl-button--float:focus {
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-2);
   z-index: 2;
 }
 .mtrl-button--float:active {
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-4);
   z-index: 4;
 }
 .mtrl-button--unelevated {
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-0);
   z-index: 0;
 }
 html[dark] .mtrl-button--unelevated::before {
@@ -204,15 +204,15 @@ html[dark] .mtrl-button--unelevated:active::before {
   opacity: 0.1;
 }
 .mtrl-button--unelevated:hover {
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-0);
   z-index: 0;
 }
 .mtrl-button--unelevated:focus {
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-0);
   z-index: 0;
 }
 .mtrl-button--unelevated:active {
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-0);
   z-index: 0;
 }
 .mtrl-button--sharp {
@@ -278,7 +278,7 @@ html[dark] .mtrl-button--unelevated:active::before {
 .mtrl-fab {
   --mtrl-fab-theme-color:var(--mtrl-theme-black);
   --mtrl-fab-theme-on-color:var(--mtrl-theme-on-black);
-  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-6);
   z-index: 6;
   height: 56px;
   border-radius: 28px;
@@ -299,15 +299,15 @@ html[dark] .mtrl-fab:active::before {
   opacity: 0.24;
 }
 .mtrl-fab:hover {
-  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-8);
   z-index: 8;
 }
 .mtrl-fab:focus {
-  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-10);
   z-index: 10;
 }
 .mtrl-fab:active {
-  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--mtrl-elevation-12);
   z-index: 12;
 }
 .mtrl-fab:not(.mtrl-fab--mini):not(.mtrl-fab--extended) {

@@ -1,0 +1,5 @@
+@use "../environment/elevation" as *
+
+\:root
+  @for $z from 0 through 24
+    --mtrl-elevation-#{$z}: #{elevation($z)}

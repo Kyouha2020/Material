@@ -47,15 +47,6 @@ $color-map: (red: $red-500, pink: $pink-500, purple: $purple-500, deep-purple: $
 @function hex2rgb($color)
   @return red($color), green($color), blue($color)
 
-@mixin create-theme($name, $color, $dark-color: $color)
-  html
-    --mtrl-theme-#{$name}-rgb: #{hex2rgb($color)}
-    --mtrl-theme-#{$name}: rgb(var(--mtrl-theme-#{$name}-rgb))
-
-    @if $dark-color != $color
-      &[dark]
-        --mtrl-theme-#{$name}-rgb: #{hex2rgb($dark-color)}
-
 @function get-color($theme, $alpha: 1)
   @if $alpha == 1
     @return var(--mtrl-theme-#{$theme})
