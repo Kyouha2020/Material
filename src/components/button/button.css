@@ -354,28 +354,28 @@ html[dir=rtl] .mtrl-fab--extended .mtrl-fab__icon--trailing {
   height: 56px;
   border-radius: 28px;
 }
-.mtrl-fab--density-0:not(.mtrl-fab--density-0--mini):not(.mtrl-fab--density-0--extended) {
+.mtrl-fab--density-0:not(.mtrl-fab--mini):not(.mtrl-fab--extended) {
   width: 56px;
 }
 .mtrl-fab--density--1 {
   height: 52px;
   border-radius: 26px;
 }
-.mtrl-fab--density--1:not(.mtrl-fab--density--1--mini):not(.mtrl-fab--density--1--extended) {
+.mtrl-fab--density--1:not(.mtrl-fab--mini):not(.mtrl-fab--extended) {
   width: 52px;
 }
 .mtrl-fab--density--2 {
   height: 48px;
   border-radius: 24px;
 }
-.mtrl-fab--density--2:not(.mtrl-fab--density--2--mini):not(.mtrl-fab--density--2--extended) {
+.mtrl-fab--density--2:not(.mtrl-fab--mini):not(.mtrl-fab--extended) {
   width: 48px;
 }
 .mtrl-fab--density--3 {
   height: 44px;
   border-radius: 22px;
 }
-.mtrl-fab--density--3:not(.mtrl-fab--density--3--mini):not(.mtrl-fab--density--3--extended) {
+.mtrl-fab--density--3:not(.mtrl-fab--mini):not(.mtrl-fab--extended) {
   width: 44px;
 }
 
