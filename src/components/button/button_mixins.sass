@@ -8,8 +8,8 @@ $button-theme: --mtrl-button-theme-color
 $button-on-theme: --mtrl-button-theme-on-color
 
 @mixin button-theme($theme: primary)
-  #{$button-theme}: #{get-color($theme)}
-  #{$button-on-theme}: #{get-color(on-#{$theme})}
+  #{$button-theme}: #{color($theme)}
+  #{$button-on-theme}: #{color(on-#{$theme})}
 
 @function button-theme()
   @return var(#{$button-theme})
@@ -31,8 +31,8 @@ $fab-theme: --mtrl-fab-theme-color
 $fab-on-theme: --mtrl-fab-theme-on-color
 
 @mixin fab-theme($theme: black)
-  #{$fab-theme}: #{get-color($theme)}
-  #{$fab-on-theme}: #{get-color(on-#{$theme})}
+  #{$fab-theme}: #{color($theme)}
+  #{$fab-on-theme}: #{color(on-#{$theme})}
 
 @function fab-theme()
   @return var(#{$fab-theme})
