@@ -14,18 +14,13 @@
 @function button-on-theme($alpha: 1)
   @return color(-button-on-color, $alpha)
 
-$button-height: 36px !default
-
 @mixin button-density($density: 0)
-  $height: get-density($button-height, $density)
+  $height: get-density(36px, $density)
   height: $height
 
   &.mtrl-button--rounded
     border-radius: $height / 2
 
-
-$fab-theme: --mtrl-fab-theme-color
-$fab-on-theme: --mtrl-fab-theme-on-color
 
 @mixin fab-theme($theme: black)
   --mtrl-theme--fab-color-rgb: #{rgb-color($theme)}
@@ -37,10 +32,8 @@ $fab-on-theme: --mtrl-fab-theme-on-color
 @function fab-on-theme($alpha: 1)
   @return color(-fab-on-color, $alpha)
 
-$fab-height: 56px !default
-
 @mixin fab-density($density: 0)
-  $height: get-density($fab-height, $density)
+  $height: get-density(56px, $density)
   height: $height
   border-radius: $height / 2
 
