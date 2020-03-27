@@ -4,18 +4,21 @@
 @use "../../design/layout/spacing" as *
 @use "../../design/usability/accessibility" as *
 
-$button-theme: --mtrl-button-theme-color
-$button-on-theme: --mtrl-button-theme-on-color
-
 @mixin button-theme($theme: primary)
-  #{$button-theme}: #{color($theme)}
-  #{$button-on-theme}: #{color(on-#{$theme})}
+  --mtrl-button-theme-color-rgb: #{rgb-color($theme)}
+  --mtrl-button-theme-on-color-rgb: #{rgb-color(on-#{$theme})}
 
-@function button-theme()
-  @return var(#{$button-theme})
+@function button-theme($alpha: 1)
+  @if $alpha == 1
+    @return rgb(var(--mtrl-button-theme-color-rgb))
+  @else
+    @return rgba(var(--mtrl-button-theme-color-rgb), $alpha)
 
-@function button-on-theme()
-  @return var(#{$button-on-theme})
+@function button-on-theme($alpha: 1)
+  @if $alpha == 1
+    @return rgb(var(--mtrl-button-theme-on-color-rgb))
+  @else
+    @return rgba(var(--mtrl-button-theme-on-color-rgb), $alpha)
 
 $button-height: 36px !default
 

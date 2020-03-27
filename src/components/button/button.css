@@ -1,6 +1,6 @@
 .mtrl-button, .mtrl-fab {
-  --mtrl-button-theme-color:rgb(var(--mtrl-theme-primary-rgb));
-  --mtrl-button-theme-on-color:rgb(var(--mtrl-theme-on-primary-rgb));
+  --mtrl-button-theme-color-rgb: var(--mtrl-theme-primary-rgb);
+  --mtrl-button-theme-on-color-rgb: var(--mtrl-theme-on-primary-rgb);
   height: 36px;
   box-shadow: var(--mtrl-elevation-0);
   z-index: 0;
@@ -24,7 +24,7 @@
   border-radius: 4px;
   border: none;
   background-color: rgb(var(--mtrl-theme-surface-rgb));
-  color: var(--mtrl-button-theme-color);
+  color: rgb(var(--mtrl-button-theme-color-rgb));
   outline: none;
   white-space: nowrap;
 }
@@ -102,6 +102,9 @@ html[dark] .mtrl-button:disabled:active::before, html[dark] .mtrl-fab:disabled:a
   border: 1px solid rgba(var(--mtrl-theme-on-surface-rgb), 0.12);
   border-spacing: 2px;
 }
+.mtrl-button--two-tone {
+  background-color: rgba(var(--mtrl-button-theme-color-rgb), 0.12);
+}
 .mtrl-button--contained, .mtrl-fab, .mtrl-button--raised {
   box-shadow: var(--mtrl-elevation-2);
   z-index: 2;
@@ -131,8 +134,8 @@ html[dark] .mtrl-button--contained:active::before, html[dark] .mtrl-fab:active::
   z-index: 8;
 }
 .mtrl-button--contained, .mtrl-fab {
-  background-color: var(--mtrl-button-theme-color);
-  color: var(--mtrl-button-theme-on-color);
+  background-color: rgb(var(--mtrl-button-theme-color-rgb));
+  color: rgb(var(--mtrl-button-theme-on-color-rgb));
 }
 .mtrl-button--contained:disabled, .mtrl-fab:disabled {
   background-color: rgba(var(--mtrl-theme-on-surface-rgb), 0.12);

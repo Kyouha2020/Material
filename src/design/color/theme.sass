@@ -47,8 +47,11 @@ $color-map: (red: $red-500, pink: $pink-500, purple: $purple-500, deep-purple: $
 @function hex2rgb($color)
   @return red($color), green($color), blue($color)
 
+@function rgb-color($theme)
+  @return var(--mtrl-theme-#{$theme}-rgb)
+
 @function color($theme, $alpha: 1)
   @if $alpha == 1
-    @return rgb(var(--mtrl-theme-#{$theme}-rgb))
+    @return rgb(rgb-color($theme))
   @else
-    @return rgba(var(--mtrl-theme-#{$theme}-rgb), $alpha)
+    @return rgba(rgb-color($theme), $alpha)
