@@ -39,12 +39,10 @@ $dark-on-error: on-color($dark-error) !default
 
 $elevation-overlay: (00: 0, 01: .05, 02: .07, 03: .08, 04: .09, 05: .1, 06: .11, 07: .11, 08: .12, 09: .12, 10: .13, 11: .13, 12: .14, 13: .14, 14: .14, 15: .14, 16: .15, 17: .15, 18: .15, 19: .15, 20: .15, 21: .15, 22: .15, 23: .15, 24: .16)
 
+$theme-map: (primary: $primary, on-primary: $on-primary, primary-variant: $primary-variant, on-primary-variant: $on-primary-variant, secondary: $secondary, on-secondary: $on-secondary, secondary-variant: $secondary-variant, on-secondary-variant: $on-secondary-variant, background: $background, on-background: $on-background, surface: $surface, on-surface: $on-surface, error: $error, on-error: $on-error)
+$dark-theme-map: (primary: $dark-primary, on-primary: $dark-on-primary, primary-variant: $dark-primary-variant, on-primary-variant: $dark-on-primary-variant, secondary: $dark-secondary, on-secondary: $dark-on-secondary, secondary-variant: $dark-secondary-variant, on-secondary-variant: $dark-on-secondary-variant, background: $dark-background, on-background: $dark-on-background, surface: $dark-surface, on-surface: $dark-on-surface, error: $dark-error, on-error: $dark-on-error)
+$color-map: (red: $red-500, pink: $pink-500, purple: $purple-500, deep-purple: $deep-purple-500, indigo: $indigo-500, blue: $blue-500, light-blue: $light-blue-500, cyan: $cyan-500, teal: $teal-500, green: $green-500, light-green: $light-green-500, lime: $lime-500, yellow: $yellow-500, amber: $amber-500, orange: $orange-500, deep-orange: $deep-orange-500, brown: $brown-500, grey: $grey-500, blue-grey: $blue-grey-500, black: black, white: white)
 
-$theme-map: ($primary, $on-primary, $primary-variant, $on-primary-variant, $secondary, $on-secondary, $secondary-variant, $on-secondary-variant, $background, $on-background, $surface, $on-surface, $error, $on-error)
-$dark-theme-map: ($dark-primary, $dark-on-primary, $dark-primary-variant, $dark-on-primary-variant, $dark-secondary, $dark-on-secondary, $dark-secondary-variant, $dark-on-secondary-variant, $dark-background, $dark-on-background, $dark-surface, $dark-on-surface, $dark-error, $dark-on-error)
-
-$theme-name-map: (primary, on-primary, primary-variant, on-primary-variant, secondary, on-secondary, secondary-variant, on-secondary-variant, background, on-background, surface, on-surface, error, on-error)
-$color-name-map: (red: $red-500, pink: $pink-500, purple: $purple-500, deep-purple: $deep-purple-500, indigo: $indigo-500, blue: $blue-500, light-blue: $light-blue-500, cyan: $cyan-500, teal: $teal-500, green: $green-500, light-green: $light-green-500, lime: $lime-500, yellow: $yellow-500, amber: $amber-500, orange: $orange-500, deep-orange: $deep-orange-500, brown: $brown-500, grey: $grey-500, blue-grey: $blue-grey-500, black: black, white: white)
 
 @function hex2rgb($color)
   @return red($color), green($color), blue($color)
@@ -57,15 +55,6 @@ $color-name-map: (red: $red-500, pink: $pink-500, purple: $purple-500, deep-purp
     @if $dark-color != $color
       &[dark]
         --mtrl-theme-#{$name}-rgb: #{hex2rgb($dark-color)}
-
-@mixin create-mtrl-theme($color)
-  $theme: nth($theme-map, index($theme-name-map, $color))
-  $dark-theme: nth($dark-theme-map, index($theme-name-map, $color))
-  @include create-theme($color, $theme, $dark-theme)
-
-@mixin create-color-theme($color)
-  @include create-theme($color, map_get($color-name-map, $color))
-  @include create-theme(on-#{$color}, on-color(map_get($color-name-map, $color)))
 
 @function get-color($theme, $alpha: 1)
   @if $alpha == 1

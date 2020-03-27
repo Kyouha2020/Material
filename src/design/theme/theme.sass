@@ -1,7 +1,9 @@
 @use "../color/theme" as *
+@use "../usability/accessibility" as *
 
-@each $name in $theme-name-map
-  @include create-mtrl-theme($name)
+@each $theme, $color in $theme-map
+  @include create-theme($theme, map_get($theme-map, $theme), map_get($dark-theme-map, $theme))
 
-@each $name, $color in $color-name-map
-  @include create-color-theme($name)
+@each $theme, $color in $color-map
+  @include create-theme($theme, map_get($color-map, $theme))
+  @include create-theme(on-#{$theme}, on-color(map_get($color-map, $theme)))

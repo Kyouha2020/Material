@@ -1,13 +1,13 @@
 @use "../../design/color/theme" as *
 @use "button_mixins" as *
 
-@each $theme in $theme-name-map
+@each $theme, $color in $theme-map
   .mtrl-button--#{$theme}.mtrl-button
     @include button-theme($theme)
   .mtrl-fab--#{$theme}.mtrl-fab
     @include fab-theme($theme)
 
-@each $theme, $color in $color-name-map
+@each $theme, $color in $color-map
   .mtrl-button--#{$theme}.mtrl-button
     @include button-theme($theme)
   .mtrl-fab--#{$theme}.mtrl-fab
