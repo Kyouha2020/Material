@@ -52,7 +52,7 @@
     @extend .mtrl-button--outlined
 
     &:not(:disabled)
-      border-color: button-theme()
+      border-color: currentColor
 
   &--two-tone
     background-color: button-theme(.12)
@@ -144,11 +144,28 @@
 .mtrl-fab
   @extend .mtrl-button, .mtrl-button--contained
   @include fab-theme()
-  @include elevation(6, 8, 10, 12)
   @include fab-density()
+  @include elevation(6, 8, 10, 12)
   background-color: fab-theme()
   color: fab-on-theme()
   padding: 0
+
+  &--outlined, &--stroked, &--two-tone
+    background-color: color(surface)
+    color: fab-theme()
+
+  &--outlined, &--stroked
+    @include elevation(0, 0, 0, 0)
+
+  &--outlined
+    border: 1px solid color(on-surface, $stroke)
+
+  &--stroked
+    @extend .mtrl-fab--outlined
+    border-color: currentColor
+
+  &--two-tone
+    background-color: fab-theme(.12)
 
   &--mini
     height: 40px
