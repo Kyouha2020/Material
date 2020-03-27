@@ -5,20 +5,14 @@
 @use "../../design/usability/accessibility" as *
 
 @mixin button-theme($theme: primary)
-  --mtrl-button-theme-color-rgb: #{rgb-color($theme)}
-  --mtrl-button-theme-on-color-rgb: #{rgb-color(on-#{$theme})}
+  --mtrl-theme--button-color-rgb: #{rgb-color($theme)}
+  --mtrl-theme--button-on-color-rgb: #{rgb-color(on-#{$theme})}
 
 @function button-theme($alpha: 1)
-  @if $alpha == 1
-    @return rgb(var(--mtrl-button-theme-color-rgb))
-  @else
-    @return rgba(var(--mtrl-button-theme-color-rgb), $alpha)
+  @return color(-button-color, $alpha)
 
 @function button-on-theme($alpha: 1)
-  @if $alpha == 1
-    @return rgb(var(--mtrl-button-theme-on-color-rgb))
-  @else
-    @return rgba(var(--mtrl-button-theme-on-color-rgb), $alpha)
+  @return color(-button-on-color, $alpha)
 
 $button-height: 36px !default
 
