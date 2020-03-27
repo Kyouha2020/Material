@@ -13,6 +13,3 @@ Major browsers except Firefox.
 * **March 26, 2020:** 不再支持 IE 11。
 
 * **March 25, 2020:** 加入 ripple 特性。
-
-## Plans
-* CSS variables
