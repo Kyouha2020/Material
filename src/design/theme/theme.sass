@@ -4,13 +4,13 @@
 \:root
   @each $theme, $color in $theme-map
     --mtrl-theme-#{$theme}-rgb: #{hex2rgb(map_get($theme-map, $theme))}
-    --mtrl-theme-#{$theme}: rgb(var(--mtrl-theme-#{$theme}-rgb))
+    --mtrl-theme-#{$theme}: #{get-color($theme)}
 
   @each $theme2, $color2 in $color-map
     --mtrl-theme-#{$theme2}-rgb: #{hex2rgb(map_get($color-map, $theme2))}
-    --mtrl-theme-#{$theme2}: rgb(var(--mtrl-theme-#{$theme2}-rgb))
+    --mtrl-theme-#{$theme2}: #{get-color($theme2)}
     --mtrl-theme-on-#{$theme2}-rgb: #{hex2rgb(on-color(map_get($color-map, $theme2)))}
-    --mtrl-theme-on-#{$theme2}: rgb(var(--mtrl-theme-on-#{$theme2}-rgb))
+    --mtrl-theme-on-#{$theme2}: #{get-color(on- + $theme2)}
 
 html[dark]
   @each $theme, $color in $theme-map

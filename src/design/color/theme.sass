@@ -49,6 +49,6 @@ $color-map: (red: $red-500, pink: $pink-500, purple: $purple-500, deep-purple: $
 
 @function get-color($theme, $alpha: 1)
   @if $alpha == 1
-    @return var(--mtrl-theme-#{$theme})
+    @return rgb(var(--mtrl-theme-#{$theme}-rgb))
   @else
     @return rgba(var(--mtrl-theme-#{$theme}-rgb), $alpha)
