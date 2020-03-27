@@ -251,16 +251,59 @@ html[dark] .mtrl-button--unelevated:active::before {
 }
 
 .mtrl-icon-button {
+  box-shadow: var(--mtrl-elevation-0);
+  z-index: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.0333333333rem;
+  text-decoration: inherit;
+  text-transform: inherit;
   width: 48px;
   height: 48px;
   padding: 0;
   border-radius: 50%;
+}
+html[dark] .mtrl-icon-button::before {
+  opacity: 0;
+}
+html[dark] .mtrl-icon-button:hover::before {
+  opacity: 0.04;
+}
+html[dark] .mtrl-icon-button:focus::before {
+  opacity: 0.12;
+}
+html[dark] .mtrl-icon-button:active::before {
+  opacity: 0.1;
+}
+.mtrl-icon-button:hover {
+  box-shadow: var(--mtrl-elevation-0);
+  z-index: 0;
+}
+.mtrl-icon-button:focus {
+  box-shadow: var(--mtrl-elevation-0);
+  z-index: 0;
+}
+.mtrl-icon-button:active {
+  box-shadow: var(--mtrl-elevation-0);
+  z-index: 0;
 }
 .mtrl-icon-button__icon {
   width: 24px;
   height: 24px;
   font-size: 24px;
   fill: currentColor;
+}
+.mtrl-icon-button--caption {
+  flex-direction: column;
+  width: 56px;
+  height: 56px;
+}
+.mtrl-icon-button--caption .mtrl-icon-button__icon {
+  width: 18px;
+  height: 18px;
+  margin-bottom: 4px;
+  font-size: 18px;
 }
 .mtrl-icon-button--square, .mtrl-icon-button--diamond {
   border-radius: 4px;
