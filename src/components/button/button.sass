@@ -47,15 +47,21 @@
 
   &--outlined
     border: 1px solid color(on-surface, $stroke)
-    border-spacing: 2px
+
+  &--stroked
+    @extend .mtrl-button--outlined
+
+    &:not(:disabled)
+      border-color: button-theme()
 
   &--two-tone
     background-color: button-theme(.12)
 
-  &--contained, &--raised
-    @include elevation(2, 4, 6, 8)
+    &:disabled
+      background-color: color(on-surface, $disabled-filled-container)
 
   &--contained
+    @include elevation(2, 4, 6, 8)
     background-color: button-theme()
     color: button-on-theme()
 
@@ -74,6 +80,9 @@
 
   &--float
     @include elevation(0, 0, 2, 4)
+
+  &--raised
+    @include elevation(2, 4, 6, 8)
 
   &--unelevated
     @include elevation(0, 0, 0, 0)

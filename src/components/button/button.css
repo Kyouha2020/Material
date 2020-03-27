@@ -95,47 +95,50 @@ html[dark] .mtrl-button:disabled:focus::before, html[dark] .mtrl-fab:disabled:fo
 html[dark] .mtrl-button:disabled:active::before, html[dark] .mtrl-fab:disabled:active::before {
   opacity: 0.1;
 }
-.mtrl-button--outlined, .mtrl-button--contained, .mtrl-fab, .mtrl-button--raised {
+.mtrl-button--outlined, .mtrl-button--stroked, .mtrl-button--contained, .mtrl-fab, .mtrl-button--raised {
   padding: 0 16px;
 }
-.mtrl-button--outlined {
+.mtrl-button--outlined, .mtrl-button--stroked {
   border: 1px solid rgba(var(--mtrl-theme-on-surface-rgb), 0.12);
-  border-spacing: 2px;
+}
+.mtrl-button--stroked:not(:disabled) {
+  border-color: rgb(var(--mtrl-theme--button-color-rgb));
 }
 .mtrl-button--two-tone {
   background-color: rgba(var(--mtrl-theme--button-color-rgb), 0.12);
 }
-.mtrl-button--contained, .mtrl-fab, .mtrl-button--raised {
+.mtrl-button--two-tone:disabled {
+  background-color: rgba(var(--mtrl-theme-on-surface-rgb), 0.12);
+}
+.mtrl-button--contained, .mtrl-fab {
   box-shadow: var(--mtrl-elevation-2);
   z-index: 2;
+  background-color: rgb(var(--mtrl-theme--button-color-rgb));
+  color: rgb(var(--mtrl-theme--button-on-color-rgb));
 }
-html[dark] .mtrl-button--contained::before, html[dark] .mtrl-fab::before, html[dark] .mtrl-button--raised::before {
+html[dark] .mtrl-button--contained::before, html[dark] .mtrl-fab::before {
   opacity: 0.07;
 }
-html[dark] .mtrl-button--contained:hover::before, html[dark] .mtrl-fab:hover::before, html[dark] .mtrl-button--raised:hover::before {
+html[dark] .mtrl-button--contained:hover::before, html[dark] .mtrl-fab:hover::before {
   opacity: 0.13;
 }
-html[dark] .mtrl-button--contained:focus::before, html[dark] .mtrl-fab:focus::before, html[dark] .mtrl-button--raised:focus::before {
+html[dark] .mtrl-button--contained:focus::before, html[dark] .mtrl-fab:focus::before {
   opacity: 0.23;
 }
-html[dark] .mtrl-button--contained:active::before, html[dark] .mtrl-fab:active::before, html[dark] .mtrl-button--raised:active::before {
+html[dark] .mtrl-button--contained:active::before, html[dark] .mtrl-fab:active::before {
   opacity: 0.22;
 }
-.mtrl-button--contained:hover, .mtrl-fab:hover, .mtrl-button--raised:hover {
+.mtrl-button--contained:hover, .mtrl-fab:hover {
   box-shadow: var(--mtrl-elevation-4);
   z-index: 4;
 }
-.mtrl-button--contained:focus, .mtrl-fab:focus, .mtrl-button--raised:focus {
+.mtrl-button--contained:focus, .mtrl-fab:focus {
   box-shadow: var(--mtrl-elevation-6);
   z-index: 6;
 }
-.mtrl-button--contained:active, .mtrl-fab:active, .mtrl-button--raised:active {
+.mtrl-button--contained:active, .mtrl-fab:active {
   box-shadow: var(--mtrl-elevation-8);
   z-index: 8;
-}
-.mtrl-button--contained, .mtrl-fab {
-  background-color: rgb(var(--mtrl-theme--button-color-rgb));
-  color: rgb(var(--mtrl-theme--button-on-color-rgb));
 }
 .mtrl-button--contained:disabled, .mtrl-fab:disabled {
   background-color: rgba(var(--mtrl-theme-on-surface-rgb), 0.12);
@@ -189,6 +192,34 @@ html[dark] .mtrl-button--float:active::before {
 .mtrl-button--float:active {
   box-shadow: var(--mtrl-elevation-4);
   z-index: 4;
+}
+.mtrl-button--raised {
+  box-shadow: var(--mtrl-elevation-2);
+  z-index: 2;
+}
+html[dark] .mtrl-button--raised::before {
+  opacity: 0.07;
+}
+html[dark] .mtrl-button--raised:hover::before {
+  opacity: 0.13;
+}
+html[dark] .mtrl-button--raised:focus::before {
+  opacity: 0.23;
+}
+html[dark] .mtrl-button--raised:active::before {
+  opacity: 0.22;
+}
+.mtrl-button--raised:hover {
+  box-shadow: var(--mtrl-elevation-4);
+  z-index: 4;
+}
+.mtrl-button--raised:focus {
+  box-shadow: var(--mtrl-elevation-6);
+  z-index: 6;
+}
+.mtrl-button--raised:active {
+  box-shadow: var(--mtrl-elevation-8);
+  z-index: 8;
 }
 .mtrl-button--unelevated {
   box-shadow: var(--mtrl-elevation-0);
