@@ -28,14 +28,14 @@ $fab-theme: --mtrl-fab-theme-color
 $fab-on-theme: --mtrl-fab-theme-on-color
 
 @mixin fab-theme($theme: black)
-  #{$fab-theme}: #{color($theme)}
-  #{$fab-on-theme}: #{color(on-#{$theme})}
+  --mtrl-theme--fab-color-rgb: #{rgb-color($theme)}
+  --mtrl-theme--fab-on-color-rgb: #{rgb-color(on-#{$theme})}
 
-@function fab-theme()
-  @return var(#{$fab-theme})
+@function fab-theme($alpha: 1)
+  @return color(-fab-color, $alpha)
 
-@function fab-on-theme()
-  @return var(#{$fab-on-theme})
+@function fab-on-theme($alpha: 1)
+  @return color(-fab-on-color, $alpha)
 
 $fab-height: 56px !default
 

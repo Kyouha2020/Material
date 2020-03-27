@@ -353,14 +353,14 @@ html[dark] .mtrl-icon-button:active::before {
 }
 
 .mtrl-fab {
-  --mtrl-fab-theme-color:rgb(var(--mtrl-theme-black-rgb));
-  --mtrl-fab-theme-on-color:rgb(var(--mtrl-theme-on-black-rgb));
+  --mtrl-theme--fab-color-rgb: var(--mtrl-theme-black-rgb);
+  --mtrl-theme--fab-on-color-rgb: var(--mtrl-theme-on-black-rgb);
   box-shadow: var(--mtrl-elevation-6);
   z-index: 6;
   height: 56px;
   border-radius: 28px;
-  background-color: var(--mtrl-fab-theme-color);
-  color: var(--mtrl-fab-theme-on-color);
+  background-color: rgb(var(--mtrl-theme--fab-color-rgb));
+  color: rgb(var(--mtrl-theme--fab-on-color-rgb));
   padding: 0;
 }
 html[dark] .mtrl-fab::before {
