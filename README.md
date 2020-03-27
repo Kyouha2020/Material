@@ -8,6 +8,8 @@ Docs: https://kyouha2020.github.io/Material/docs/
 Major browsers except Firefox.
 
 ## News
+* **March 27, 2020:** 应用大量 CSS 变量。
+
 * **March 26, 2020:** 不再支持 IE 11。
 
 * **March 25, 2020:** 加入 ripple 特性。
