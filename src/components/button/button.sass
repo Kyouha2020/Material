@@ -12,6 +12,7 @@
   @include button-density()
   @include elevation(0)
   @include typography(button)
+  @include ripple
   @include elevation_
   @include unselectable
   display: inline-flex
@@ -21,7 +22,7 @@
   padding: 0 8px
   border-radius: 4px
   border: none
-  background-color: button-theme(calc(var(--mtrl-button-bg-opacity-origin, 0) + var(--mtrl-elevation--bg-opacity-dark-boost, 0) + var(--mtrl-button-bg-opacity, 0)))
+  background-color: button-theme(bg-opacity(0))
   color: button-theme()
   outline: none
   white-space: nowrap
@@ -30,14 +31,7 @@
     min-width: 64px
 
   &:hover
-    --mtrl-button-bg-opacity: #{$container-overlay--hovered}
     cursor: pointer
-
-  &:focus
-    --mtrl-button-bg-opacity: #{$container-overlay--focused}
-
-  &:active
-    --mtrl-button-bg-opacity: #{$container-overlay--pressed}
 
   &:disabled
     @include elevation(0)
@@ -59,14 +53,14 @@
       border-color: currentColor
 
   &--two-tone
-    --mtrl-button-bg-opacity-origin: .12
+    @include bg-opacity(.12)
 
     &:disabled
       background-color: color(on-surface, $disabled-filled-container)
 
   &--contained
     @include elevation(2, 4, 6, 8)
-    background-color: button-theme(calc(var(--mtrl-button-bg-opacity-origin, 1) - var(--mtrl-button-bg-opacity, 0)))
+    background-color: button-theme(bg-opacity(1))
     color: button-on-theme()
 
     &:disabled
@@ -150,13 +144,12 @@
   @include fab-theme()
   @include fab-density()
   @include elevation(6, 8, 10, 12)
-  background-color: fab-theme(calc(var(--mtrl-button-bg-opacity-origin, 1) - var(--mtrl-button-bg-opacity, 0)))
+  background-color: fab-theme(bg-opacity(1))
   color: fab-on-theme()
   padding: 0
 
   &--outlined, &--stroked, &--two-tone
-    --mtrl-button-bg-opacity-origin: 0
-    background-color: fab-theme(calc(var(--mtrl-button-bg-opacity-origin, 1) + var(--mtrl-button-bg-opacity, 0)))
+    background-color: fab-theme(bg-opacity(0))
     color: fab-theme()
 
   &--outlined, &--stroked
@@ -170,7 +163,7 @@
     border-color: currentColor
 
   &--two-tone
-    --mtrl-button-bg-opacity-origin: .12
+    @include bg-opacity(.12)
 
   &--mini
     height: 40px

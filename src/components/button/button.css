@@ -22,7 +22,7 @@
   padding: 0 8px;
   border-radius: 4px;
   border: none;
-  background-color: rgba(var(--mtrl-theme--button-color-rgb), calc(var(--mtrl-button-bg-opacity-origin, 0) + var(--mtrl-elevation--bg-opacity-dark-boost, 0) + var(--mtrl-button-bg-opacity, 0)));
+  background-color: rgba(var(--mtrl-theme--button-color-rgb), calc(var(--mtrl-component--bg-opacity-origin, 0) + var(--mtrl-elevation--bg-opacity-dark-boost, 0) + var(--mtrl-component--bg-opacity, 0)));
   color: rgb(var(--mtrl-theme--button-color-rgb));
   outline: none;
   white-space: nowrap;
@@ -33,18 +33,20 @@
 html[dark] .mtrl-button, html[dark] .mtrl-fab {
   --mtrl-elevation--bg-opacity-dark-boost: 0;
 }
+.mtrl-button:hover, .mtrl-fab:hover {
+  --mtrl-component--bg-opacity: 0.04;
+}
+.mtrl-button:focus, .mtrl-fab:focus {
+  --mtrl-component--bg-opacity: 0.12;
+}
+.mtrl-button:active, .mtrl-fab:active {
+  --mtrl-component--bg-opacity: 0.1;
+}
 .mtrl-button:not(.mtrl-icon-button):not(.mtrl-fab), .mtrl-fab:not(.mtrl-icon-button):not(.mtrl-fab) {
   min-width: 64px;
 }
 .mtrl-button:hover, .mtrl-fab:hover {
-  --mtrl-button-bg-opacity: 0.04;
   cursor: pointer;
-}
-.mtrl-button:focus, .mtrl-fab:focus {
-  --mtrl-button-bg-opacity: 0.12;
-}
-.mtrl-button:active, .mtrl-fab:active {
-  --mtrl-button-bg-opacity: 0.1;
 }
 .mtrl-button:disabled, .mtrl-fab:disabled {
   box-shadow: var(--mtrl-elevation-0);
@@ -67,7 +69,7 @@ html[dark] .mtrl-button:disabled, html[dark] .mtrl-fab:disabled {
   border-color: currentColor;
 }
 .mtrl-button--two-tone {
-  --mtrl-button-bg-opacity-origin: .12;
+  --mtrl-component--bg-opacity-origin: 0.12;
 }
 .mtrl-button--two-tone:disabled {
   background-color: rgba(var(--mtrl-theme-on-surface-rgb), 0.12);
@@ -75,7 +77,7 @@ html[dark] .mtrl-button:disabled, html[dark] .mtrl-fab:disabled {
 .mtrl-button--contained, .mtrl-fab {
   box-shadow: var(--mtrl-elevation-2);
   z-index: 2;
-  background-color: rgba(var(--mtrl-theme--button-color-rgb), calc(var(--mtrl-button-bg-opacity-origin, 1) - var(--mtrl-button-bg-opacity, 0)));
+  background-color: rgba(var(--mtrl-theme--button-color-rgb), calc(var(--mtrl-component--bg-opacity-origin, 1) - var(--mtrl-component--bg-opacity, 0)));
   color: rgb(var(--mtrl-theme--button-on-color-rgb));
 }
 html[dark] .mtrl-button--contained, html[dark] .mtrl-fab {
@@ -321,7 +323,7 @@ html[dark] .mtrl-icon-button:active {
   border-radius: 28px;
   box-shadow: var(--mtrl-elevation-6);
   z-index: 6;
-  background-color: rgba(var(--mtrl-theme--fab-color-rgb), calc(var(--mtrl-button-bg-opacity-origin, 1) - var(--mtrl-button-bg-opacity, 0)));
+  background-color: rgba(var(--mtrl-theme--fab-color-rgb), calc(var(--mtrl-component--bg-opacity-origin, 1) - var(--mtrl-component--bg-opacity, 0)));
   color: rgb(var(--mtrl-theme--fab-on-color-rgb));
   padding: 0;
 }
@@ -353,8 +355,7 @@ html[dark] .mtrl-fab:active {
   --mtrl-elevation--bg-opacity-dark-boost: 0.14;
 }
 .mtrl-fab--outlined, .mtrl-fab--stroked, .mtrl-fab--two-tone {
-  --mtrl-button-bg-opacity-origin: 0;
-  background-color: rgba(var(--mtrl-theme--fab-color-rgb), calc(var(--mtrl-button-bg-opacity-origin, 1) + var(--mtrl-button-bg-opacity, 0)));
+  background-color: rgba(var(--mtrl-theme--fab-color-rgb), calc(var(--mtrl-component--bg-opacity-origin, 0) + var(--mtrl-elevation--bg-opacity-dark-boost, 0) + var(--mtrl-component--bg-opacity, 0)));
   color: rgb(var(--mtrl-theme--fab-color-rgb));
 }
 .mtrl-fab--outlined, .mtrl-fab--stroked {
@@ -392,7 +393,7 @@ html[dark] .mtrl-fab--outlined:active, html[dark] .mtrl-fab--stroked:active {
   border-color: currentColor;
 }
 .mtrl-fab--two-tone {
-  --mtrl-button-bg-opacity-origin: .12;
+  --mtrl-component--bg-opacity-origin: 0.12;
 }
 .mtrl-fab--mini {
   height: 40px;

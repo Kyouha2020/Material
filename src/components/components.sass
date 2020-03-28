@@ -1,3 +1,5 @@
+@use "../design/interaction/states" as *
+
 @mixin accessible-border
   border: none
   &:not(:focus-visible)
@@ -10,3 +12,20 @@
   -ms-user-select: none
   user-select: none
   -webkit-tap-highlight-color: transparent
+
+@mixin ripple
+  &:hover
+    --mtrl-component--bg-opacity: #{$container-overlay--hovered}
+  &:focus
+    --mtrl-component--bg-opacity: #{$container-overlay--focused}
+  &:active
+    --mtrl-component--bg-opacity: #{$container-overlay--pressed}
+
+@mixin bg-opacity($opacity)
+  --mtrl-component--bg-opacity-origin: #{$opacity}
+
+@function bg-opacity($opacity)
+  @if $opacity != 1
+    @return calc(var(--mtrl-component--bg-opacity-origin, #{$opacity}) + var(--mtrl-elevation--bg-opacity-dark-boost, 0) + var(--mtrl-component--bg-opacity, 0))
+  @else
+  @return calc(var(--mtrl-component--bg-opacity-origin, #{$opacity}) - var(--mtrl-component--bg-opacity, 0))
