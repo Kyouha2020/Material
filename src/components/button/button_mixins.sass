@@ -1,5 +1,4 @@
 @use "../../design/color/theme" as *
-@use "../../design/layout/density" as *
 
 @mixin button-theme($theme: primary)
   --mtrl-theme--button-color-rgb: #{rgb-color($theme)}
@@ -11,13 +10,6 @@
 @function button-on-theme($alpha: 1)
   @return color(-button-on-color, $alpha)
 
-@mixin button-density($density: 0)
-  $height: get-density(36px, $density)
-  height: $height
-
-  &.mtrl-button--rounded
-    border-radius: $height / 2
-
 
 @mixin fab-theme($theme: secondary)
   --mtrl-theme--fab-color-rgb: #{rgb-color($theme)}
@@ -28,11 +20,3 @@
 
 @function fab-on-theme($alpha: 1)
   @return color(-fab-on-color, $alpha)
-
-@mixin fab-density($density: 0)
-  $height: get-density(56px, $density)
-  height: $height
-  border-radius: $height / 2
-
-  &:not(.mtrl-fab--mini):not(.mtrl-fab--extended)
-    width: $height

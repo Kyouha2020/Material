@@ -29,3 +29,21 @@
     @return calc(var(--mtrl-component--bg-opacity-origin, #{$opacity}) + var(--mtrl-elevation--bg-opacity-dark-boost, 0) + var(--mtrl-component--bg-opacity, 0))
   @else
   @return calc(var(--mtrl-component--bg-opacity-origin, #{$opacity}) - var(--mtrl-component--bg-opacity, 0))
+
+@mixin height($height)
+  --mtrl-component--height: #{$height}
+
+@function height($height: null)
+  @if $height != null
+    @return var(--mtrl-component--height, #{$height})
+  @else
+    @return var(--mtrl-component--height)
+
+@mixin density($density)
+  --mtrl-component--density: #{$density}
+
+@function density($height: null, $density: 0)
+  @if $height != null
+    @return calc(#{height($height)} + 4px * var(--mtrl-component--density, #{$density}))
+  @else
+    @return calc(#{height()} + 4px * var(--mtrl-component--density, #{$density}))

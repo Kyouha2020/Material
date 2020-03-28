@@ -9,7 +9,7 @@
 
 .mtrl-button
   @include button-theme()
-  @include button-density()
+  @include height(36px)
   @include elevation(0)
   @include typography(button)
   @include ripple
@@ -19,6 +19,7 @@
   align-items: center
   justify-content: center
   vertical-align: middle
+  height: density()
   padding: 0 8px
   border-radius: 4px
   border: none
@@ -37,7 +38,6 @@
     @include elevation(0)
     cursor: default
     pointer-events: none
-    background-color: color(surface, $disabled-filled-container)
     color: color(on-surface, $text--disabled)
 
   &--outlined, &--contained, &--raised
@@ -59,7 +59,7 @@
       background-color: color(on-surface, $disabled-filled-container)
 
   &--contained
-    @include elevation(2, 4, 6, 8)
+    @extend .mtrl-button--raised
     background-color: button-theme(bg-opacity(1))
     color: button-on-theme()
 
@@ -85,6 +85,9 @@
   &--unelevated
     @include elevation(0, 0, 0, 0)
 
+  &--rounded
+    border-radius: calc(#{height()} / 2)
+
   &--sharp
     border-radius: 0
 
@@ -95,9 +98,9 @@
     &--between
       justify-content: space-between
 
-  @for $i from 0 through -3
+  @for $i from -1 through -3
     &--density-#{$i}
-      @include button-density($i)
+      @include density($i)
 
 
 .mtrl-icon-button
@@ -140,13 +143,17 @@
 
 
 .mtrl-fab
-  @extend .mtrl-button, .mtrl-button--contained
+  @extend .mtrl-button, .mtrl-button--contained, .mtrl-button--rounded
   @include fab-theme()
-  @include fab-density()
+  @include height(56px)
   @include elevation(6, 8, 10, 12)
   background-color: fab-theme(bg-opacity(1))
   color: fab-on-theme()
+  height: density()
   padding: 0
+
+  &:not(&--extended)
+    width: density()
 
   &--outlined, &--stroked, &--two-tone
     background-color: fab-theme(bg-opacity(0))
@@ -166,12 +173,11 @@
     @include bg-opacity(.12)
 
   &--mini
-    height: 40px
-    width: 40px
+    @include density(-4)
 
   &--extended
+    @include height(48px)
     min-width: 64px
-    height: 48px
     padding: 0 20px
 
     .mtrl-fab__icon
@@ -192,6 +198,6 @@
   &--tile
     border-radius: 0
 
-  @for $i from 0 through -3
+  @for $i from -1 through -3
     &--density-#{$i}
-      @include fab-density($i)
+      @include density($i)
