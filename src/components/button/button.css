@@ -321,7 +321,7 @@ html[dark] .mtrl-icon-button:active {
   border-radius: 28px;
   box-shadow: var(--mtrl-elevation-6);
   z-index: 6;
-  background-color: rgb(var(--mtrl-theme--fab-color-rgb));
+  background-color: rgba(var(--mtrl-theme--fab-color-rgb), calc(var(--mtrl-button-bg-opacity-origin, 1) - var(--mtrl-button-bg-opacity, 0)));
   color: rgb(var(--mtrl-theme--fab-on-color-rgb));
   padding: 0;
 }
@@ -353,7 +353,8 @@ html[dark] .mtrl-fab:active {
   --mtrl-elevation--bg-opacity-dark-boost: 0.14;
 }
 .mtrl-fab--outlined, .mtrl-fab--stroked, .mtrl-fab--two-tone {
-  background-color: rgb(var(--mtrl-theme-surface-rgb));
+  --mtrl-button-bg-opacity-origin: 0;
+  background-color: rgba(var(--mtrl-theme--fab-color-rgb), calc(var(--mtrl-button-bg-opacity-origin, 1) + var(--mtrl-button-bg-opacity, 0)));
   color: rgb(var(--mtrl-theme--fab-color-rgb));
 }
 .mtrl-fab--outlined, .mtrl-fab--stroked {
@@ -391,7 +392,7 @@ html[dark] .mtrl-fab--outlined:active, html[dark] .mtrl-fab--stroked:active {
   border-color: currentColor;
 }
 .mtrl-fab--two-tone {
-  background-color: rgba(var(--mtrl-theme--fab-color-rgb), 0.12);
+  --mtrl-button-bg-opacity-origin: .12;
 }
 .mtrl-fab--mini {
   height: 40px;

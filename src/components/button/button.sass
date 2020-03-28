@@ -150,12 +150,13 @@
   @include fab-theme()
   @include fab-density()
   @include elevation(6, 8, 10, 12)
-  background-color: fab-theme()
+  background-color: fab-theme(calc(var(--mtrl-button-bg-opacity-origin, 1) - var(--mtrl-button-bg-opacity, 0)))
   color: fab-on-theme()
   padding: 0
 
   &--outlined, &--stroked, &--two-tone
-    background-color: color(surface)
+    --mtrl-button-bg-opacity-origin: 0
+    background-color: fab-theme(calc(var(--mtrl-button-bg-opacity-origin, 1) + var(--mtrl-button-bg-opacity, 0)))
     color: fab-theme()
 
   &--outlined, &--stroked
@@ -169,7 +170,7 @@
     border-color: currentColor
 
   &--two-tone
-    background-color: fab-theme(.12)
+    --mtrl-button-bg-opacity-origin: .12
 
   &--mini
     height: 40px
