@@ -1,34 +1,30 @@
 @use "../design/interaction/states" as *
 
-@mixin accessible-border
-  border: none
-  &:not(:focus-visible)
-    outline: none
-  &:focus-visible
-    overflow: hidden
-
 @mixin unselectable
   -webkit-user-select: none
   -ms-user-select: none
   user-select: none
   -webkit-tap-highlight-color: transparent
 
-@mixin ripple
-  &:hover
-    --mtrl-component--bg-opacity: #{$container-overlay--hovered}
-  &:focus
-    --mtrl-component--bg-opacity: #{$container-overlay--focused}
-  &:active
-    --mtrl-component--bg-opacity: #{$container-overlay--pressed}
+@mixin ripple($idle: 0, $hover: $container-overlay--hovered, $focus: $container-overlay--focused, $press: $container-overlay--pressed)
+  &::before
+    position: absolute
+    width: calc(100% + #{stroke-width(0px)} * 2)
+    height: calc(100% + #{stroke-width(0px)} * 2)
+    left: calc(#{stroke-width(0px)} * -1)
+    content: ''
+    background-color: currentColor
+    border-radius: inherit
+    z-index: inherit
 
-@mixin bg-opacity($opacity)
-  --mtrl-component--bg-opacity-origin: #{$opacity}
-
-@function bg-opacity($opacity)
-  @if $opacity != 1
-    @return calc(var(--mtrl-component--bg-opacity-origin, #{$opacity}) + var(--mtrl-elevation--bg-opacity-dark-boost, 0) + var(--mtrl-component--bg-opacity, 0))
-  @else
-  @return calc(var(--mtrl-component--bg-opacity-origin, #{$opacity}) - var(--mtrl-component--bg-opacity, 0))
+  &::before
+    opacity: #{$idle}
+  &:hover:before
+    opacity: #{$hover}
+  &:focus:before
+    opacity: #{$focus}
+  &:active:before
+    opacity: #{$press}
 
 @mixin height($height)
   --mtrl-component--height: #{$height}
@@ -47,3 +43,12 @@
     @return calc(#{height($height)} + 4px * var(--mtrl-component--density, #{$density}))
   @else
     @return calc(#{height()} + 4px * var(--mtrl-component--density, #{$density}))
+
+@mixin stroke-width($width)
+  --mtrl-component--stroke-width: #{$width}
+
+@function stroke-width($width: null)
+  @if $width != null
+    @return var(--mtrl-component--stroke-width, #{$width})
+  @else
+    @return var(--mtrl-component--stroke-width)

@@ -17,4 +17,3 @@ Major browsers.
 * **March 25, 2020:** 加入 ripple 特性。
 
 ## Issues & Plans
-* 需要改进状态反馈，目前以透明度不同的背景来代替。

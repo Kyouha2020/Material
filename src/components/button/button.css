@@ -16,6 +16,7 @@
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   display: inline-flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
@@ -23,7 +24,7 @@
   padding: 0 8px;
   border-radius: 4px;
   border: none;
-  background-color: rgba(var(--mtrl-theme--button-color-rgb), calc(var(--mtrl-component--bg-opacity-origin, 0) + var(--mtrl-elevation--bg-opacity-dark-boost, 0) + var(--mtrl-component--bg-opacity, 0)));
+  background-color: rgb(var(--mtrl-theme-surface-rgb));
   color: rgb(var(--mtrl-theme--button-color-rgb));
   outline: none;
   white-space: nowrap;
@@ -31,14 +32,27 @@
 html[dark] .mtrl-button, html[dark] .mtrl-fab {
   --mtrl-elevation--bg-opacity-dark-boost: 0;
 }
-.mtrl-button:hover, .mtrl-fab:hover {
-  --mtrl-component--bg-opacity: 0.04;
+.mtrl-button::before, .mtrl-fab::before {
+  position: absolute;
+  width: calc(100% + var(--mtrl-component--stroke-width, 0px) * 2);
+  height: calc(100% + var(--mtrl-component--stroke-width, 0px) * 2);
+  left: calc(var(--mtrl-component--stroke-width, 0px) * -1);
+  content: "";
+  background-color: currentColor;
+  border-radius: inherit;
+  z-index: inherit;
 }
-.mtrl-button:focus, .mtrl-fab:focus {
-  --mtrl-component--bg-opacity: 0.12;
+.mtrl-button::before, .mtrl-fab::before {
+  opacity: 0;
 }
-.mtrl-button:active, .mtrl-fab:active {
-  --mtrl-component--bg-opacity: 0.1;
+.mtrl-button:hover:before, .mtrl-fab:hover:before {
+  opacity: 0.04;
+}
+.mtrl-button:focus:before, .mtrl-fab:focus:before {
+  opacity: 0.12;
+}
+.mtrl-button:active:before, .mtrl-fab:active:before {
+  opacity: 0.1;
 }
 .mtrl-button:not(.mtrl-icon-button):not(.mtrl-fab), .mtrl-fab:not(.mtrl-icon-button):not(.mtrl-fab) {
   min-width: 64px;
@@ -60,19 +74,20 @@ html[dark] .mtrl-button:disabled, html[dark] .mtrl-fab:disabled {
   padding: 0 16px;
 }
 .mtrl-button--outlined, .mtrl-button--stroked {
-  border: 1px solid rgba(var(--mtrl-theme-on-surface-rgb), 0.12);
+  --mtrl-component--stroke-width: 1px;
+  border: var(--mtrl-component--stroke-width) solid rgba(var(--mtrl-theme-on-surface-rgb), 0.12);
 }
 .mtrl-button--stroked:not(:disabled) {
   border-color: currentColor;
 }
 .mtrl-button--two-tone {
-  --mtrl-component--bg-opacity-origin: 0.12;
+  background-color: rgba(var(--mtrl-theme--button-color-rgb), 0.12);
 }
 .mtrl-button--two-tone:disabled {
   background-color: rgba(var(--mtrl-theme-on-surface-rgb), 0.12);
 }
 .mtrl-button--contained, .mtrl-fab {
-  background-color: rgba(var(--mtrl-theme--button-color-rgb), calc(var(--mtrl-component--bg-opacity-origin, 1) - var(--mtrl-component--bg-opacity, 0)));
+  background-color: rgb(var(--mtrl-theme--button-color-rgb));
   color: rgb(var(--mtrl-theme--button-on-color-rgb));
 }
 .mtrl-button--contained:disabled, .mtrl-fab:disabled {
@@ -281,7 +296,7 @@ html[dark] .mtrl-icon-button:active {
   --mtrl-component--height: 56px;
   box-shadow: var(--mtrl-elevation-6);
   z-index: 6;
-  background-color: rgba(var(--mtrl-theme--fab-color-rgb), calc(var(--mtrl-component--bg-opacity-origin, 1) - var(--mtrl-component--bg-opacity, 0)));
+  background-color: rgb(var(--mtrl-theme--fab-color-rgb));
   color: rgb(var(--mtrl-theme--fab-on-color-rgb));
   height: calc(var(--mtrl-component--height) + 4px * var(--mtrl-component--density, 0));
   padding: 0;
@@ -314,7 +329,7 @@ html[dark] .mtrl-fab:active {
   width: calc(var(--mtrl-component--height) + 4px * var(--mtrl-component--density, 0));
 }
 .mtrl-fab--outlined, .mtrl-fab--stroked, .mtrl-fab--two-tone {
-  background-color: rgba(var(--mtrl-theme--fab-color-rgb), calc(var(--mtrl-component--bg-opacity-origin, 0) + var(--mtrl-elevation--bg-opacity-dark-boost, 0) + var(--mtrl-component--bg-opacity, 0)));
+  background-color: rgb(var(--mtrl-theme-surface-rgb));
   color: rgb(var(--mtrl-theme--fab-color-rgb));
 }
 .mtrl-fab--outlined, .mtrl-fab--stroked {
@@ -352,7 +367,7 @@ html[dark] .mtrl-fab--outlined:active, html[dark] .mtrl-fab--stroked:active {
   border-color: currentColor;
 }
 .mtrl-fab--two-tone {
-  --mtrl-component--bg-opacity-origin: 0.12;
+  background-color: rgba(var(--mtrl-theme--fab-color-rgb), 0.12);
 }
 .mtrl-fab--mini {
   --mtrl-component--density: -4;
