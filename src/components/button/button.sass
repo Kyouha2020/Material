@@ -37,9 +37,9 @@
 
   &:disabled
     @include elevation(0)
+    color: color(on-surface, $text--disabled)
     cursor: default
     pointer-events: none
-    color: color(on-surface, $text--disabled)
 
   &--outlined, &--contained, &--raised
     padding: 0 16px

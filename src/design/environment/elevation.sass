@@ -20,28 +20,28 @@ $ambient-map: (0: 0px 0px 0px 0px, 1: 0px 1px 3px 0px, 2: 0px 1px 5px 0px, 3: 0p
   $ambient-color: rgba($color, 0.12 + $opacity-boost)
 
   html[dark] &
-    --mtrl-elevation--bg-opacity-dark-boost: #{map-get($elevation-overlay, $z-value)}
+    --mtrl-ripple--opacity-dark-boost: #{map-get($elevation-overlay, $z-value)}
   box-shadow: var(--mtrl-elevation-#{$z-value})
   z-index: $z-value
 
   @if $z-value-hover != null
     &:hover
       html[dark] &
-        --mtrl-elevation--bg-opacity-dark-boost: #{map-get($elevation-overlay, $z-value-hover)}
+        --mtrl-ripple--opacity-dark-boost: #{map-get($elevation-overlay, $z-value-hover)}
       $z-value: $z-value-hover
       box-shadow: var(--mtrl-elevation-#{$z-value-hover})
       z-index: $z-value-hover
   @if $z-value-focus != null
     &:focus
       html[dark] &
-        --mtrl-elevation--bg-opacity-dark-boost: #{map-get($elevation-overlay, $z-value-focus)}
+        --mtrl-ripple--opacity-dark-boost: #{map-get($elevation-overlay, $z-value-focus)}
       $z-value: $z-value-focus
       box-shadow: var(--mtrl-elevation-#{$z-value-focus})
       z-index: $z-value-focus
   @if $z-value-press != null
     &:active
       html[dark] &
-        --mtrl-elevation--bg-opacity-dark-boost: #{map-get($elevation-overlay, $z-value-press)}
+        --mtrl-ripple--opacity-dark-boost: #{map-get($elevation-overlay, $z-value-press)}
       $z-value: $z-value-press
       box-shadow: var(--mtrl-elevation-#{$z-value-press})
       z-index: $z-value-press

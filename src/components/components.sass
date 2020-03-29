@@ -18,13 +18,13 @@
     z-index: inherit
 
   &::before
-    opacity: #{$idle}
+    opacity: calc(#{$idle} + var(--mtrl-ripple--opacity-dark-boost, 0))
   &:hover:before
-    opacity: #{$hover}
+    opacity: calc(#{$hover} + var(--mtrl-ripple--opacity-dark-boost, 0))
   &:focus:before
-    opacity: #{$focus}
+    opacity: calc(#{$focus} + var(--mtrl-ripple--opacity-dark-boost, 0))
   &:active:before
-    opacity: #{$press}
+    opacity: calc(#{$press} + var(--mtrl-ripple--opacity-dark-boost, 0))
 
 @mixin height($height)
   --mtrl-component--height: #{$height}
