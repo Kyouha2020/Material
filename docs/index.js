@@ -29,5 +29,5 @@ if (dirToggle !== null)
     })
 
 document.querySelectorAll('.mtrl-button, .mtrl-fab, .mtrl-bottom-app-bar__navigation-drawer-control, .mtrl-top-app-bar__navigation-icon, .mtrl-top-app-bar__action-icon, .mtrl-tab__item, .mtrl-text-field').forEach(button => {
-    button.setAttribute('data-mtrl-ripple', '')
+    button.classList.add('mtrl-ripple')
 })
