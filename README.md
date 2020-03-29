@@ -5,9 +5,11 @@ Docs: https://kyouha2020.github.io/Material/docs/
 * RTL support.
 
 ## Browser compatibility
-Major browsers except Firefox.
+Major browsers.
 
-## News
+## News & Updates
+* **March 29, 2020:** 更新 ripple。
+
 * **March 27, 2020:** 应用大量 CSS 变量。
 
 * **March 26, 2020:** 不再支持 IE 11。
