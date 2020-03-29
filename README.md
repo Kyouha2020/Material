@@ -15,3 +15,6 @@ Major browsers.
 * **March 26, 2020:** 不再支持 IE 11。
 
 * **March 25, 2020:** 加入 ripple 特性。
+
+## Issues & Plans
+* 需要改进状态反馈，目前以背景透明度不同来代替。
