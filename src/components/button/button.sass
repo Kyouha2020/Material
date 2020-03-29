@@ -165,11 +165,10 @@
     @include elevation(0, 0, 0, 0)
 
   &--outlined
-    border: 1px solid color(on-surface, $stroke)
+    @extend .mtrl-button--outlined
 
   &--stroked
-    @extend .mtrl-fab--outlined
-    border-color: currentColor
+    @extend .mtrl-button--stroked
 
   &--two-tone
     background-color: fab-theme(.12)

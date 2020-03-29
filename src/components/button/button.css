@@ -70,14 +70,14 @@ html[dark] .mtrl-button, html[dark] .mtrl-fab {
 html[dark] .mtrl-button:disabled, html[dark] .mtrl-fab:disabled {
   --mtrl-ripple--opacity-dark-boost: 0;
 }
-.mtrl-button--outlined, .mtrl-button--stroked, .mtrl-button--contained, .mtrl-fab, .mtrl-button--raised {
+.mtrl-button--outlined, .mtrl-fab--outlined, .mtrl-button--stroked, .mtrl-fab--stroked, .mtrl-button--contained, .mtrl-fab, .mtrl-button--raised {
   padding: 0 16px;
 }
-.mtrl-button--outlined, .mtrl-button--stroked {
+.mtrl-button--outlined, .mtrl-fab--outlined, .mtrl-button--stroked, .mtrl-fab--stroked {
   --mtrl-component--stroke-width: 1px;
   border: var(--mtrl-component--stroke-width) solid rgba(var(--mtrl-theme-on-surface-rgb), 0.12);
 }
-.mtrl-button--stroked:not(:disabled) {
+.mtrl-button--stroked:not(:disabled), .mtrl-fab--stroked:not(:disabled) {
   border-color: currentColor;
 }
 .mtrl-button--two-tone {
@@ -359,12 +359,6 @@ html[dark] .mtrl-fab--outlined:focus, html[dark] .mtrl-fab--stroked:focus {
 }
 html[dark] .mtrl-fab--outlined:active, html[dark] .mtrl-fab--stroked:active {
   --mtrl-ripple--opacity-dark-boost: 0;
-}
-.mtrl-fab--outlined, .mtrl-fab--stroked {
-  border: 1px solid rgba(var(--mtrl-theme-on-surface-rgb), 0.12);
-}
-.mtrl-fab--stroked {
-  border-color: currentColor;
 }
 .mtrl-fab--two-tone {
   background-color: rgba(var(--mtrl-theme--fab-color-rgb), 0.12);
