@@ -1,3 +1,5 @@
+# 已停更，之后可能会恢复更新。
+
 # Material
 Docs: https://kyouha2020.github.io/Material/docs/
 
